@@ -1,0 +1,8 @@
+- [X] Streamline categories and move metadata to tags
+- [ ] Move static content
+  - [ ] Images
+  - [ ] Files
+- [ ] Comment system
+- [ ] Contact page
+- [ ] Links
+- [ ] Reformat CV
