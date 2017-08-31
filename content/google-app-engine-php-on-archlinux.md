@@ -29,17 +29,17 @@ Read the [Official instructions](https://cloud.google.com/appengine/docs/standar
 
 Enable the `bcmath` extension that is required.  
 Edit `/etc/php55/php.ini` and add to the extensions list:
-```
+```ini
 extension=bcmath.so
 ```
 
 To allow php tooling from the Google Cloud SDK to run, append its paths to the `open_basedir` directive in `/etc/php55/php.ini`:
-```
+```ini
 :/opt/google-cloud-sdk/platform/google_appengine/google/appengine/tools/devappserver2/php:/opt/google-cloud-sdk/platform/google_appengine/google/appengine/sdk/php
 ```
 
 To disable `html_errors` for better CLI debugging, create `/etc/php55/conf.d/disable_html_errors.ini`:
-```
+```ini
 html_errors = Off
 ```
 
@@ -47,7 +47,7 @@ html_errors = Off
 
 # From the CLI
 Run `dev_appserver.py` with the following options:
-```
+```shell
 /opt/google-cloud-sdk/platform/google_appengine/dev_appserver.py --php_executable_path /usr/bin/php55-cgi --php_gae_extension_path /usr/lib/php55/modules/gae_runtime_module.so --php_xdebug_extension_path=/usr/lib/php55/modules/xdebug.so --log_level debug .
 ```
 
@@ -62,6 +62,6 @@ Start a new Google App Engine project.
 In the `Settings`, set the PHP level to "PHP 5.5".  
 Add a `PHP 5.5` interpreter to `/usr/bin/php55` and add the xdebug path.  
 Edit the run "Run/Debug Configuration" and add the following to the `Interpreter options`:
-```
+```shell
 --php_executable_path /usr/bin/php55-cgi --php_gae_extension_path /usr/lib/php55/modules/gae_runtime_module.so --php_xdebug_extension_path /usr/lib/php55/modules/xdebug.so --log_level debug
 ```

@@ -43,7 +43,7 @@ DEFAULT_PAGINATION = 10
 
 # Plugins
 PLUGIN_PATHS = ['../pelican-plugins']
-PLUGINS = ['pandoc_reader', 'assets', 'sitemap', 'gravatar']
+PLUGINS = ['assets', 'gravatar', 'pandoc_reader', 'sitemap']
 
 # Pandoc options
 PANDOC_ARGS = []
@@ -61,16 +61,3 @@ USER_AVATAR_URL = SITEURL + '/images/avatar.png'
 
 # Theme
 THEME = "../materialistic-pelican/"
-
-# Enable markdown tables
-MARKDOWN = {
-    'extension_configs': {
-        'markdown.extensions.codehilite': {
-            'css_class': 'highlight',
-        },
-        'markdown.extensions.extra': {},
-        # optionally, more extensions,
-        # e.g. markdown.extensions.meta
-    },
-    'output_format': 'html5',
-}
