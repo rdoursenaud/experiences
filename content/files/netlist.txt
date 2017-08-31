@@ -1,0 +1,308 @@
+Netlist
+
+Exported from Core.sch at 20/12/2004 10:52:37 
+
+EAGLE Version 4.13 Copyright (c) 1988-2004 CadSoft
+
+Net      Part     Pad      Pin        Sheet
+
+Change Class 0;
++5V      C3       1        1          1
+         C4       +        +          1
+         IC1      11       VDD1       1
+         IC1      32       VDD2       1
+         IC2      8        VCC        1
+         IC4      OUT      OUT        1
+         J10      1        1          1
+         J11      1        1          1
+         J15      1        1          1
+         J15      9        9          1
+         J2       1        1          1
+         J3       5        5          1
+         J3       6        6          1
+         J4       4        4          1
+         J5       9        9          1
+         J6       2        2          1
+         J7       2        2          1
+         J8       2        2          1
+         J9       2        2          1
+         P1       A        A          1
+         P2       E        E          1
+         R1       1        1          1
+         R10      1        1          1
+         R2       2        2          1
+         R3       2        2          1
+         R6       1        1          1
+         R8       1        1          1
+         R9       2        2          1
+
+Change Class 0;
+GND      C1       2        2          1
+         C2       2        2          1
+         C3       2        2          1
+         C4       -        -          1
+         C5       -        -          1
+         C6       2        2          1
+         IC1      12       GND1       1
+         IC1      31       GND2       1
+         IC2      5        GND        1
+         IC4      GND      GND        1
+         J10      2        2          1
+         J11      4        4          1
+         J12      2        2          1
+         J12      PE       PE         1
+         J12      PE@      PE         1
+         J15      5        5          1
+         J2       2        2          1
+         J3       7        7          1
+         J3       8        8          1
+         J4       5        5          1
+         J4       G1       G1         1
+         J4       G2       G2         1
+         J5       10       10         1
+         J6       1        1          1
+         J7       1        1          1
+         J8       1        1          1
+         J9       1        1          1
+         P2       A        A          1
+         R5       2        2          1
+         T1       1        E          1
+         X1       -        -          1
+         X2       PE       PE         1
+         X2       PE@      PE         1
+
+Change Class 0;
+N$1      R11      2        2          1
+         X2       4        4          1
+
+Change Class 0;
+N$2      J12      4        4          1
+         R8       2        2          1
+
+Change Class 0;
+N$3      J12      5        5          1
+         R7       2        2          1
+
+Change Class 0;
+N$4      D1       A        A          1
+         IC2      3        C          1
+         X2       5        5          1
+
+Change Class 0;
+N$5      D1       C        C          1
+         IC2      2        A          1
+         R11      1        1          1
+
+Change Class 0;
+N$6      IC2      7        VB         1
+         R5       1        1          1
+
+Change Class 0;
+N$7      IC1      26       RC7/RX/DT  1
+         IC2      6        VO         1
+         J11      3        3          1
+         R6       2        2          1
+
+Change Class 0;
+N$8      IC1      25       RC6/TX/CK  1
+         J11      2        2          1
+         R7       1        1          1
+
+Change Class 0;
+N$9      IC1      1        MCLR/(ICSP_VPP) 1
+         J3       10       10         1
+
+Change Class 0;
+N$10     J1       2        2          1
+         J1       3        3          1
+         J16      1        1          1
+         X1       AC2      AC2        1
+         X2       6        6          1
+
+Change Class 0;
+N$11     J1       1        1          1
+         J16      2        2          1
+         X1       AC1      AC1        1
+         X2       7        7          1
+
+Change Class 0;
+N$12     C5       +        +          1
+         C6       1        1          1
+         IC4      IN       IN         1
+         X1       +        +          1
+
+Change Class 0;
+N$13     J3       9        9          1
+         R1       2        2          1
+
+Change Class 0;
+N$14     C1       1        1          1
+         IC1      13       OSC1/CLKI  1
+         Q1       2        2          1
+
+Change Class 0;
+N$15     C2       1        1          1
+         IC1      14       OSC2/CLKO/RA6 1
+         Q1       1        1          1
+
+Change Class 0;
+N$16     IC1      39       RB6/PGC/(ICSP_CLK) 1
+         J3       4        4          1
+
+Change Class 0;
+N$17     IC1      40       RB7/PGD/(ICSP_DATA) 1
+         J3       2        2          1
+
+Change Class 0;
+N$18     IC1      20       RD1/PSP1   1
+         J9       3        3          1
+         R9       1        1          1
+
+Change Class 0;
+N$19     IC1      15       RC0/T1OSO/T1CLK 1
+         J6       5        5          1
+         J7       5        5          1
+
+Change Class 0;
+N$20     IC1      18       RC3/SCK/SCL 1
+         J6       3        3          1
+         R10      2        2          1
+
+Change Class 0;
+N$21     IC1      6        RA4/T0CLK  1
+         J4       3        3          1
+         R2       1        1          1
+
+Change Class 0;
+N$22     IC1      33       RB0/INT0   1
+         J15      2        2          1
+
+Change Class 0;
+N$23     IC1      21       RD2/PSP2   1
+         J8       5        5          1
+         J9       5        5          1
+
+Change Class 0;
+N$24     IC1      28       RD5/PSP5   1
+         J10      7        7          1
+         J15      11       11         1
+         J4       1        1          1
+
+Change Class 0;
+N$25     IC1      2        RA0/AN0    1
+         J5       8        8          1
+
+Change Class 0;
+N$26     IC1      3        RA1/AN1    1
+         J5       7        7          1
+
+Change Class 0;
+N$27     IC1      4        RA2/AN2/VREF- 1
+         J5       6        6          1
+
+Change Class 0;
+N$28     IC1      5        RA3/AN3/VREF+ 1
+         J5       5        5          1
+
+Change Class 0;
+N$29     IC1      7        RA5/AN4/SS/LVDIN 1
+         J5       4        4          1
+
+Change Class 0;
+N$30     IC1      8        RE0/RD/AN5 1
+         J5       3        3          1
+
+Change Class 0;
+N$31     IC1      9        RE1/WR/AN6 1
+         J5       2        2          1
+
+Change Class 0;
+N$32     IC1      10       RE2/CS/AN7 1
+         J5       1        1          1
+
+Change Class 0;
+N$33     IC1      19       RD0/PSP0   1
+         J8       3        3          1
+
+Change Class 0;
+N$34     IC1      16       RC1/T1OSI/CCP2* 1
+         J6       4        4          1
+         J7       4        4          1
+
+Change Class 0;
+N$35     IC1      17       RC2/CCP1   1
+         J7       3        3          1
+
+Change Class 0;
+N$37     IC1      22       RD3/PSP3   1
+         J10      4        4          1
+         J8       4        4          1
+         J9       4        4          1
+
+Change Class 0;
+N$38     IC1      23       RC4/SDI/SDA 1
+         J10      6        6          1
+
+Change Class 0;
+N$39     IC1      29       RD6/PSP6   1
+         J10      5        5          1
+         J15      13       13         1
+
+Change Class 0;
+N$40     IC1      24       RC5/SDO    1
+         J10      8        8          1
+
+Change Class 0;
+N$41     IC1      27       RD4/PSP4   1
+         J14      1        1          1
+
+Change Class 0;
+N$42     IC1      34       RB1/INT1   1
+         J15      4        4          1
+
+Change Class 0;
+N$43     IC1      35       RB2/INT2   1
+         J15      6        6          1
+
+Change Class 0;
+N$44     IC1      36       RB3/CCP2*  1
+         J15      8        8          1
+
+Change Class 0;
+N$45     IC1      37       RB4        1
+         J15      10       10         1
+
+Change Class 0;
+N$46     IC1      38       RB5/PGM/(ICSP_VLVP) 1
+         J15      12       12         1
+
+Change Class 0;
+N$47     J15      14       14         1
+         J3       3        3          1
+
+Change Class 0;
+N$48     J15      16       16         1
+         J3       1        1          1
+
+Change Class 0;
+N$49     IC1      30       RD7/PSP7   1
+         J15      15       15         1
+
+Change Class 0;
+N$50     J15      3        3          1
+         R3       1        1          1
+         T1       3        C          1
+
+Change Class 0;
+N$51     R4       1        1          1
+         T1       2        B          1
+
+Change Class 0;
+N$52     P1       E        E          1
+         P1       S        S          1
+         R4       2        2          1
+
+Change Class 0;
+N$58     J15      7        7          1
+         P2       S        S          1
+

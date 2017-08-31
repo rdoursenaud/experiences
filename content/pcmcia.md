@@ -1,7 +1,7 @@
 Title: PCMCIA
 Date: 2005-08-07 07:10
-Author: admin
-Category: Asus Z71A
+Category: Blog
+Tags: Hardware, Asus, Z71A, PCMCIA
 Slug: pcmcia
 Status: published
 

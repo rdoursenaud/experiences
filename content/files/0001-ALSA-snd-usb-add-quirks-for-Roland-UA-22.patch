@@ -1,0 +1,54 @@
+From 55cc6392f71dbbdba1c4dd24c4c4707929f7a8ff Mon Sep 17 00:00:00 2001
+From: Daniel Mack <zonque@gmail.com>
+Date: Wed, 22 May 2013 09:02:56 +0200
+Subject: [PATCH 1/2] ALSA: snd-usb: add quirks for Roland UA-22
+
+The device complies to the UAC1 standard but hides that fact with
+proprietary descriptors.
+
+Signed-off-by: Daniel Mack <zonque@gmail.com>
+Reported-by: Rafa Lafuente <rafalafuente@gmail.com>
+---
+ sound/usb/quirks-table.h | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+
+diff --git a/sound/usb/quirks-table.h b/sound/usb/quirks-table.h
+index c657752..32dab50 100644
+--- a/sound/usb/quirks-table.h
++++ b/sound/usb/quirks-table.h
+@@ -1773,6 +1773,32 @@ YAMAHA_DEVICE(0x7010, "UB99"),
+ 		}
+ 	}
+ },
++{
++	USB_DEVICE(0x0582, 0x0159),
++	.driver_info = (unsigned long) & (const struct snd_usb_audio_quirk) {
++		/* .vendor_name = "Roland", */
++		/* .product_name = "UA-22", */
++		.ifnum = QUIRK_ANY_INTERFACE,
++		.type = QUIRK_COMPOSITE,
++		.data = (const struct snd_usb_audio_quirk[]) {
++			{
++				.ifnum = 0,
++				.type = QUIRK_AUDIO_STANDARD_INTERFACE
++			},
++			{
++				.ifnum = 1,
++				.type = QUIRK_AUDIO_STANDARD_INTERFACE
++			},
++			{
++				.ifnum = 2,
++				.type = QUIRK_MIDI_STANDARD_INTERFACE
++			},
++			{
++				.ifnum = -1
++			}
++		}
++	}
++},
+ /* this catches most recent vendor-specific Roland devices */
+ {
+ 	.match_flags = USB_DEVICE_ID_MATCH_VENDOR |
+-- 
+2.3.2
+

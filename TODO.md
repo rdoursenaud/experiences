@@ -1,8 +1,9 @@
 - [X] Streamline categories and move metadata to tags
-- [ ] Move static content
-  - [ ] Images
-  - [ ] Files
-- [ ] Comment system
-- [ ] Contact page
-- [ ] Links
-- [ ] Reformat CV
+- [X] Move static content
+  - [X] Images
+  - [X] Files
+- [X] Comment system
+- [X] ~~Contact page~~
+- [X] Links
+- [X] Reformat CV
+- [ ] Google Analytics

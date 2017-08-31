@@ -1,0 +1,27 @@
+Partlist
+
+Exported from JDM.sch at 20/12/2004 10:51:46 
+
+EAGLE Version 4.13 Copyright (c) 1988-2004 CadSoft
+
+Part     Value          Device             Package  Library        Sheet
+
+C1       100µ           CPOL-EUE2.5-6      E2,5-6   rcl            1
+C2       22µ            CPOL-EUE2.5-5      E2,5-5   rcl            1
+D1       1N4148         1N4148             DO35-10  diode          1
+D2       1N4148         1N4148             DO35-10  diode          1
+D3       1N4148         1N4148             DO35-10  diode          1
+D4       1N4148         1N4148             DO35-10  diode          1
+D5       8.7V           ZENER-DIODEDO35Z10 DO35Z10  diode          1
+D6       5.1V           ZENER-DIODEDO35Z10 DO35Z10  diode          1
+IC1      PIC18F4X2DIL40 PIC18F4X2DIL40     DIL40    pic18f4x2      1
+J2       To Core I.C.P. MA05-2             MA05-2   con-lstb       1
+J3       RS232 Female   F09HP              F09HP    con-subd       1
+J4                      JACK-PMS           JACK-PMS POWER-IN       1
+Q1       BC547B         BC547B             TO92     transistor-npn 1
+Q2       BC547B         BC547B             TO92     transistor-npn 1
+R1       10K            R-EU_0207/2V       0207/2V  rcl            1
+R2       10K            R-EU_0207/2V       0207/2V  rcl            1
+R3       1.5K           R-EU_0207/2V       0207/2V  rcl            1
+R4       10K            R-EU_0207/7        0207/7   rcl            1
+R5       220            R-EU_0207/5V       0207/5V  rcl            1

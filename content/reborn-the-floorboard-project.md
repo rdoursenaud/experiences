@@ -1,7 +1,7 @@
 Title: Reborn the floorboard project
 Date: 2004-05-12 12:00
-Author: admin
-Category: Midibox
+Category: Blog
+Tags: Hardware, Midibox
 Slug: reborn-the-floorboard-project
 Status: published
 
@@ -46,4 +46,4 @@ midibox.org forums.
 Stay tuned!
 
 Ressources : [MIDI
-Specification](http://raphael.doursenaud.fr/wp-content/uploads/MIDI_Specification.pdf)
+Specification](/files/MIDI_Specification.pdf)

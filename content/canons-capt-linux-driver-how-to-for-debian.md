@@ -1,8 +1,8 @@
 Title:  Canon's CAPT linux driver how-to for Debian
 Date: 2005-09-17 12:00
-Author: admin
-Category: Debian
-Slug: canons-capt-linux-driver-how-to-for-debian
+Category: Blog
+Tags: GNU/Linux, Debian, Printer, Canon, CAPT
+Slug: canon-capt-linux-driver-how-to-for-debian
 Status: published
 
 A [free driver](http://www.boichat.ch/nicolas/capt/) is now available as an alternative for LBP-810 and LBP-1120.
@@ -166,8 +166,8 @@ TODO
 
 \* Make startup script work at bootup  
 *- Real Debian packages : NEW! Test packages available :
-[cndrvcups-common\_1.10-2\_i386](http://raphael.doursenaud.fr/wp-content/uploads/cndrvcups-common_1.10-2_i386.deb)
-[cndrvcups-capt\_1.10-2\_i386](http://raphael.doursenaud.fr/wp-content/uploads/cndrvcups-capt_1.10-2_i386.deb)*  
+[cndrvcups-common\_1.10-2\_i386](files/cndrvcups-common_1.10-2_i386.deb)
+[cndrvcups-capt\_1.10-2\_i386](files/cndrvcups-capt_1.10-2_i386.deb)*
 \* Create symlinks for startup script at bootup  
 \* Write an assistant for printer configuration  
 \* Include french translations  

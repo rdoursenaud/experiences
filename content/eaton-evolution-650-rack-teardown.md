@@ -1,7 +1,7 @@
 Title: Eaton Evolution 650 rack teardown
 Date: 2017-02-22 13:37
-Author: admin
-Category: Hardware, Inclassables
+Category: Blog
+Tags: Hardware, Teardown, Eaton, Evolution 650
 Slug: eaton-evolution-650-rack-teardown
 Status: published
 

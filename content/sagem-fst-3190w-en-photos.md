@@ -1,7 +1,7 @@
 Title: Sagem F@st 3190W en photos
 Date: 2005-08-11 18:28
-Author: admin
-Category: PBC FTTH
+Category: Blog
+Tags: Hardware, PBC FTTH, Sagem, F@st 3190W
 Slug: sagem-fst-3190w-en-photos
 Status: published
 

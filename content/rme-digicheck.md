@@ -1,7 +1,7 @@
 Title: RME Digicheck
 Date: 2005-08-09 06:29
-Author: admin
-Category: GNU/Linux
+Category: Blog
+Tags: GNU/Linux, RME, Digicheck
 Slug: rme-digicheck
 Status: published
 

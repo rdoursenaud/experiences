@@ -1,7 +1,7 @@
 Title: Soundcraft MADI-USB teardown
 Date: 2017-02-22 13:40
-Author: admin
-Category: Audio, Hardware, Teardowns
+Category: Blog
+Tags: Hardware, Audio, Teardown, Soundcraft, MADI-USB
 Slug: soundcraft-madi-usb-teardown
 Status: published
 

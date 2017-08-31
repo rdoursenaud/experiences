@@ -1,7 +1,7 @@
 Title: Passage de tvtime à zapping
 Date: 2005-09-19 18:47
-Author: admin
-Category: Ubuntu
+Category: Blog
+Tags: GNU/Linux, Ubuntu
 Slug: passage-de-tvtime-a-zapping
 Status: published
 
