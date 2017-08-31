@@ -16,15 +16,15 @@ Curriculum Vitæ
             </h1>
         </div>
 
-        <div class="mdl-cell mdl-shadow--2dp mdl-cell--5-col">
+        <div class="mdl-cell mdl-card mdl-shadow--2dp mdl-cell--5-col">
             <div class="mdl-card__title">
                 <h3 class="mdl-card__title-text" style="text-align: right;">
                     Rapha&euml;l Doursenaud<br>
                 </h3>
                 </div>
-                <div class="mdl-card__supporting-text">
+                <div class="mdl-card__supporting-text mdl-card--border">
                 <p style="text-align: right;">
-                    26B avenue Pouguet<br>
+                    26 B avenue Pouguet<br>
                     64000 PAU<br>
                     FRANCE<br>
                     +33 (0)6 68 48 20 10<br>

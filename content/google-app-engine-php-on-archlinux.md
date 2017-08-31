@@ -45,7 +45,7 @@ html_errors = Off
 
 ## Run
 
-# From the CLI
+### From the CLI
 Run `dev_appserver.py` with the following options:
 ```shell
 /opt/google-cloud-sdk/platform/google_appengine/dev_appserver.py --php_executable_path /usr/bin/php55-cgi --php_gae_extension_path /usr/lib/php55/modules/gae_runtime_module.so --php_xdebug_extension_path=/usr/lib/php55/modules/xdebug.so --log_level debug .
@@ -57,7 +57,7 @@ I like to run my development server in debug mode all the time but you can remov
 
 If you have any error, you can append the `--dev_appserver_log_level debug` for a more verbose output.
 
-# In PhpStorm
+### In PhpStorm
 Start a new Google App Engine project.  
 In the `Settings`, set the PHP level to "PHP 5.5".  
 Add a `PHP 5.5` interpreter to `/usr/bin/php55` and add the xdebug path.  

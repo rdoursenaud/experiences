@@ -7,3 +7,7 @@
 - [X] Links
 - [X] Reformat CV
 - [ ] Google Analytics
+- [ ] Switch from Firebase (For custom SSL + IPv6 support) to:
+    - [ ] Google Cloud Storage
+    - [ ] Google Cloud Load Balancing
+    - [ ] Google Cloud CDN?
