@@ -3,7 +3,7 @@ Date: 2010-10-19 12:42
 Category: Blog
 Tags: GNU/Linux, Blackmagic Design, Decklink
 Slug: decklink-sdi-linux-2-6-36
-Status: draft
+Status: published
 
 Here's a patch allowing the
 [blackmagic](http://www.blackmagic-design.com/) kernel module to  
