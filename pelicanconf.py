@@ -54,7 +54,7 @@ SITEMAP = {'format': 'xml'}
 
 # Theme options
 PRIMARY_COLOR = 'Blue Grey'
-ACCENT_COLOR = 'Blue'
+ACCENT_COLOR = 'Indigo'
 GOOGLE_PLUS_COMMENTS = True
 USER_LOGO_URL = SITEURL + '/images/logo.png'
 USER_AVATAR_URL = SITEURL + '/images/avatar.png'
