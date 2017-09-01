@@ -8,10 +8,24 @@ Status: published
 Après avoir configuré la télécommande pour tvtime, je me suis attaqué a
 totem dont voici la configuration (tvtime inclus) :
 
-` #/etc/lirc/lircrc # Global launcher begin     prog = irexec     button = tv     mode = tvtime     config = tvtime & end begin  prog = irexec  button = dvd  mode = totem  config = totem & end`
+```
+#/etc/lirc/lircrc
+# Global launcher
+begin
+prog = irexec
+button = tv
+mode = tvtime
+config = tvtime &
+end
+begin
+prog = irexec
+button = dvd
+mode = totem
+config = totem &
+end
 
-\# Software specific  
-\#\# Totem  
+# Software specific  
+## Totem  
 begin totem  
 begin  
 prog = irexec  
@@ -69,12 +83,12 @@ repeat = 1
 end  
 begin  
 prog = irexec  
-button = max\_window  
+button = max_window  
 config = totem --fullscreen  
 end  
 end totem
 
-\#\# tvtime  
+## tvtime  
 begin tvtime  
 begin  
 prog = irexec  
@@ -84,22 +98,22 @@ end
 begin  
 prog = irexec  
 button = e  
-config = tvtime-command TOGGLE\_INPUT  
+config = tvtime-command TOGGLE_INPUT  
 end  
 begin  
 prog = irexec  
-button = launch\_setup  
-config = tvtime-command DISPLAY\_INFO  
+button = launch_setup  
+config = tvtime-command DISPLAY_INFO  
 end  
 begin  
 prog = irexec  
-button = max\_window  
-config = tvtime-command TOGGLE\_FULLSCREEN  
+button = max_window  
+config = tvtime-command TOGGLE_FULLSCREEN  
 end  
 begin  
 prog = irexec  
 button = mute  
-config = tvtime-command TOGGLE\_MUTE  
+config = tvtime-command TOGGLE_MUTE  
 end  
 begin  
 prog = irexec  
@@ -124,79 +138,79 @@ end
 begin  
 prog = irexec  
 button = vol-up  
-config = tvtime-command MIXER\_UP  
+config = tvtime-command MIXER_UP  
 repeat = 1  
 end  
 begin  
 prog = irexec  
 button = vol-down  
-config = tvtime-command MIXER\_DOWN  
+config = tvtime-command MIXER_DOWN  
 repeat = 1  
 end  
 begin  
 prog = irexec  
 button = chan-up  
-config = tvtime-command CHANNEL\_UP  
+config = tvtime-command CHANNEL_UP  
 end  
 begin  
 prog = irexec  
 button = chan-down  
-config = tvtime-command CHANNEL\_DOWN  
+config = tvtime-command CHANNEL_DOWN  
 end  
 begin  
 prog = irexec  
-button = dvd-root\_menu  
-config = tvtime-command CHANNEL\_JUMP  
+button = dvd-root_menu  
+config = tvtime-command CHANNEL_JUMP  
 end  
 begin  
 prog = irexec  
 button = 1  
-config = tvtime-command CHANNEL\_1 ENTER  
+config = tvtime-command CHANNEL_1 ENTER  
 end  
 begin  
 prog = irexec  
 button = 2  
-config = tvtime-command CHANNEL\_2 ENTER  
+config = tvtime-command CHANNEL_2 ENTER  
 end  
 begin  
 prog = irexec  
 button = 3  
-config = tvtime-command CHANNEL\_3 ENTER  
+config = tvtime-command CHANNEL_3 ENTER  
 end  
 begin  
 prog = irexec  
 button = 4  
-config = tvtime-command CHANNEL\_4 ENTER  
+config = tvtime-command CHANNEL_4 ENTER  
 end  
 begin  
 prog = irexec  
 button = 5  
-config = tvtime-command CHANNEL\_5 ENTER  
+config = tvtime-command CHANNEL_5 ENTER  
 end  
 begin  
 prog = irexec  
 button = 6  
-config = tvtime-command CHANNEL\_6 ENTER  
+config = tvtime-command CHANNEL_6 ENTER  
 end  
 begin  
 prog = irexec  
 button = 7  
-config = tvtime-command CHANNEL\_7 ENTER  
+config = tvtime-command CHANNEL_7 ENTER  
 end  
 begin  
 prog = irexec  
 button = 8  
-config = tvtime-command CHANNEL\_8 ENTER  
+config = tvtime-command CHANNEL_8 ENTER  
 end  
 begin  
 prog = irexec  
 button = 9  
-config = tvtime-command CHANNEL\_9 ENTER  
+config = tvtime-command CHANNEL_9 ENTER  
 end  
 begin  
 prog = irexec  
 button = 0  
-config = tvtime-command CHANNEL\_0  
+config = tvtime-command CHANNEL_0  
 end  
 begin  
 prog = irexec  
@@ -204,4 +218,4 @@ button = ok
 config = tvtime-command ENTER  
 end  
 end tvtime  
-</code>
+```
