@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/rdoursenaud
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://raphael.doursenaud.fr
+  * I am rdoursenaud (https://keybase.io/rdoursenaud) on keybase.
+  * I have a public key ASCsNpaBh2xvtMNUop2jBO2Ga1LjKg_gOrMjHWHtfXoiGQo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120ac369681876c6fb4c354a29da304ed866b52e32a0fe03ab3231d61ed7d7a22190a",
+            "host": "keybase.io",
+            "kid": "0120ac369681876c6fb4c354a29da304ed866b52e32a0fe03ab3231d61ed7d7a22190a",
+            "uid": "f46c4bdadbf3888c22f0fe8713e3ab19",
+            "username": "rdoursenaud"
+        },
+        "service": {
+            "hostname": "raphael.doursenaud.fr",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.16"
+    },
+    "ctime": 1470175615,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1470175521,
+        "hash": "5e50e7149ab06e4fd289e08dc3d13cf1b0fe4a1f628c23c727f43361601c29f045d1172f5b3b1395f82d3d7c8a38a81d0abf2d43ac35c4610cb4546852bf3fac",
+        "seqno": 555173
+    },
+    "prev": "95a3a3475769a54a774add902f6aa9df186d289d1630109d97e88225dca1d25c",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgrDaWgYdsb7TDVKKdowTthmtS4yoP4DqzIx1h7X16IhkKp3BheWxvYWTFAv97ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYWMzNjk2ODE4NzZjNmZiNGMzNTRhMjlkYTMwNGVkODY2YjUyZTMyYTBmZTAzYWIzMjMxZDYxZWQ3ZDdhMjIxOTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYWMzNjk2ODE4NzZjNmZiNGMzNTRhMjlkYTMwNGVkODY2YjUyZTMyYTBmZTAzYWIzMjMxZDYxZWQ3ZDdhMjIxOTBhIiwidWlkIjoiZjQ2YzRiZGFkYmYzODg4YzIyZjBmZTg3MTNlM2FiMTkiLCJ1c2VybmFtZSI6InJkb3Vyc2VuYXVkIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJyYXBoYWVsLmRvdXJzZW5hdWQuZnIiLCJwcm90b2NvbCI6Imh0dHA6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjE2In0sImN0aW1lIjoxNDcwMTc1NjE1LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0NzAxNzU1MjEsImhhc2giOiI1ZTUwZTcxNDlhYjA2ZTRmZDI4OWUwOGRjM2QxM2NmMWIwZmU0YTFmNjI4YzIzYzcyN2Y0MzM2MTYwMWMyOWYwNDVkMTE3MmY1YjNiMTM5NWY4MmQzZDdjOGEzOGE4MWQwYWJmMmQ0M2FjMzVjNDYxMGNiNDU0Njg1MmJmM2ZhYyIsInNlcW5vIjo1NTUxNzN9LCJwcmV2IjoiOTVhM2EzNDc1NzY5YTU0YTc3NGFkZDkwMmY2YWE5ZGYxODZkMjg5ZDE2MzAxMDlkOTdlODgyMjVkY2ExZDI1YyIsInNlcW5vIjo4LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQPIyQ2xJm2amzVkkbeUGHe1HTzamy6eAuCvNd6VHWgWWuUMmkdzaVlDB51uSuWmUSUoM3E62NGmAMnamV82hAQGoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCACHpWbKnJckvSazi14HpuPTYeesRGb6xJhuHTOXAiwjqN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/rdoursenaud
+
+==================================================================
+

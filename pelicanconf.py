@@ -9,7 +9,12 @@ SITEDESC = 'Raphaël Doursenaud\'s Web Space'
 SITEURL = ''
 
 PATH = 'content'
-STATIC_PATHS = ['images', 'files']
+STATIC_PATHS = ['images', 'files', 'extra']
+ARTICLE_EXCLUDES = STATIC_PATHS
+EXTRA_PATH_METADATA = {
+    'extra/keybase.txt': {'path': 'keybase.txt'},
+    'extra/google4801127235adabeb.html': {'path': 'google4801127235adabeb.html'}
+}
 
 TIMEZONE = 'Europe/Paris'
 
