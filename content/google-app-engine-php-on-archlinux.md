@@ -1,6 +1,6 @@
 Title: Google App Engine PHP Development with PhpStorm on Arch Linux
 Date: 2017-07-26 17:30
-Category: Blog
+Category: Informatique
 Tags: GNU/Linux, Arch Linux, Google, Google Cloud, Google Cloud Platform, Google App Engine, PHP, JetBrains, PhpStorm
 Slug:  gae-dev-phpstorm-archlinux
 Status: published

@@ -1,6 +1,6 @@
 Title: Redesigned JDM programmer board 
 Date: 2004-05-12 12:00
-Category: Blog
+Category: Électronique
 Tags: Hardware, Midibox
 Slug: redesigned-jdm-programmer-board
 Status: published

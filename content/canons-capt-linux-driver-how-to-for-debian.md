@@ -1,6 +1,6 @@
 Title:  Canon's CAPT linux driver how-to for Debian
 Date: 2005-09-17 12:00
-Category: Blog
+Category: Informatique
 Tags: GNU/Linux, Debian, Printer, Canon, CAPT
 Slug: canon-capt-linux-driver-how-to-for-debian
 Status: published

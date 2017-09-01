@@ -1,6 +1,6 @@
 Title: Agostini lilypond drums notation
 Date: 2011-07-21 07:31
-Category: Blog
+Category: Musique
 Tags: Drums, Agostini, Lilypond
 Slug: agostini-lilypond-drums-notation
 Status: published

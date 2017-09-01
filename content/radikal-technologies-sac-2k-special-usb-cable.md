@@ -1,6 +1,6 @@
 Title: Radikal Technologies SAC-2K special USB cable
 Date: 2010-09-15 19:41
-Category: Blog
+Category: Informatique
 Tags: Hardware, USB, Radikal Technologies, SAC-2K
 Slug: radikal-technologies-sac-2k-special-usb-cable
 Status: published

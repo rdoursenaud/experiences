@@ -1,7 +1,7 @@
 Title: Roland UA-22 DUO-CAPTURE EX
 Date: 2015-03-12 03:49
-Category: Blog
-Tags: Hardware, Teardowns, Roland, UA-22, ALSA, Audio, DUO-CAPTURE EX, GNU/Linux, MIDI, USB
+Category: Informatique
+Tags: Hardware, Teardown, Roland, UA-22, ALSA, Audio, DUO-CAPTURE EX, GNU/Linux, MIDI, USB
 Slug: roland-ua-22-duo-capture-ex
 Status: published
 

@@ -1,6 +1,6 @@
 Title: Hey Dude Where's my Oil
 Date: 2005-09-17 12:00
-Category: Blog
+Category: Musique
 Tags: Drums, Audio
 Slug: hey-dude-wheres-my-oil
 Status: published

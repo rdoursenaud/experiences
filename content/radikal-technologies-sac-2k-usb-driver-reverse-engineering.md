@@ -1,6 +1,6 @@
 Title: Radikal Technologies SAC-2K USB driver reverse engineering
 Date: 2010-10-13 12:29
-Category: Blog
+Category: Informatique
 Tags: Hardware, Reverse Engineering, GNU/Linux, MIDI, qemu, Radikal Technologies, SAC-2K, SysEx, USB, usbmon, wireshark
 Slug: radikal-technologies-sac-2k-usb-driver-reverse-engineering
 Status: published

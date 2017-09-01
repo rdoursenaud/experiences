@@ -1,6 +1,6 @@
 Title: Redesigned Core module board
 Date: 2004-05-12 12:00
-Category: Blog
+Category: Électronique
 Tags: Hardware, Midibox
 Slug: redesigned-core-module-board
 Status: published

@@ -1,6 +1,6 @@
 Title: Fedora Core 3 kernel rpms with VT6410 generic support
 Date: 2005-09-17 12:00
-Category: Blog
+Category: Informatique
 Tags: GNU/Linux, Fedora Core, Kernel
 Slug: fedora-core-3-kernel-rpms-with-vt6410-generic-support
 Status: published

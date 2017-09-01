@@ -1,6 +1,6 @@
 Title: Soundcraft Si Compact 16 teardown
 Date: 2015-05-17 17:52
-Category: Blog
+Category: Teardown
 Tags: Hardware, Audio, Teardown, Soundcraft, Si Compact 16
 Slug: soundcraft-si-compact-16-teardown
 Status: published

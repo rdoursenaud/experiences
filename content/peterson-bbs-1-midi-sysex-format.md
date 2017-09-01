@@ -1,6 +1,6 @@
 Title: Peterson BBS-1 MIDI SysEx format
 Date: 2012-08-24 18:57
-Category: Blog
+Category: Informatique
 Tags: Hardware, Reverse Engineering, Midi, Peterson, BBS-1
 Slug: peterson-bbs-1-midi-sysex-format
 Status: published
