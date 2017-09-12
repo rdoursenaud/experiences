@@ -1,5 +1,6 @@
 Title: Lenovo ThinkPad P51
 Date: 2017-08-31 12:15
+Modified: 2017-09-12 12:45
 Category: Informatique
 Slug: lenovo-thinkpad-p51
 Tags: Hardware, Lenovo, ThinkPad, P51, GNU/Linux, Arch Linux
@@ -75,6 +76,8 @@ thinkpad_acpi: please report the conditions when this event happened to ibm-acpi
 
 
 #### GPUs
+
+Display management scripts and configuration repository available on [GitHub](https://github.com/rdoursenaud/lenovo-p51-display-management)
 
 ##### Optimus / Prime
 
@@ -158,6 +161,11 @@ levels:
   - [7, 85, 32767]
 ```
 
+###### FIXME
+Virtual hwmon path can change upon reboot and prevent thinkfan from starting.
+The order is determined by the modules loading order.
+Workaround seem to be to load modules manually in a deterministic order.
+
 ### Install
 
 #### Partitions
@@ -185,3 +193,61 @@ toplevel
           +-- YYYY-MM-DDThh:mm:ss+02:00 (`date -Iseconds`) snapshot directory
           +-- …
 ```
+
+### Firmware bugs?
+
+TODO: report to Lenovo support.
+
+#### Workstation dock long USB detection
+
+Using the workstation dock, boot time is painfully slow as the EFI scans USB peripherals.  
+Unfortunately, removing USB devices from the dock doesn't improve performance.
+
+
+#### Disk lock and fingerprint
+
+When using the fingerprint scanner on boot with disk lock enabled, the first disk sometimes does not unlock.
+
+
+### Benchmarks
+
+#### Geekbench
+
+##### CPU
+
+[Linux](http://browser.geekbench.com/v4/cpu/3884202)  
+[Microsoft Windows 10](http://browser.geekbench.com/v4/cpu/3280047)
+
+##### GPU compute
+
+[Linux nVidia Quadro M2200 OpenCL](http://browser.geekbench.com/v4/compute/1074183)  
+[Microsoft Windows 10 Intel HD Graphics P630](http://browser.geekbench.com/v4/compute/882924)  
+[Microsoft Windows 10 nVidia Quadro M2200](http://browser.geekbench.com/v4/compute/882920)
+
+#### Luxmark
+
+[CPU+GPU](http://www.luxmark.info/node/4625)  
+[GPU](http://luxmark.info/node/4624)
+
+#### gtkperf
+
+Launched from CLI  
+Fullscreen window 1920x1080  
+5 consecutive runs  
+
+##### Intel modesetting
+3.62-3.74
+
+##### Intel
+2.72-2.80
+
+##### nVidia
+
+###### Single laptop screen
+2.70-2.74
+
+###### 4 screens setup with Workstation Dock
+screen 1 (DP-1): 4.11-4.67  
+screen 2 (DP-2 rotated 90° right): 4.80-5.41  
+screen 3 (DP-3):  4.91-5.69  
+screen 4 (eDP-1-1): 4.52-5.27  
