@@ -1,6 +1,6 @@
 Title: Lenovo ThinkPad P51
 Date: 2017-08-31 12:15
-Modified: 2017-09-12 12:45
+Modified: 2017-10-19 00:40
 Category: Informatique
 Slug: lenovo-thinkpad-p51
 Tags: Hardware, Lenovo, ThinkPad, P51, GNU/Linux, Arch Linux
