@@ -47,8 +47,8 @@ DEFAULT_PAGINATION = 10
 # RELATIVE_URLS = True
 
 # Plugins
-PLUGIN_PATHS = ['../pelican-plugins']
-PLUGINS = ['assets', 'gravatar', 'pandoc_reader', 'sitemap']
+PLUGIN_PATHS = ['../pelican-plugins', '../pelican-materialize']
+PLUGINS = ['assets', 'gravatar', 'materialize', 'pandoc_reader', 'sitemap']
 
 # Pandoc options
 PANDOC_ARGS = []
