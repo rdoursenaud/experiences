@@ -1,6 +1,6 @@
 Title: Lenovo ThinkPad P51
 Date: 2017-08-31 12:15
-Modified: 2017-11-18 11:00
+Modified: 2018-01-03 21:00
 Category: Informatique
 Slug: lenovo-thinkpad-p51
 Tags: Hardware, Lenovo, ThinkPad, P51, GNU/Linux, Arch Linux
@@ -43,7 +43,7 @@ thinkpad_acpi: please report the conditions when this event happened to ibm-acpi
 | Backlight control                         |                                                                                                                                                                                                                     |                                                                                                                                            | Working                     | N.A.          |
 | GPU (Intel)                               | Intel HD Graphics P630 (CPU integrated)                                                                                                                                                                             | 350 MHz / 1.10 GHz 1.7 GB DirectX 12 OpenGL 4.4 OpenCL 2.0                                                                                 | Working                     | i915          |
 | GPU (nVidia)                              | GM206GLM [Quadro M2200 Mobile]                                                                                                                                                                                      | 1024 CUDA cores 4 GB GDDR5 128-bit 55W OpenGL 4.5 DirectX 12 (Hardware Feature Level 12_1) Shader Model 5.0 DisplayPort 1.2 FP32 precision | Working                     | nvidia        |
-| HDMI                                      |                                                                                                                                                                                                                     | 1.4b                                                                                                                                       | Partial (No audio)          | N.A.          |
+| HDMI                                      |                                                                                                                                                                                                                     | 1.4b                                                                                                                                       | Working                     | nvhda (audio) |
 | Mini DisplayPort                          |                                                                                                                                                                                                                     | 1.2a                                                                                                                                       | TBD                         | N.A.          |
 | Thunderbolt 3 / USB 3.1                   |                                                                                                                                                                                                                     |                                                                                                                                            | TBD (USB device charging OK)       | ?             |
 | LAN                                       | Intel I219-LM                                                                                                                                                                                                       | 1 Gbs                                                                                                                                      | Working                     | e1000e        |
@@ -103,6 +103,10 @@ options i915 enable_rc6=4
 options i915 enable_dc=2
 options i915 enable_fbc=1
 ```
+
+##### HDMI audio
+
+Build, install and enable the nvhda module from https://bugs.freedesktop.org/show_bug.cgi?id=75985
 
 #### Touchscreen
 
