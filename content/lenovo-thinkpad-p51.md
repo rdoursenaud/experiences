@@ -106,7 +106,7 @@ options i915 enable_fbc=1
 
 ##### HDMI audio
 
-Build, install and enable the nvhda module from https://bugs.freedesktop.org/show_bug.cgi?id=75985
+Build, install and enable the nvhda module from [this bug report](https://bugs.freedesktop.org/show_bug.cgi?id=75985#c27)
 
 #### Touchscreen
 
