@@ -61,8 +61,8 @@ SITEMAP = {'format': 'xml'}
 PRIMARY_COLOR = 'Blue Grey'
 ACCENT_COLOR = 'Indigo'
 GOOGLE_PLUS_COMMENTS = True
-USER_LOGO_URL = SITEURL + '/images/logo.png'
-USER_AVATAR_URL = SITEURL + '/images/avatar.png'
+USER_LOGO_URL = SITEURL + '/images/logo.webp'
+USER_AVATAR_URL = SITEURL + '/images/avatar.webp'
 
 # Theme
 THEME = "../materialistic-pelican/"
