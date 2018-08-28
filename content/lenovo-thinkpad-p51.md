@@ -1,6 +1,6 @@
 Title: Lenovo ThinkPad P51
 Date: 2017-08-31 12:15
-Modified: 2018-06-18 16:00
+Modified: 2018-08-28 17:00
 Category: Informatique
 Slug: lenovo-thinkpad-p51
 Tags: Hardware, Lenovo, ThinkPad, P51, GNU/Linux, Arch Linux
@@ -123,6 +123,10 @@ xinput map-to-output Wacom\ Co.,Ltd.\ Pen\ and\ multitouch\ sensor\ Pen\ eraser 
 #### Dock
 
 Sound I/O not working.
+
+Update 2018-08-28:
+Sound I/O is now working in Arch Linux.
+Don't know which update brought support though…
 
 #### Fans
 
