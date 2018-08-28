@@ -1,6 +1,6 @@
 Title: Lenovo ThinkPad P51
 Date: 2017-08-31 12:15
-Modified: 2018-01-03 21:00
+Modified: 2018-06-18 16:00
 Category: Informatique
 Slug: lenovo-thinkpad-p51
 Tags: Hardware, Lenovo, ThinkPad, P51, GNU/Linux, Arch Linux
@@ -15,10 +15,7 @@ Status: published
 - [Contribute DMI IDs](http://www.thinkwiki.org/wiki/List_of_DMI_IDs#Adding_entries):
 
 ```
-|| LENOVO || 20HHCTO1WW || ThinkPad P51 || LENOVO || 20HHCTO1WW || SDK0J40697 WIN || LENOVO || None || LENOVO || N1UET34W (1.08 ) || 05/15/2017 
-|| <nowiki></nowiki>
-
-|| LENOVO || 20HHCTO1WW || ThinkPad P51 || LENOVO || 20HHCTO1WW || SDK0J40697 WIN || LENOVO || None || LENOVO || N1UET37W (1.11 ) || 07/24/2017 
+|| LENOVO || 20HHCTO1WW || ThinkPad P51 || LENOVO || 20HHCTO1WW || SDK0J40697 WIN || LENOVO || None || LENOVO || N1UET42W (1.16 ) || 11/27/2017 
 || <nowiki></nowiki>
 ```
 
