@@ -64,7 +64,7 @@ Curriculum Vitæ
                 </dt>
                 <dd>
                     <h4>
-                        <a href="https://www.credential.net/0189rifr
+                        <a href="https://www.credential.net/0189rifr"
                            target="_blank">Google Cloud Certified Professional Cloud Architect</a>
                     </h4>
                     <h4>
