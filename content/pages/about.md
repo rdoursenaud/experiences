@@ -1,16 +1,8 @@
 Title: About
-Date: 2009-08-09 10:04
+Date: 2018-12-17 17:00
 Author: admin
 Slug: about
 Status: published
-
-### Réalisation
-
-[![EMA
-Tech.](/images/ematech.png "EMA Tech.")](http://ematech.github.io)  
-26B avenue Pouguet  
-64000 PAU  
-France
 
 ### Éditeur
 
@@ -20,11 +12,7 @@ Raphaël Doursenaud
 
 ### Hébergement
 
-[![EMA
-Tech.](/images/ematech.png "EMA Tech.")](http://ematech.github.io)  
-26B avenue Pouguet  
-64000 PAU  
-France
+[Firebase Hosting](https://firebase.google.com/support/privacy/) (Google)
 
 ### Moteur du site
 
