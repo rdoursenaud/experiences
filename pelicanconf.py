@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'Raphaël Doursenaud'
+AUTHOR = 'Raphaël Doursenaud'
 AUTHOR_EMAIL = 'rdoursenaud@gmail.com'
 SITENAME = 'Experiences'
 SITEDESC = 'Raphaël Doursenaud\'s Web Space'
@@ -44,7 +44,7 @@ SOCIAL = (
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-# RELATIVE_URLS = True
+#RELATIVE_URLS = True
 
 # Plugins
 PLUGIN_PATHS = ['../pelican-plugins', '../pelican-materialize']
