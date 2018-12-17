@@ -66,3 +66,4 @@ USER_AVATAR_URL = SITEURL + '/images/avatar.webp'
 
 # Theme
 THEME = "../materialistic-pelican/"
+WEBASSETS = True
