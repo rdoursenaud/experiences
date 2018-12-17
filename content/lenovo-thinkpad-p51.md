@@ -15,7 +15,7 @@ Status: published
 - [Contribute DMI IDs](http://www.thinkwiki.org/wiki/List_of_DMI_IDs#Adding_entries):
 
 ```
-|| LENOVO || 20HHCTO1WW || ThinkPad P51 || LENOVO || 20HHCTO1WW || SDK0J40697 WIN || LENOVO || None || LENOVO || N1UET42W (1.16 ) || 11/27/2017 
+|| LENOVO || 20HHCTO1WW || ThinkPad P51 || LENOVO || 20HHCTO1WW || SDK0J40697 WIN || LENOVO || None || LENOVO || N1UET72W (1.46 ) || 10/04/2018 
 || <nowiki></nowiki>
 ```
 
