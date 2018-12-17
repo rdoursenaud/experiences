@@ -1,7 +1,7 @@
 Curriculum Vitæ
 ###############
 
-:date: 2009-08-09 10:39
+:date: 2018-12-17 16:05
 :author: admin
 :slug: cv
 :status: published
@@ -11,7 +11,7 @@ Curriculum Vitæ
     <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--7-col mdl-color--primary">
             <h1 class="mdl-color-text--white" style="text-align: center;">
-                Architecte Google Cloud Platform<br>
+                Architecte Google Cloud Platform Certifié<br>
                 Expert G Suite<br>
             </h1>
         </div>
@@ -60,12 +60,26 @@ Curriculum Vitæ
                     </p>
                 </dd>
                 <dt>
+                    2018
+                </dt>
+                <dd>
+                    <h4>
+                        <a href="https://www.credential.net/0189rifr
+                           target="_blank">Google Cloud Certified Professional Cloud Architect</a>
+                    </h4>
+                    <h4>
+                        Architecting with Google Cloud Platform Specialization (via <a
+                            href="https://www.coursera.org/account/accomplishments/specialization/9PXJQ6J5GX4G"
+                            target="_blank">Coursera</a>)<br>
+                    </h4>
+                </dd>
+                <dt>
                     2017
                 </dt>
                 <dd>
                     <h4>
                         Google Cloud Platform for Systems Operations Professionals Specialization (via <a
-                            href="https://www.coursera.org/account/accomplishments/specialization/certificate/59X26L8AVGK4"
+                            href="https://www.coursera.org/account/accomplishments/specialization//59X26L8AVGK4"
                             target="_blank">Coursera</a>)<br>
                     </h4>
                     <h4>
@@ -249,10 +263,10 @@ Curriculum Vitæ
                 </dt>
                 <dd>
                     <p>
-                        <em>Expert Certifi&eacute;</em> en D&eacute;ploiement Google Apps (Google Apps Certified
-                        Deployment Specialist)<br>
-                        <em>D&eacute;veloppeur</em> Google Cloud Platform (Google App Engine Python &amp; PHP, webapp2,
+                        <em>Architecte certifié et développeur</em> Google Cloud Platform (Google App Engine Python &amp; PHP, webapp2,
                         Google Apps Marketplace, Gadgets Gmail, APIs Google, OAuth2&hellip;)<br>
+                        <em>Expert Certifi&eacute;</em> en D&eacute;ploiement G Suite (Google Apps Certified
+                        Deployment Specialist)<br>
                         Participation active aux Logiciels Libres (Traductions, paquets, code, rapports de d&eacute;fauts,
                         communaut&eacute;&hellip;)<br>
                         Administration syst&egrave;mes et r&eacute;seaux (Debian, Shinken, Fusion-inventory, GLPI, NGINX&hellip;)<br>
@@ -382,5 +396,5 @@ Curriculum Vitæ
     </div>
 
     <p>
-        (M.A.J. le 11/08/2016)
+        (M.A.J. le 17/12/2018)
     </p>
