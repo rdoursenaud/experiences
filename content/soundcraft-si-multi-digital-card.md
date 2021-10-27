@@ -5,7 +5,7 @@ Tags: GNU/Linux, Hardware, Audio, Soundcraft, Si Multi Digital
 Slug: soundcraft-si-multi-digital-card
 Status: published
 
-[Photos](https://plus.google.com/photos/103261928464197839037/albums/6149870533468472513?authkey=CIKBr4W_q_KKngE)
+[Photos](https://goo.gl/photos/jMU3zhXQ7ojWFvGQ8)
 
 Once the firmware is flashed from a Windows or Mac OS machine, the
 device is seen as USB class compliant.  

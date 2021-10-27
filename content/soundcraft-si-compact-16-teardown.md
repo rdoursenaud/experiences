@@ -5,7 +5,7 @@ Tags: Hardware, Audio, Teardown, Soundcraft, Si Compact 16
 Slug: soundcraft-si-compact-16-teardown
 Status: published
 
-[Photos](https://plus.google.com/photos/103261928464197839037/albums/6149243278562531297?authkey=CImI_rHS29DQ0QE)
+[Photos](https://goo.gl/photos/Tq6DEgYVoqTKaKYu7)
 
 Taking it apart
 ---------------
@@ -74,4 +74,4 @@ DC 150 W
 
 ### Optional: MULTI DIGITAL I/O board
 
-[Photos](https://plus.google.com/photos/103261928464197839037/albums/6149870533468472513?authkey=CIKBr4W_q_KKngE)
+[Photos](https://goo.gl/photos/jMU3zhXQ7ojWFvGQ8)

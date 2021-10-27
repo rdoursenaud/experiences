@@ -37,4 +37,4 @@ Oh, and if you're an hardware freak like me, you'll love seeing what's
 in its guts.  
   
 [Here are the photos of the
-teardown.](https://plus.google.com/photos/103261928464197839037/albums/6125160886026017681)
+teardown.](https://photos.app.goo.gl/8cYJhVcB2Lp6Mvmc9)
