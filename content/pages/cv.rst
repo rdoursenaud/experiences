@@ -1,7 +1,7 @@
 Curriculum Vitæ
 ###############
 
-:date: 2018-12-17 16:05
+:date: 2021-10-27 07:50
 :author: admin
 :slug: cv
 :status: published
@@ -11,16 +11,17 @@ Curriculum Vitæ
     <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--7-col mdl-color--primary">
             <h1 class="mdl-color-text--white" style="text-align: center;">
-                Architecte Google Cloud Platform Certifié<br>
+                Architecte Google Cloud Platform<br>
+                &amp;<br>
                 Expert G Suite<br>
             </h1>
         </div>
 
         <div class="mdl-cell mdl-card mdl-shadow--2dp mdl-cell--5-col">
             <div class="mdl-card__title">
-                <h3 class="mdl-card__title-text" style="text-align: right;">
+                <h2 class="mdl-card__title-text" style="text-align: right;">
                     Rapha&euml;l Doursenaud<br>
-                </h3>
+                </h2>
                 </div>
                 <div class="mdl-card__supporting-text mdl-card--border">
                 <p style="text-align: right;">
@@ -36,138 +37,219 @@ Curriculum Vitæ
 
     <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
         <div class="mdl-tabs__tab-bar">
-            <a href="#formation" class="mdl-tabs__tab is-active">Formation</a>
-            <a href="#experiences" class="mdl-tabs__tab">Exp&eacute;riences professionnelles</a>
-            <a href="#competences" class="mdl-tabs__tab">Comp&eacute;tences</a>
+            <a href="#competences" class="mdl-tabs__tab is-active">Comp&eacute;tences</a>
             <a href="#langues" class="mdl-tabs__tab">Langues</a>
+            <a href="#experiences" class="mdl-tabs__tab">Exp&eacute;riences professionnelles</a>
             <a href="#loisirs" class="mdl-tabs__tab">Loisirs</a>
+            <a href="#formation" class="mdl-tabs__tab">Formation</a>
         </div>
 
-        <div class="mdl-tabs__panel is-active" id="formation">
+        <div class="mdl-tabs__panel is-active" id="competences">
             <dl>
                 <dt>
-                    Depuis toujours-Aujourd&#39;hui
+                    <h3>
+                        Informatique<br>
+                    </h3>
                 </dt>
                 <dd>
-                    <h4>
-                        Autodidacte<br>
-                    </h4>
                     <p>
-                        <em>Veille technologique</em>
+                        Participation active aux Logiciels Libres (Traductions, paquets, code, rapports de d&eacute;fauts,
+                        communaut&eacute;&hellip;)<br>
+
+                        Excellente connaissance des protocoles et technologies de l’Internet et du Web
+                        (IP v4 et v6, UDP, TCP, Noms de domaines, DNS, Messagerie, SMTP, MBOX, Navigateurs Google Chrome et Mozilla Firefox, HTTP, TLS, SSH, FTP&hellip;)<br>
+
+                        Maîtrise des systèmes de gestion de versions centralisés ou décentralisés
+                        (Git, Subversion&hellip;) et des plateformes de collaboration associées (GitHub, GitLab&hellip;)<br>
+
+                        Utilisation d’environnements de développement intégrés (JetBrains, Eclipse)<br>
+
+                        Bonne connaissance des plateformes mobiles Android et iOS (Android Studio, adb, XCode)<br>
+
+                        Sensibilité aux problématiques de sécurité dès la conception<em>
+
+                        Protocoles musique et spectacle (OSC, MIDI, DMX&hellip;)<br>
                     </p>
                     <p>
-                        Mises &agrave; jour de comp&eacute;tences
+                        Administration syst&egrave;mes et r&eacute;seaux (Debian, Vyatta, DHCP, DNS, NGINX)<br>
+                        Supervision et métrologie (Google Cloud Monitoring, Shinken, Fusion-inventory, GLPI&hellip;)
+
+                        Systèmes de gestion de bases de données, relationnelles ou non (Google Cloud SQL, PostgreSQL, MariaDB/MySQL, Google Cloud Datastore)<br>
+
+                        Conception, <em>programmation</em> (Python, PHP, C, C++&hellip;)<br>
+
+                        Documentation (Markdown, reST, Sphinx, Doxygen)<br>
+
+                        Définition et utilisation d’API et de web services (REST, SOAP)<br>
+
+                        Interfaces Homme-Machine (Web, Kivy, Qt, matériel standard ou sur mesure)<br>
+
+                        Tests unitaires, fonctionnels et de bout-en-bout<br>
+
+                        Automatisation à l’aide de <em>scripts</em> (Bash, PowerShell, Python&hellip;)<br>
+
+                        Virtualisation (Google Kubernetes Engine, Google Compute Engine, Oracle VirtualBox, Qemu, Proxmox, Docker)<br>
+
+                        Intégration continue (GitLab)<br>
                     </p>
-                </dd>
-                <dt>
-                    2018
-                </dt>
-                <dd>
-                    <h4>
-                        <a href="https://www.credential.net/0189rifr"
-                           target="_blank">Google Cloud Certified Professional Cloud Architect</a>
-                    </h4>
-                    <h4>
-                        Architecting with Google Cloud Platform Specialization (via <a
-                            href="https://www.coursera.org/account/accomplishments/specialization/9PXJQ6J5GX4G"
-                            target="_blank">Coursera</a>)<br>
-                    </h4>
-                </dd>
-                <dt>
-                    2017
-                </dt>
-                <dd>
-                    <h4>
-                        Google Cloud Platform for Systems Operations Professionals Specialization (via <a
-                            href="https://www.coursera.org/account/accomplishments/specialization//59X26L8AVGK4"
-                            target="_blank">Coursera</a>)<br>
-                    </h4>
-                    <h4>
-                        G Suite Administrator Fundamentals<br>
-                    </h4>
-                </dd>
-                <dt>
-                    2015
-                </dt>
-                <dd>
-                    <h4>
-                        Google Apps Certified Deployment Specialist (Renouvellement ID #2561)<br>
-                    </h4>
-                    <h4>
-                        Google Apps for Work Credentials (Marketing, sales)<br>
-                    </h4>
-                    <h4>
-                        Hurricane Electric <a
-                            href="https://ipv6.he.net/certification/scoresheet.php?pass_name=gpcsolutions">IPv6
-                        Certification</a> (Niveau Sage)<br>
-                    </h4>
-                </dd>
-                <dt>
-                    2014
-                </dt>
-                <dd>
-                    <h4>
-                        Google Apps Certified Deployment Specialist (ID #1756)<br>
-                    </h4>
-                    <h4>
-                        Google Web Academy Online Basics<br>
-                    </h4>
-                    <h4>
-                        Google Web Academy Online Professionals<br>
-                    </h4>
-                </dd>
-                <dt>
-                    2007
-                </dt>
-                <dd>
-                    <h4>
-                        Stages conventionn&eacute;s Amada<br>
-                    </h4>
                     <p>
-                        <em>Solutions de CAO et FAO poin&ccedil;onnage/pliage</em> : Solidworks/Sheetworks et
-                        Punch5/BendCAM
+                        Conception, dimensionnement, assemblage, installation, paramétrage et exploitation de machines
+                        de bureau ou serveurs sous tout syst&egrave;me d&#39;exploitation
+                        (GNU/Linux, Google Chromebook, Microsoft Windows, *BSD, Apple MacOS)<br>
+
+                        Maintenance pr&eacute;ventive et curative
+                    </p>
+                    <p>
+                        <em>Architecte certifié et développeur</em> Google Cloud Platform (Google App Engine Python &amp; PHP, webapp2,
+                        Google Apps Marketplace, Gadgets Gmail, APIs Google, OAuth2&hellip;)
+                    </p>
+                    <p>
+                        <em>Expert Certifi&eacute;</em> en D&eacute;ploiement G Suite (Google Apps Certified
+                        Deployment Specialist)<br>
+
+                        Gmail, Google Agenda, Google Drive, Console d’administration&hellip;<em><br>
+
+                        Déploiement, migration (IMAP/Microsoft Exchange/Outlook) et intégration
                     </p>
                 </dd>
                 <dt>
-                    2003-2004
+                    <h3>
+                        &Eacute;lectronique et informatique embarquée<br>
+                    </h3>
                 </dt>
                 <dd>
-                    <h4>
-                        Licence Professionnelle<br>
-                    </h4>
                     <p>
-                        Syst&egrave;mes Informatiques et Logiciels option Communication Multim&eacute;dia
+                        Protoypage, modification, réparation et maintenance<br>
+
+                        À l’aise avec la <em>logique numérique</em> et l’électronique associée<br>
+
+                        Dessin de schémas et circuits imprimés (KiCad, Eagle)<br>
+
+                        Utilisation des instruments de laboratoire (Multimètres, oscilloscope, générateurs, analyseur logique)<br>
+
+                        Exp&eacute;rience sur micro-contr&ocirc;leurs et syst&egrave;mes embarqu&eacute;s (<a
+                            href="https://micropython.org" target="_blank">MicroPython</a>, CircuitPython, Arduino, ARM, PIC&hellip;)<br>
+
+                        Débogage JTAG et programmation en circuit (Sondes Segger J-Link, ST-Link, PICkit)<br>
+
+                        Bonne connaissance des protocoles d’interconnexion courants (UART, I2C, SPI)<br>
+
+                        Excellente connaissance du protocole MIDI v.1,
+                        de ses extensions (MTC, MMC, SysEx&hellip;)
+                        et de ses différents transports (UART, USB, IEEE1394, BLE, RTP)<br>
+
+                        Très bonnes connaissances des protocoles réseau (Ethernet, WiFi, Bluetooth)<br>
+
+                        Bonnes notions sur les protocoles audio et vidéo numériques (I2S, S/PDIF, AES/EBU, DVI, HDMI, DisplayPort)<br>
+
+                        Notions de développement sur FPGA avec HPS sur Intel/Altera Cyclone V (Intel Quartus Prime, VHDL)
                     </p>
                 </dd>
                 <dt>
-                    2001-2003
+                    <h3>
+                        Audiovisuel
+                    </h3>
                 </dt>
                 <dd>
-                    <h4>
-                        Brevet de Technicien Sup&eacute;rieur<br>
-                    </h4>
                     <p>
-                        Audiovisuel option Son <em>en alternance (Voir <a href="#experiences">exp&eacute;riences
-                        professionnelles</a>)</em>
+                        <em>Connaissance approfondie</em> des technologies et formats num&eacute;riques et
+                        analogiques<br>
+
+                        Notions d’acoustique (Mesures, traitements)<br>
+
+                        <em>Prise de son</em> (Musique, voix, ambiances)<br>
+
+                        <em>Post-production</em> sonore (Montage, mixage, P.A.D.)<br>
+
+                        Maîtrise des stations de travail audionumériques (Studio One, Nuendo, Cubase)<br>
+
+                        <em>Sonorisation musicale</em> et &eacute;v&eacute;nementielle<br>
+
+                        Int&eacute;gration technique<br>
+
+                        Notions de production et mastering technique (SDRM, ISRC)<br>
+
+                        Authoring DVD<br>
                     </p>
                 </dd>
                 <dt>
-                    1999-2001
+                    <h3>
+                        Multim&eacute;dia
+                    </h3>
                 </dt>
                 <dd>
-                    <h4>
-                        Baccalaur&eacute;at<br>
-                    </h4>
                     <p>
-                        Sciences et Technologies Industrielles g&eacute;nie &Eacute;lectronique (Mention <em>Bien</em>)
+                        <em>Direction</em> d&#39;&eacute;quipes de d&eacute;veloppement<br>
+
+                        D&eacute;veloppement <em>web</em> (HTML, CSS, Javascript, PHP, Python, Django&hellip;)<br>
+
+                        Dessin vectoriel et traitement d&#39;image (Inkscape, GIMP, Krita&hellip;)<br>
+
+                        P.A.O. et pr&eacute;presse CMJN (Scribus, PDF-X3&hellip;)<br>
+
+                        Notions de mod&eacute;lisation 3D et imagerie num&eacute;rique (Blender)
+                    </p>
+                </dd>
+                <dt>
+                    <h3>
+                        T&ocirc;lerie
+                    </h3>
+                </dt>
+                <dd>
+                    <p>
+                        <em>&Eacute;tudes/Conception/FAO</em> (Solidworks, Sheetworks, Punch5, Bendcam&hellip;)<br>
+
+                        <em>Exploitation/R&eacute;glage</em> sur poin&ccedil;onneuse Amada Europe 255
+                        et plieuse Amada HFP 100-3
                     </p>
                 </dd>
             </dl>
         </div>
+
+        <div class="mdl-tabs__panel" id="langues">
+            <dl>
+                <dt>
+                    <h3>
+                        Anglais
+                    </h3>
+                </dt>
+                <dd>
+                    Lu, &eacute;crit, parl&eacute;
+                </dd>
+                <dt>
+                    <h3>
+                        Espagnol
+                    </h3>
+                </dt>
+                <dd>
+                    Bonnes bases (Compréhension orale et écrite)
+                </dd>
+                <dt>
+                    <h3>
+                        Japonais
+                    </h3>
+                </dt>
+                <dd>
+                    Notions basiques
+                </dd>
+            </dl>
+        </div>
+
         <div class="mdl-tabs__panel" id="experiences">
             <dl>
                 <dt>
-                    2010-Aujourd&#39;hui
+                    <h3>2019-Aujourd&#39;hui</h3>
+                </dt>
+                <dd>
+                    <h4>
+                        Architecte Cloud<br>
+                    </h4>
+                    <p>
+                        <a href="https://wearedevx.com">DevX</a> (Pau, 64)
+                    </p>
+                </dd>
+                <dt>
+                    <h3>2010-Aujourd&#39;hui</h3>
                 </dt>
                 <dd>
                     <h4>
@@ -185,11 +267,11 @@ Curriculum Vitæ
                     </p>
                 </dd>
                 <dt>
-                    2007-2012
+                    <h3>2007-2012</h3>
                 </dt>
                 <dd>
                     <h4>
-                        Chef d&#39;entreprise<br>
+                        Chef d&#39;entreprise
                     </h4>
                     <p>
                         Fondateur de EMA Tech.<br>
@@ -197,204 +279,267 @@ Curriculum Vitæ
                     </p>
                 </dd>
                 <dt>
-                    2005-2007
+                    <h3>2005-2007</h3>
                 </dt>
                 <dd>
                     <h4>
-                        Technicien bureau d&#39;&eacute;tudes<br>
+                        Technicien bureau d&#39;&eacute;tudes
                     </h4>
                     <p>
-                        <a href="http://a-s-g.fr">Soci&eacute;t&eacute; A.S.G</a> (Pau/Puyo&ocirc; 64)<br>
+                        <a href="http://a-s-g.fr">Soci&eacute;t&eacute; A.S.G</a> (Pau/Puyo&ocirc;, 64)<br>
+
                         <em>Conception, fabrication</em> en t&ocirc;lerie fine, c&acirc;blage et r&eacute;alisations
                         audiovisuelles sur mesure<br>
+
                         <em>Conception et administration</em> du parc informatique et du r&eacute;seau industriel
                     </p>
                 </dd>
                 <dt>
-                    2004-2005
+                    <h3>2004-2005</h3>
                 </dt>
                 <dd>
                     <h4>
-                        Post-production audiovisuelle<br>
+                        Post-production audiovisuelle
                     </h4>
                     <p>
                         <em>Montage, mixage, post-synchronisation</em> Olympia 2005 du groupe <a
-                            href="http://www.nadau.com">NADAU</a> pour diffusions Radio (France Bleu), T&eacute;l&eacute;vision
-                        (France 3), CD et DVD<br>
-                        <em>Authoring</em> du DVD incluant menus et sous-titres
+                            href="http://www.nadau.com">NADAU</a> pour diffusions Radio (France Bleu),
+                        T&eacute;l&eacute;vision (France 3), CD et DVD<br>
+
+                        <em>Authoring</em> du DVD incluant menus et sous-titres en Béarnais et Français
                     </p>
                     <h4>
-                        Sonorisation<br>
+                        Sonorisation
                     </h4>
                     <p>
                         Diff&eacute;rentes formations locales (NADAU, concerts Emma&uuml;s, Yele Kabe, Treat, Sylphid,
-                        Smily &amp; D com danse &#8230;) et <em>Festival</em> de Barinque avec l&#39;association <a
+                        Smily &amp; D com danse &#8230;)
+                        et <em>Festival</em> de Barinque avec l&#39;association <a
                             href="http://basic.assso.fr">BASIC</a>
                     </p>
                     <h4>
-                        Technicien Audiovisuel<br>
+                        Technicien Audiovisuel
                     </h4>
                     <p>
-                        En int&eacute;rim avec Creyf&#39;s (PAU 64)<br>
-                        Pour le compte des soci&eacute;t&eacute;s TEXIS, Audiomaster et Even&#39;on
+                        En int&eacute;rim avec Creyf&#39;s (PAU, 64)
+                        pour le compte des soci&eacute;t&eacute;s TEXIS, Audiomaster et Even&#39;on
                     </p>
                 </dd>
                 <dt>
-                    2001-2003
+                    <h3>2001-2003</h3>
                 </dt>
                 <dd>
                     <h4>
-                        Technicien polyvalent Audiovisuel <em>en alternance</em><br>
+                        Technicien polyvalent Audiovisuel <em>en alternance</em>
                     </h4>
                     <p>
-                        Soci&eacute;t&eacute; TEXIS (PAU 64)<br>
+                        Soci&eacute;t&eacute; TEXIS (PAU, 64)<br>
+
                         Vente, conseil, installation et maintenance de mat&eacute;riels de sonorisation, d&#39;enregistrement
                         et d&#39;&eacute;clairage sc&eacute;nique
                     </p>
                 </dd>
             </dl>
         </div>
-        <div class="mdl-tabs__panel" id="competences">
-            <dl>
-                <dt>
-                    <h4>
-                        Informatique<br>
-                    </h4>
-                </dt>
-                <dd>
-                    <p>
-                        <em>Architecte certifié et développeur</em> Google Cloud Platform (Google App Engine Python &amp; PHP, webapp2,
-                        Google Apps Marketplace, Gadgets Gmail, APIs Google, OAuth2&hellip;)<br>
-                        <em>Expert Certifi&eacute;</em> en D&eacute;ploiement G Suite (Google Apps Certified
-                        Deployment Specialist)<br>
-                        Participation active aux Logiciels Libres (Traductions, paquets, code, rapports de d&eacute;fauts,
-                        communaut&eacute;&hellip;)<br>
-                        Administration syst&egrave;mes et r&eacute;seaux (Debian, Shinken, Fusion-inventory, GLPI, NGINX&hellip;)<br>
-                        Conception, <em>programmation</em> (Python, PHP, C, C++&hellip;)<br>
-                        Assemblage, installation,configuration et exploitation de machines sous tout syst&egrave;me d&#39;exploitation
-                        (GNU/Linux, *BSD, MacOS, Windows)<br>
-                        Maintenance pr&eacute;ventive et curative
-                    </p>
-                </dd>
-                <dt>
-                    <h4>
-                        Audiovisuel<br>
-                    </h4>
-                </dt>
-                <dd>
-                    <p>
-                        <em>Prise de son</em> et prise de vue<br>
-                        <em>Post-production</em> sonore (Montage, mixage, P.A.D.)<br>
-                        <em>Sonorisation musicale</em> et &eacute;v&eacute;nementielle<br>
-                        Authoring DVD<br>
-                        <em>Connaissance approfondie</em> des technologies et formats num&eacute;riques et
-                        analogiques<br>
-                        R&eacute;alisation de fiches techniques<br>
-                        Int&eacute;gration<br>
-                        Notions de production
-                    </p>
-                </dd>
-                <dt>
-                    <h4>
-                        Multim&eacute;dia<br>
-                    </h4>
-                </dt>
-                <dd>
-                    <p>
-                        <em>Direction</em> d&#39;&eacute;quipes de d&eacute;veloppement<br>
-                        D&eacute;veloppement <em>web</em> (HTML, CSS, Javascript, PHP, Python, Django&hellip;)<br>
-                        Dessin vectoriel et traitement d&#39;image (Inkscape, GIMP, Krita&hellip;)<br>
-                        P.A.O. et pr&eacute;presse CMJN (Scribus, PDF-X3&hellip;)<br>
-                        Notions de mod&eacute;lisation 3D et imagerie num&eacute;rique (Blender)
-                    </p>
-                </dd>
-                <dt>
-                    <h4>
-                        &Eacute;lectronique<br>
-                    </h4>
-                </dt>
-                <dd>
-                    <p>
-                        Conception, r&eacute;alisation et maintenance<br>
-                        Exp&eacute;rience sur micro-contr&ocirc;leurs et syst&egrave;mes embarqu&eacute;s (<a
-                            href="https://micropython.org" target="_blank">MicroPython</a>, PIC, ARM7&hellip;)
-                    </p>
-                </dd>
-                <dt>
-                    <h4>
-                        T&ocirc;lerie<br>
-                    </h4>
-                </dt>
-                <dd>
-                    <p>
-                        <em>&Eacute;tudes/Conception/FAO</em> (Solidworks, Sheetworks, Punch5, Bendcam&hellip;)<br>
-                        <em>Exploitation/R&eacute;glage</em> sur poin&ccedil;onneuse Amada Europe 255 et plieuse Amada
-                        HFP 100-3
-                    </p>
-                </dd>
-            </dl>
-        </div>
-        <div class="mdl-tabs__panel" id="langues">
-            <dl>
-                <dt>
-                    <h4>
-                        Anglais<br>
-                    </h4>
-                </dt>
-                <dd>
-                    Lu, &eacute;crit, parl&eacute;
-                </dd>
-                <dt>
-                    <h4>
-                        Espagnol<br>
-                    </h4>
-                </dt>
-                <dd>
-                    Notions
-                </dd>
-                <dt>
-                    <h4>
-                        Japonais<br>
-                    </h4>
-                </dt>
-                <dd>
-                    Notions de base, apprentissage (toujours) en cours
-                </dd>
-            </dl>
-        </div>
+
         <div class="mdl-tabs__panel" id="loisirs">
             <dl>
                 <dt>
-                    <h4>
-                        Musique<br>
-                    </h4>
+                    <h3>
+                        Musique
+                    </h3>
                 </dt>
                 <dd>
                     <p>
+                        <em>(Ex-)Batteur</em> des groupes&nbsp;:
+                        <ul>
+                            <li>Wait For It</li>
+                            <li>From Age</li>
+                            <li>TTS</li>
+                        </ul>
+
                         <em>Guitariste</em> (&Eacute;lectrique, acoustique et classique)<br>
-                        Tr&eacute;sorier de l&#39;association&nbsp;<a href="http://tts.rocks">TTS</a><br>
-                        <em>Ex-batteur</em> du groupe TTS<br>
-                        <em>Ex-batteur</em> du groupe From Age
+
+                        Co-fondateur et tr&eacute;sorier de l&#39;association&nbsp;TTS>
                     </p>
                 </dd>
                 <dt>
-                    <h4>
-                        Reverse engineering / Programmation / &Eacute;lectronique<br>
-                    </h4>
+                    <h3>
+                        Rétro-ingénierie / Programmation / &Eacute;lectronique
+                    </h3>
                 </dt>
                 <dd>
                     <p>
-                        Protocole HiQnet<br>
-                        Peterson BBS1<br>
+			            Contributeur, traducteur, auteur et mainteneur de Logiciels Libres (Voir GitHub)<br>
+
                         Maintenance de paquets pour Arch Linux sur l&#39;<a
                             href="https://aur.archlinux.org/packages/?SeB=m&amp;K=rdoursenaud">AUR</a><br>
-                        &hellip;
+                    </p>
+                    <p>
+                        <h4>Projets matériels</h4>
+
+                        <a href="https://github.com/EMATech/Network-Studio-Clock">Horloge réseau NTP et afficheur MIDI Time Code (MTC)</a>
+                        (Adafruit MatrixPortal, CircuitPython, WiFi, NTP, USB MIDI, MTC)
+                        [Prototypage]
+                    </p>
+                    <p>
+                        <h4>Projets logiciels avec rétro-ingénierie du matériel</h4>
+
+                        <h5>Contour ShuttleXPress</h5>
+                        <a href="https://github.com/EMATech/ContourShuttleXpress">Étude faisabilité d’un pilote USB HID alternatif <em>userland</em></a>
+                        (Python, hidapi, PySide6/Qt6)
+                        [Faisabilité validée, implémentation en cours]
+
+                        <h5>Pad batterie aux doigts et contrôleur DAW Presonus ATOM</h5>
+                        <a href="https://github.com/EMATech/AtomCtrl">Découverte et analyse du protocole propriétaire sur MIDI USB</a>
+                        (Python, Mido, LoopMIDI)
+                        [En cours]
+
+                        <h5>Pré-amplificateur home-cinéma Denon DN-500AV</h5>
+                        Télécommande tactile <a href="https://github.com/EMATech/DenonRemote">DenonRemote</a>
+                        (Python, Twisted, Kivy, Telnet, PyInstaller)
+
+                        <h5>Console numérique Soundcraft Si Compact</h5>
+                        <ul>
+                            <li><a href="https://github.com/EMATech/HiQontrol">Télécommande alternative à l’application iOS officielle</a> (Python, Twisted, Kivy) [Projet en sommeil cause achat iPad]</li>
+                            <li><a href="https://gitlab.com/wireshark/wireshark/-/wikis/HiQnet">Dissecteur Wireshark</a> pour le protocole Harman HiQnet (C) [Terminé]</li>
+                            <li><a href="https://github.com/EMATech/Soundcraft_Digital">Exploration faisabilité Pilote FFADO pour carte optionnelle Multidigital</a> [Abandonné cause revente de la carte]</li>
+                            <li><a href="https://github.com/EMATech/soundcraft-show-format">Format des fichiers de mémoire de scène</a> pour interprétation, génération ou modification indépendamment du système (Python) [Déterminé à 80%]</li>
+                        </ul>
+
+                        <h5>Métronome Peterson BBS1</h5>
+                        <a href="https://github.com/EMATech/BBS1">Découverte et intefaçage pour programmation</a>
+
+                        <h5>&hellip;</h5>
                     </p>
                 </dd>
             </dl>
         </div>
+
+        <div class="mdl-tabs__panel" id="formation">
+            <dl>
+                <dt>
+                    <h3>Depuis toujours-Aujourd&#39;hui</h3>
+                </dt>
+                <dd>
+                    <h4>
+                        Autodidacte
+                    </h4>
+                    <p>
+                        <em>Veille technologique</em>
+                    </p>
+                    <p>
+                        Mises &agrave; jour de comp&eacute;tences
+                    </p>
+                </dd>
+                <dt>
+                    <h3>2018</h3>
+                </dt>
+                <dd>
+                    <h4>
+                        <a href="https://www.credential.net/0189rifr"
+                           target="_blank">Google Cloud Certified Professional Cloud Architect</a>
+                    </h4>
+                    <h4>
+                        Architecting with Google Cloud Platform Specialization (via <a
+                            href="https://www.coursera.org/account/accomplishments/specialization/9PXJQ6J5GX4G"
+                            target="_blank">Coursera</a>)<br>
+                    </h4>
+                </dd>
+                <dt>
+               	    <h3>2017</h3>
+                </dt>
+                <dd>
+                    <h4>
+                        Google Cloud Platform for Systems Operations Professionals Specialization (via <a
+                            href="https://www.coursera.org/account/accomplishments/specialization//59X26L8AVGK4"
+                            target="_blank">Coursera</a>)
+                    </h4>
+                    <h4>
+                        G Suite Administrator Fundamentals<br>
+                    </h4>
+                </dd>
+                <dt>
+                    <h3>2015</h3>
+                </dt>
+                <dd>
+                    <h4>
+                        Google Apps Certified Deployment Specialist (Renouvellement ID #2561)
+                    </h4>
+                    <h4>
+                        Google Apps for Work Credentials (Marketing, sales)
+                    </h4>
+                    <h4>
+                        Hurricane Electric <a
+                            href="https://ipv6.he.net/certification/scoresheet.php?pass_name=gpcsolutions">IPv6
+                        Certification</a> (Niveau Sage)
+                    </h4>
+                </dd>
+                <dt>
+                    <h3>2014</h3>
+                </dt>
+                <dd>
+                    <h4>
+                        Google Apps Certified Deployment Specialist (ID #1756)
+                    </h4>
+                    <h4>
+                        Google Web Academy Online Basics
+                    </h4>
+                    <h4>
+                        Google Web Academy Online Professionals
+                    </h4>
+                </dd>
+                <dt>
+                    <h3>2007</h3>
+                </dt>
+                <dd>
+                    <h4>
+                        Stages conventionn&eacute;s Amada
+                    </h4>
+                    <p>
+                        <em>Solutions de CAO et FAO poin&ccedil;onnage/pliage</em> : Solidworks/Sheetworks et
+                        Punch5/BendCAM
+                    </p>
+                </dd>
+                <dt>
+                    <h3>2003-2004</h3>
+                </dt>
+                <dd>
+                    <h4>
+                        Licence Professionnelle (Niveau)
+                    </h4>
+                    <p>
+                        Syst&egrave;mes Informatiques et Logiciels option Communication Multim&eacute;dia
+                    </p>
+                </dd>
+                <dt>
+                    <h3>2001-2003</h3>
+                </dt>
+                <dd>
+                    <h4>
+                        Brevet de Technicien Sup&eacute;rieur
+                    </h4>
+                    <p>
+                        Audiovisuel option Son <em>en alternance (Voir <a href="#experiences">exp&eacute;riences
+                        professionnelles</a>)</em>
+                    </p>
+                </dd>
+                <dt>
+                    <h3>1999-2001</h3>
+                </dt>
+                <dd>
+                    <h4>
+                        Baccalaur&eacute;at
+                    </h4>
+                    <p>
+                        Sciences et Technologies Industrielles g&eacute;nie &Eacute;lectronique (Mention <em>Bien</em>)
+                    </p>
+                </dd>
+            </dl>
+        </div>
+
     </div>
 
     <p>
-        (M.A.J. le 17/12/2018)
+        (M.A.J. le 27/10/2021)
     </p>
