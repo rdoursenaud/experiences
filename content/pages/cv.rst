@@ -9,28 +9,30 @@ Curriculum Vitæ
 .. raw:: html
 
     <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--7-col mdl-color--primary">
+        <div class="mdl-cell mdl-cell--8-col mdl-color--primary">
             <h1 class="mdl-color-text--white" style="text-align: center;">
-                Architecte Google Cloud Platform<br>
+                Architecte<br>Google Cloud Platform<br>
                 &amp;<br>
-                Expert G Suite<br>
+                Expert<br>Google Workspace<br>
             </h1>
         </div>
 
-        <div class="mdl-cell mdl-card mdl-shadow--2dp mdl-cell--5-col">
+        <div class="mdl-cell mdl-card mdl-shadow--2dp mdl-cell--4-col">
             <div class="mdl-card__title">
-                <h2 class="mdl-card__title-text" style="text-align: right;">
+                <h2 class="mdl-card__title-text">
                     Rapha&euml;l Doursenaud<br>
                 </h2>
-                </div>
-                <div class="mdl-card__supporting-text mdl-card--border">
+            </div>
+            <div class="mdl-card__supporting-text mdl-card--border">
                 <p style="text-align: right;">
-                    26 B avenue Pouguet<br>
+                    26&nbsp;B avenue Pouguet<br>
                     64000 PAU<br>
                     FRANCE<br>
                     +33 (0)6 68 48 20 10<br>
                     raphael(chez)doursenaud(point)fr
                 </p>
+                <p>&nbsp;</p>
+                <p style="text-align:right;"><em>M.A.J. le 27/10/2021</em></p>
             </div>
         </div>
     </div>
@@ -59,22 +61,25 @@ Curriculum Vitæ
                         Excellente connaissance des protocoles et technologies de l’Internet et du Web
                         (IP v4 et v6, UDP, TCP, Noms de domaines, DNS, Messagerie, SMTP, MBOX, Navigateurs Google Chrome et Mozilla Firefox, HTTP, TLS, SSH, FTP&hellip;)<br>
 
-                        Maîtrise des systèmes de gestion de versions centralisés ou décentralisés
-                        (Git, Subversion&hellip;) et des plateformes de collaboration associées (GitHub, GitLab&hellip;)<br>
+                        Bonne connaissance des protocoles pour la musique et le spectacle (OSC, MIDI, DMX&hellip;)<br>
 
-                        Utilisation d’environnements de développement intégrés (JetBrains, Eclipse)<br>
+                        Maîtrise des systèmes de gestion de versions centralisés (CVS, Subversion) et décentralisés
+                        (Git, Mercurial&hellip;) et des plateformes de collaboration associées (GitHub, GitLab&hellip;)<br>
+
+                        Utilisation avancée d’environnements de développement intégrés [IDE] (JetBrains, Eclipse)<br>
 
                         Bonne connaissance des plateformes mobiles Android et iOS (Android Studio, adb, XCode)<br>
 
-                        Sensibilité aux problématiques de sécurité dès la conception<em>
+                        Intérêt prononcé pour l’accessibilité et la typographie<br>
 
-                        Protocoles musique et spectacle (OSC, MIDI, DMX&hellip;)<br>
+                        Sensibilité aux problématiques de sécurité dès la conception
                     </p>
                     <p>
-                        Administration syst&egrave;mes et r&eacute;seaux (Debian, Vyatta, DHCP, DNS, NGINX)<br>
-                        Supervision et métrologie (Google Cloud Monitoring, Shinken, Fusion-inventory, GLPI&hellip;)
+                        Administration syst&egrave;mes et r&eacute;seaux (Debian, Vyatta, DHCP, DNS, NGINX&hellip;)<br>
+                        Supervision et métrologie (Google Cloud Monitoring, Shinken, Fusion-inventory, GLPI&hellip;)<br>
 
-                        Systèmes de gestion de bases de données, relationnelles ou non (Google Cloud SQL, PostgreSQL, MariaDB/MySQL, Google Cloud Datastore)<br>
+                        Systèmes de gestion de bases de données,
+                        relationnelles ou non (Google Cloud SQL, PostgreSQL, MariaDB/MySQL, Google Cloud Datastore)<br>
 
                         Conception, <em>programmation</em> (Python, PHP, C, C++&hellip;)<br>
 
@@ -94,22 +99,23 @@ Curriculum Vitæ
                     </p>
                     <p>
                         Conception, dimensionnement, assemblage, installation, paramétrage et exploitation de machines
-                        de bureau ou serveurs sous tout syst&egrave;me d&#39;exploitation
+                        de bureau ou serveurs sous tout syst&egrave;me d'exploitation
                         (GNU/Linux, Google Chromebook, Microsoft Windows, *BSD, Apple MacOS)<br>
 
                         Maintenance pr&eacute;ventive et curative
                     </p>
                     <p>
-                        <em>Architecte certifié et développeur</em> Google Cloud Platform (Google App Engine Python &amp; PHP, webapp2,
-                        Google Apps Marketplace, Gadgets Gmail, APIs Google, OAuth2&hellip;)
+                        <em>Architecte certifié et développeur</em> Google Cloud Platform
+                        (Google App Engine Python &amp; PHP, webapp2, Google Workspace Marketplace, Gadgets Gmail, APIs Google, OAuth2&hellip;)
                     </p>
                     <p>
-                        <em>Expert Certifi&eacute;</em> en D&eacute;ploiement G Suite (Google Apps Certified
-                        Deployment Specialist)<br>
+                        <em>Expert Certifi&eacute;</em> en D&eacute;ploiement Google Workspace
+                        (Google Workspace Certified Deployment Specialist)<br>
 
-                        Gmail, Google Agenda, Google Drive, Console d’administration&hellip;<em><br>
+                        Connaissance approfondie des outils et possibilités de Google Workspace
+                        (Gmail, Google Agenda, Google Drive, Console d’administration&hellip;)<br>
 
-                        Déploiement, migration (IMAP/Microsoft Exchange/Outlook) et intégration
+                        Déploiement, migration (IMAP/Microsoft Exchange/Outlook) et intégration (Active Directory/LDAP) de Google Workspace
                     </p>
                 </dd>
                 <dt>
@@ -126,23 +132,26 @@ Curriculum Vitæ
                         Dessin de schémas et circuits imprimés (KiCad, Eagle)<br>
 
                         Utilisation des instruments de laboratoire (Multimètres, oscilloscope, générateurs, analyseur logique)<br>
-
-                        Exp&eacute;rience sur micro-contr&ocirc;leurs et syst&egrave;mes embarqu&eacute;s (<a
-                            href="https://micropython.org" target="_blank">MicroPython</a>, CircuitPython, Arduino, ARM, PIC&hellip;)<br>
+                    </p>
+                    <p>
+                        Exp&eacute;rience sur micro-contr&ocirc;leurs et syst&egrave;mes embarqu&eacute;s
+                        (<a href="https://micropython.org" target="_blank">MicroPython</a>, CircuitPython, Arduino, ARM, PIC&hellip;)<br>
 
                         Débogage JTAG et programmation en circuit (Sondes Segger J-Link, ST-Link, PICkit)<br>
 
                         Bonne connaissance des protocoles d’interconnexion courants (UART, I2C, SPI)<br>
 
-                        Excellente connaissance du protocole MIDI v.1,
+                        Excellente connaissance du protocole MIDI v1.0,
                         de ses extensions (MTC, MMC, SysEx&hellip;)
                         et de ses différents transports (UART, USB, IEEE1394, BLE, RTP)<br>
 
                         Très bonnes connaissances des protocoles réseau (Ethernet, WiFi, Bluetooth)<br>
 
-                        Bonnes notions sur les protocoles audio et vidéo numériques (I2S, S/PDIF, AES/EBU, DVI, HDMI, DisplayPort)<br>
+                        Bonnes notions sur les protocoles audio et vidéo numériques
+                        (I2S, S/PDIF, AES/EBU, DVI, HDMI, DisplayPort)<br>
 
-                        Notions de développement sur FPGA avec HPS sur Intel/Altera Cyclone V (Intel Quartus Prime, VHDL)
+                        Notions de développement sur FPGA avec HPS sur Intel/Altera Cyclone V
+                        (Intel Quartus Prime, VHDL)
                     </p>
                 </dd>
                 <dt>
@@ -152,8 +161,8 @@ Curriculum Vitæ
                 </dt>
                 <dd>
                     <p>
-                        <em>Connaissance approfondie</em> des technologies et formats num&eacute;riques et
-                        analogiques<br>
+                        <em>Connaissance approfondie</em>
+                        des technologies et formats num&eacute;riques et analogiques<br>
 
                         Notions d’acoustique (Mesures, traitements)<br>
 
@@ -214,7 +223,8 @@ Curriculum Vitæ
                     </h3>
                 </dt>
                 <dd>
-                    Lu, &eacute;crit, parl&eacute;
+                    <strong>Lu, &eacute;crit, parl&eacute;</strong><br>
+                    Maitrise du <em>jargon technique</em>
                 </dd>
                 <dt>
                     <h3>
@@ -222,7 +232,8 @@ Curriculum Vitæ
                     </h3>
                 </dt>
                 <dd>
-                    Bonnes bases (Compréhension orale et écrite)
+                    Bonnes bases<br>
+                    Compréhension orale et écrite
                 </dd>
                 <dt>
                     <h3>
@@ -256,14 +267,17 @@ Curriculum Vitæ
                         Chef d&#39;entreprise<br>
                     </h4>
                     <p>
-                        Associ&eacute; fondateur et directeur technique de <a href="http://gpcsolutions.fr">GPC.solutions</a><br>
+                        <a href="http://gpcsolutions.fr">GPC.solutions</a> (Pau, 64)&nbsp;:
+                        associ&eacute; fondateur et directeur technique<br>
                         Travail en mobilit&eacute; pour les entreprises.
                     </p>
                     <p>
-                        Revendeur int&eacute;grateur G Suite.
+                        Revendeur int&eacute;grateur Google Workspace
+                        (Autrefois G Suite ou encore Google App à ses débuts).<br>
+                        Expertise&nbsp;Google Could Platform et APIs Google.
                     </p>
                     <p>
-                        Expertise&nbsp;Google Could Platform et APIs Google.
+                        Commercialisation en mode <em>Cloud</em> de l’ERP libre <em>Dolibarr</em>
                     </p>
                 </dd>
                 <dt>
@@ -274,8 +288,20 @@ Curriculum Vitæ
                         Chef d&#39;entreprise
                     </h4>
                     <p>
-                        Fondateur de EMA Tech.<br>
+                        EMA Tech. (Pau, 64)&nbsp;: fondateur<br>
                         &Eacute;v&eacute;nement, Multim&eacute;dia, Audiovisuel et Technologies
+                    </p>
+                    <p>
+                        Production musicale, enregistrement et sonorisation<br>
+                        Conception et prototypage de machines informatiques dédiées aux métiers du son et du spectacle&nbsp;:
+                    </p>
+                        <ul>
+                            <li><strong>STAN</strong>&nbsp;: Station de travail audionumérique</li>
+                            <li><strong>LEA</strong>&nbsp;: Lecteur d’échantillons autonome</li>
+                            <li><strong>DD</strong>&nbsp;: Duplicateur de disques</li>
+                        </ul>
+                    <p>
+                        Création de sites web et maintenance informatique
                     </p>
                 </dd>
                 <dt>
@@ -306,22 +332,23 @@ Curriculum Vitæ
                             href="http://www.nadau.com">NADAU</a> pour diffusions Radio (France Bleu),
                         T&eacute;l&eacute;vision (France 3), CD et DVD<br>
 
-                        <em>Authoring</em> du DVD incluant menus et sous-titres en Béarnais et Français
+                        <em>Authoring</em> du DVD incluant création des menus
+                        et intégration des sous-titres en Béarnais et Français suite à ma suggestion
                     </p>
                     <h4>
                         Sonorisation
                     </h4>
                     <p>
-                        Diff&eacute;rentes formations locales (NADAU, concerts Emma&uuml;s, Yele Kabe, Treat, Sylphid,
-                        Smily &amp; D com danse &#8230;)
-                        et <em>Festival</em> de Barinque avec l&#39;association <a
-                            href="http://basic.assso.fr">BASIC</a>
+                        Diff&eacute;rentes formations locales
+                        (NADAU, concerts Emma&uuml;s, Yele Kabe, Treat, Sylphid,Smily &amp; D com danse&&hellip;)
+                        et <em>Festival</em> de Barinque avec l&#39;association
+                        <a href="http://basic.assso.fr">BASIC</a>
                     </p>
                     <h4>
                         Technicien Audiovisuel
                     </h4>
                     <p>
-                        En int&eacute;rim avec Creyf&#39;s (PAU, 64)
+                        Creyf&#39;s (PAU, 64)&nbsp;: int&eacute;rim
                         pour le compte des soci&eacute;t&eacute;s TEXIS, Audiomaster et Even&#39;on
                     </p>
                 </dd>
@@ -333,7 +360,7 @@ Curriculum Vitæ
                         Technicien polyvalent Audiovisuel <em>en alternance</em>
                     </h4>
                     <p>
-                        Soci&eacute;t&eacute; TEXIS (PAU, 64)<br>
+                        TEXIS (PAU, 64)<br>
 
                         Vente, conseil, installation et maintenance de mat&eacute;riels de sonorisation, d&#39;enregistrement
                         et d&#39;&eacute;clairage sc&eacute;nique
@@ -352,64 +379,67 @@ Curriculum Vitæ
                 <dd>
                     <p>
                         <em>(Ex-)Batteur</em> des groupes&nbsp;:
+                    </p>
                         <ul>
-                            <li>Wait For It</li>
-                            <li>From Age</li>
-                            <li>TTS</li>
+                            <li><strong>Wait For It</strong> (Pau, 64)&nbsp;: Compositions Hard Rock</li>
+                            <li><strong>From Age</strong> (Pau, 64)&nbsp;: Reprises Hard Rock et Metal</li>
+                            <li><strong>TTS</strong> (Pau, 64)&nbsp;: Compositions et reprises Metal</li>
                         </ul>
-
+                    <p>
                         <em>Guitariste</em> (&Eacute;lectrique, acoustique et classique)<br>
 
-                        Co-fondateur et tr&eacute;sorier de l&#39;association&nbsp;TTS>
+                        Co-fondateur et tr&eacute;sorier de l&#39;<em>association</em>&nbsp;TTS
                     </p>
                 </dd>
                 <dt>
                     <h3>
-                        Rétro-ingénierie / Programmation / &Eacute;lectronique
+                        Rétro-ingénierie / &Eacute;lectronique / Programmation
                     </h3>
                 </dt>
                 <dd>
                     <p>
-			            Contributeur, traducteur, auteur et mainteneur de Logiciels Libres (Voir GitHub)<br>
+                        Contributeur, traducteur, auteur et mainteneur de Logiciels Libres (Voir GitHub)<br>
 
                         Maintenance de paquets pour Arch Linux sur l&#39;<a
                             href="https://aur.archlinux.org/packages/?SeB=m&amp;K=rdoursenaud">AUR</a><br>
                     </p>
-                    <p>
-                        <h4>Projets matériels</h4>
 
+                    <h4>Projets matériels</h4>
+                    <p>
                         <a href="https://github.com/EMATech/Network-Studio-Clock">Horloge réseau NTP et afficheur MIDI Time Code (MTC)</a>
-                        (Adafruit MatrixPortal, CircuitPython, WiFi, NTP, USB MIDI, MTC)
+                        (Adafruit MatrixPortal, CircuitPython, Wi-Fi, NTP, USB MIDI, MTC)
                         [Prototypage]
                     </p>
-                    <p>
-                        <h4>Projets logiciels avec rétro-ingénierie du matériel</h4>
+                    <h4>Projets logiciels avec rétro-ingénierie du matériel</h4>
 
-                        <h5>Contour ShuttleXPress</h5>
+                    <h5>Contour ShuttleXPress</h5>
+                    <p>
                         <a href="https://github.com/EMATech/ContourShuttleXpress">Étude faisabilité d’un pilote USB HID alternatif <em>userland</em></a>
                         (Python, hidapi, PySide6/Qt6)
                         [Faisabilité validée, implémentation en cours]
-
-                        <h5>Pad batterie aux doigts et contrôleur DAW Presonus ATOM</h5>
+                    </p>
+                   <h5>Pad batterie aux doigts et contrôleur DAW Presonus ATOM</h5>
+                    <p>
                         <a href="https://github.com/EMATech/AtomCtrl">Découverte et analyse du protocole propriétaire sur MIDI USB</a>
                         (Python, Mido, LoopMIDI)
                         [En cours]
-
-                        <h5>Pré-amplificateur home-cinéma Denon DN-500AV</h5>
+                    </p>
+                    <h5>Pré-amplificateur home-cinéma Denon DN-500AV</h5>
+                    <p>
                         Télécommande tactile <a href="https://github.com/EMATech/DenonRemote">DenonRemote</a>
                         (Python, Twisted, Kivy, Telnet, PyInstaller)
-
-                        <h5>Console numérique Soundcraft Si Compact</h5>
-                        <ul>
-                            <li><a href="https://github.com/EMATech/HiQontrol">Télécommande alternative à l’application iOS officielle</a> (Python, Twisted, Kivy) [Projet en sommeil cause achat iPad]</li>
-                            <li><a href="https://gitlab.com/wireshark/wireshark/-/wikis/HiQnet">Dissecteur Wireshark</a> pour le protocole Harman HiQnet (C) [Terminé]</li>
-                            <li><a href="https://github.com/EMATech/Soundcraft_Digital">Exploration faisabilité Pilote FFADO pour carte optionnelle Multidigital</a> [Abandonné cause revente de la carte]</li>
-                            <li><a href="https://github.com/EMATech/soundcraft-show-format">Format des fichiers de mémoire de scène</a> pour interprétation, génération ou modification indépendamment du système (Python) [Déterminé à 80%]</li>
-                        </ul>
-
-                        <h5>Métronome Peterson BBS1</h5>
+                    </p>
+                    <h5>Console numérique Soundcraft Si Compact</h5>
+                    <ul>
+                        <li><a href="https://github.com/EMATech/HiQontrol">Télécommande alternative à l’application iOS officielle</a> (Python, Twisted, Kivy) [Projet en sommeil cause achat iPad]</li>
+                        <li><a href="https://gitlab.com/wireshark/wireshark/-/wikis/HiQnet">Dissecteur Wireshark</a> pour le protocole Harman HiQnet (C) [Terminé]</li>
+                        <li><a href="https://github.com/EMATech/Soundcraft_Digital">Exploration faisabilité Pilote FFADO pour carte optionnelle Multidigital</a> [Abandonné cause revente de la carte]</li>
+                        <li><a href="https://github.com/EMATech/soundcraft-show-format">Format des fichiers de mémoire de scène</a> pour interprétation, génération ou modification indépendamment du système (Python) [Déterminé à 80%]</li>
+                    </ul>
+                    <h5>Métronome Peterson BBS1</h5>
+                    <p>
                         <a href="https://github.com/EMATech/BBS1">Découverte et intefaçage pour programmation</a>
-
+                    </p>
                         <h5>&hellip;</h5>
                     </p>
                 </dd>
@@ -426,9 +456,7 @@ Curriculum Vitæ
                         Autodidacte
                     </h4>
                     <p>
-                        <em>Veille technologique</em>
-                    </p>
-                    <p>
+                        <em>Veille technologique</em><br>
                         Mises &agrave; jour de comp&eacute;tences
                     </p>
                 </dd>
@@ -447,7 +475,7 @@ Curriculum Vitæ
                     </h4>
                 </dd>
                 <dt>
-               	    <h3>2017</h3>
+                    <h3>2017</h3>
                 </dt>
                 <dd>
                     <h4>
@@ -456,7 +484,7 @@ Curriculum Vitæ
                             target="_blank">Coursera</a>)
                     </h4>
                     <h4>
-                        G Suite Administrator Fundamentals<br>
+                        G Suite Administrator Fundamentals
                     </h4>
                 </dd>
                 <dt>
@@ -497,7 +525,7 @@ Curriculum Vitæ
                         Stages conventionn&eacute;s Amada
                     </h4>
                     <p>
-                        <em>Solutions de CAO et FAO poin&ccedil;onnage/pliage</em> : Solidworks/Sheetworks et
+                        <em>Solutions de CAO et FAO poin&ccedil;onnage/pliage</em>&npsb;: Solidworks/Sheetworks et
                         Punch5/BendCAM
                     </p>
                 </dd>
@@ -539,7 +567,3 @@ Curriculum Vitæ
         </div>
 
     </div>
-
-    <p>
-        (M.A.J. le 27/10/2021)
-    </p>
