@@ -27,54 +27,67 @@ thinkpad_acpi: unhandled HKEY event 0x6031
 thinkpad_acpi: please report the conditions when this event happened to ibm-acpi-devel@lists.sourceforge.net
 ```
 
+
 ### Hardware features
+
 
 #### Matrix
 
-| Device                                    | Model                                                                                                                                                                                                               | Specs                                                                                                                                      | Status                      | Modules       |
-|-------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|---------------|
-| CPU                                       | [Intel Xeon E3-1535M v6](https://ark.intel.com/products/97468/Intel-Xeon-Processor-E3-1535M-v6-8M-Cache-3_10-GHz)                                                                                                   | 3.1 GHz / 4.2 GHz 4 cores / 8 threads 8 MB SmartCache                                                                                      | Working                     | N.A.          |
-| Imaging Unit/Gaussian Mixture Model (GMM) | In CPU                                                                                                                                                                                                              |                                                                                                                                            | ?                           | ?             |
-| ECC memory                                | [Samsung M474A2K43BB1-CRC](http://www.samsung.com/semiconductor/products/dram/pc-dram/ddr4-sodimm/M474A2K43BB1?ia=2429)                                                                                             | 260pin SODIMM DDR 4 2400MHz 16 GB (× 4 - 64 GB total)                                                                                      | Working                     | N.A.          |
-| Screen                                    | BOE  NV156FHM-N42                                                                                                                                                                                                   |  15.6" 16:9 1920×1080 IPS LED                                                                                                              | Working                     | N.A.          |
-| Backlight control                         |                                                                                                                                                                                                                     |                                                                                                                                            | Working                     | N.A.          |
-| GPU (Intel)                               | Intel HD Graphics P630 (CPU integrated)                                                                                                                                                                             | 350 MHz / 1.10 GHz 1.7 GB DirectX 12 OpenGL 4.4 OpenCL 2.0                                                                                 | Working                     | i915          |
-| GPU (nVidia)                              | GM206GLM [Quadro M2200 Mobile]                                                                                                                                                                                      | 1024 CUDA cores 4 GB GDDR5 128-bit 55W OpenGL 4.5 DirectX 12 (Hardware Feature Level 12_1) Shader Model 5.0 DisplayPort 1.2 FP32 precision | Working                     | nvidia        |
-| HDMI                                      |                                                                                                                                                                                                                     | 1.4b                                                                                                                                       | Working                     | nvhda (audio) |
-| Mini DisplayPort                          |                                                                                                                                                                                                                     | 1.2a                                                                                                                                       | Working                     | thunderbolt   |
-| Thunderbolt 3 / USB 3.1                   |                                                                                                                                                                                                                     |                                                                                                                                            | Working                     | ?             |
-| LAN                                       | Intel I219-LM                                                                                                                                                                                                       | 1 Gbs                                                                                                                                      | Working                     | e1000e        |
-| WLAN (Wi-Fi)                              | [Intel Wireless 8265](https://ark.intel.com/fr/products/94150/Intel-Dual-Band-Wireless-AC-8265)                                                                                                                     | 802.11ac M.2                                                                                                                               | Working                     | iwlwifi       |
-| WWAN                                      | [Qualcomm Snapdragon X7 LTE-A](https://www.qualcomm.com/products/snapdragon/modems/4g-lte/x7) ([Sierra Wireless EM7455](https://www.sierrawireless.com/products-and-solutions/embedded-solutions/products/em7455/)) | 4G LTE-A M.2                                                                                                                               | Working                     | cdc_mbim      |
-| GPS                                       | In WWAN device                                                                                                                                                                                                      | GNSS (GPS, GLONASS, Beidou, Galileo)                                                                                                       | TBD                         |               |
-| Bluetooth                                 | Intel Wireless 8265                                                                                                                                                                                                 | 4.2 (Maybe software limited to 4.1?)                                                                                                       | Working                     | btusb         |
-| Audio                                     | Intel ([Realtek ALC3268](http://www.realtek.com.tw/products/productsView.aspx?Langid=1&PFid=27&Level=5&Conn=4&ProdID=140) codec)                                                                                    |                                                                                                                                            | Working                     | snd_hda_intel |
-| NVMe (M.2 SSD)                            | Samsung NVMe SSD Controller SM961/PM961                                                                                                                                                                             | 1 TB (× 2)                                                                                                                                 | Working (Needs accessories) |               |
-| SATA (HDD)                                | Western Digital WDC WD10SPCX-60K                                                                                                                                                                                    | 1 TB 2.5" wide 7mm high                                                                                                                    | Working (Needs accessories) |               |
-| Keyboard                                  | Chicony                                                                                                                                                                                                             |                                                                                                                                            | Working                     | atkbd         |
-| Function/Multimedia keys                  |                                                                                                                                                                                                                     |                                                                                                                                            | Working                     | N.A.          |
-| TrackPoint                                | Chicony                                                                                                                                                                                                             |                                                                                                                                            | Working                     | psmouse       |
-| Touchpad                                  | Synaptics                                                                                                                                                                                                           | Mylar surface                                                                                                                              | Working                     | psmouse       |
-| Touchscreen                               | Wacom                                                                                                                                                                                                               | Capacitive multi-touch 10-finger                                                                                                           | Working                     | wacom         |
-| Active Pen                                | Wacom                                                                                                                                                                                                               |                                                                                                                                            | Working                     | wacom         |
-| Webcam                                    | [SunplusIT controller?](http://www.sunplusit.com/english/products/pccamera/index.aspx)                                                                                                                              | 720p (1280×720) Fixed focus                                                                                                                | Working                     | uvcvideo      |
-| Media card                                |                                                                                                                                                                                                                     | MMC, SD, SDHC, SDXC UHS-II                                                                                                                 | Working                     |               |
-| Express Card                              | Realtek RTS525A                                                                                                                                                                                                     | /34                                                                                                                                        | Working                     | rtsx_pci      |
-| Smartcard Reader                          | [Alcor Micro AU9540](http://www.alcormicro.com/en_content/c_product/product_01b.php?CategoryID=4&IndexID=4)                                                                                                         |                                                                                                                                            | Working                     |               |
-| USB 3.0                                   |                                                                                                                                                                                                                     |                                                                                                                                            | Working                     |               |
-| Power management                          |                                                                                                                                                                                                                     |                                                                                                                                            | Working                     | thinkpad_acpi |
-| TPM                                       |                                                                                                                                                                                                                     | 2.0                                                                                                                                        | Not Working (No TPM 2.0 toolchain on GNU/Linux just yet. See [James Bottomley's blog post](https://blog.hansenpartnership.com/tpm2-and-linux/))                 | tpm           |
-| Fingerprint reader                        | Validity Sensors, Inc.                                                                                                                                                                                              |                                                                                                                                            | Partially Working           | libfprint fork (See below) |
-| Color calibrator                          | X-Rite Pantone Color Sensor                                                                                                                                                                                         |                                                                                                                                            | Not Working                 |               |
-| UEFI flash                                |                                                                                                                                                                                                                     |                                                                                                                                            | Not Working                 |               |
-| Suspend to RAM (Standby)                  |                                                                                                                                                                                                                     |                                                                                                                                            | Working                     |               |
-| Suspend to disk (Hibernate)               |                                                                                                                                                                                                                     |                                                                                                                                            | Working                     |               |
-| Battery                                   |                                                                                                                                                                                                                     | 96 Wh                                                                                                                                      | Working                     |               |
+| Device                                    | Model                                                           | Specs                                                                                                                                      | Status                                                                                         | Modules                    |
+|-------------------------------------------|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|----------------------------|
+| CPU                                       | [Intel Xeon E3-1535M v6][1]                                     | 3.1 GHz / 4.2 GHz 4 cores / 8 threads 8 MB SmartCache                                                                                      | Working                                                                                        | N.A.                       |
+| Imaging Unit/Gaussian Mixture Model (GMM) | In CPU                                                          |                                                                                                                                            | ?                                                                                              | ?                          |
+| ECC memory                                | [Samsung M474A2K43BB1-CRC][2]                                   | 260pin SODIMM DDR 4 2400MHz 16 GB (× 4 - 64 GB total)                                                                                      | Working                                                                                        | N.A.                       |
+| Screen                                    | BOE NV156FHM-N42                                                | 15.6" 16:9 1920×1080 IPS LED                                                                                                               | Working                                                                                        | N.A.                       |
+| Backlight control                         |                                                                 |                                                                                                                                            | Working                                                                                        | N.A.                       |
+| GPU (Intel)                               | Intel HD Graphics P630 (CPU integrated)                         | 350 MHz / 1.10 GHz 1.7 GB DirectX 12 OpenGL 4.4 OpenCL 2.0                                                                                 | Working                                                                                        | i915                       |
+| GPU (nVidia)                              | GM206GLM \[Quadro M2200 Mobile\]                                | 1024 CUDA cores 4 GB GDDR5 128-bit 55W OpenGL 4.5 DirectX 12 (Hardware Feature Level 12_1) Shader Model 5.0 DisplayPort 1.2 FP32 precision | Working                                                                                        | nvidia                     |
+| HDMI                                      |                                                                 | 1.4b                                                                                                                                       | Working                                                                                        | nvhda (audio)              |
+| Mini DisplayPort                          |                                                                 | 1.2a                                                                                                                                       | Working                                                                                        | thunderbolt                |
+| Thunderbolt 3 / USB 3.1                   |                                                                 |                                                                                                                                            | Working                                                                                        | ?                          |
+| LAN                                       | Intel I219-LM                                                   | 1 Gbs                                                                                                                                      | Working                                                                                        | e1000e                     |
+| WLAN (Wi-Fi)                              | [Intel Wireless 8265][3]                                        | 802.11ac M.2                                                                                                                               | Working                                                                                        | iwlwifi                    |
+| WWAN                                      | [Qualcomm Snapdragon X7 LTE-A][4] ([Sierra Wireless EM7455][5]) | 4G LTE-A M.2                                                                                                                               | Working                                                                                        | cdc_mbim                   |
+| GPS                                       | In WWAN device                                                  | GNSS (GPS, GLONASS, Beidou, Galileo)                                                                                                       | TBD                                                                                            |                            |
+| Bluetooth                                 | Intel Wireless 8265                                             | 4.2 (Maybe software limited to 4.1?)                                                                                                       | Working                                                                                        | btusb                      |
+| Audio                                     | Intel ([Realtek ALC3268][6] codec)                              |                                                                                                                                            | Working                                                                                        | snd_hda_intel              |
+| NVMe (M.2 SSD)                            | Samsung NVMe SSD Controller SM961/PM961                         | 1 TB (× 2)                                                                                                                                 | Working (Needs accessories)                                                                    |                            |
+| SATA (HDD)                                | Western Digital WDC WD10SPCX-60K                                | 1 TB 2.5" wide 7mm high                                                                                                                    | Working (Needs accessories)                                                                    |                            |
+| Keyboard                                  | Chicony                                                         |                                                                                                                                            | Working                                                                                        | atkbd                      |
+| Function/Multimedia keys                  |                                                                 |                                                                                                                                            | Working                                                                                        | N.A.                       |
+| TrackPoint                                | Chicony                                                         |                                                                                                                                            | Working                                                                                        | psmouse                    |
+| Touchpad                                  | Synaptics                                                       | Mylar surface                                                                                                                              | Working                                                                                        | psmouse                    |
+| Touchscreen                               | Wacom                                                           | Capacitive multi-touch 10-fingers                                                                                                          | Working                                                                                        | wacom                      |
+| Active Pen                                | Wacom                                                           |                                                                                                                                            | Working                                                                                        | wacom                      |
+| Webcam                                    | [SunplusIT controller?][7]                                      | 720p (1280×720) Fixed focus                                                                                                                | Working                                                                                        | uvcvideo                   |
+| Media card                                |                                                                 | MMC, SD, SDHC, SDXC UHS-II                                                                                                                 | Working                                                                                        |                            |
+| Express Card                              | Realtek RTS525A                                                 | /34                                                                                                                                        | Working                                                                                        | rtsx_pci                   |
+| Smartcard Reader                          | [Alcor Micro AU9540][8]                                         |                                                                                                                                            | Working                                                                                        |                            |
+| USB 3.0                                   |                                                                 |                                                                                                                                            | Working                                                                                        |                            |
+| Power management                          |                                                                 |                                                                                                                                            | Working                                                                                        | thinkpad_acpi              |
+| TPM                                       |                                                                 | 2.0                                                                                                                                        | Not Working (No TPM 2.0 toolchain on GNU/Linux just yet. See [James Bottomley's blog post][9]) | tpm                        |
+| Fingerprint reader                        | Validity Sensors, Inc.                                          |                                                                                                                                            | Partially Working                                                                              | libfprint fork (See below) |
+| Color calibrator                          | X-Rite Pantone Color Sensor                                     |                                                                                                                                            | Not Working                                                                                    |                            |
+| UEFI flash                                |                                                                 |                                                                                                                                            | Not Working                                                                                    |                            |
+| Suspend to RAM (Standby)                  |                                                                 |                                                                                                                                            | Working                                                                                        |                            |
+| Suspend to disk (Hibernate)               |                                                                 |                                                                                                                                            | Working                                                                                        |                            |
+| Battery                                   |                                                                 | 96 Wh                                                                                                                                      | Working                                                                                        |                            |
+
+[1]: https://ark.intel.com/products/97468/Intel-Xeon-Processor-E3-1535M-v6-8M-Cache-3_10-GHz
+[2]: http://www.samsung.com/semiconductor/products/dram/pc-dram/ddr4-sodimm/M474A2K43BB1?ia=2429
+[3]: https://ark.intel.com/fr/products/94150/Intel-Dual-Band-Wireless-AC-8265
+[4]: https://www.qualcomm.com/products/snapdragon/modems/4g-lte/x7
+[5]: https://www.sierrawireless.com/products-and-solutions/embedded-solutions/products/em7455/
+[6]: http://www.realtek.com.tw/products/productsView.aspx?Langid=1&PFid=27&Level=5&Conn=4&ProdID=140
+[7]: http://www.sunplusit.com/english/products/pccamera/index.aspx
+[8]: http://www.alcormicro.com/en_content/c_product/product_01b.php?CategoryID=4&IndexID=4
+[9]: https://blog.hansenpartnership.com/tpm2-and-linux/
 
 
 #### GPUs
 
 Display management scripts and configuration repository available on [GitHub](https://github.com/rdoursenaud/lenovo-p51-display-management)
+
 
 ##### Optimus / Prime
 
@@ -90,6 +103,7 @@ options nvidia_drm modeset=1
 "Boot with standard options"  "rw root=UUID=b549d30f-939e-4d74-b39d-676856e9faca drm.rnodes=1 intel_iommu=1 quiet initrd=/intel-ucode.img initrd=/initramfs-linux.img"
 ```
 
+
 ##### Energy saving
 
 `/etc/modprobe.d/i915.conf`
@@ -101,9 +115,11 @@ options i915 enable_dc=2
 options i915 enable_fbc=1
 ```
 
+
 ##### HDMI audio
 
 Build, install and enable the nvhda module from [this bug report](https://bugs.freedesktop.org/show_bug.cgi?id=75985#c27)
+
 
 #### Touchscreen
 
@@ -120,14 +136,17 @@ xinput map-to-output Wacom\ Co.,Ltd.\ Pen\ and\ multitouch\ sensor\ Pen\ stylus 
 xinput map-to-output Wacom\ Co.,Ltd.\ Pen\ and\ multitouch\ sensor\ Pen\ eraser eDP-1-1
 ```
 
+
 #### Dock
 
 Sound I/O not working.
+
 
 ##### Update 2018-08-28
 
 Sound I/O is now working in Arch Linux.
 Don't know which update brought support though…
+
 
 #### Fans
 
@@ -135,6 +154,7 @@ Don't know which update brought support though…
 ```
 options thinkpad_acpi fan_control=1
 ```
+
 
 ##### [ThinkFan](https://github.com/vmatare/thinkfan/)
 
@@ -167,20 +187,25 @@ levels:
   - [7, 85, 32767]
 ```
 
+
 ###### FIXME
 Virtual hwmon path can change upon reboot and prevent thinkfan from starting.
 The order is determined by the modules loading order.
 Workaround seem to be to load modules manually in a deterministic order.
 
+
 #### Fingerprint reader
 
 Not supported by fprint.
+
 
 ##### Update 2020-04-02
 
 The libfprint fork at https://github.com/nmikhailov/Validity90 offers experimental support with ongoing reverse engineering.
 
+
 ### Install
+
 
 #### Partitions
 
@@ -191,6 +216,7 @@ SWAP 21,36 GiB
 RAID1 BTRFS SSDs  
 ESP backup on second disk  
 Second swap
+
 
 #### Directories and subvolumes
 
@@ -208,9 +234,11 @@ toplevel
           +-- …
 ```
 
+
 ### Firmware bugs?
 
 TODO: report to Lenovo support.
+
 
 #### Workstation dock long USB detection
 
@@ -225,12 +253,15 @@ When using the fingerprint scanner on boot with disk lock enabled, the first dis
 
 ### Benchmarks
 
+
 #### Geekbench
+
 
 ##### CPU
 
 [Linux](http://browser.geekbench.com/v4/cpu/3884202)  
 [Microsoft Windows 10](http://browser.geekbench.com/v4/cpu/3280047)
+
 
 ##### GPU compute
 
@@ -238,10 +269,12 @@ When using the fingerprint scanner on boot with disk lock enabled, the first dis
 [Microsoft Windows 10 Intel HD Graphics P630](http://browser.geekbench.com/v4/compute/882924)  
 [Microsoft Windows 10 nVidia Quadro M2200](http://browser.geekbench.com/v4/compute/882920)
 
+
 #### Luxmark
 
 [CPU+GPU](http://www.luxmark.info/node/4625)  
 [GPU](http://luxmark.info/node/4624)
+
 
 #### gtkperf
 
@@ -249,16 +282,21 @@ Launched from CLI
 Fullscreen window 1920x1080  
 5 consecutive runs  
 
+
 ##### Intel modesetting
 3.62-3.74
+
 
 ##### Intel
 2.72-2.80
 
+
 ##### nVidia
+
 
 ###### Single laptop screen
 2.70-2.74
+
 
 ###### 4 screens setup with Workstation Dock
 screen 1 (DP-1): 4.11-4.67  
