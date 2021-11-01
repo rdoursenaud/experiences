@@ -4,15 +4,19 @@ Author: admin
 Slug: about
 Status: published
 
+
 ### Éditeur
 
 Raphaël Doursenaud  
 26B avenue Pouguet  
-64000 PAU
+64000 PAU  
+FRANCE
+
 
 ### Hébergement
 
 [Firebase Hosting](https://firebase.google.com/support/privacy/) (Google)
+
 
 ### Moteur du site
 
@@ -20,9 +24,11 @@ Raphaël Doursenaud
 Un logiciel libre sous licence
 [GNU Affero General Public License v3.0](http://www.gnu.org/licenses/licenses.html#AGPL)
 
+
 ### Apparence
 
-Modified [Materialistic Pelican](https://github.com/eswarm/materialistic-pelican/)
+[Modified](https://github.com/rdoursenaud/materialistic-pelican) [Materialistic Pelican](https://github.com/eswarm/materialistic-pelican/)
+
 
 ### Données personnelles
 
@@ -33,8 +39,10 @@ et d’opposition sur les données qui le concernent qu'il peut exercer à
 tout moment par écrit à l'adresse suivante :
 
 Raphaël Doursenaud  
-26B avenue Pouguet  
-64000 PAU
+26 B avenue Pouguet  
+64000 PAU  
+FRANCE
+
 
 ### Données de connexion
 
