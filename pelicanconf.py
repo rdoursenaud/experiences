@@ -36,7 +36,6 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 # Social widget
 SOCIAL = (
     ('GitHub', 'https://github.com/rdoursenaud'),
-    ('Google plus', 'https://plus.google.com/+RaphaëlDoursenaudGPCsolutions'),
     ('Twitter', 'https://twitter.com/rdoursenaud'),
     ('LinkedIn', 'https://www.linkedin.com/in/rdoursenaud')
 )
@@ -60,7 +59,7 @@ SITEMAP = {'format': 'xml'}
 # Theme options
 PRIMARY_COLOR = 'Blue Grey'
 ACCENT_COLOR = 'Indigo'
-GOOGLE_PLUS_COMMENTS = True
+GOOGLE_PLUS_COMMENTS = False  # Google Plus is defunct!
 USER_LOGO_URL = SITEURL + '/images/logo.webp'
 USER_AVATAR_URL = SITEURL + '/images/avatar.webp'
 
