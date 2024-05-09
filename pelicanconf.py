@@ -6,7 +6,7 @@ AUTHOR = 'Raphaël Doursenaud'
 AUTHOR_EMAIL = 'rdoursenaud@gmail.com'
 SITENAME = 'Experiences'
 SITEDESC = 'Raphaël Doursenaud\'s Web Space'
-SITEURL = ''
+SITEURL = 'https://raphael.doursenaud.fr'
 
 PATH = 'content'
 STATIC_PATHS = ['images', 'files', 'extra']
