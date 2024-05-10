@@ -8,7 +8,7 @@ Status: published
 ### Éditeur
 
 Raphaël Doursenaud  
-26B avenue Pouguet  
+26 BIS avenue Pouguet  
 64000 PAU  
 FRANCE
 
@@ -39,7 +39,7 @@ et d’opposition sur les données qui le concernent qu'il peut exercer à
 tout moment par écrit à l'adresse suivante :
 
 Raphaël Doursenaud  
-26 B avenue Pouguet  
+26 BIS avenue Pouguet  
 64000 PAU  
 FRANCE
 
