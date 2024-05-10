@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Raphaël Doursenaud'
 AUTHOR_EMAIL = 'rdoursenaud@gmail.com'
-SITENAME = 'Experiences'
+SITENAME = 'Expériences // Experiments'
 SITEDESC = 'Raphaël Doursenaud\'s Web Space'
 SITEURL = 'https://raphael.doursenaud.fr'
 
@@ -36,7 +36,8 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 # Social widget
 SOCIAL = (
     ('GitHub', 'https://github.com/rdoursenaud'),
-    ('Twitter', 'https://twitter.com/rdoursenaud'),
+    ('GitLab', 'https://gitlab.com/rdoursenaud'),
+    ('X-Twitter', 'https://twitter.com/rdoursenaud'),
     ('LinkedIn', 'https://www.linkedin.com/in/rdoursenaud')
 )
 
@@ -57,12 +58,17 @@ PANDOC_EXTENSIONS = []
 SITEMAP = {'format': 'xml'}
 
 # Theme options
-PRIMARY_COLOR = 'Blue Grey'
-ACCENT_COLOR = 'Indigo'
+PRIMARY_COLOR = 'Amber'
+ACCENT_COLOR = 'Deep Orange'
 GOOGLE_PLUS_COMMENTS = False  # Google Plus is defunct!
-USER_LOGO_URL = SITEURL + '/images/logo.webp'
-USER_AVATAR_URL = SITEURL + '/images/avatar.webp'
+USER_LOGO_URL = '/images/logo.webp'
+USER_AVATAR_URL = '/images/avatar.webp'
 
 # Theme
 THEME = "../materialistic-pelican/"
 WEBASSETS = True
+
+# Articles
+DEFAULT_METADATA = {
+    'status': 'draft',
+}
