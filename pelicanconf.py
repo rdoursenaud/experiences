@@ -6,7 +6,7 @@ AUTHOR = 'Raphaël Doursenaud'
 AUTHOR_EMAIL = 'rdoursenaud@gmail.com'
 SITENAME = 'Expériences // Experiments'
 SITEDESC = 'Raphaël Doursenaud\'s Web Space'
-SITEURL = 'https://raphael.doursenaud.fr'
+SITEURL = ''  # Overridden by publishconf.py
 
 PATH = 'content'
 STATIC_PATHS = ['images', 'files', 'extra']
@@ -27,24 +27,50 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+# Navigation
+NAV = (
+    ('Blog', 'index'),
+    ('CV', 'pages/cv'),
+    ('Archives', 'archives'),
+    ('À propos', 'pages/about'),
+)
 
 # Social widget
 SOCIAL = (
     ('GitHub', 'https://github.com/rdoursenaud'),
     ('GitLab', 'https://gitlab.com/rdoursenaud'),
+    ('LinkedIn', 'https://www.linkedin.com/in/rdoursenaud'),
     ('X-Twitter', 'https://twitter.com/rdoursenaud'),
-    ('LinkedIn', 'https://www.linkedin.com/in/rdoursenaud')
+)
+
+# Footer
+CONTRIB = (
+    ('AUR', 'https://aur.archlinux.org/packages/?SeB=m&K=rdoursenaud'),
+    ('GitHub', 'https://github.com/rdoursenaud'),
+    ('GitLab', 'https://gitlab.com/rdoursenaud'),
+    ('Open Hub', 'https://www.openhub.net/accounts/215754?ref=Detailed'),
+    ('Python Package Index', 'https://pypi.org/user/rdoursenaud/'),
+)
+
+MEMBER = (
+    ('April', 'http://www.april.org/adherer'),
+    ('EFF', 'https://www.eff.org/join'),
+    ('FSF', 'http://www.fsf.org/'),
+    ('FSFE', 'https://fellowship.fsfe.org/'),
+    ('Internety Society', 'https://www.internetsociety.org/become-a-member/'),
+)
+
+LINKS = (
+    # ('Association TTS', 'https://tts.rocks/'),
+    ('EMA Tech.', 'https://ematech.github.io/'),
+    ('GPC.solutions', 'https://gpcsolutions.fr/'),
+    ('FAI associatif Stolon', 'https://stolon.fr/'),
 )
 
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True  # Overridden by publishconf.py
 
 # Plugins
 PLUGIN_PATHS = ['../pelican-plugins', '../pelican-materialize']
