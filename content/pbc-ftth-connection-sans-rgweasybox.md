@@ -1,7 +1,7 @@
 Title: Connection sans RGW/EasyBox
 Date: 2005-08-10 18:35
-Category: Informatique
-Tags: Hardware, PBC FTTH
+Category: Informatique // IT
+Tags: Matériel, Hardware, PBC, FTTH, Réseaux, Networking
 Slug: pbc-ftth-connection-sans-rgweasybox
 Status: published
 

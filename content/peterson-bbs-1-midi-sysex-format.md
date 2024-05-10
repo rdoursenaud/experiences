@@ -1,9 +1,10 @@
 Title: Peterson BBS-1 MIDI SysEx format
 Date: 2012-08-24 18:57
-Category: Informatique
-Tags: Hardware, Reverse Engineering, Midi, Peterson, BBS-1
+Category: Informatique // IT
+Tags: Matériel, Hardware, Reverse Engineering, MIDI, Peterson, BBS-1
 Slug: peterson-bbs-1-midi-sysex-format
 Status: published
+Lang: en
 
 I just received my brand new metronome and began tinkering with it.  
   
@@ -78,6 +79,4 @@ Here's the data I've been able to collect so far :
     Firmware update cmd 1
     -> F0 00 40 70 01 02 00 03 00 00 00 00 00 [N] 00 2D 0A 7B 78 5A 28 F7
     [loop until finished]
-
-</p>
 

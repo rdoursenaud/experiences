@@ -1,9 +1,10 @@
 Title: HP XW8000 Front panel pinout
 Date: 2009-11-29 03:15
-Category: Informatique
-Tags: Hardware, Hewlett-Packard, XW8000
+Category: Informatique // IT
+Tags: Matériel, Hardware, Hewlett-Packard, XW8000
 Slug: hp-xw8000-front-panel-pinout
 Status: published
+Lang: en
 
 ![xw8000 pinout](images/xw8000-pinout.png "xw8000 pinout")
 

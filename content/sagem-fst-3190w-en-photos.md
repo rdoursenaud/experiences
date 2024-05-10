@@ -1,7 +1,7 @@
 Title: Sagem F@st 3190W en photos
 Date: 2005-08-11 18:28
-Category: Teardown
-Tags: Hardware, Teardown, PBC FTTH, Sagem, F@st 3190W
+Category: Démontage // Teardown
+Tags: Matériel, Hardware, Démontage, Teardown, PBC FTTH, Sagem, F@st 3190W
 Slug: sagem-fst-3190w-en-photos
 Status: published
 

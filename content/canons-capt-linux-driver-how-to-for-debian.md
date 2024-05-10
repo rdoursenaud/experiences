@@ -1,9 +1,11 @@
 Title:  Canon's CAPT linux driver how-to for Debian
 Date: 2005-09-17 12:00
-Category: Informatique
-Tags: GNU/Linux, Debian, Printer, Canon, CAPT
+Category: Informatique // IT
+Tags: GNU/Linux, Debian, Imprimante, Printer, Canon, CAPT
 Slug: canon-capt-linux-driver-how-to-for-debian
 Status: published
+Lang: en
+
 
 A [free driver](http://www.boichat.ch/nicolas/capt/) is now available as an alternative for LBP-810 and LBP-1120.
 -----------------------------------------------------------------------------------------------------------------

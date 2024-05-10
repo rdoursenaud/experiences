@@ -1,7 +1,7 @@
 Title: Netgear GS724T teardown
 Date: 2017-02-22 13:39
-Category: Teardown
-Tags: Hardware, Teardown
+Category: Démontage // Teardown
+Tags: Matériel, Hardware
 Slug: netgear-gs724t-teardown
 Status: published
 

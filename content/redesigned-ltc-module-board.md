@@ -1,11 +1,12 @@
 Title: Redesigned LTC module board
 Date: 2004-05-12 12:00
-Category: Électronique
+Category: Électronique // Electronics
 Tags: Hardware, Midibox
 Slug: redesigned-ltc-module-board
 Status: published
+Lang: 
 
-<!-- Navigation -->Status : Frozen.
+Status : Frozen.
 
 The MidiBox Project : [http://www.midibox.org](http://www.midibox.org/)
 

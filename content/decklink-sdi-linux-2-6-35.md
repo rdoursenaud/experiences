@@ -1,6 +1,6 @@
 Title: Decklink SDI Linux 2.6.35
 Date: 2010-09-01 09:07
-Category: Informatique
+Category: Informatique // IT
 Tags: GNU/Linux, Blackmagic Design, Decklink
 Slug: decklink-sdi-linux-2-6-35
 Status: published

@@ -1,6 +1,6 @@
 Title: Télécommande suite : Totem
 Date: 2005-08-15 04:24
-Category: Informatique
+Category: Informatique // IT
 Tags: GNU/Linux, Ubuntu, lirc, totem
 Slug: telecommande-suite-totem
 Status: published

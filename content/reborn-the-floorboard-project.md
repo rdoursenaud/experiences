@@ -1,9 +1,10 @@
 Title: Reborn the floorboard project
 Date: 2004-05-12 12:00
-Category: Électronique
-Tags: Hardware, Midibox
+Category: Électronique // Electronics
+Tags: Matériel, Hardware, Midibox, MIDI
 Slug: reborn-the-floorboard-project
 Status: published
+Lang: en
 
 Status : Work In Progress.
 

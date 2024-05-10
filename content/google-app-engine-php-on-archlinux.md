@@ -1,10 +1,10 @@
 Title: Google App Engine PHP Development with PhpStorm on Arch Linux
 Date: 2017-07-26 17:30
-Category: Informatique
+Category: Informatique // IT
 Tags: GNU/Linux, Arch Linux, Google, Google Cloud, Google Cloud Platform, Google App Engine, PHP, JetBrains, PhpStorm
 Slug:  gae-dev-phpstorm-archlinux
 Status: published
-
+Lang: en
 
 [//]: # (TODO: package php55-memcache and php55-memcached? NO!!!! It should NOT be loaded for the appserver to work. It's checked in `devappserver2/php/check_environment.php`)
 

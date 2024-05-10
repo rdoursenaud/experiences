@@ -1,9 +1,10 @@
 Title: Soundcraft Si Multi Digital Card
 Date: 2014-05-02 09:20
-Category: Informatique
-Tags: GNU/Linux, Hardware, Audio, Soundcraft, Si Multi Digital
+Category: Informatique // IT
+Tags: GNU/Linux, Matériel, Hardware, Audio, Soundcraft, Si Multi Digital
 Slug: soundcraft-si-multi-digital-card
 Status: published
+Lang: en
 
 [Photos](https://goo.gl/photos/jMU3zhXQ7ojWFvGQ8)
 

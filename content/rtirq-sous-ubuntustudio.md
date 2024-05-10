@@ -1,6 +1,6 @@
 Title: RTIRQ sous UbuntuStudio
 Date: 2007-10-23 01:21
-Category: Informatique
+Category: Informatique // IT
 Tags: GNU/Linux, Ubuntu, UbuntuStudio, rtirq
 Slug: rtirq-sous-ubuntustudio
 Status: published

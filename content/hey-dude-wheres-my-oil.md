@@ -1,9 +1,10 @@
 Title: Hey Dude Where's my Oil
 Date: 2005-09-17 12:00
-Category: Musique
-Tags: Drums, Audio
+Category: Musique // Music
+Tags: Batterie, Drums, Audio
 Slug: hey-dude-wheres-my-oil
 Status: published
+Lang: en
 
 Music from : <http://www.hearmymusic.co.uk/>
 

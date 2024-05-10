@@ -1,6 +1,6 @@
 Title: Cross-compiler un noyau i386 sur amd64 avec make-kpkg
 Date: 2009-08-23 07:40
-Category: Informatique
+Category: Informatique // IT
 Tags: GNU/Linux, Debian, Ubuntu, UbuntuStudio
 Slug: cross-compiler-un-noyau-i386-sur-amd64-avec-make-kpkg
 Status: published

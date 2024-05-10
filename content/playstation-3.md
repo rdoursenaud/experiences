@@ -1,7 +1,7 @@
 Title: Playstation 3 ?
 Date: 2011-02-10 23:18
-Category: Inclassable
-Tags: hack_this, Sony, Playstation
+Category: Inclassable // Unclassifiable 
+Tags: hack_this, Sony, Playstation, MIDI
 Slug: playstation-3
 Status: published
 

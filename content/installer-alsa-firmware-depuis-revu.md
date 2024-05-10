@@ -1,6 +1,6 @@
 Title: Installer alsa-firmware depuis REVU
 Date: 2007-10-23 02:03
-Category: Informatique
+Category: Informatique // IT
 Tags: GNU/Linux, Ubuntu, UbuntuStudio, ALSA
 Slug: installer-alsa-firmware-depuis-revu
 Status: published
