@@ -3,6 +3,7 @@ Date: 2018-12-17 17:00
 Author: admin
 Slug: about
 Status: published
+Nav: about
 
 
 ### Éditeur
@@ -10,15 +11,16 @@ Status: published
 Raphaël Doursenaud  
 26 BIS avenue Pouguet  
 64000 PAU  
-FRANCE
-
+FRANCE  
+raphael(chez)doursenaud(point)fr  
++33 (0)6 68 48 20 10
 
 ### Hébergement
 
 [Firebase Hosting](https://firebase.google.com/support/privacy/) (Google)
 
 
-### Moteur du site
+### Moteur
 
 [Pelican](http://getpelican.com/)  
 Un logiciel libre sous licence
@@ -27,7 +29,7 @@ Un logiciel libre sous licence
 
 ### Apparence
 
-[Modified](https://github.com/rdoursenaud/materialistic-pelican) [Materialistic Pelican](https://github.com/eswarm/materialistic-pelican/)
+[Materialistic Pelican](https://github.com/rdoursenaud/materialistic-pelican)
 
 
 ### Données personnelles
@@ -36,13 +38,7 @@ Conformément aux articles 38 et suivants de la loi n°78-17 du 6 janvier
 1978 relative à l’informatique, aux fichiers et aux libertés, l’usager
 du service dispose d’un droit d’accès, de modification, de rectification
 et d’opposition sur les données qui le concernent qu'il peut exercer à
-tout moment par écrit à l'adresse suivante :
-
-Raphaël Doursenaud  
-26 BIS avenue Pouguet  
-64000 PAU  
-FRANCE
-
+tout moment par écrit à l'adresse de l'éditeur.
 
 ### Données de connexion
 
