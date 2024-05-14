@@ -9,7 +9,11 @@ SITEDESC = 'Raphaël Doursenaud\'s Web Space'
 SITEURL = ''  # Overridden by publishconf.py
 
 PATH = 'content'
-STATIC_PATHS = ['images', 'files', 'extra']
+STATIC_PATHS = [
+    'images',
+    'files',
+    'extra',
+]
 ARTICLE_EXCLUDES = STATIC_PATHS
 EXTRA_PATH_METADATA = {
     'extra/keybase.txt': {'path': 'keybase.txt'},
@@ -29,22 +33,26 @@ AUTHOR_FEED_RSS = None
 
 # Navigation
 NAV = (
-    ('Blog', 'index'),
-    ('CV', 'pages/cv'),
-    ('Archives', 'archives'),
-    ('À propos', 'pages/about'),
+    # (text, path, selector )
+    ('Blog', 'index', 'index'),
+    ('CV', 'pages/cv', 'cv'),
+    ('Archives', 'archives', 'archives'),
+    ('À propos', 'pages/about', 'about'),
 )
 
 # Social widget
 SOCIAL = (
+    # (text, url)
     ('GitHub', 'https://github.com/rdoursenaud'),
     ('GitLab', 'https://gitlab.com/rdoursenaud'),
+    ('YouTube', 'https://www.youtube.com/@rdoursenaud'),
     ('LinkedIn', 'https://www.linkedin.com/in/rdoursenaud'),
     ('X-Twitter', 'https://twitter.com/rdoursenaud'),
 )
 
 # Footer
 CONTRIB = (
+    # (text, url)
     ('AUR', 'https://aur.archlinux.org/packages/?SeB=m&K=rdoursenaud'),
     ('GitHub', 'https://github.com/rdoursenaud'),
     ('GitLab', 'https://gitlab.com/rdoursenaud'),
@@ -53,6 +61,7 @@ CONTRIB = (
 )
 
 MEMBER = (
+    # (text, url)
     ('April', 'http://www.april.org/adherer'),
     ('EFF', 'https://www.eff.org/join'),
     ('FSF', 'http://www.fsf.org/'),
@@ -61,6 +70,7 @@ MEMBER = (
 )
 
 LINKS = (
+    # (text, url)
     # ('Association TTS', 'https://tts.rocks/'),
     ('EMA Tech.', 'https://ematech.github.io/'),
     ('GPC.solutions', 'https://gpcsolutions.fr/'),
@@ -73,8 +83,17 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True  # Overridden by publishconf.py
 
 # Plugins
-PLUGIN_PATHS = ['../pelican-plugins', '../pelican-materialize']
-PLUGINS = ['assets', 'gravatar', 'materialize', 'pandoc_reader', 'sitemap']
+PLUGIN_PATHS = [
+    '../pelican-plugins',
+    '../pelican-materialize',
+]
+PLUGINS = [
+    'assets',
+    'gravatar',
+    'materialize',
+    'pandoc_reader',
+    'sitemap',
+]
 
 # Pandoc options
 PANDOC_ARGS = []
