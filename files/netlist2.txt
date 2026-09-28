@@ -1,0 +1,164 @@
+Netlist
+
+Exported from LTC.sch at 20/12/2004 10:50:11 
+
+EAGLE Version 4.13 Copyright (c) 1988-2004 CadSoft
+
+Net      Part     Pad      Pin        Sheet
+
+Change Class 0;
++5V      C1       1        1          1
+         IC1      16       VCC        1
+         IC2      14       VCC        1
+         IC3      14       VCC        1
+         J1       1        1          1
+         LED1     A        A          1
+         LED2     A        A          1
+         R2       2        2          1
+         R4       2        2          1
+
+Change Class 0;
+GND      C4       1        1          1
+         IC1      10       T2IN       1
+         IC1      15       GND        1
+         IC2      7        GND        1
+         IC3      7        GND        1
+         J1       4        4          1
+         J3       2        2          1
+         J3       PE       PE         1
+         J3       PE@      PE         1
+         J4       2        2          1
+         J4       PE       PE         1
+         J4       PE@      PE         1
+         R7       1        1          1
+         R8       1        1          1
+         X1       5        5          1
+         X1       G1       G1         1
+         X1       G2       G2         1
+
+Change Class 0;
+N$1      IC3      11       O          1
+         R3       1        1          1
+
+Change Class 0;
+N$2      J3       5        5          1
+         R1       2        2          1
+
+Change Class 0;
+N$3      J3       4        4          1
+         R2       1        1          1
+
+Change Class 0;
+N$4      J4       5        5          1
+         R3       2        2          1
+
+Change Class 0;
+N$5      J4       4        4          1
+         R4       1        1          1
+
+Change Class 0;
+N$6      IC1      13       R1IN       1
+         X1       3        3          1
+
+Change Class 0;
+N$7      IC2      5        I1         1
+         IC2      8        O          1
+         R5       1        1          1
+
+Change Class 0;
+N$8      IC2      1        I0         1
+         IC2      11       O          1
+         R6       1        1          1
+
+Change Class 0;
+N$9      C5       -        -          1
+         IC2      10       I1         1
+         IC2      9        I0         1
+         R7       2        2          1
+
+Change Class 0;
+N$10     IC3      8        O          1
+         R1       1        1          1
+
+Change Class 0;
+N$12     IC3      10       I1         1
+         IC3      6        O          1
+         IC3      9        I0         1
+
+Change Class 0;
+N$13     IC3      12       I0         1
+         IC3      13       I1         1
+         IC3      3        O          1
+
+Change Class 0;
+N$14     IC1      12       R1OUT      1
+         IC2      4        I0         1
+         IC3      4        I0         1
+         IC3      5        I1         1
+         J1       3        3          1
+
+Change Class 0;
+N$15     IC1      11       T1IN       1
+         IC2      2        I1         1
+         IC3      1        I0         1
+         IC3      2        I1         1
+         J1       2        2          1
+
+Change Class 0;
+N$16     C6       -        -          1
+         IC2      12       I0         1
+         IC2      13       I1         1
+         R8       2        2          1
+
+Change Class 0;
+N$17     C5       +        +          1
+         IC2      6        O          1
+
+Change Class 0;
+N$18     C6       +        +          1
+         IC2      3        O          1
+
+Change Class 0;
+N$19     LED1     K        C          1
+         R5       2        2          1
+
+Change Class 0;
+N$20     LED2     K        C          1
+         R6       2        2          1
+
+Change Class 0;
+N$21     C2       1        1          1
+         IC1      1        C1+        1
+
+Change Class 0;
+N$22     C2       2        2          1
+         IC1      3        C1-        1
+
+Change Class 0;
+N$23     C3       1        1          1
+         IC1      4        C2+        1
+
+Change Class 0;
+N$24     C3       2        2          1
+         IC1      5        C2-        1
+
+Change Class 0;
+N$25     C4       2        2          1
+         IC1      6        V-         1
+
+Change Class 0;
+N$26     C1       2        2          1
+         IC1      2        V+         1
+
+Change Class 0;
+N$29     IC1      14       T1OUT      1
+         X1       2        2          1
+
+Change Class 0;
+N$30     IC1      7        T2OUT      1
+         X1       8        8          1
+
+Change Class 0;
+N$31     X1       4        4          1
+         X1       6        6          1
+

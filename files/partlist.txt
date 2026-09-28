@@ -1,0 +1,50 @@
+Partlist
+
+Exported from Core.sch at 20/12/2004 10:52:33 
+
+EAGLE Version 4.13 Copyright (c) 1988-2004 CadSoft
+
+Part     Value          Device          Package      Library        Sheet
+
+C1       33pF           C-EU025-024X044 C025-024X044 rcl            1
+C2       33pF           C-EU025-024X044 C025-024X044 rcl            1
+C3       100nF          C-EU050-025X075 C050-025X075 rcl            1
+C4       10µF           CPOL-EUE2.5-5   E2,5-5       rcl            1
+C5       2200µF         CPOL-EUE7.5-16  E7,5-16      rcl            1
+C6       330nF          C-EU050-045X075 C050-045X075 rcl            1
+D1       1N4148         1N4148          DO35-10      diode          1
+IC1      PIC18F4X2DIL40 PIC18F4X2DIL40  DIL40        pic18f4x2      1
+IC2      6N138          6N138           DIL08        optocoupler    1
+IC4                     78XXS           78XXS        v-reg          1
+J1                      JACK-PMS        JACK-PMS     POWER-IN       1
+J2                      PINHD-1X2       1X02         pinhead        1
+J3                      JP5Q            JP5Q         jumper         1
+J4                      M09HP           M09HP        con-subd       1
+J5                      MA10-1          MA10-1       con-lstb       1
+J6                      MA05-1          MA05-1       con-lstb       1
+J7                      MA05-1          MA05-1       con-lstb       1
+J8                      MA05-1          MA05-1       con-lstb       1
+J9                      MA05-1          MA05-1       con-lstb       1
+J10                     MA04-2          MA04-2       con-lstb       1
+J11                     MA04-1          MA04-1       con-lstb       1
+J12      MAB5SH         MAB5SH          MAB5SH       con-hirschmann 1
+J14                     PINHD-1X1       1X01         pinhead        1
+J15                     MA08-2          MA08-2       con-lstb       1
+J16                     PINHD-1X2       1X02         pinhead        1
+P1                      TRIM_EU-CA6H    CA6H         pot            1
+P2                      TRIM_EU-CA6H    CA6H         pot            1
+Q1                      CRYTALHC49U-H   HC49U-H      crystal        1
+R1       100            R-EU_0207/5V    0207/5V      rcl            1
+R2       1K             R-EU_0207/2V    0207/2V      rcl            1
+R3       10K            R-EU_0207/2V    0207/2V      rcl            1
+R4       1K             R-EU_0411/15    0411/15      rcl            1
+R5       5.6K           R-EU_0207/2V    0207/2V      rcl            1
+R6       1.2K           R-EU_0207/2V    0207/2V      rcl            1
+R7       220            R-EU_0207/7     0207/7       rcl            1
+R8       220            R-EU_0207/2V    0207/2V      rcl            1
+R9       10K            R-EU_0207/2V    0207/2V      rcl            1
+R10      10K            R-EU_0207/2V    0207/2V      rcl            1
+R11      220            R-EU_0207/2V    0207/2V      rcl            1
+T1       BC337          BC337           TO92         transistor-npn 1
+X1                      RB1A            RB1A         rectifier      1
+X2       MAB7SH         MAB7SH          MAB7SH       con-hirschmann 1

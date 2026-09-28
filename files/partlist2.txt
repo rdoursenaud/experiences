@@ -1,0 +1,31 @@
+Partlist
+
+Exported from LTC.sch at 20/12/2004 10:50:04 
+
+EAGLE Version 4.13 Copyright (c) 1988-2004 CadSoft
+
+Part     Value          Device          Package      Library        Sheet
+
+C1       100nF          C-EU050-025X075 C050-025X075 rcl            1
+C2       100nF          C-EU050-025X075 C050-025X075 rcl            1
+C3       100nF          C-EU050-025X075 C050-025X075 rcl            1
+C4       100nF          C-EU050-025X075 C050-025X075 rcl            1
+C5       10µF           CPOL-EUE2.5-5   E2,5-5       rcl            1
+C6       10µF           CPOL-EUE2.5-5   E2,5-5       rcl            1
+IC1      MAX232         MAX232          DIL16        maxim          1
+IC2      74HC00N        74HC00N         DIL14        74xx-eu        1
+IC3      74HC00N        74HC00N         DIL14        74xx-eu        1
+J1                      MA04-1          MA04-1       con-lstb       1
+J3       MAB5SH         MAB5SH          MAB5SH       con-hirschmann 1
+J4       MAB5SH         MAB5SH          MAB5SH       con-hirschmann 1
+LED1     MIDI In        LED3MM          LED3MM       led            1
+LED2     MIDI Out       LED3MM          LED3MM       led            1
+R1       220            R-EU_0207/7     0207/7       rcl            1
+R2       220            R-EU_0207/7     0207/7       rcl            1
+R3       220            R-EU_0207/7     0207/7       rcl            1
+R4       220            R-EU_0207/7     0207/7       rcl            1
+R5                      R-EU_0207/2V    0207/2V      rcl            1
+R6                      R-EU_0207/2V    0207/2V      rcl            1
+R7       100K           R-EU_0207/7     0207/7       rcl            1
+R8       100K           R-EU_0207/7     0207/7       rcl            1
+X1                      F09HP           F09HP        con-subd       1

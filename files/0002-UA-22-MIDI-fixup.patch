@@ -1,0 +1,29 @@
+From 51071fa4055836989a629872fb7376fc70c68949 Mon Sep 17 00:00:00 2001
+From: Daniel Mack <zonque@gmail.com>
+Date: Thu, 23 May 2013 13:30:13 +0200
+Subject: [PATCH 2/2] UA-22 MIDI fixup
+
+---
+ sound/usb/quirks-table.h | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/sound/usb/quirks-table.h b/sound/usb/quirks-table.h
+index 32dab50..61eb7ab 100644
+--- a/sound/usb/quirks-table.h
++++ b/sound/usb/quirks-table.h
+@@ -1791,7 +1791,11 @@ YAMAHA_DEVICE(0x7010, "UB99"),
+ 			},
+ 			{
+ 				.ifnum = 2,
+-				.type = QUIRK_MIDI_STANDARD_INTERFACE
++				.type = QUIRK_MIDI_FIXED_ENDPOINT,
++				.data = & (const struct snd_usb_midi_endpoint_info) {
++					.out_cables = 0x0001,
++					.in_cables  = 0x0001
++				}
+ 			},
+ 			{
+ 				.ifnum = -1
+-- 
+2.3.2
+

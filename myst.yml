@@ -1,0 +1,364 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+
+project:
+  title: "Expériences // Experiments"
+  subtitle:
+  short_title:
+  description: "Raphaël Doursenaud's Web Space"
+  exports:
+  downloads:
+  label:
+  tags:
+    - "Hardware"
+    - "Software"
+    - "Reverse Engineering"
+    - "Audio"
+    - "Electronics"
+    - "Linux"
+  thumbnail:
+  banner:
+  parts:
+    banner: parts/banner.md
+    primary_sidebar_footer: parts/primary-sidebar-footer.md
+    footer: parts/footer.md
+  bibliography:
+  date: 2026-09-16
+  keywords:
+  authors:
+    - name: "Raphaël Doursenaud"
+      id: rdoursenaud
+      orcid:
+      corresponding:
+      email: "raphael+blog@doursenaud.fr"
+      roles:
+      affiliations:
+        - id: refuge
+          name: refuge.coop
+          url: https://refuge.coop
+          github: rufuge-coop
+          postal_code: "64000"
+          city: Pau
+          country: France
+        - id: gpc
+          name: GPC.solutions SAS
+          email: contact@gpcsolutions.fr
+          url: https://gpcsolutions.fr
+          github: GPCsolutions
+          postal_code: "64000"
+          city: Pau
+          country: France
+        - id: ematech
+          name: EMA Tech.
+          institution:
+          doi:
+          ror:
+          isni:
+          ringgold:
+          email: contact@ematech.fr
+          address:
+          city: Pau
+          state:
+          postal_code: "64000"
+          country: France
+          url: https://ematech.fr
+          github: EMATech
+          phone:
+          fax:
+          collaboration:
+
+      equal_contributor:
+      deceased:
+      note: This blog's author
+      phone: "+33668482010"
+      fax:
+      url: https://raphael.doursenaud.fr
+      bluesky:
+      mastodon: "@rdoursenaud@mamot.fr"
+      threads:
+      linkedin: https://www.linkedin.com/in/rdoursenaud
+      twitter:
+      x:
+      facebook:
+      discord:
+      youtube: https://www.youtube.com/@rdoursenaud
+      discourse:
+      slack:
+      github: "rdoursenaud"
+      gitlab: https://gitlab.com/rdoursenaud
+  reviewers:
+  editors:
+  affiliations:
+  doi:
+  arxiv:
+  pmid:
+  pmcid:
+  open_access:
+  license:
+    code: GPL-3.0-or-later
+    content: CC-BY-SA-4.0
+  copyright: Raphaël Doursenaud
+  funding: This work was self funded
+  github: https://github.com/rdoursenaud/experiences
+  edit_url: null
+  source_url:
+  binder:
+  subject:
+  venue:
+  volume:
+  issue:
+  first_page:
+  last_page:
+  math:
+  abbreviations:
+    AC: Alternating Current
+    ACID: Atomicity, Consistency, Isolation, and Durability
+    AD: Active Directory
+    ADB: Android Debug Bridge
+    AES: Audio Engineering Society
+    ALSA: Advanced Linux Sound Architecture
+    AMEI: Association of Musical Electronics Industry (Japon)
+    API: Application Programming Interface
+    ARM: Acorn RISC Machine
+    ARPA: Advanced Research Projects Agency
+    AUR: Arch User Repository
+    BASH: Bourne-Again SHell
+    BIND: Berkeley Internet Name Daemon
+    BIOS: Basic Input Output System
+    BLE: Bluetooth Low Energy
+    BSD: Berkeley Software Distribution
+    BTS: Brevet de Technicien Supérieur
+    BTW: By The Way
+    CAM: Computer Aided Manufacturing
+    CAO: Conception Assistée par Ordinateur
+    CC: Creative Commons
+    CD: Compact Disc
+    CEI: Commission Électrotechnique Internationale
+    CERN: Conseil Européen pour la Recherche Nucléaire (Organe provisoire devenu l’« organisation européenne pour la recherche nucléaire »)
+    CFAO: Conception Fabrication Assistés par Ordinateur
+    CI/CD: Continuous Integration / Continuous Deployment
+    CISC: Complex Instruction Set Computer
+    CLI: Command Line Interface
+    CMJN: Cyan Magenta Jaune Noir
+    CPU: Central Processing Unit
+    CSS: Cascading Style Sheets
+    CUDA: Compute Unified Device Architecture
+    CUPS: Common Unix Printing System
+    CVE: Common Vulnerabilities and Exposures
+    CVS: Concurrent Versions System
+    D-Bus: Desktop Bus
+    DevOps: Development and Operations
+    DC: Direct Current
+    DDR: Dual Data Rate
+    DHCP: Dynamic Host Configuration Protocol
+    DIN: Deutsches Institut für Normung
+    DMA: Direct Memory Access
+    DMI: Desktop Management Interface
+    DMX: Digital Multiplex
+    DNS: Domain Name System
+    DRY: Don't Repeat Yourself
+    DSP: Digital Signal Processing/Processor
+    DVD: Digital Versatile Disc
+    EBU: European Broadcasting Union
+    ECMA: European Computer Manufacturers Association (Devenu « Ecma International » en 1994.)
+    EFI: Extensible Firmware Interface
+    eGPU: external Graphics Processing Unit
+    ERP: Enterprise Resource Planning
+    ESP: EFI (Extensible Firmware Interface) Storage Partition
+    FAI: Fournisseur d’Accès à Internet
+    FAO: Fabrication Assistée par Ordinateur
+    FAT: File Allocation Table
+    FFADO: Free Firewire Audio Drivers
+    FOSS: Free and Open Source Software
+    FPGA: Field-Programmable Gate Array
+    FTTH: Fiber To The Home
+    GCP: Google Cloud Platform
+    GDDR: Graphics Dual Data Rate
+    GIMP: GNU Image Manipulation Program
+    GKE: Google Kubernetes Engine
+    GLONASS: GLObalnaya NAvigatsionnaya Sputnikovaya Sistema
+    GLPI: Gestionnaire Libre de Parc Informatique
+    GNSS: Global Navigation Satellite System
+    GNU: GNU's Not Unix
+    GPL: GNU General Public License
+    GPS: Global Positioning System
+    GPU: Graphics Processing Unit
+    GTK: Gimp Tool Kit
+    gzip: GNU zip
+    HDD: Hard Disk Drive
+    HDMI: High Definition Multimedia Interface
+    HID: Human Interface Device
+    HTML: HyperText Markup Language
+    I/O: Input/Output
+    i18n: Internationalization
+    I2C: Inter-Integrated Circuit
+    I2S: Inter-IC Sound
+    IaaS: Infrastructure as a Service
+    IANA: Internet Assigned Numbers Authority
+    ID: Identifiant
+    IEC: International Electrotechnical Commission
+    IEEE: Institute of Electrical and Electronics Engineers
+    IETF: Internet Engineering Task Force
+    IHM: Interface Homme-Machine
+    IMAP: Internet Message Access Protocol
+    IOMMU: Input-Output Memory Management Unit
+    IP: Internet Protocol
+    IPC: Inter-Process Communication
+    IPS: In-Plane Switching
+    ISO: International Organization for Standardization
+    ISRC: International Standard Recording Code
+    JACK: JACK Audio Connection Kit
+    JS: JavaScript
+    JTAG: Joint Test Action Group
+    KISS: Keep It Simple, Stupid
+    KDE: K Desktop Environment
+    KVM: Kernel-based Virtual Machine
+    l10n: Localization
+    LAN: Local Area Network
+    LCD: Liquid Crystal Display
+    LDAP: Lightweight Directory Access Protocol
+    LED: Light Emitting Diode
+    LGPL: GNU Lesser General Public License
+    LTE: Long Term Evolution
+    LXC: Linux Containers
+    MIDI: Musical Instrument Digital Interface
+    MIME: Multipurpose Internet Mail Extensions
+    MIT: Massachusetts Institute of Technology
+    MMA: MIDI Manufacturers Association (États Unis d’Amérique)
+    Mb: Megabit
+    MB: Megabyte
+    MMC: MIDI Machine Control
+    MTC: MIDI Time Code
+    NoSQL: Not Only SQL
+    NTP: Network Time Protocol
+    NVM: Non-Volatile Memory
+    NVMe: Non-Volatile Memory Express
+    OAuth2: Open Authorization version 2
+    OS: Operating System
+    OSC: Open Sound Control
+    # TODO: split
+    OSI: Open Systems Interconnection ou Open Source Initiative
+    P.A.D.: Prêt À Diffuser
+    PaaS: Platform as a Service
+    PAO: Publication Assistée par Ordinateur
+    PC: Personal Computer
+    PCB: Printed Circuit Board
+    PCI: Peripheral Component Interconnect
+    PCIe: Peripheral Component Interconnect Express
+    PCMCIA: Personal Computer Memory Card International Association
+    PDF: Portable Document Format
+    PGI: Progiciel de Gestion Intégré
+    PHP: Personal Home Page / PHP Hypertext Preprocessor
+    PSU: Power Supply Unit
+    PoC: Proof of Concept / Preuve de Concept
+    R&D: Recherche et Développement
+    RAID: Redundant Array of Independent Disks
+    RAM: Random Access Memory
+    reST: reStructuredText
+    REST: REpresentational State Transfer
+    RFC: Request For Comments
+    RGB: Red Green Blue
+    RGPD: Règlememt Général sur la Protection des Données
+    RISC: Reduced Instruction Set Computer
+    RTP: Real-time Transport Protocol
+    RVB: Rouge Vert Bleu
+    S/PDIF: Sony/Philips Digital Interface
+    SaaS: Software as a Service
+    SAC: Software Assigned Controller
+    SATA: Serial Advanced Technology Attachment
+    SD: Secure Digital
+    SDHC: Secure Digital High Capacity
+    SDI: Serial Digital Interface
+    SDK: Software Development Kit
+    SDRM: Société pour l'administration du Droit de Reproduction Mécanique des auteurs, compositeurs, éditeurs, réalisateurs et doubleurs sous-titreurs
+    SDXC: Secure Digital eXtended Capacity
+    SIG: Special Interest Group
+    SOAP: Simple Object Access Protocol
+    SODIMM: Small Outline Dual Inline Memory Module
+    SPI: Serial Peripheral Interface
+    SQL: Structured Query Language
+    SSD: Solid State Drive
+    SSH: Secure SHell
+    SSL: Secure Sockets Layer
+    STI: Sciences et Technologies de l'Industrie
+    SVN: SubVersioN
+    SysEx: System Exclusive
+    TCP: Transmission Control Protocol
+    TLS: Transport Layer Security
+    TPM: Trusted Platform Module
+    TSA: Technologies des Systèmes Automatisés
+    UART: Universal Asynchronous Receiver-Transmitter
+    UDP: User Datagram Protocol
+    UEFI: Unified Extensible Firmware Interface
+    UHS: Ultra High Speed
+    USB: Universal Serial Bus
+    VHDL: VHSIC (Very High Speed Integrated Circuits) Hardware Description Language
+    W3C: World Wide Web Consortium
+    Wi-Fi: Wireless Fidelity
+    WINE: Wine Is Not an Emulator
+    WIP: Work In Progress
+    WLAN: Wireless Local Area Network
+    WWAN: Wireless Wide Area Network
+    WWW: World Wide Web
+    XML: eXtensible Markup Language
+  numbering:
+  options:
+  id: 182c2960-ccae-4050-bdb7-0a0d1164d5e0
+  references:
+  requirements:
+  resources:
+  social:
+  jupyter:
+  thebe:
+  kernelspec:
+  execute:
+  static_files:
+    - files
+    - google4801127235adabeb.html
+    - images
+    - keybase.txt
+  exclude:
+   - blog/_private/**/*
+  toc:
+    - file: index.md
+    - title: Blog
+      children:
+        - pattern: blog/_draft/*.md
+          hidden: true
+        - pattern: blog/**/*.md
+          sort: descending
+    - file: pages/cv.md
+    # TODO: english version
+    # - file: pages/resume.md
+    - file: glossaire.md
+      hidden: true
+    # TODO: english version
+    #- file: glossary.md
+    #  hidden: true
+    - file: pages/contact.md
+    - file: pages/about.md
+
+# https://mystmd.org/guide/website-templates
+site:
+  template: book-theme
+  options:
+    hide_toc:
+    hide_footer:
+    hide_outline:
+    hide_title_block:
+    hide_authors:
+    hide_search:
+    outline_maxdepth:
+    twitter:
+    favicon: images/favicon.png
+    logo: images/favicon.svg
+    logo_dark:
+    logo_text:
+    logo_url:
+    logo_alt: "Raphaël Doursenaud's Web Space"
+    analytics_google:
+    analytics_plausible:
+    numbered_references:
+    folders: false
+    internal_domains: raphael.doursenaud.fr
+    style:

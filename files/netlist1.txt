@@ -1,0 +1,90 @@
+Netlist
+
+Exported from JDM.sch at 20/12/2004 10:51:52 
+
+EAGLE Version 4.13 Copyright (c) 1988-2004 CadSoft
+
+Net      Part     Pad      Pin        Sheet
+
+Change Class 0;
+BQ2      Q2       2        B          1
+         R2       1        1          1
+
+Change Class 0;
+CTS      J3       8        8          1
+         Q2       3        C          1
+         R3       1        1          1
+
+Change Class 0;
+DTR      J3       4        4          1
+         R3       2        2          1
+
+Change Class 0;
+J1       D1       C        C          1
+         D2       A        A          1
+         IC1      39       RB6/PGC/(ICSP_CLK) 1
+         J2       4        4          1
+         J3       7        7          1
+
+Change Class 0;
+MCLR     D4       A        A          1
+         IC1      1        MCLR/(ICSP_VPP) 1
+         J2       10       10         1
+         Q1       1        E          1
+
+Change Class 0;
+N$3      IC1      38       RB5/PGM/(ICSP_VLVP) 1
+         R4       1        1          1
+
+Change Class 0;
+N$5      J4       1        1          1
+         R5       2        2          1
+
+Change Class 0;
+Q1C      C1       +        +          1
+         D5       C        C          1
+         Q1       3        C          1
+         R5       1        1          1
+
+Change Class 0;
+RB3      IC1      36       RB3/CCP2*  1
+         R1       1        1          1
+
+Change Class 0;
+RB7      IC1      40       RB7/PGD/(ICSP_DATA) 1
+         J2       2        2          1
+         Q2       1        E          1
+
+Change Class 0;
+TXD      D3       C        C          1
+         D4       C        C          1
+         J3       3        3          1
+         Q1       2        B          1
+
+Change Class 0;
+VDD      C2       +        +          1
+         D2       C        C          1
+         D5       A        A          1
+         D6       C        C          1
+         IC1      11       VDD1       1
+         IC1      32       VDD2       1
+         J2       6        6          1
+         J3       5        5          1
+         J3       G1       G1         1
+         J3       G2       G2         1
+         R2       2        2          1
+
+Change Class 0;
+VSS      C1       -        -          1
+         C2       -        -          1
+         D1       A        A          1
+         D3       A        A          1
+         D6       A        A          1
+         IC1      12       GND1       1
+         IC1      31       GND2       1
+         J2       8        8          1
+         J4       2        2          1
+         J4       3        3          1
+         R1       2        2          1
+         R4       2        2          1
+

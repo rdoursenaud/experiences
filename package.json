@@ -1,0 +1,16 @@
+{
+  "name": "experiences",
+  "version": "1.0.0",
+  "description": "MyST Markdowm Dynamic Site on Infomaniak",
+  "main": "index.js",
+  "scripts": {
+    "start": "myst start --headless --keep-host",
+    "build": "myst build --site"
+  },
+  "dependencies": {
+    "mystmd": "latest"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
