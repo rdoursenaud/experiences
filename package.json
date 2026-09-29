@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
   "start": "HOST=0.0.0.0 myst start --keep-host --port ${PORT:-3000}",
+  "clean": "rm -fr _build",
   "build": "myst build --site"
   },
   "dependencies": {
