@@ -21,7 +21,7 @@ date: 2026-09-15
 :header: Raphaël Doursenaud
 :footer: *Mis à jour le 15/09/2026*
 
-```{image} ../images/avatar.webp
+```{image} /images/avatar.webp
 :alt: Portrait de Raphaël Doursenaud
 :align: center
 ```
@@ -47,7 +47,7 @@ Conception, études et FAO en tôlerie fine. Intégration physique des systèmes
 
 - **Conception & FAO** : Solidworks, Sheetworks, Punch5, BendCAM.
 - **Exploitation** : Poinçonneuse Amada Europe 255, Plieuse Amada HFP 100-3.
-  ```{figure} ../images/amada.jpeg
+  ```{figure} /images/amada.jpeg
   :label: fig-atelier-asg
   :alt: Poinçonneuse CNC Amada Europe 255 en production
   :align: center
@@ -64,7 +64,7 @@ Conception hardware, logique numérique, débogage bas niveau et maîtrise des {
 - **Embarqué** : Microcontrôleurs (ARM, PIC, AVR), MicroPython, CircuitPython, Arduino.
 - **Instrumentation** : Oscilloscopes, analyseurs logiques, sondes JTAG (Segger, ST-Link).
 - **Protocoles Bas Niveau** : UART, I2C, SPI, {term}`1-Wire`.
-```{figure} ../images/lab.jpg
+```{figure} /images/lab.jpg
 :label: fig-labo-electronique
 :alt: Banc de test électronique avec oscilloscope et ampli à lampes ouvert
 :align: center
@@ -82,7 +82,7 @@ Analyse de vulnérabilités, durcissement de systèmes et administration d’inf
 - **Systèmes** : GNU/{term}`Linux` ({term}`Debian`, {term}`Arch Linux`, expert), *BSD, {term}`Microsoft Windows`, {term}`Apple macOS`.
 - **Réseaux** : IPv6 (Certified Sage HE.net), IPv4, DNS (BIND), DHCP, NTP, Routage ({term}`iptables`, {term}`Vyatta`).
 - **Sécurité** : TLS/SSL, SSH, Firewalls, IOMMU, DMA, Analyse de paquets ({term}`Wireshark`).
-```{figure} ../images/hiqnet.png
+```{figure} /images/hiqnet.png
 :label: fig-wireshark-hiqnet
 :alt: Capture d’écran Wireshark montrant le protocole HiQnet disséqué
 :align: center
@@ -97,7 +97,7 @@ Analyse protocolaire HiQnet avec le dissecteur personnalisé. Visualisation des 
 *R&D Indépendante, Logiciel Libre & Rétro-ingénierie.*
 Création d’outils sur-mesure, pilotes systèmes, interopérabilité et interfaces homme-machine.
 - **Langages** : **{term}`Python`** (Expert, écosystème audio), **{term}`Rust`** (En cours, {term}`COSMIC`/{term}`Iced`), **{term}`C`** ({term}`Kernel`, {term}`Embarqué`), {term}`Assembleur`, BASH, {term}`PowerShell`, PHP, {term}`JavaScript`…
-```{figure} ../images/midiexplorer.png
+```{figure} /images/midiexplorer.png
 :label: fig-midiexplorer
 :alt: Interface graphique de midiexplorer montrant le routage MIDI et l’analyse de messages SysEx
 :align: center
@@ -128,7 +128,7 @@ Production sonore, instrumentation, écriture musicale et maîtrise de la chaîn
 - **Musique** : Guitare (Électrique, Acoustique, Classique), Batterie. Lecture/Écriture musicale (**{term}`LilyPond`**, {term}`Frescobaldi`).
 - **Prise de Son** : Musique live, studio, ambiances. Microphonie et implantation.
 - **Sonorisation** : Événementielle, musicale, intégration technique de systèmes.
-```{figure} ../images/festival.jpg
+```{figure} /images/festival.jpg
 :label: fig-festival-scene
 :alt: Grande scène de festival avec structure treillis et système de sonorisation complet
 :align: center
@@ -366,7 +366,7 @@ Commercialisation en mode *{term}`Cloud`* de l’ERP/PGI Libre *{term}`Dolibarr`
 
 Production musicale, enregistrement et sonorisation :
 - 2008 : co-production album CD [Frank Blackfield « No Class Blues »](https://www.discogs.com/fr/release/11970282-Frank-Blackfield-No-Class-Blues)
-```{figure} ../images/fb0001.jpg
+```{figure} /images/fb0001.jpg
 :label: fig-cd-frank-blackfield
 :alt: Pochette de l’album "No Class Blues" de Frank Blackfield
 :align: center
@@ -379,7 +379,7 @@ Production musicale et réalisation complète d’un CD Audio : co-production,
 
 R&D, conception et prototypage de machines informatiques dédiées aux métiers du son et du spectacle :
 - **STAN** : Station de travail audionumérique
-```{figure} ../images/STANII.jpg
+```{figure} /images/STANII.jpg
 :label: fig-stan
 :alt: Station de travail audionumérique STAN avec console de mixage et écran CRT
 :align: center
