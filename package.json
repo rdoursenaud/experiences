@@ -4,8 +4,8 @@
   "description": "MyST Markdowm Dynamic Site on Infomaniak",
   "main": "index.js",
   "scripts": {
-    "start": "myst start --headless --keep-host",
-    "build": "myst build --site"
+  "start": "myst start --keep-host --headless --port ${PORT:-3000}",
+  "build": "myst build --site"
   },
   "dependencies": {
     "mystmd": "latest"
