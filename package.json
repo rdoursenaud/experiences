@@ -4,7 +4,7 @@
   "description": "MyST Markdowm Dynamic Site on Infomaniak",
   "main": "index.js",
   "scripts": {
-  "start": "myst start --keep-host --headless --port ${PORT:-3000}",
+  "start": "myst start --keep-host",
   "build": "myst build --site"
   },
   "dependencies": {
