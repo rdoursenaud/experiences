@@ -320,14 +320,15 @@ project:
   exclude:
    - blog/_private/**/*
   toc:
-    - file: index.md
+    # TODO: landing page
+    # - file: index.md
+    - file: pages/cv.md
     - title: Blog
       children:
         - pattern: blog/_draft/*.md
           hidden: true
         - pattern: blog/**/*.md
           sort: descending
-    - file: pages/cv.md
     # TODO: english version
     # - file: pages/resume.md
     - file: glossaire.md
