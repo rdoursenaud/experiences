@@ -4,7 +4,7 @@
   "description": "MyST Markdowm Dynamic Site on Infomaniak",
   "main": "index.js",
   "scripts": {
-  "start": "HOST=0.0.0.0 myst start --keep-host --port ${PORT:-3000}",
+  "start": "HOST=0.0.0.0 myst start --keep-host --port ${PORT:-3000} --server-port 8080",
   "clean": "myst clean",
   "build": "myst build"
   },
