@@ -20,7 +20,7 @@ Frozen
 ## Significant improvements against the original design
 
 - Only one single bridge.
-- Fully equiped with in-circuit components.
+- Fully equipped with in-circuit components.
 - Ready for direct rear panel mount.
 
 First let's take a look at the schematic:  

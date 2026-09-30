@@ -27,7 +27,7 @@ voir un jour digicheck sur Linux :
 > in this piece of software and I can understand you don't want to see
 > any  
 > other manufacturer use your work freely) or a mix of both with closed  
-> source librairies and open sourced free GUI ala nVidia.
+> source libraries and open sourced free GUI ala nVidia.
 > 
 > You have the power to fulfill my dream!  
 > Any hopes?

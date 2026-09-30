@@ -142,7 +142,7 @@ esac
 exit 0
 ```
 
-Start the ccpd dameon.  
+Start the ccpd daemon.  
 ` # /etc/init.d/ccpd start `
 
 You're done.
@@ -167,16 +167,16 @@ you may have missed something.
 And now print!
 
 :::{caution} TODO
-- [ ] Make startup script work at bootup  
+- [ ] Make startup script work at boot-up  
 - [x] Real Debian packages
   :::{tip} NEW!
   Test packages available :  
   - [cndrvcups-common\_1.10-2\_i386](../files/cndrvcups-common_1.10-2_i386.deb)
   - [cndrvcups-capt\_1.10-2\_i386](../files/cndrvcups-capt_1.10-2_i386.deb)
-- [ ] Create symlinks for startup script at bootup  
+- [ ] Create symlinks for startup script at boot-up  
 - [ ] Write an assistant for printer configuration  
 - [ ] Include french translations  
-- [ ] Tanslate /usr/share/captmon/msgtable.xml to french  
+- [ ] Translate /usr/share/captmon/msgtable.xml to french  
 - [ ] Make cngplp fr.po and statusui fr.po  
 - [ ] Rewrite this how-to for Ubuntu both in english and french and post it
 to the respective WiKis

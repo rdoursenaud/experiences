@@ -26,7 +26,7 @@ Dans `/etc/init.d/rtirq` :
 # under the terms of the GNU General Public License version 2 or later.
 #
 # chkconfig: 35 81 19
-# description: Realtime IRQ thread tunning.
+# description: Realtime IRQ thread tuning.
 #
 ### BEGIN INIT INFO
 # Provides:          rtirq
@@ -36,7 +36,7 @@ Dans `/etc/init.d/rtirq` :
 # Should-Stop: $time alsa alsasound hotplug
 # Default-Start:     3 5
 # Default-Stop:      0 1 2 6
-# Short-Description: Realtime IRQ thread tunning.
+# Short-Description: Realtime IRQ thread tuning.
 # Description:       Change the realtime scheduling policy
 #   and priority of relevant system driver IRQ handlers.
 ### END INIT INFO
@@ -314,7 +314,7 @@ dans `/etc/rtirq.conf` :
 #
 # /etc/sysconfig/rtirq
 #
-# Configuration for IRQ thread tunning,
+# Configuration for IRQ thread tuning,
 # for realtime-preempt enabled kernels.
 #
 # This program is free software; you can redistribute it and/or modify it

@@ -19,7 +19,7 @@ Work In Progress
 [http://www.midibox.org](http://www.midibox.org)
 :::
 
-I'm actually in the phase of building a developpement prototype board
+I'm actually in the phase of building a development prototype board
 using redesigned standard modules and beginning to define what the final
 hardware should look like.
 
@@ -48,11 +48,11 @@ hardware should look like.
 - PC based user interface on a 1st step and a PIC based next
 - Maybe include a coffee machine (just kidding)
 
-For more informations, please check [this post](http://forum.midibox.org/index.php?topic=3705.0)
+For more information, please check [this post](http://forum.midibox.org/index.php?topic=3705.0)
 at the midibox.org forums.
 
 Stay tuned!
 
-:::{hint}Ressources
+:::{hint}Resources
 [MIDI Specification](/files/MIDI_Specification.pdf)
 :::

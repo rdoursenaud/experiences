@@ -21,7 +21,7 @@ Frozen
 ## Significant improvements against the original design
 
 - Only six bridges: NO wires under the board ;
-- Fully equiped with in-circuit components ;
+- Fully equipped with in-circuit components ;
 - 7 pin DIN connector for phantom power support through MIDI IN ;
 - Ready for direct rear panel mount.
 

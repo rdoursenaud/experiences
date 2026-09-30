@@ -34,7 +34,7 @@ Firewire is not currently supported by FFADO.
   
 Will do my best to try and figure it out.  
   
-Further informations will likely end up in my
+Further information will likely end up in my
 [GitHub repo.](https://github.com/EMATech/Soundcraft_Digital)
 :::
 
