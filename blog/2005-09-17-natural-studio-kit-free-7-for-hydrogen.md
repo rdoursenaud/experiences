@@ -1,7 +1,7 @@
 ---
 title: Natural Studio Kit Free 7 for Hydrogen
 date: '2005-09-17'
-subject: Musique // Music
+subject: Musique • Music
 tags:
   - Musique
   - Music

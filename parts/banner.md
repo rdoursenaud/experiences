@@ -1,1 +1,1 @@
-Bienvenue sur mon blog ! // Welcome to my blog!
+Bienvenue sur mon blog ! • Welcome to my blog!

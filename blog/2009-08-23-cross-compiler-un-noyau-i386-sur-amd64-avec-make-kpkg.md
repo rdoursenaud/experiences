@@ -1,7 +1,7 @@
 ---
 title: Cross-compiler un noyau i386 sur amd64 avec make-kpkg
 date: '2009-08-23'
-subject: Informatique // IT
+subject: Informatique • IT
 tags:
   - Informatique
   - IT

@@ -2,7 +2,7 @@
 version: 1
 
 project:
-  title: "Expériences (Experiments)"
+  title: "Expériences ◆ Experiments"
   subtitle:
   short_title:
   description: "Raphaël Doursenaud's Web Space"
@@ -327,7 +327,7 @@ project:
       hidden: true
     # TODO: english version
     # - file: pages/resume.md
-    - title: Blog [FR/EN]
+    - title: Blog
       children:
         - pattern: blog/_draft/*.md
           hidden: true
@@ -346,11 +346,11 @@ project:
 # https://mystmd.org/guide/website-templates
 site:
   nav:
-    - title: CV (Resume) [FR]
+    - title: CV • Resume
       url: /pages/cv
-    - title: Contact [FR]
+    - title: Contact
       url: /pages/contact
-    - title: À propos (About) [FR]
+    - title: À propos • About
       url: /pages/about
   template: book-theme
   options:

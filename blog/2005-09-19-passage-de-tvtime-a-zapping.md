@@ -1,7 +1,7 @@
 ---
 title: Passage de tvtime à zapping
 date: '2005-09-19'
-subject: Informatique // IT
+subject: Informatique • IT
 tags:
   - Informatique
   - IT

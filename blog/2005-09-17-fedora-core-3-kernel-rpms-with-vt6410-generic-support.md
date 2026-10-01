@@ -1,7 +1,7 @@
 ---
 title: Fedora Core 3 kernel rpms with VT6410 generic support
 date: '2005-09-17'
-subject: Informatique // IT
+subject: Informatique • IT
 tags:
   - Informatique 
   - IT

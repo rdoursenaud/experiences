@@ -1,7 +1,7 @@
 ---
 title: 'Cosmic DE: Map touch device to monitor'
 subtitle: 'Gotta touch…'
-subject: Informatique // IT
+subject: Informatique • IT
 date: '2026-02-12'
 tags:
   - COSMIC

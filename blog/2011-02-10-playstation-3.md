@@ -1,7 +1,7 @@
 ---
 title: Playstation 3?
 date: '2011-02-10'
-subject: Inclassable // Unclassifiable
+subject: Inclassable • Unclassifiable
 tags:
   - Inclassable
   - Unclassifiable

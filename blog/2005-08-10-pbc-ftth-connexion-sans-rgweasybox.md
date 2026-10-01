@@ -1,7 +1,7 @@
 ---
 title: Connexion sans RGW/EasyBox
 date: '2005-08-10'
-subject: Informatique // IT
+subject: Informatique • IT
 tags:
   - Matériel
   - Hardware

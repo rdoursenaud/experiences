@@ -1,7 +1,7 @@
 ---
 title: Hey Dude Where's my Oil
 date: '2005-09-17'
-subject: Musique // Music
+subject: Musique • Music
 tags:
   - Musique
   - Music

@@ -1,7 +1,7 @@
 ---
 title: Redesigned Core module board
 date: 2004-05-12
-subject: Électronique // Electronics
+subject: Électronique • Electronics
 tags:
   - Électronique
   - Electronics

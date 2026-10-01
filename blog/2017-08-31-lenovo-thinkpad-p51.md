@@ -2,7 +2,7 @@
 title: Lenovo ThinkPad P51
 subtitle: Hardware & Software support discovery
 date: '2017-08-31'
-subject: Informatique // IT
+subject: Informatique • IT
 tags:
   - Informatique
   - IT

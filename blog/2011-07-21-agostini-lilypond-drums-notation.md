@@ -1,7 +1,7 @@
 ---
 title: Agostini lilypond drums notation
 date: '2011-07-21'
-subject: Musique // Musique
+subject: Musique • Musique
 tags:
   - Musique
   - Music

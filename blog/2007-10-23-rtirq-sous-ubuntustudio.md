@@ -1,7 +1,7 @@
 ---
 title: RTIRQ sous UbuntuStudio
 date: '2007-10-23'
-subject: Informatique // IT
+subject: Informatique • IT
 tags:
   - Informatique
   - IT

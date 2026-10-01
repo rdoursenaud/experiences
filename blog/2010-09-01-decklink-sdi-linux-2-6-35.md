@@ -1,7 +1,7 @@
 ---
 title: Decklink SDI Linux 2.6.35
 date: '2010-09-01'
-subject: Informatique // IT
+subject: Informatique • IT
 tags:
   - Informatique
   - IT

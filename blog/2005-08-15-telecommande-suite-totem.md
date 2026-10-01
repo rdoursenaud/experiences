@@ -1,7 +1,7 @@
 ---
 title: 'Télécommande suite : Totem'
 date: '2005-08-15'
-subject: Informatique // IT
+subject: Informatique • IT
 tags:
   - Informatique
   - IT
