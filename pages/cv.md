@@ -47,7 +47,7 @@ Conception, études et FAO en tôlerie fine. Intégration physique des systèmes
 
 - **Conception & FAO** : Solidworks, Sheetworks, Punch5, BendCAM.
 - **Exploitation** : Poinçonneuse Amada Europe 255, Plieuse Amada HFP 100-3.
-  ```{figure} /images/amada.jpeg
+  ```{figure} /images/amada.webp
   :label: fig-atelier-asg
   :alt: Poinçonneuse CNC Amada Europe 255 en production
   :align: center
@@ -64,7 +64,7 @@ Conception hardware, logique numérique, débogage bas niveau et maîtrise des {
 - **Embarqué** : Microcontrôleurs (ARM, PIC, AVR), MicroPython, CircuitPython, Arduino.
 - **Instrumentation** : Oscilloscopes, analyseurs logiques, sondes JTAG (Segger, ST-Link).
 - **Protocoles Bas Niveau** : UART, I2C, SPI, {term}`1-Wire`.
-```{figure} /images/lab.jpg
+```{figure} /images/lab.webp
 :label: fig-labo-electronique
 :alt: Banc de test électronique avec oscilloscope et ampli à lampes ouvert
 :align: center
@@ -128,7 +128,7 @@ Production sonore, instrumentation, écriture musicale et maîtrise de la chaîn
 - **Musique** : Guitare (Électrique, Acoustique, Classique), Batterie. Lecture/Écriture musicale (**{term}`LilyPond`**, {term}`Frescobaldi`).
 - **Prise de Son** : Musique live, studio, ambiances. Microphonie et implantation.
 - **Sonorisation** : Événementielle, musicale, intégration technique de systèmes.
-```{figure} /images/festival.jpg
+```{figure} /images/festival.webp
 :label: fig-festival-scene
 :alt: Grande scène de festival avec structure treillis et système de sonorisation complet
 :align: center
@@ -350,7 +350,7 @@ Co-fondateur et trésorier de l’*association* TTS :
 [GPC.solutions](http://gpcsolutions.fr) (Pau, 64) : associé fondateur et directeur technique.
 Prestations de service informatiques permettant aux entreprises de travailler en mobilité.
 
-Revendeur intégrateur {term}`Google Workspace` (Autrefois G Suite ou encore Google App à ses débuts).
+Revendeur intégrateur {term}`Google Workspace` (Autrefois G Suite ou encore Google Apps à ses débuts).
 Expertise GCP et APIs Google.
 
 Commercialisation en mode *{term}`Cloud`* de l’ERP/PGI Libre *{term}`Dolibarr`*.
@@ -379,7 +379,7 @@ Production musicale et réalisation complète d’un CD Audio : co-production,
 
 R&D, conception et prototypage de machines informatiques dédiées aux métiers du son et du spectacle :
 - **STAN** : Station de travail audionumérique
-```{figure} /images/STANII.jpg
+```{figure} /images/STANII.webp
 :label: fig-stan
 :alt: Station de travail audionumérique STAN avec console de mixage et écran CRT
 :align: center

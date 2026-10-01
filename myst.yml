@@ -2,7 +2,7 @@
 version: 1
 
 project:
-  title: "Expériences // Experiments"
+  title: "Expériences (Experiments)"
   subtitle:
   short_title:
   description: "Raphaël Doursenaud's Web Space"
@@ -321,26 +321,37 @@ project:
    - blog/_private/**/*
   toc:
     # TODO: landing page
-    # - file: index.md
+    - file: blog/index.md
+      hidden: true
     - file: pages/cv.md
-    - title: Blog
+      hidden: true
+    # TODO: english version
+    # - file: pages/resume.md
+    - title: Blog [FR/EN]
       children:
         - pattern: blog/_draft/*.md
           hidden: true
         - pattern: blog/**/*.md
           sort: descending
-    # TODO: english version
-    # - file: pages/resume.md
     - file: glossaire.md
       hidden: true
     # TODO: english version
     #- file: glossary.md
     #  hidden: true
     - file: pages/contact.md
+      hidden: true
     - file: pages/about.md
+      hidden: true
 
 # https://mystmd.org/guide/website-templates
 site:
+  nav:
+    - title: CV (Resume) [FR]
+      url: /pages/cv
+    - title: Contact [FR]
+      url: /pages/contact
+    - title: À propos (About) [FR]
+      url: /pages/about
   template: book-theme
   options:
     hide_toc:
@@ -360,6 +371,6 @@ site:
     analytics_google:
     analytics_plausible:
     numbered_references:
-    folders: false
+    folders: true
     internal_domains: raphael.doursenaud.fr
     style:
