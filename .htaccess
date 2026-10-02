@@ -1,0 +1,84 @@
+SetOutputFilter DEFLATE
+AddOutputFilterByType DEFLATE "application/atom+xml" "application/javascript" "application/json" "application/ld+json" "application/manifest+json" "application/rdf+xml" "application/rss+xml" "application/schema+json" "application/vnd.geo+json" "application/vnd.ms-fontobject" "application/x-font-ttf" "application/x-javascript" "application/x-web-app-manifest+json" "application/xhtml+xml" "application/xml" "font/eot" "font/opentype" "image/bmp" "image/svg+xml" "image/vnd.microsoft.icon" "image/x-icon" "text/cache-manifest" "text/css" "text/html" "text/javascript" "text/plain" "text/vcard" "text/vnd.rim.location.xloc" "text/vtt" "text/x-component" "text/x-cross-domain-policy" "text/xml"
+
+# SECTION BEGIN GIT PROTECTION
+RedirectMatch 404 /\.git
+# SECTION END GIT PROTECTION
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Redirect all HTTP trafic to HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+  
+    # --- Pages statiques (suppression .html) ---
+    RewriteRule ^pages/about\.html$ /pages/about [R=301,L]
+    RewriteRule ^pages/contact\.html$ /pages/contact [R=301,L]
+    RewriteRule ^pages/cv\.html$ /pages/cv [R=301,L]
+
+    # --- Articles de blog (vers nouveau chemin) ---
+    RewriteRule ^lenovo-thinkpad-p51\.html$ https://raphael.doursenaud.fr/blog/2017-08-31-lenovo-thinkpad-p51 [R=301,L]
+    RewriteRule ^gae-dev-phpstorm-archlinux\.html$ https://raphael.doursenaud.fr/blog/2017-07-26-google-app-engine-php-on-archlinux [R=301,L]
+    RewriteRule ^soundcraft-mini-stagebox-32-teardown\.html$ https://raphael.doursenaud.fr/blog/2017-02-22-soundcraft-mini-stagebox-32-teardown [R=301,L]
+    RewriteRule ^soundcraft-madi-usb-teardown\.html$ https://raphael.doursenaud.fr/blog/2017-02-22-soundcraft-madi-usb-teardown [R=301,L]
+    RewriteRule ^netgear-gs724t-teardown\.html$ https://raphael.doursenaud.fr/blog/2017-02-22-netgear-gs724t-teardown [R=301,L]
+    RewriteRule ^eaton-evolution-650-rack-teardown\.html$ https://raphael.doursenaud.fr/blog/2017-02-22-eaton-evolution-650-rack-teardown [R=301,L]
+    RewriteRule ^sony-mex-n5100bt-teardown\.html$ https://raphael.doursenaud.fr/blog/2016-11-13-sony-mex-n5100bt-teardown [R=301,L]
+    RewriteRule ^soundcraft-si-compact-16-teardown\.html$ https://raphael.doursenaud.fr/blog/2015-05-17-soundcraft-si-compact-16-teardown [R=301,L]
+    RewriteRule ^roland-ua-22-duo-capture-ex\.html$ https://raphael.doursenaud.fr/blog/2015-03-12-roland-ua-22-duo-capture-ex [R=301,L]
+    RewriteRule ^soundcraft-si-multi-digital-card\.html$ https://raphael.doursenaud.fr/blog/2014-05-02-soundcraft-si-multi-digital-card [R=301,L]
+    RewriteRule ^peterson-bbs-1-midi-sysex-format\.html$ https://raphael.doursenaud.fr/blog/2012-08-24-peterson-bbs-1-midi-sysex-format [R=301,L]
+    RewriteRule ^agostini-lilypond-drums-notation\.html$ https://raphael.doursenaud.fr/blog/2011-07-21-agostini-lilypond-drums-notation [R=301,L]
+    RewriteRule ^playstation-3\.html$ https://raphael.doursenaud.fr/blog/2011-02-10-playstation-3 [R=301,L]
+    RewriteRule ^decklink-sdi-linux-2-6-36\.html$ https://raphael.doursenaud.fr/blog/2010-10-19-decklink-sdi-linux-2-6-36 [R=301,L]
+    RewriteRule ^radikal-technologies-sac-2k-usb-driver-reverse-engineering\.html$ https://raphael.doursenaud.fr/blog/2010-10-13-radikal-technologies-sac-2k-usb-driver- [R=301,L]  # confiance: 71%
+    RewriteRule ^radikal-technologies-sac-2k-special-usb-cable\.html$ https://raphael.doursenaud.fr/blog/2010-09-15-radikal-technologies-sac-2k-special-usb [R=301,L]  # confiance: 83%
+    RewriteRule ^decklink-sdi-linux-2-6-35\.html$ https://raphael.doursenaud.fr/blog/2010-09-01-decklink-sdi-linux-2-6-35 [R=301,L]
+    RewriteRule ^hp-xw8000-front-panel-pinout\.html$ https://raphael.doursenaud.fr/blog/2009-11-29-hp-xw8000-front-panel-pinout [R=301,L]
+    RewriteRule ^cross-compiler-un-noyau-i386-sur-amd64-avec-make-kpkg\.html$ https://raphael.doursenaud.fr/blog/2009-08-23-cross-compiler-un-noyau-i386-sur-amd64- [R=301,L]  # confiance: 67%
+    RewriteRule ^installer-alsa-firmware-depuis-revu\.html$ https://raphael.doursenaud.fr/blog/2007-10-23-installer-alsa-firmware-depuis-revu [R=301,L]
+    RewriteRule ^rtirq-sous-ubuntustudio\.html$ https://raphael.doursenaud.fr/blog/2007-10-23-rtirq-sous-ubuntustudio [R=301,L]
+    RewriteRule ^passage-de-tvtime-a-zapping\.html$ https://raphael.doursenaud.fr/blog/2005-09-19-passage-de-tvtime-a-zapping [R=301,L]
+    RewriteRule ^canon-capt-linux-driver-how-to-for-debian\.html$ https://raphael.doursenaud.fr/blog/2005-09-17-canons-capt-linux-driver-how-to-for-deb [R=301,L]
+    RewriteRule ^fedora-core-3-kernel-rpms-with-vt6410-generic-support\.html$ https://raphael.doursenaud.fr/blog/2005-09-17-fedora-core-3-kernel-rpms-with-vt6410-g [R=301,L]  # confiance: 75%
+    RewriteRule ^hey-dude-wheres-my-oil\.html$ https://raphael.doursenaud.fr/blog/2005-09-17-hey-dude-wheres-my-oil [R=301,L]
+    RewriteRule ^natural-studio-kit-free-7-for-hydrogen\.html$ https://raphael.doursenaud.fr/blog/2005-09-17-natural-studio-kit-free-7-for-hydrogen [R=301,L]
+    RewriteRule ^telecommande-suite-totem\.html$ https://raphael.doursenaud.fr/blog/2005-08-15-telecommande-suite-totem [R=301,L]
+    RewriteRule ^sagem-fst-3190w-en-photos\.html$ https://raphael.doursenaud.fr/blog/2005-08-11-sagem-fst-3190w-en-photos [R=301,L]
+    RewriteRule ^pbc-ftth-connection-sans-rgweasybox\.html$ https://raphael.doursenaud.fr/blog/2005-08-10-pbc-ftth-connexion-sans-rgweasybox [R=301,L]  # confiance: 67%
+    RewriteRule ^rme-digicheck\.html$ https://raphael.doursenaud.fr/blog/2005-08-09-rme-digicheck [R=301,L]
+    RewriteRule ^pcmcia\.html$ https://raphael.doursenaud.fr/blog/2005-08-07-pcmcia [R=301,L]
+    RewriteRule ^reborn-the-floorboard-project\.html$ https://raphael.doursenaud.fr/blog/2004-05-12-reborn-the-floorboard-project [R=301,L]
+    RewriteRule ^redesigned-core-module-board\.html$ https://raphael.doursenaud.fr/blog/2004-05-12-redesigned-core-module-board [R=301,L]
+    RewriteRule ^redesigned-jdm-programmer-board\.html$ https://raphael.doursenaud.fr/blog/2004-05-12-redesigned-jdm-programmer-board [R=301,L]
+    RewriteRule ^redesigned-ltc-module-board\.html$ https://raphael.doursenaud.fr/blog/2004-05-12-redesigned-ltc-module-board [R=301,L]
+
+    # --- Pages générales et taxonomies (vers racine) ---
+    RewriteRule ^archives\.html$ / [R=301,L]
+    RewriteRule ^tags\.html$ / [R=301,L]
+    RewriteRule ^categories\.html$ / [R=301,L]
+    RewriteRule ^category/(.*)$ / [R=301,L]
+    RewriteRule ^tag/(.*)$ / [R=301,L]
+    RewriteRule ^author/(.*)$ / [R=301,L]
+  
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Security Headers
+    
+    # Content-Security-Policy (CSP)
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; img-src 'self' data:; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self';"
+
+    # X-Frame-Options
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # X-Content-Type-Options
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Referrer-Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Permissions-Policy
+    Header always set Permissions-Policy "accelerometer=(), ambient-light-sensor=(), autoplay=(), camera=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), speaker=(), sync-xhr=(), usb=(), vr=()"
+</IfModule>
