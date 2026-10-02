@@ -1,2 +1,2 @@
-Dernière mise à jour:
-2026-10-01
+Mis à jour • Updated  
+`2026-10-02`
