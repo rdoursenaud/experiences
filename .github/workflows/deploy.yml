@@ -1,13 +1,19 @@
-name: Deploy to Infomaniak
+name: Deployment
+
+concurrency:
+  group: production
+  cancel-in-progress: true
 
 on:
   push:
     branches:
-      - main
+      - $default-branch
+  workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  deployment:
     runs-on: ubuntu-latest
+    environment: production
 
     steps:
       - name: Checkout code
