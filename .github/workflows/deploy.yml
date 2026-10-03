@@ -22,7 +22,7 @@ jobs:
       - name: Setup Python & Install MyST
         uses: actions/setup-python@v7
         with:
-          python-version: '3.11'
+          python-version: '3.14'
       - name: Install MySTMD
         # https://pypi.org/project/mystmd/
         run: pip install mystmd
@@ -32,14 +32,14 @@ jobs:
           myst clean -y
           myst build --html
 
-      - name: Fix Local URLs
+      - name: Fix URLs
         run: |
           grep -Rl "http://localhost:3[0-9]{3}" ./_build/html/ | xargs -r sed -i -E 's|http://localhost:3[0-9]{3}|https://raphael.doursenaud.fr|g' || true
 
       - name: Deploy via Rsync
         uses: burnett01/rsync-deployments@9.0.1
         with:
-          switches: -av --delete
+          switches: -azvr --delete
           path: _build/html/
           remote_path: sites/raphael.doursenaud.fr/
           remote_host: ox8ba0.ftp.infomaniak.com
