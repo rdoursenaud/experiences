@@ -14,7 +14,15 @@ RedirectMatch 404 /\.git
 
     # --- Désactivation du slash automatique d'Apache ---
     # Requis par MystMD pour gérer les URLs sans extension proprement
+    # Ne fonctionne pas sur Infomaniak
     DirectorySlash Off
+
+    # --- Servir index.html sans slash (contourne DirectorySlash) ---
+    # Si la requête pointe vers un dossier sans slash final, on sert index.html
+    # en interne (pas de 301), ce qui empêche Apache d'ajouter le slash.
+    RewriteCond %{REQUEST_URI} !/$
+    RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+    RewriteRule ^(.+)$ $1/index.html [L]
 
     # --- Pages statiques (suppression .html) ---
     RewriteRule ^pages/about\.html$ /pages/about [R=301,L]
