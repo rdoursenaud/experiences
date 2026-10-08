@@ -7,11 +7,15 @@ RedirectMatch 404 /\.git
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    
+
     # Redirect all HTTP trafic to HTTPS
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
-  
+
+    # --- Désactivation du slash automatique d'Apache ---
+    # Requis par MystMD pour gérer les URLs sans extension proprement
+    DirectorySlash Off
+
     # --- Pages statiques (suppression .html) ---
     RewriteRule ^pages/about\.html$ /pages/about [R=301,L]
     RewriteRule ^pages/contact\.html$ /pages/contact [R=301,L]
@@ -61,12 +65,12 @@ RedirectMatch 404 /\.git
     RewriteRule ^category/(.*)$ / [R=301,L]
     RewriteRule ^tag/(.*)$ / [R=301,L]
     RewriteRule ^author/(.*)$ / [R=301,L]
-  
+
 </IfModule>
 
 <IfModule mod_headers.c>
     # Security Headers
-    
+
     # Content-Security-Policy (CSP)
     Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; img-src 'self' data:; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self';"
 
