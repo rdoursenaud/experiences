@@ -25,7 +25,7 @@ It works great!
 
 Full support out of the box on Android on all modes using Audio
 Evolution Mobile and USB Audio Recorder PRO from
-[http://www.extreamsd.com](http://www.extreamsd.com) and even native
+[www.extreamsd.com](https://www.extreamsd.com) and even native
 support in Lollipop (5.0) in "TAB" mode.
 
 On the Linux side of things, I was pleased to see full audio support
@@ -44,9 +44,12 @@ patches.
 
 :::{hint} Update
 
-The [patch](http://permalink.gmane.org/gmane.linux.alsa.devel/135432)
+The [patch](https://mailman.alsa-project.org/pipermail/alsa-devel/2015-March/089034.html)
 has been
-[merged upstream.](http://permalink.gmane.org/gmane.linux.alsa.devel/135436)
+[merged upstream.](https://mailman.alsa-project.org/pipermail/alsa-devel/2015-March/089038.html)
+% Original URLs:
+% - http://permalink.gmane.org/gmane.linux.alsa.devel/135432
+% - http://permalink.gmane.org/gmane.linux.alsa.devel/135436
 
 Thanks Daniel!
 

@@ -145,7 +145,7 @@ Sonorisation de spectacles vivants en extérieur. Intégration technique et gest
 
 ### 7. La Synthèse : La Coopérative
 
-Ce parcours diversifié converge aujourd’hui vers la création de refuge.coop, une coopérative visant à fusionner R&D, technique et création artistique dans un lieu autonome et collaboratif.
+Ce parcours diversifié converge aujourd’hui vers la création de [refuge.coop](https://refuge.coop), une coopérative visant à fusionner R&D, technique et création artistique dans un lieu autonome et collaboratif.
 
 +++
 
@@ -347,7 +347,7 @@ Co-fondateur et trésorier de l’*association* TTS :
 
 ### 2010-Aujourd’hui **Co-fondateur, Président & Responsable Technique**
 
-[GPC.solutions](http://gpcsolutions.fr) (Pau, 64) : associé fondateur et directeur technique.
+[GPC.solutions](https://gpcsolutions.fr) (Pau, 64) : associé fondateur et directeur technique.
 Prestations de service informatiques permettant aux entreprises de travailler en mobilité.
 
 Revendeur intégrateur {term}`Google Workspace` (Autrefois G Suite ou encore Google Apps à ses débuts).
@@ -394,7 +394,7 @@ Création de sites web et maintenance informatique.
 
 ### 2005-2007 **Technicien Bureau d’Études**
 
-[A.S.G](http://a-s-g.fr) (Pau/Puyoô, 64).
+[A.S.G](https://a-s-g.fr) (Pau/Puyoô, 64).
 
 *Conception, fabrication* en tôlerie fine, câblage et réalisations audiovisuelles sur mesure.
 
@@ -403,7 +403,7 @@ Création de sites web et maintenance informatique.
 ### 2004-2005 **Technicien Indépendant**
 **Post-production audiovisuelle**
 
-*Montage, mixage, post-synchronisation* Olympia 2005 du groupe [NADAU](http://www.nadau.com)
+*Montage, mixage, post-synchronisation* Olympia 2005 du groupe [NADAU](https://www.nadau.com)
 pour diffusions Radio (France Bleu), Télévision (France 3),
 [CD](https://www.discogs.com/fr/release/2806251-Nadau-Nadau-%C3%80-LOlympia) et
 [DVD](https://www.discogs.com/fr/release/33049746-Nadau-Nadau-%C3%80-LOlympia).
@@ -412,7 +412,8 @@ pour diffusions Radio (France Bleu), Télévision (France 3),
 
 **Sonorisation**
 
-Différentes formations locales (NADAU, concerts Emmaüs, Yele Kabe, Treat, Sylphid, Smily & D com danse...) et *Festival* de Barinque avec l’association [BASIC](http://basic.asso.fr).
+Différentes formations locales (NADAU, concerts Emmaüs, Yele Kabe, Treat, Sylphid, Smily & D com danse...) et *Festival* de Barinque avec l’association [BASIC](https://web.archive.org/web/20130517222445/http://basic.asso.fr/).
+% Original URL: https://basic.asso.fr
 
 **Technicien Audiovisuel**
 

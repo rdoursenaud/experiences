@@ -11,8 +11,9 @@ tags:
 ---
 
 Here's a patch allowing the
-[blackmagic](http://www.blackmagic-design.com) kernel module to
+[blackmagic](https://www.blackmagicdesign.com) kernel module to
 build against 2.6.36 linux kernel.
+% Original URL: http://www.blackmagic-design.com
 
 ```diff
 Signed-off-by: Raphaël Doursenaud 

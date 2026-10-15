@@ -24,4 +24,5 @@ performante.
 Après quelques tests simples j’ai réussi à faire fonctionner ma
 connexion sans cet équipement.  
 Je décris la procédure sur le forum dédié au réseau :
-[PauBC.com](http://forum.paubc.info/index.php/topic,335.0.html).
+{del}`[PauBC.com](http://forum.paubc.info/index.php/topic,335.0.html)`.
+% FIXME: broken link

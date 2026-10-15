@@ -4,7 +4,7 @@ https://keybase.io/rdoursenaud
 
 I hereby claim:
 
-  * I am an admin of http://raphael.doursenaud.fr
+  * I am an admin of https://raphael.doursenaud.fr
   * I am rdoursenaud (https://keybase.io/rdoursenaud) on keybase.
   * I have a public key ASCsNpaBh2xvtMNUop2jBO2Ga1LjKg_gOrMjHWHtfXoiGQo
 
@@ -52,4 +52,3 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/rdoursenaud
 
 ==================================================================
-

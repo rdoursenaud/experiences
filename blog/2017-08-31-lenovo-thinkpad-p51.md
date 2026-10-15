@@ -23,7 +23,7 @@ tags:
 - [ ] BTRFS maintenance: btrfs balance + mail results
 - [ ] Backup HDD: cron btrfs send/receive
 - [ ] Encrypt filesystems
-- [ ] [Contribute DMI IDs](http://www.thinkwiki.org/wiki/List_of_DMI_IDs#Adding_entries):
+- [ ] [Contribute DMI IDs](https://www.thinkwiki.org/wiki/List_of_DMI_IDs#Adding_entries):
   ```
   || LENOVO || 20HHCTO1WW || ThinkPad P51 || LENOVO || 20HHCTO1WW || SDK0J40697 WIN || LENOVO || None || LENOVO || N1UET72W (1.46 ) || 10/04/2018 
   || <nowiki></nowiki>
@@ -81,13 +81,21 @@ tags:
 | Battery                                   |                                                                 | 96 Wh                                                                                                                                      | Working                                                                                        |                            |
 
 [1]: https://ark.intel.com/products/97468/Intel-Xeon-Processor-E3-1535M-v6-8M-Cache-3_10-GHz
-[2]: http://www.samsung.com/semiconductor/products/dram/pc-dram/ddr4-sodimm/M474A2K43BB1?ia=2429
+[2]: https://www.samsung.com/semiconductor/products/dram/pc-dram/ddr4-sodimm/M474A2K43BB1?ia=2429
+% FIXME: broken link
+
 [3]: https://ark.intel.com/fr/products/94150/Intel-Dual-Band-Wireless-AC-8265
 [4]: https://www.qualcomm.com/products/snapdragon/modems/4g-lte/x7
 [5]: https://www.sierrawireless.com/products-and-solutions/embedded-solutions/products/em7455/
-[6]: http://www.realtek.com.tw/products/productsView.aspx?Langid=1&PFid=27&Level=5&Conn=4&ProdID=140
-[7]: http://www.sunplusit.com/english/products/pccamera/index.aspx
-[8]: http://www.alcormicro.com/en_content/c_product/product_01b.php?CategoryID=4&IndexID=4
+[6]: https://web.archive.org/web/20160309201937/http://www.realtek.com.tw:80/products/productsView.aspx?Langid=1&PFid=27&Level=5&Conn=4&ProdID=140
+% Original URL: http://www.realtek.com.tw/products/productsView.aspx?Langid=1&PFid=27&Level=5&Conn=4&ProdID=140
+
+[7]: https://web.archive.org/web/20170816033938/http://www.sunplusit.com/english/products/pccamera/index.aspx
+% Original URL: http://www.sunplusit.com/english/products/pccamera/index.aspx
+
+[8]: https://web.archive.org/web/20171024124451/http://www.alcormicro.com/en_content/c_product/product_01b.php?CategoryID=4&IndexID=4
+% Original URL: http://www.alcormicro.com/en_content/c_product/product_01b.php?CategoryID=4&IndexID=4
+
 [9]: https://blog.hansenpartnership.com/tpm2-and-linux/
 
 
@@ -213,7 +221,7 @@ The libfprint fork at https://github.com/nmikhailov/Validity90 offers experiment
 
 #### Partitions
 
-ESP: FAT32 1024 MiB (550 minimum [Source](http://www.rodsbooks.com/efi-bootloaders/principles.html))  
+ESP: FAT32 1024 MiB (550 minimum [Source](https://www.rodsbooks.com/efi-bootloaders/principles.html))  
 BTRFS 931,51 GiB (To match the backup HDD size)  
 SWAP 21,36 GiB
 
@@ -265,22 +273,24 @@ When using the fingerprint scanner on boot with disk lock enabled, the first dis
 
 ##### CPU
 
-[Linux](http://browser.geekbench.com/v4/cpu/3884202)  
-[Microsoft Windows 10](http://browser.geekbench.com/v4/cpu/3280047)
+[Linux](https://browser.geekbench.com/v4/cpu/3884202)  
+[Microsoft Windows 10](https://browser.geekbench.com/v4/cpu/3280047)
 
 
 ##### GPU compute
 
-[Linux nVidia Quadro M2200 OpenCL](http://browser.geekbench.com/v4/compute/1074183)  
-[Microsoft Windows 10 Intel HD Graphics P630](http://browser.geekbench.com/v4/compute/882924)  
-[Microsoft Windows 10 nVidia Quadro M2200](http://browser.geekbench.com/v4/compute/882920)
+[Linux nVidia Quadro M2200 OpenCL](https://browser.geekbench.com/v4/compute/1074183)  
+[Microsoft Windows 10 Intel HD Graphics P630](https://browser.geekbench.com/v4/compute/882924)  
+[Microsoft Windows 10 nVidia Quadro M2200](https://browser.geekbench.com/v4/compute/882920)
 
 
 #### Luxmark
 
-[CPU+GPU](http://www.luxmark.info/node/4625)  
-[GPU](http://luxmark.info/node/4624)
-
+[CPU+GPU](https://web.archive.org/web/20240221113441/http://luxmark.info/node/4625)  
+[GPU](https://web.archive.org/web/20240225011432/http://luxmark.info/node/4624)
+% Original URLs:
+% - http://luxmark.info/node/4625
+% - http://luxmark.info/node/4624
 
 #### gtkperf
 

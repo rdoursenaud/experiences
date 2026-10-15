@@ -14,7 +14,7 @@ tags:
 ---
 
 :::{important}
-A [free driver](http://www.boichat.ch/nicolas/capt/) is now available as an alternative for LBP-810 and LBP-1120.
+A [free driver](https://www.boichat.ch/nicolas/capt/) is now available as an alternative for LBP-810 and LBP-1120.
 :::
 
 :::{warning}

@@ -9,10 +9,11 @@ tags:
   - Ubuntu
 ---
 
-Je viens de découvrir [Zapping](http://zapping.sf.net) ; tout comme
+Je viens de découvrir [Zapping](https://zapping.sourceforge.net/Zapping/index.html) ; tout comme
 `tvtime` il permet de regarder la TV cependant il s’intègre beaucoup mieux
 à Gnome et j’y obtiens une qualité supérieure ! Le télétexte est aussi
 intégré !
+% Original URL: http://zapping.sf.net
 
 Afin de faire la transition, j’ai été obligé de me pencher sur le
 contrôle lirc de zapping. Leur site n’est apparemment pas à jour de ce

@@ -14,7 +14,7 @@ Frozen
 :::
 
 :::{card} The MidiBox Project
-[http://www.midibox.org](http://www.midibox.org)
+[midibox.org](https://midibox.org)
 :::
 
 ## Significant improvements against the original design

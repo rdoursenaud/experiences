@@ -16,7 +16,7 @@ Work In Progress
 :::
 
 :::{card} The MidiBox Project
-[http://www.midibox.org](http://www.midibox.org)
+[midibox.org](https://midibox.org)
 :::
 
 I'm actually in the phase of building a development prototype board
@@ -48,7 +48,9 @@ hardware should look like.
 - PC based user interface on a 1st step and a PIC based next
 - Maybe include a coffee machine (just kidding)
 
-For more information, please check [this post](http://forum.midibox.org/index.php?topic=3705.0)
+% Original URL: https://forum.midibox.org/index.php?topic=3705.0
+
+For more information, please check [this post](https://forum.midibox.org/t/revive-floorboard-project/3720)
 at the midibox.org forums.
 
 Stay tuned!

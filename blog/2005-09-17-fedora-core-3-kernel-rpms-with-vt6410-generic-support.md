@@ -16,7 +16,8 @@ This page is old and no longer maintained!
 :::
 
 This kernel is patched using the patch which can be found at [Robert
-Kersterson's homepage](http://robertk.com/source/).
+Kersterson's homepage](https://web.archive.org/web/20051108011007/http://robertk.com/source/).
+% Original URL: http://robertk.com/source/
 
 ### RPMs
 

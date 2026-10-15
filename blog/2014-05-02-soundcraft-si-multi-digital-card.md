@@ -43,7 +43,7 @@ Further information will likely end up in my
 Takashi Sakamoto's doing an awesome job of figuring out the interface.  
   
 Follow [this thread on the FFADO
-mailing-list](http://sourceforge.net/p/ffado/mailman/ffado-devel/thread/CAKKsO5CYHVRvgo6AV%3D%3DZRJ2it53cF7UGHnnDyCLZY_jzJYHpSA%40mail.gmail.com/)
+mailing-list](https://sourceforge.net/p/ffado/mailman/ffado-devel/thread/CAKKsO5CYHVRvgo6AV%3D%3DZRJ2it53cF7UGHnnDyCLZY_jzJYHpSA%40mail.gmail.com/)
 for live progress.  
   
 Kudos to Takashi! He really knows his stuff.

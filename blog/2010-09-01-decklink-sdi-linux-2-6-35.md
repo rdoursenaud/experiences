@@ -11,8 +11,10 @@ tags:
 ---
 
 Here's a patch allowing the
-[blackmagic](http://www.blackmagic-design.com/) kernel module to
+[blackmagic](https://www.blackmagicdesign.com) kernel module to
 build against 2.6.35 linux kernel.
+% Original URL: http://www.blackmagic-design.com
+
 ```diff
 diff -Nurp DeckLink-7.6.3/blackmagic_lib.c DeckLink-7.6.3-2.6.35//blackmagic_lib.c
 --- DeckLink-7.6.3/blackmagic_lib.c 2010-04-19 05:30:38.000000000 +0200

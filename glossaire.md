@@ -561,7 +561,7 @@ Cloud
 [Source](https://fr.wikipedia.org/wiki/Cloud_computing)
 
 Coopérative
-: Entreprise collective dont les membres (sociétaires) sont à la fois associés et utilisateurs. Les décisions sont prises démocratiquement (une personne = une voix) et les bénéfices sont répartis équitablement ou réinvestis. Voir **refuge.coop**.
+: Entreprise collective dont les membres (sociétaires) sont à la fois associés et utilisateurs. Les décisions sont prises démocratiquement (une personne = une voix) et les bénéfices sont répartis équitablement ou réinvestis. Voir **[refuge.coop](https://refuge.coop)**.
 
 Interopérabilité
 : L’interopérabilité est la capacité que possède un produit ou un système, dont les interfaces sont intégralement conçues à fonctionner avec d’autres produits ou systèmes existants ou futurs et ce sans restriction d’accès ou de mise en œuvre.  
@@ -605,5 +605,5 @@ Souveraineté Numérique
 :::
 
 :::{note}
-Ce glossaire est vivant. Les définitions sont adaptées au contexte de mes projets et de la coopérative **refuge.coop**. N’hésitez pas à proposer des enrichissements.
+Ce glossaire est vivant. Les définitions sont adaptées au contexte de mes projets et de la coopérative **[refuge.coop](https://refuge.coop)**. N’hésitez pas à proposer des enrichissements.
 :::

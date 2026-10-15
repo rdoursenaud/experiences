@@ -10,7 +10,8 @@ tags:
   - Audio
 ---
 
-Music from: <http://www.hearmymusic.co.uk/>
+Music from: {del}`<http://www.hearmymusic.co.uk/>`
+% FIXME: broken link
 
 I've played/sequenced a drum part for this blues song:  
 [MIDI track (Drums only)](/files/dude.mid)  
