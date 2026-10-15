@@ -3,12 +3,12 @@ version: 1
 
 project:
   title: "Expériences ◆ Experiments"
-  subtitle:
-  short_title:
+  #subtitle:
+  #short_title:
   description: "Raphaël Doursenaud's Web Space"
-  exports:
-  downloads:
-  label:
+  #exports:
+  #downloads:
+  #label:
   tags:
     - "Hardware"
     - "Software"
@@ -16,22 +16,22 @@ project:
     - "Audio"
     - "Electronics"
     - "Linux"
-  thumbnail:
-  banner:
+  #thumbnail:
+  #banner:
   parts:
     banner: parts/banner.md
     primary_sidebar_footer: parts/primary-sidebar-footer.md
     footer: parts/footer.md
-  bibliography:
+  #bibliography:
   date: 2026-09-16
-  keywords:
+  #keywords:
   authors:
     - name: "Raphaël Doursenaud"
       id: rdoursenaud
-      orcid:
-      corresponding:
+      #orcid:
+      #corresponding:
       email: "raphael+blog@doursenaud.fr"
-      roles:
+      #roles:
       affiliations:
         - id: refuge
           name: refuge.coop
@@ -50,50 +50,50 @@ project:
           country: France
         - id: ematech
           name: EMA Tech.
-          institution:
-          doi:
-          ror:
-          isni:
-          ringgold:
+          #institution:
+          #doi:
+          #ror:
+          #isni:
+          #ringgold:
           email: contact@ematech.fr
-          address:
+          #address:
           city: Pau
-          state:
+          #state:
           postal_code: "64000"
           country: France
           url: https://ematech.fr
           github: EMATech
-          phone:
-          fax:
-          collaboration:
+          #phone:
+          #fax:
+          #collaboration:
 
-      equal_contributor:
-      deceased:
+      #equal_contributor:
+      #deceased:
       note: This blog's author
       phone: "+33668482010"
-      fax:
+      #fax:
       url: https://raphael.doursenaud.fr
-      bluesky:
+      #bluesky:
       mastodon: "@rdoursenaud@mamot.fr"
-      threads:
+      #threads:
       linkedin: https://www.linkedin.com/in/rdoursenaud
-      twitter:
-      x:
-      facebook:
-      discord:
+      #twitter:
+      #x:
+      #facebook:
+      #discord:
       youtube: https://www.youtube.com/@rdoursenaud
-      discourse:
-      slack:
+      #discourse:
+      #slack:
       github: "rdoursenaud"
       gitlab: https://gitlab.com/rdoursenaud
-  reviewers:
-  editors:
-  affiliations:
-  doi:
-  arxiv:
-  pmid:
-  pmcid:
-  open_access:
+  #reviewers:
+  #editors:
+  #affiliations:
+  #doi:
+  #arxiv:
+  #pmid:
+  #pmcid:
+  #open_access:
   license:
     code: GPL-3.0-or-later
     content: CC-BY-SA-4.0
@@ -101,15 +101,15 @@ project:
   funding: This work was self funded
   github: https://github.com/rdoursenaud/experiences
   edit_url: null
-  source_url:
-  binder:
-  subject:
-  venue:
-  volume:
-  issue:
-  first_page:
-  last_page:
-  math:
+  #source_url:
+  #binder:
+  #subject:
+  #venue:
+  #volume:
+  #issue:
+  #first_page:
+  #last_page:
+  #math:
   abbreviations:
     AC: Alternating Current
     ACID: Atomicity, Consistency, Isolation, and Durability
@@ -301,17 +301,17 @@ project:
     WWAN: Wireless Wide Area Network
     WWW: World Wide Web
     XML: eXtensible Markup Language
-  numbering:
-  options:
+  #numbering:
+  #options:
   id: 182c2960-ccae-4050-bdb7-0a0d1164d5e0
-  references:
-  requirements:
-  resources:
-  social:
-  jupyter:
-  thebe:
-  kernelspec:
-  execute:
+  #references:
+  #requirements:
+  #resources:
+  #social:
+  #jupyter:
+  #thebe:
+  #kernelspec:
+  #execute:
   static_files:
     - .htaccess
     - .infomaniak-maintenance.html
@@ -357,23 +357,23 @@ site:
       url: /pages/about
   template: book-theme
   options:
-    hide_toc:
-    hide_footer:
-    hide_outline:
-    hide_title_block:
-    hide_authors:
-    hide_search:
-    outline_maxdepth:
-    twitter:
+    #hide_toc:
+    #hide_footer:
+    #hide_outline:
+    #hide_title_block:
+    #hide_authors:
+    #hide_search:
+    #outline_maxdepth:
+    #twitter:
     favicon: images/favicon.png
     logo: images/favicon.svg
-    logo_dark:
-    logo_text:
-    logo_url:
+    #logo_dark:
+    #logo_text:
+    #logo_url:
     logo_alt: "Raphaël Doursenaud's Web Space"
-    analytics_google:
-    analytics_plausible:
-    numbered_references:
+    #analytics_google:
+    #analytics_plausible:
+    #numbered_references:
     folders: true
     internal_domains: raphael.doursenaud.fr
-    style:
+    #style:
