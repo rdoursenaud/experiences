@@ -34,11 +34,17 @@ jobs:
 
       - name: Fix URLs
         run: |
-          grep -Rl "http://localhost:3[0-9]{3}" ./_build/html/ | xargs -r sed -i -E 's|http://localhost:3[0-9]{3}|https://raphael.doursenaud.fr|g' || true
+          # 1. localhost → domaine
+          grep -RlE "http://localhost:3[0-9]{3}" ./_build/html/ \
+            | xargs -r sed -i -E 's|http://localhost:3[0-9]{3}|https://raphael.doursenaud.fr|g'
+          # 2. slash final sur les <loc> du sitemap qui n'en ont pas
+          sed -i -E 's|(<loc>https://raphael\.doursenaud\.fr[^<]*[^/])</loc>|\1/</loc>|g' \
+            ./_build/html/sitemap.xml
 
-      - name: Add trailing slash to sitemap
+      - name: Check sitemap
         run: |
-          sed -i -E 's|(<loc>https://raphael\.doursenaud\.fr[^<]*[^/])</loc>|\1/</loc>|g' ./_build/html/sitemap.xml
+          head -20 ./_build/html/sitemap.xml
+          grep -c "localhost" ./_build/html/sitemap.xml || echo "OK: aucun localhost restant"
 
       - name: Deploy via Rsync
         uses: burnett01/rsync-deployments@9.0.1
