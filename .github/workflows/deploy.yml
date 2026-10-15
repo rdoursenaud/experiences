@@ -41,6 +41,11 @@ jobs:
           sed -i -E 's|(<loc>https://raphael\.doursenaud\.fr[^<]*[^/])</loc>|\1/</loc>|g' \
             ./_build/html/sitemap.xml
 
+      - name: Append static pages to sitemap
+        run: |
+          sed -i -E 's|</urlset>|  <url><loc>https://raphael.doursenaud.fr/pages/about/</loc></url>\n  <url><loc>https://raphael.doursenaud.fr/pages/contact/</loc></url>\n  <url><loc>https://raphael.doursenaud.fr/pages/cv/</loc></url>\n</urlset>|' \
+            ./_build/html/sitemap.xml
+
       - name: Check sitemap
         run: |
           head -20 ./_build/html/sitemap.xml
