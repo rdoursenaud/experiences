@@ -67,11 +67,24 @@ RedirectMatch 404 /\.git
 
 </IfModule>
 
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType text/css               "access plus 1 year"
+    ExpiresByType image/png              "access plus 1 year"
+    ExpiresByType image/webp             "access plus 1 year"
+    ExpiresByType image/jpeg             "access plus 1 year"
+    ExpiresByType image/svg+xml          "access plus 1 year"
+    ExpiresByType font/woff2             "access plus 1 year"
+    ExpiresByType font/woff              "access plus 1 year"
+    ExpiresByType image/x-icon           "access plus 1 year"
+</IfModule>
+
 <IfModule mod_headers.c>
     # Security Headers
 
     # Content-Security-Policy (CSP)
-    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; img-src 'self' data:; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self';"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; img-src 'self' data:; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self';"
 
     # X-Frame-Options
     Header always set X-Frame-Options "SAMEORIGIN"
@@ -84,4 +97,32 @@ RedirectMatch 404 /\.git
 
     # Permissions-Policy
     Header always set Permissions-Policy "accelerometer=(), ambient-light-sensor=(), autoplay=(), camera=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), speaker=(), sync-xhr=(), usb=(), vr=()"
+
+    # Preconnect
+
+    # CDNs
+    Header add Link "<https://cdnjs.cloudflare.com>; rel=preconnect"
+    Header add Link "<https://cdn.jsdelivr.net>; rel=preconnect"
+
+    # Cache overrides
+
+    # Don't cache thebe and main css
+    <FilesMatch "^([0-9]+\.)?(thebe-core|thebe-lite|myst-theme)\.(min\.)?(js|css)$">
+        Header set Cache-Control "public, max-age=0, must-revalidate"
+    </FilesMatch>
+
+    # Don't cache the Service worker
+    <FilesMatch "^service-worker\.js$">
+        Header set Cache-Control "public, max-age=0, must-revalidate"
+    </FilesMatch>
+
+    # Don't cache metadata
+    <FilesMatch "\.(json|inv)$">
+        Header set Cache-Control "public, max-age=0, must-revalidate"
+    </FilesMatch>
+
+    # Don't cache original images assets
+    <If "%{REQUEST_URI} =~ m#^/images/#">
+        Header set Cache-Control "public, max-age=0, must-revalidate"
+    </If>
 </IfModule>
