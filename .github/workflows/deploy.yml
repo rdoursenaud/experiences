@@ -30,7 +30,7 @@ jobs:
       - name: Build Site
         run: |
           myst clean -y
-          myst build --html
+          myst build --ci --html
 
       - name: Fix URLs
         run: |
