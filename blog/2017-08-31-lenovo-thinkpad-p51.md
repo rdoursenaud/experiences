@@ -80,13 +80,21 @@ tags:
 | Suspend to disk (Hibernate)               |                                                                 |                                                                                                                                            | Working                                                                                        |                            |
 | Battery                                   |                                                                 | 96 Wh                                                                                                                                      | Working                                                                                        |                            |
 
-[1]: https://ark.intel.com/products/97468/Intel-Xeon-Processor-E3-1535M-v6-8M-Cache-3_10-GHz
-[2]: https://www.samsung.com/semiconductor/products/dram/pc-dram/ddr4-sodimm/M474A2K43BB1?ia=2429
-% FIXME: broken link
+[1]: https://web.archive.org/web/20170911193911/https://ark.intel.com/products/97468/Intel-Xeon-Processor-E3-1535M-v6-8M-Cache-3_10-GHz
+% Original URL: https://ark.intel.com/products/97468/Intel-Xeon-Processor-E3-1535M-v6-8M-Cache-3_10-GHz
 
-[3]: https://ark.intel.com/fr/products/94150/Intel-Dual-Band-Wireless-AC-8265
-[4]: https://www.qualcomm.com/products/snapdragon/modems/4g-lte/x7
-[5]: https://www.sierrawireless.com/products-and-solutions/embedded-solutions/products/em7455/
+[2]: https://download.semiconductor.samsung.com/resources/data-sheet/DDR4_8Gb_B_die_Unbuffered_SODIMM_Rev2.2_Nov.17.pdf
+% Original URL: https://www.samsung.com/semiconductor/products/dram/pc-dram/ddr4-sodimm/M474A2K43BB1?ia=2429
+
+[3]: https://web.archive.org/web/20170721092640/http://ark.intel.com/fr/products/94150/Intel-Dual-Band-Wireless-AC-8265
+% Original URL: https://ark.intel.com/fr/products/94150/Intel-Dual-Band-Wireless-AC-8265
+
+[4]: https://web.archive.org/web/20170907043555/https://www.qualcomm.com/products/snapdragon/modems/4g-lte/x7
+% Original URL: https://www.qualcomm.com/products/snapdragon/modems/4g-lte/x7
+
+[5]: https://web.archive.org/web/20190718175619/https://www.sierrawireless.com/products-and-solutions/embedded-solutions/products/em7455/
+% Original URL: https://www.sierrawireless.com/products-and-solutions/embedded-solutions/products/em7455/
+
 [6]: https://web.archive.org/web/20160309201937/http://www.realtek.com.tw:80/products/productsView.aspx?Langid=1&PFid=27&Level=5&Conn=4&ProdID=140
 % Original URL: http://www.realtek.com.tw/products/productsView.aspx?Langid=1&PFid=27&Level=5&Conn=4&ProdID=140
 
