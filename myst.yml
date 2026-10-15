@@ -127,6 +127,7 @@ project:
     BIOS: Basic Input Output System
     BLE: Bluetooth Low Energy
     BSD: Berkeley Software Distribution
+    BTRFS: B-Tree File System
     BTS: Brevet de Technicien Supérieur
     BTW: By The Way
     CAM: Computer Aided Manufacturing
@@ -160,6 +161,7 @@ project:
     DSP: Digital Signal Processing/Processor
     DVD: Digital Versatile Disc
     EBU: European Broadcasting Union
+    ECC: Error-Correcting Code
     ECMA: European Computer Manufacturers Association (Devenu « Ecma International » en 1994.)
     EFI: Extensible Firmware Interface
     eGPU: external Graphics Processing Unit
