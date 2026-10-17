@@ -17,6 +17,10 @@ tags:
   - Laptop
 ---
 
+:::{figure} /images/lenovo-thinkpad-p51-hero.png
+:alt: Lenovo ThinkPad P51 hero shot
+:::
+
 :::{caution} TODO
 
 - [ ] Hardware features matrix (WIP)
@@ -35,8 +39,8 @@ tags:
   thinkpad_acpi: please report the conditions when this event happened to ibm-acpi-devel@lists.sourceforge.net
   ```
 :::
-### Hardware features
 
+### Hardware features
 
 #### Matrix
 

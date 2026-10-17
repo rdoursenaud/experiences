@@ -5,6 +5,8 @@
 - [**Loi n° 65-557 du 10 juillet 1965**](https://www.legifrance.gouv.fr/loda/id/LEGISCTA000006092769) **fixant le statut de la copropriété des immeubles bâtis**
 
   - [Article 18-1](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000042120918) *Consultation pièces justificatives entre convocation et AG*
+
+  - [Article 18-2](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000049398757) *Changement de syndic*
   
   - [Loi n° 85-1470 du 31 décembre 1985](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000878233) modifiant la loi n° 65-557 du 10 juillet 1965 fixant le statut de la copropriété des immeubles bâtis
 
@@ -13,13 +15,18 @@
 - [Loi n° 2014-366 du 24 mars 2014](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000028772256) pour l'accès au logement et un urbanisme rénové
 
 - [Ordonnance n° 2019-1101 du 30 octobre 2019](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000039295537) portant réforme du droit de la copropriété des immeubles bâtis
+
 - [Loi n° 2021-1104 du 22 août 2021](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043956924) portant lutte contre le dérèglement climatique et renforcement de la résilience face à ses effets
 
 ## Socle Réglementaire
 
 - [**Décret n°67-223 du 17 mars 1967**](https://www.legifrance.gouv.fr/loda/id/LEGIARTI000031857508) **pris pour l'application de la loi n° 65-557 du 10 juillet 1965 fixant le statut de la copropriété des immeubles bâtis**
 
+  - [Article 33-1](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000042078761) *Changement de syndic*
+
 - [Décret n°2005-240 du 14 mars 2005](https://www.legifrance.gouv.fr/loda/id/LEGITEXT000006051416) relatif aux comptes du syndicat des copropriétaires
+
+  - [Article 6](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006239514) *Changement de syndic*
 
 - [Arrêté du 14 mars 2005](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000258165) relatif aux comptes du syndicat des copropriétaires
 
@@ -52,5 +59,5 @@
 
 ## Jurisprudence
 
-- Cour de Cassation (3ème Chambre Civile):: C'est elle qui tranche les litiges majeurs (nullité d'AG, responsabilité du syndic, interprétation des tantièmes)
-- Cours d'Appel:: Nombreuses décisions sur les cas concrets (troubles de voisinage, travaux, impayés)
+- Cour de Cassation (3ème Chambre Civile) : C'est elle qui tranche les litiges majeurs (nullité d'AG, responsabilité du syndic, interprétation des tantièmes)
+- Cours d'Appel : Nombreuses décisions sur les cas concrets (troubles de voisinage, travaux, impayés)

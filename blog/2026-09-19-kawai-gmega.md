@@ -8,13 +8,20 @@ tags:
   - SysEx
 ---
 
-% TODO: main photo
+:::{figure} /images/kawai-gmega-front.jpg
+:alt: Kawai Gmega
+:::
+## Manuals
 
-% TODO: insert manual
+- [User Manual](https://archive.org/details/manuallib-id-2723109)
+- [System Exclusive Parameters](https://archive.org/details/gmega-sysex)
+- [Wave List](https://archive.org/details/manuallib-id-2723113)
+
+Source : archive.org
 
 % TODO: tips
 
-### SysEx
+## Useful SysEx messages
 
 :::{card} Factory Reset SysEx Dump
 
@@ -62,3 +69,7 @@ F0 40 00 10 00 08 08 1F 00 00 01 0F 06 04 00 01 04 00 01 08 08 00 00 01 01 0A 04
 
 [Source: DevanWolf on Vogons](https://www.vogons.org/viewtopic.php?p=1383779#p1383779)
 :::
+
+## Teardown
+
+[Photo album](https://photos.app.goo.gl/8Vipu3x6CSTZLbGe8)
