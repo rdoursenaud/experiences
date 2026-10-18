@@ -60,3 +60,20 @@ jobs:
           remote_host: ox8ba0.ftp.infomaniak.com
           remote_user: ox8ba0_deploy-gh
           remote_key: ${{ secrets.INFOMANIAK_SSH_KEY }}
+
+      - name: Submit URLs to Bing IndexNow
+        run: |
+          KEY=$(cat 9f66de17e87e4934a15d81c7538407d3.txt)
+          # Le fichier doit être déployé
+          test -f ./_build/html/9f66de17e87e4934a15d81c7538407d3.txt \
+            || { echo "Clé absente du build!"; exit 1; }
+          jq -R -s \
+            --arg host "raphael.doursenaud.fr" \
+            --arg key "$KEY" \
+            --arg kl "https://raphael.doursenaud.fr/$KEY.txt" \
+            '{host:$host, key:$key, keyLocation:$kl, urlList:(split("\n")|map(select(length>0)))}' \
+            <(grep -oP '(?<=<loc>)[^<]+' ./_build/html/sitemap.xml) \
+          | curl -sS -o /dev/null -w "IndexNow HTTP %{http_code}\n" \
+              -X POST "https://api.indexnow.org/indexnow" \
+              -H "Content-Type: application/json; charset=utf-8" \
+              --data-binary @-
