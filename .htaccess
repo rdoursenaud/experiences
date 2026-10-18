@@ -131,4 +131,11 @@ RedirectMatch 404 /\.git
     <If "%{REQUEST_URI} =~ m#^/images/#">
         Header set Cache-Control "public, max-age=0, must-revalidate"
     </If>
+
+    # Downloads
+
+    # Forcer le téléchargement des fichiers de données
+    <If "%{REQUEST_URI} =~ m#^/(files|build)/#">
+        Header set Content-Disposition "attachment"
+    </If>
 </IfModule>
