@@ -68,6 +68,9 @@ RedirectMatch 404 /\.git
     RewriteRule ^tag/(.*)$ / [R=301,L]
     RewriteRule ^author/(.*)$ / [R=301,L]
 
+    # --- Médias legacy WordPress (wp-content/uploads → files) ---
+    RewriteRule ^wp-content/uploads/(.*)$ /files/$1 [R=301,L]
+
 </IfModule>
 
 <IfModule mod_expires.c>

@@ -318,12 +318,13 @@ project:
     - .htaccess
     - .infomaniak-maintenance.html
     - .user.ini
+    # Bing IndexNow API Key
+    - 9f66de17e87e4934a15d81c7538407d3.txt
     - files
+    # TODO:
+    #- humans.txt
     - images
     - keybase.txt
-    # Bing IndexNow
-    - 9f66de17e87e4934a15d81c7538407d3.txt
-    # TODO: - humans.txt
   exclude:
    - blog/_private/**/*
   toc:
