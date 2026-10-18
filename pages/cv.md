@@ -31,7 +31,7 @@ date: 2026-09-15
 FRANCE
 
 {button}`raphael+cv@doursenaud.fr <mailto:raphael+cv@doursenaud.fr>`
-{button}`+33 (0)6 68 48 20 10 <tel:+33668482010>`
+{button}`+33 (0)6 68 48 20 10 <tel:+33668482010>`
 :::
 
 +++
