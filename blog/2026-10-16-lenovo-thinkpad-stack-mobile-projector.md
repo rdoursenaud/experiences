@@ -51,6 +51,7 @@ abbreviations:
 | FCC ID | `A5MM123` (IC : `5903G-M123`) |
 | Grantee | `A5M` (Lenovo) |
 | Product code | `M123` (ThinkPad Stack Projector) |
+| Android codename | `pj_stack_acc` |
 
 > Recherche FCC : https://www.fcc.gov/oet/ea/fccid
 
@@ -107,6 +108,10 @@ Voir [Lenovo ThinkPad Stack Assistant](2026-10-16-lenovo-thinkpad-stack-assistan
 - **LineageOS** — pas de branche x86 maintenue
 - **Android-x86** — modernité + pilotes DLP/SST conservés nativement
 - **Arch Linux** — DLP interne à porter
+
+:::{note} Previous art
+https://www.reddit.com/r/NixOS/comments/1ultoc5/booted_nixos_on_the_incredibly_obscure_thinkpad/
+:::
 
 ---
 

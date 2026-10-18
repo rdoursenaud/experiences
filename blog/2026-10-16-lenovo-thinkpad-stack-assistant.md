@@ -20,7 +20,11 @@ abbreviations:
   OTA: Over The Air
   JSON: JavaScript Object Notation
   ZIP:
-    
+  DES: Data Encryption Standard
+  IV: Initialization Vector
+  PDB: Program DataBase
+  WPF: Windows Presentation Foundation
+  mDNS: multicast DNS
 ---
 
 # Lenovo ThinkPad Stack Assistant
@@ -159,6 +163,102 @@ Clés du `ReceivingThread` (v2.0.6)
 | `result` | String | Réponse générique |
 | `ret` | String | Code retour |
 | `Full` | String | ⚠️ majuscule — réponse complète ? |
+
+## Windows — client .NET (`Stack.exe`)
+
+*Version `0.2.0.6`, assembly WPF (`MahApps.Metro`). Rétro-ingénierie via
+décompilation native (`ilspy-bin`), les symboles complets étant livrés avec le
+binaire.*
+
+:::{note} Symboles en production
+`Stack.pdb` est packagé à côté de `Stack.exe`. Un décompilateur .NET reconstruit
+donc un quasi-code source (noms de classes, méthodes, variables) sans
+désassemblage aveugle — le `.pdb` n'a jamais été retiré du build livré.
+:::
+
+### Dépendances embarquées
+
+| Composant | Binaire | Rôle |
+| --- | --- | --- |
+| SSH | `dropbear.exe`, `dbclient.exe`, `dropbearkey.exe` (+ `cygwin1.dll`) | tunnel/maintenance vers le device |
+| Découverte réseau | `Interop.Bonjour.dll` | mDNS/DNS-SD (cf. protocole) |
+| Bluetooth | `InTheHand.Net.Personal.dll` | appairage BT |
+| QR Code | `ThoughtWorks.QRCode.dll` | provisioning / partage de config |
+| Audio | `CoreAudioApi.dll` | sortie audio locale |
+
+:::{warning} Clé SSH factice
+`id_rsa.pub` contient une ligne de `1` (`1111…`). Un vrai `id_rsa.pub` commence
+par `ssh-rsa AAAA…` (base64). Le fichier sert uniquement à ce que le code ne
+plante pas sur une lecture de clé absente — l'authentification SSH n'est jamais
+vérifiée.
+:::
+
+### Chaîne de chiffrement des fichiers
+
+Deux blobs opaques dans `files/` sont déchiffrés par la classe
+`stack.Helper.CSEncryptDecrypt`. Le code décompilé révèle un chiffrement
+purement décoratif :
+
+```csharp
+public static void DecryptFile(string sInputFilename, string sOutputFilename, string sKey)
+{
+    DESCryptoServiceProvider DES = new DESCryptoServiceProvider();
+    DES.Key = Encoding.ASCII.GetBytes(sKey);   // clé = la string en dur
+    DES.IV  = Encoding.ASCII.GetBytes(sKey);   // IV = même string
+    // … DES-CBC, padding PKCS7 implicite …
+}
+```
+
+| Défaut | Constat |
+| --- | --- |
+| Algorithme | **DES** (1977), clé de 8 octets — cassable par brute-force |
+| Clé | **`"ThinkPad"`** — `public const string FirmwareFileKey = "ThinkPad"` (8 caractères = taille exacte d'une clé DES) |
+| IV | **égal à la clé** — annule tout l'intérêt du mode CBC |
+| Rôle réel | Empêcher un `strings` sur le `.bin`, pas protéger un secret |
+
+:::{note} Vérification par l'entropie
+`gjzglx.txt` fait 808 octets = 101 × 8 → multiple de la taille de bloc DES,
+cohérent avec du DES-CBC + padding. `binwalk` sur les deux blobs bruts est muet
+(aucun magic) : c'est bien du chiffré, pas du compressé.
+:::
+
+### Déchiffrement
+
+```python
+from Crypto.Cipher import DES
+from Crypto.Util.Padding import unpad
+
+key = b"ThinkPad"                       # IV = Key, comme dans le code
+for f in ["files/gjzglx.txt", "files/Moser_rj_gj.bin"]:
+    data = open(f, "rb").read()
+    plain = unpad(DES.new(key, DES.MODE_CBC, iv=key).decrypt(data), 8)
+    open(f.split("/")[-1] + ".dec", "wb").write(plain)
+```
+
+| Blob chiffré | Contenu en clair |
+| --- | --- |
+| `gjzglx.txt` | **Manifeste OTA** (JSON bilingue CN/EN) — `version`/`max-version` `1.1.1.8` + notes de version. Le nom en pinyin et l'extension `.txt` qui ment ne changent rien au contenu. |
+| `Moser_rj_gj.bin` | **Conteneur firmware** — identique au `sw_fw.bin` du module routeur : header Realtek (10 264 o) → LZMA (kernel + initrd) → SquashFS v4.0 LZMA. Voir l'article *Routeur* pour l'extraction complète. |
+
+:::{note} Le `.bin` est le recovery, pas l'OTA
+`binwalk` sur le `.dec` sort un SquashFS daté **2038-07-18** (horloge RTC dégénérée
+au build). C'est le firmware recovery embarqué dans l'installeur — pas la dernière
+version OTA, malgré le `max-version` affiché par le manifeste.
+:::
+
+### Récapitulatif — sécurité décorative
+
+| Couche | « Protection » |
+| --- | --- |
+| Clé SSH | `1111…` (factice) |
+| Symboles | `.pdb` livré en prod |
+| Chiffrement | DES (1977) |
+| Clé | `"ThinkPad"` en `const string` |
+| IV | Égal à la clé |
+
+Le fil conducteur est le même que côté device (telnet `root:root`, CGI sans
+auth, OTA signé MD5 seul) : chaque couche de sécurité existe pour décourager le
+curieux, aucune pour arrêter un analyseur.
 
 ---
 
