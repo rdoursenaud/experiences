@@ -111,6 +111,13 @@ Voir [Lenovo ThinkPad Stack Assistant](2026-10-16-lenovo-thinkpad-stack-assistan
 
 :::{note} Previous art
 https://www.reddit.com/r/NixOS/comments/1ultoc5/booted_nixos_on_the_incredibly_obscure_thinkpad/
+
+Confirme que le DLP est probablement vu comme un simple
+périphérique interne (eDP, LDVS, HDMI?) et ne nécessite
+probablement pas de pilote spécifique pour afficher une image.
+
+Le challenge sera sur la partie contrôle (keystone, brightness…)
+qui est probablement sur un bus type I2C.
 :::
 
 ---

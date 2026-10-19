@@ -65,12 +65,9 @@ Ressources :
 - **Dual-band** : il n’est pas porté par le seul `RTL8881A`. Une radio **RTL8192ER** discrète (2,4 GHz) complète le SoC (5 GHz) — ce qui explique la scission `mib_rf` (2,4 GHz) / `mib_rf_ac` (5 GHz) et l’attribution `wlan0` = 5 GHz, `wlan1` = 2,4 GHz.
 - **Flash / RAM** : la NOR Winbond 16 Mio et la DDR 128 Mio recoupent exactement le layout MTD et le `MemTotal` relevés en fonctionnement.
 
-**Connecteur pogo** (repérage au multimètre) : **USB** + **3V3** + **5V** + **GND**.
+**Connecteur pogo** (repérage partiel au multimètre) : **USB** + **3V3** + **5V** + **GND**.
 
 ## Identification
-
-Nom de projet interne : `Poker`
-Preuve : path de build `…/poker-1.1.3.4/Poker/rtl819x/linux-2.6.30`
 
 | Champ | Valeur |
 | --- | --- |
@@ -80,6 +77,9 @@ Preuve : path de build `…/poker-1.1.3.4/Poker/rtl819x/linux-2.6.30`
 | EC | `0.1.0.2` |
 | Gateway IP | `192.168.33.254` |
 | Serveur HTTP | Boa v0.94, User: `root` |
+
+Nom de projet interne : `Poker`
+Preuve : path de build `…/poker-1.1.3.4/Poker/rtl819x/linux-2.6.30`
 
 ## Connectique pogo — empilement des modules
 
@@ -189,7 +189,7 @@ Trivial, confirmé.
 - Credentials : **`root:root`** (hash `$1$` cracké en < 1 min sous John).
 - Boa tourne en **`User root`** → toute RCE CGI = uid 0.
 
-### Mécanique d’authentification (contre-intuitive)
+### Mécanisme d’authentification (contre-intuitif)
 
 - **`/bin/login` (busybox) lit `passwd`, pas `shadow`.** Le hash root actif est donc celui de `/var/passwd` (`$1$se4gYKJy$…` = `root`).
 - **`/var/shadow` est un leurre** : `rcS` fait `cp /etc/shadow.sample /var/shadow` à chaque boot → son contenu (`$1$KEKJV2R0$…`) est écrasé au boot et ne sert jamais à l’auth.
@@ -209,7 +209,7 @@ telnet 192.168.33.254
 
 ## Configuration persistante — format `COMPCS`
 
-`/var/config.dat` (~9,7 Ko) = blob sérialisé Realtek, **magic `COMPCS`**, **pas compressé** (le `lzma` échoue — c’est un format à table d’offsets little-endian, lisible en `strings`). Les champs texte (`Stackable Router`, `Lenovo`, `admin`, SSID, PSK) sont en clair, entrecoupés de pointeurs d’offset croissants.
+`/var/config.dat` (~9,7 Ko) = blob sérialisé Realtek, **magic `COMPCS`**, **pas compressé** (le `lzma` échoue — c’est un format à table d’offsets little-endian, lisible en `strings`). Les champs texte (`Stackable Router`, `Lenovo`, `admin`, SSID, PSK) sont en clair, entrecoupés de pointeurs d’offset croissants.
 
 ```bash
 strings -a -t x config.dat | grep -iE 'stack|lenovo|admin|ssid|psk|passw'

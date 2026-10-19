@@ -58,24 +58,17 @@ Voir ci-dessous pour une version complète conservée par archive.org.
 
 `2.0.6` (Mai/Juin 2017).
 
-### Surface de rétro-ingénierie
-
-- **Hotspot Wi-Fi** : SSID par défaut `StackProjector-XXXX` (XXXX = 4 derniers caractères du MAC), mot de passe affiché par défaut — vecteur d’accès local.
-- **Serveur d’OTA** : l’app interroge un serveur de mise à jour interne (projecteur + routeur) — à capturer en trafic réseau.
-- **Protocole de pilotage** : l’app pilote le projecteur à distance (Home/Settings, keystone, cast) via le Wi-Fi — à désosser (apktool/jadx).
-- **Limite de conception** : projecteur en mono-utilisateur (le HDD tolère jusqu’à 5 connexions) — à lever côté port.
-
 ## Protocole
 
-(résolu par désassemblage Android apk v2.0.6)
+(Par désassemblage apk Android v2.0.6)
 
 Découverte : mDNS/DNS-SD, browse `_http._tcp.`, filtre serviceName ∋ "StackProjector",
-resolveService → host:port dynamique. IP projecteur statique connue : 192.168.33.100.
+resolveService → host:port dynamique. IP projecteur statique connue : `192.168.33.100`.
 
 - Projecteur (pilotage) : socket TCP, payload JSON.
   Clés vues : keystone_status, keystone_level (String). Cast/settings = autres clés JSON à capturer.
   Timeout applicatif via setSoTimeout.
-- Routeur (config + OTA) : HTTP, serveur Boa, gateway 192.168.33.254.
+- Routeur (config + OTA) : HTTP, serveur Boa, gateway `192.168.33.254`.
   OTA = POST multipart /boafrm/formUpload (Referer /upload.htm, cookie
   lenovo_user=admin; lenovo_password=<vide>, champ submit-url=/upload.htm)
   → GET /countDownPage.htm (reboot).
@@ -164,7 +157,9 @@ Clés du `ReceivingThread` (v2.0.6)
 | `ret` | String | Code retour |
 | `Full` | String | ⚠️ majuscule — réponse complète ? |
 
-## Windows — client .NET (`Stack.exe`)
+## Microsoft Windows
+
+Client en .NET (`Stack.exe`)
 
 *Version `0.2.0.6`, assembly WPF (`MahApps.Metro`). Rétro-ingénierie via
 décompilation native (`ilspy-bin`), les symboles complets étant livrés avec le
@@ -173,7 +168,7 @@ binaire.*
 :::{note} Symboles en production
 `Stack.pdb` est packagé à côté de `Stack.exe`. Un décompilateur .NET reconstruit
 donc un quasi-code source (noms de classes, méthodes, variables) sans
-désassemblage aveugle — le `.pdb` n'a jamais été retiré du build livré.
+désassemblage aveugle. Le `.pdb` n'a jamais été retiré du build livré.
 :::
 
 ### Dépendances embarquées
@@ -188,16 +183,14 @@ désassemblage aveugle — le `.pdb` n'a jamais été retiré du build livré.
 
 :::{warning} Clé SSH factice
 `id_rsa.pub` contient une ligne de `1` (`1111…`). Un vrai `id_rsa.pub` commence
-par `ssh-rsa AAAA…` (base64). Le fichier sert uniquement à ce que le code ne
-plante pas sur une lecture de clé absente — l'authentification SSH n'est jamais
-vérifiée.
+par `ssh-rsa AAAA…` (base64).
 :::
 
-### Chaîne de chiffrement des fichiers
+### Fichiers chiffrés
 
 Deux blobs opaques dans `files/` sont déchiffrés par la classe
 `stack.Helper.CSEncryptDecrypt`. Le code décompilé révèle un chiffrement
-purement décoratif :
+purement décoratif :
 
 ```csharp
 public static void DecryptFile(string sInputFilename, string sOutputFilename, string sKey)
@@ -214,7 +207,7 @@ public static void DecryptFile(string sInputFilename, string sOutputFilename, st
 | Algorithme | **DES** (1977), clé de 8 octets — cassable par brute-force |
 | Clé | **`"ThinkPad"`** — `public const string FirmwareFileKey = "ThinkPad"` (8 caractères = taille exacte d'une clé DES) |
 | IV | **égal à la clé** — annule tout l'intérêt du mode CBC |
-| Rôle réel | Empêcher un `strings` sur le `.bin`, pas protéger un secret |
+| Rôle réel | Empêcher un `strings` sur le `.bin` ? Cocher une case dans la spec ? |
 
 :::{note} Vérification par l'entropie
 `gjzglx.txt` fait 808 octets = 101 × 8 → multiple de la taille de bloc DES,
@@ -228,8 +221,8 @@ cohérent avec du DES-CBC + padding. `binwalk` sur les deux blobs bruts est muet
 from Crypto.Cipher import DES
 from Crypto.Util.Padding import unpad
 
-key = b"ThinkPad"                       # IV = Key, comme dans le code
-for f in ["files/gjzglx.txt", "files/Moser_rj_gj.bin"]:
+key = b"ThinkPad"
+for f in ["gjzglx.txt", "Moser_rj_gj.bin"]:
     data = open(f, "rb").read()
     plain = unpad(DES.new(key, DES.MODE_CBC, iv=key).decrypt(data), 8)
     open(f.split("/")[-1] + ".dec", "wb").write(plain)
@@ -237,13 +230,13 @@ for f in ["files/gjzglx.txt", "files/Moser_rj_gj.bin"]:
 
 | Blob chiffré | Contenu en clair |
 | --- | --- |
-| `gjzglx.txt` | **Manifeste OTA** (JSON bilingue CN/EN) — `version`/`max-version` `1.1.1.8` + notes de version. Le nom en pinyin et l'extension `.txt` qui ment ne changent rien au contenu. |
-| `Moser_rj_gj.bin` | **Conteneur firmware** — identique au `sw_fw.bin` du module routeur : header Realtek (10 264 o) → LZMA (kernel + initrd) → SquashFS v4.0 LZMA. Voir l'article *Routeur* pour l'extraction complète. |
+| `gjzglx.txt` | **Manifeste OTA** (JSON bilingue CN/EN) — `version`/`max-version` `1.1.1.8` + notes de version. |
+| `Moser_rj_gj.bin` | **Conteneur firmware** — similaire au `sw_fw.bin` du module routeur : header Realtek (10 264 o) → LZMA (kernel + initrd) → SquashFS v4.0 LZMA. Voir l'article *Routeur* pour l'extraction complète. |
 
-:::{note} Le `.bin` est le recovery, pas l'OTA
+:::{note} Le `.bin` est un recovery plus ancien que l'OTA
 `binwalk` sur le `.dec` sort un SquashFS daté **2038-07-18** (horloge RTC dégénérée
-au build). C'est le firmware recovery embarqué dans l'installeur — pas la dernière
-version OTA, malgré le `max-version` affiché par le manifeste.
+au build). C'est le firmware recovery embarqué dans l'installeur. Il ne correspond pas à pas la dernière
+version OTA `1.1.3.4` pourtant sortie à la date de publication.
 :::
 
 ### Récapitulatif — sécurité décorative
@@ -256,8 +249,8 @@ version OTA, malgré le `max-version` affiché par le manifeste.
 | Clé | `"ThinkPad"` en `const string` |
 | IV | Égal à la clé |
 
-Le fil conducteur est le même que côté device (telnet `root:root`, CGI sans
-auth, OTA signé MD5 seul) : chaque couche de sécurité existe pour décourager le
+Le fil conducteur est le même que côté routeur (telnet `root:root`, CGI sans
+auth, OTA signé MD5 seul) : chaque couche de sécurité existe pour décourager le
 curieux, aucune pour arrêter un analyseur.
 
 ---
@@ -265,7 +258,7 @@ curieux, aucune pour arrêter un analyseur.
 ### Observations critiques pour le portage
 
 1. **Typos à préserver** : `volumn` (pas volume), `accessbility` (pas accessibility). Le projecteur attend ces chaînes exactes.
-2. **Doublons de séparateur** : `battery-level` / `battery_level`, `battery-status` / `battery_status`, `bright` / `brightness`. Deux générations de firmware coexistent dans le parser — le port doit accepter les deux ou trancher.
+2. **Doublons de séparateur** : `battery-level` / `battery_level`, `battery-status` / `battery_status`, `bright` / `brightness`. Deux générations de firmware coexistent dans le parser, le portage doit accepter les deux ou trancher.
 3. **Tout est String** (y compris ce qui devrait être Int/Boolean). Le `getInt`/`getBoolean` du grep lit probablement une *autre* classe (le `SendingThread` ou un handler séparé). Le `ReceivingThread` parse tout en String.
 4. **`Full` avec majuscule** : probablement un flag de réponse complète vs incrémentale. À confirmer en écoutant le flux.
 5. **Pas de clé `power` / `on` / `off`** : l’extinction passe peut-être par `result` ou par fermeture de socket. À vérifier.
