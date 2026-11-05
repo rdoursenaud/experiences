@@ -23,6 +23,12 @@ jobs:
         uses: actions/setup-python@v7
         with:
           python-version: '3.14'
+
+      - name: Install image toolchain for MystMD
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends webp imagemagick inkscape
+
       - name: Install MySTMD
         # https://pypi.org/project/mystmd/
         run: pip install mystmd
