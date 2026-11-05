@@ -41,13 +41,14 @@ OS : iPadOS `16.7.16`
 
 ## Équipement utilisé
 
-- Cordon Lightning ↔ USB-A ;
+- Cordon [Lightning](https://fr.wikipedia.org/wiki/Lightning_(connecteur)) ↔ USB-A ;
 - Mon bon vieux [ThinkPad P51](/blog/2017-08-31-lenovo-thinkpad-p51) sous Arch Linux.
 
 ## Jailbreak
 
 ```{figure} /images/2026-11-05_dopamine.png
 :alt: Dopamine
+:width: 80%
 ```
 
 *J’ai simplement suivi le guide* : [Dopamine (semi-untethered)](https://ios.cfw.guide/get-started/iPad-(5th-generation).html)
