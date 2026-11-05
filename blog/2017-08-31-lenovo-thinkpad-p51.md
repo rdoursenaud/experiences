@@ -110,6 +110,9 @@ tags:
 
 [9]: https://blog.hansenpartnership.com/tpm2-and-linux/
 
+:::{note}Update 2026-10-26
+[Lenovo ThinkPad P51 Linux Hardware Probe](https://linux-hardware.org/?probe=184ecc2a5c)
+:::
 
 #### GPUs
 
