@@ -2,3 +2,5 @@
 _build/
 # node
 node_modules/
+# Private articles
+blog/_private
