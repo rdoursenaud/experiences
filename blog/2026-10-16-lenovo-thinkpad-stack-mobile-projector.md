@@ -95,7 +95,7 @@ Voir [Lenovo ThinkPad Stack Assistant](2026-10-16-lenovo-thinkpad-stack-assistan
  Champ | Valeur | Intérêt port |
 | --- | --- | --- |
 | Projector Model | `M123` | recoupe le FCC `A5MM123` |
-| Kernel | `3.14.55x86_64` | **x86_64 confirmé** — branche alignée sur Android-x86 6.0 |
+| Kernel | `3.14.55-x86_64` | **x86_64 confirmé** — branche alignée sur Android-x86 6.0 |
 | Android | `6.0.1` | base à reproduire |
 | System Version | `2.2.5` | référence OTA projecteur |
 | Release | `g_pi_stack-user 6.0.1` | build user, non-root d’origine |
