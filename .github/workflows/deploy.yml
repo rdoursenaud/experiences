@@ -87,7 +87,7 @@ jobs:
             --arg kl "https://raphael.doursenaud.fr/$KEY.txt" \
             '{host:$host, key:$key, keyLocation:$kl, urlList:(split("\n")|map(select(length>0)))}' \
             <(grep -oP '(?<=<loc>)[^<]+' ./_build/html/sitemap.xml) \
-          | curl -sS -o /dev/null -w "IndexNow HTTP %{http_code}\n" \
+          | curl -sS -w "IndexNow HTTP %{http_code}\n" \
               -X POST "https://api.indexnow.org/indexnow" \
               -H "Content-Type: application/json; charset=utf-8" \
               --data-binary @-
