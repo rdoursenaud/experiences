@@ -14,6 +14,8 @@ jobs:
   deployment:
     runs-on: ubuntu-latest
     environment: production
+    env:
+      KEY: 9f66de17e87e4934a15d81c7538407d3
 
     steps:
       - name: Checkout code
@@ -67,12 +69,18 @@ jobs:
           remote_user: ox8ba0_deploy-gh
           remote_key: ${{ secrets.INFOMANIAK_SSH_KEY }}
 
+      - name: Wait for key to be reachable
+        run: |
+          URL="https://raphael.doursenaud.fr/$KEY.txt"
+          for i in 1 2 3 4 5; do
+            body=$(curl -fsS "$URL" 2>/dev/null || true)
+            [ "$body" = "$KEY" ] && { echo "key OK"; exit 0; }
+            echo "attempt $i: got '$body'"; sleep 5
+          done
+          echo "key not reachable/served correctly"; exit 1
+
       - name: Submit URLs to Bing IndexNow
         run: |
-          KEY=$(cat 9f66de17e87e4934a15d81c7538407d3.txt)
-          # Le fichier doit être déployé
-          test -f ./_build/html/9f66de17e87e4934a15d81c7538407d3.txt \
-            || { echo "Clé absente du build!"; exit 1; }
           jq -R -s \
             --arg host "raphael.doursenaud.fr" \
             --arg key "$KEY" \
