@@ -316,7 +316,7 @@ project:
   #kernelspec:
   #execute:
   static_files:
-    ### Theme bug workaround. Fix these files in CI
+    ### Theme bug workaround. Fixing these files deployment in CI!
     #- .htaccess
     #- .infomaniak-maintenance.html
     #- .user.ini
@@ -335,8 +335,7 @@ project:
     # TODO: landing page
     - file: index.md
     - file: pages/cv.md
-#    - file: pages/cv.md
-#      hidden: true
+      hidden: true
     # TODO: english version
     # - file: pages/resume.md
     - file: blog/index.md
@@ -352,9 +351,9 @@ project:
     #- file: glossary.md
     #  hidden: true
     - file: pages/contact.md
-#      hidden: true
+      hidden: true
     - file: pages/about.md
-#      hidden: true
+      hidden: true
 
 # https://mystmd.org/guide/website-templates
 site:
