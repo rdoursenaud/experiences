@@ -45,6 +45,9 @@ jobs:
 
       - name: Fix URLs
         run: |
+          # 0. pre.render → domaine
+          grep -RlE "http://pre.render" ./_build/html/ \
+            | xargs -r sed -i -E 's|http://pre.render|https://raphael.doursenaud.fr|g'
           # 1. localhost → domaine
           grep -RlE "http://localhost:3[0-9]{3}" ./_build/html/ \
             | xargs -r sed -i -E 's|http://localhost:3[0-9]{3}|https://raphael.doursenaud.fr|g'
