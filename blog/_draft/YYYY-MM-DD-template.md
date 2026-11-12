@@ -1,13 +1,13 @@
 ---
 abbreviations:  # Optional
-#  <Term>: <Expanded Term>
-#date: '<YYYY-MM-DD>'
+  <Term>: <Expanded Term>
+date: '<YYYY-MM-DD>'
 downloads:  # Optional
-#  - file: /files/<filename>
-#    title: '<File name>'
+  - file: /files/<filename>
+    title: '<File name>'
 keywords:  # For search engines
-#  - '<Keyword0>'
-#  - '<Keyword1>'
+  - '<Keyword0>'
+  - '<Keyword1>'
 short_title: '<Short title (menus): Template>'  # Optional. Max 40 chars
 subject: '<FR> • <EN>'  # Max 40 chars
 # One of:
@@ -26,10 +26,10 @@ subject: '<FR> • <EN>'  # Max 40 chars
 # subject: 'Techno. Vidéo • Video Tech.'
 subtitle: '<Sub title (article): Empty>'  # Max 500 chars
 tags:  # For humans
-#  - '<Tag0>'
-#  - '<Tag1>'
-#title: '<Long title (article): An awesome blog entry template>'  # Optional: you can also use an H1 heading
+  - '<Tag0>'
+  - '<Tag1>'
+#title: '<Long title (article): An awesome blog entry template>'  # Optional: prefer using an H1 heading
 ---
-# <Title>
+# <An awesome blog entry template>
 
-## <Section>
+## <A section>
