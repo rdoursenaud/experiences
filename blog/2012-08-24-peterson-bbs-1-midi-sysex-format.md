@@ -1,17 +1,17 @@
 ---
-title: Peterson BBS-1 MIDI SysEx format
 date: '2012-08-24'
-subject: Music Technologies
+short_title: 'BBS-1 SysEx format'
+subject: 'Techno. Musique • Music Tech.'
 tags:
-  - Informatique
-  - IT
-  - Matériel
-  - Hardware
-  - Reverse Engineering
-  - MIDI
-  - Peterson
-  - BBS-1
+  - 'Layer: Hardware'
+  - 'Reverse Engineering'
+  - 'MIDI'
+  - 'SysEx'
+  - 'Peterson'
+  - 'BBS-1'
 ---
+# Peterson BBS-1 MIDI SysEx format
+
 
 I just received my brand new metronome and began tinkering with it.  
   

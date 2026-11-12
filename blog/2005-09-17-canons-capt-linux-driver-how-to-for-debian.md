@@ -1,17 +1,23 @@
 ---
-title: Canon's CAPT linux driver how-to for Debian
 date: '2005-09-17'
-subject: Printing
+downloads:
+  - file: /files/cndrvcups-common_1.10-2_i386.deb
+    title: 'cndrvcups-common_1.10-2_i386'
+  - file: /files/cndrvcups-capt_1.10-2_i386.deb
+    title: 'cndrvcups-capt_1.10-2_i386'
+short_title: 'Canon LBP Linux'
+subject: 'Impression • Printing'
 tags:
-  - Informatique
-  - IT
-  - GNU/Linux
-  - Debian
-  - Imprimante
-  - Printer
-  - Canon
-  - CAPT
+  - 'Imprimante'
+  - 'Printer'
+  - 'GNU/Linux'
+  - 'Debian'
+  - 'CAPT'
+  - 'Canon'
+  - 'LBP-810'
+  - 'LBP-1120'
 ---
+# Canon's CAPT linux driver how-to for Debian
 
 :::{important}
 A [free driver](https://www.boichat.ch/nicolas/capt/) is now available as an alternative for LBP-810 and LBP-1120.
@@ -169,15 +175,15 @@ And now print!
 :::{caution} TODO
 - [ ] Make startup script work at boot-up  
 - [x] Real Debian packages
-  :::{tip} NEW!
+  ::::{tip} NEW!
   Test packages available :  
-  - [cndrvcups-common\_1.10-2\_i386](../files/cndrvcups-common_1.10-2_i386.deb)
-  - [cndrvcups-capt\_1.10-2\_i386](../files/cndrvcups-capt_1.10-2_i386.deb)
+  - [cndrvcups-common\_1.10-2\_i386](/files/cndrvcups-common_1.10-2_i386.deb)
+  - [cndrvcups-capt\_1.10-2\_i386](/files/cndrvcups-capt_1.10-2_i386.deb)
 - [ ] Create symlinks for startup script at boot-up  
 - [ ] Write an assistant for printer configuration  
 - [ ] Include french translations  
 - [ ] Translate /usr/share/captmon/msgtable.xml to french  
 - [ ] Make cngplp fr.po and statusui fr.po  
-- [ ] Rewrite this how-to for Ubuntu both in english and french and post it
-to the respective WiKis
+- [ ] Rewrite this how-to for Ubuntu both in english and french
+      and post it to the respective WiKis
 :::

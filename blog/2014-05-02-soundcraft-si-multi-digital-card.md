@@ -1,17 +1,14 @@
 ---
-title: Soundcraft Si Multi Digital Card
 date: '2014-05-02'
-subject: AV Technologies
+short_title: 'Soundcraft Si Multi Digital'
+subject: 'Techno. Audio • Audio Tech.'
 tags:
-  - Informatique
-  - IT
-  - GNU/Linux
-  - Matériel
-  - Hardware
-  - Audio
-  - Soundcraft
-  - Si Multi Digital
+  - 'GNU/Linux'
+  - 'Layer: Hardware'
+  - 'Soundcraft'
+  - 'Si Multi Digital'
 ---
+# Soundcraft Si Multi Digital Card
 
 [Photos](https://goo.gl/photos/jMU3zhXQ7ojWFvGQ8)
 

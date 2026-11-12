@@ -1,18 +1,19 @@
 ---
-title: Soundcraft Si Compact 16 teardown
 date: '2015-05-17'
-subject: Teardown
+short_title: 'Teardown: Si Compact 16'
+subject: 'Techno. Audio • Audio Tech.'
 tags:
-  - Démontage
-  - Teardown
-  - Matériel
-  - Hardware
-  - Audio
-  - Démontage
-  - Teardown
-  - Soundcraft
-  - Si Compact 16
+  - 'Démontage'
+  - 'Teardown'
+  - 'Layer: Hardware'
+  - 'Soundcraft'
+  - 'Si Compact 16'
+  - 'USB'
+  - 'Firewire'
+  - 'IEEE1394'
+  - 'ADAT'
 ---
+# Soundcraft Si Compact 16 teardown
 
 ## Taking it apart
 

@@ -1,14 +1,12 @@
 ---
-title: RME Digicheck
 date: '2005-08-09'
-subject: AV Technologies
+subject: 'Techno. Audio • Audio Tech.'
 tags:
-  - Informatique
-  - IT
-  - GNU/Linux
-  - RME
-  - Digicheck
+  - 'GNU/Linux'
+  - 'RME'
+  - 'Digicheck'
 ---
+# RME Digicheck
 
 J’ai envoyé ce mail au support RME pour savoir s’il y avait un espoir de
 voir un jour digicheck sur Linux :

@@ -1,14 +1,15 @@
 ---
-title: Decklink SDI Linux 2.6.36
 date: '2010-10-19'
-subject: AV Technologies
+subject: 'Techno. Vidéo • Video Tech.'
 tags:
-  - Informatique
-  - IT
-  - GNU/Linux
-  - Blackmagic Design
-  - Decklink
+  - 'GNU/Linux'
+  - 'Kernel'
+  - 'Patch'
+  - 'Blackmagic Design'
+  - 'Decklink'
+  - 'SDI'
 ---
+# Decklink SDI Linux 2.6.36
 
 Here's a patch allowing the
 [blackmagic](https://www.blackmagicdesign.com) kernel module to

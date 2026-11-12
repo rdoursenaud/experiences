@@ -1,20 +1,47 @@
 ---
-title: Redesigned Core module board
-date: 2004-05-12
-subject: Électronique • Electronics
+date: '2004-05-12'
+downloads:
+  - file: /files/core.sch
+    title: 'Core schematic'
+  - file: /files/core.brd
+    title: 'Core board'
+  - file: /files/partlist.txt
+    title: 'Core partlist'
+  - file: /files/netlist.txt
+    title: 'Core netlist'
+keywords:
+  - 'DIY'
+  - 'MIDI controller'
+  - 'MIDI foot controller'
+  - 'PCB Design'
+  - 'microcontroller'
+  - 'embedded system'
+  - 'PIC'
+short_title: 'Midibox: Core'
+subject: 'Électronique • Electronics'
+subtitle: 'Panel mountable single board design'
 tags:
-  - Électronique
-  - Electronics
-  - Matériel
-  - Hardware
-  - Midibox
+  - 'DIY'
+  - 'EAGLE'
+  - 'Status: Frozen'
+  - 'Layer: Hardware'
+  - 'MIDI'
+  - 'Midibox'
+  - 'Schematic'
+  - 'Board'
+  - 'Partlist'
+  - 'Netlist'
+  - 'PIC18F4x2'
+  - 'DIN5-180'
+  - 'DIN7'
 ---
+# Redesigned Core module board
 
 :::{note} Status
 Frozen
 :::
 
-:::{card}The MidiBox Project
+:::{card} The MidiBox Project
 [midibox.org](https://midibox.org)
 :::
 

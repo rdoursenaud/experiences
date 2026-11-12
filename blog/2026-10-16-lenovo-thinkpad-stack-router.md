@@ -1,16 +1,4 @@
 ---
-title: 'Lenovo ThinkPad Stack Router'
-date: '2026-10-16'
-tags:
-  - Rétro-Ingénierie
-  - Reverse Engineering
-  - Lenovo
-  - ThinkPad
-  - Stack
-  - Router
-  - Realtek
-  - MIPS
-  - GPL
 abbreviations:
   SoC: System on Chip
   SDK: Software Development Kit
@@ -30,8 +18,23 @@ abbreviations:
   TR-069: Technical Report 069 (CWMP)
   MIB: Management Information Base
   PSK: Pre-Shared Key
+date: '2026-10-16'
+short_title: 'ThinkPad Stack: Router'
+subject: 'Techno. Réseau • Networking Tech.'
+tags:
+  - 'Rétro-Ingénierie'
+  - 'Reverse Engineering'
+  - 'Lenovo'
+  - 'ThinkPad'
+  - 'Stack'
+  - 'Router'
+  - 'Realtek'
+  - 'MIPS'
+  - 'GPL'
+  - 'GNU/Linux'
+  - 'Wi-Fi'
+  - 'Ethernet'
 ---
-
 # Lenovo ThinkPad Stack Router
 
 > Rétro-ingénierie du module routeur du ThinkPad Stack — extraction firmware, accès root, source GPL publiée, portage envisagé.
@@ -157,7 +160,7 @@ binwalk --extract mtd0.bin          # decompressed.bin @ 42818 = kernel raw
 
 ## Firmware — conteneurs OTA / recovery
 
-Conteneur `sw_fw.bin` (Source: APK Levono Stack Assistant) et `fw.bin` (Source: OTA réseau), structure identique :
+Conteneur `sw_fw.bin` (Source: APK Lenovo Stack Assistant) et `fw.bin` (Source: OTA réseau), structure identique :
 
 | Offset | Contenu |
 | --- | --- |
@@ -282,7 +285,7 @@ Auth à deux modes : `admin` local OU `lenovoid` cloud (`change_router_login_t
 ## GPL — source complète publiée
 
 Lenovo a livré la **source correspondante intégrale**.  
-(Conformité quasi complète, ce qui est asssez rare pour le noter !)
+(Conformité quasi complète, ce qui est assez rare pour le noter !)
 
 Source : <https://support.lenovo.com/us/en/downloads/DS105234>
 

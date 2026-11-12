@@ -1,21 +1,4 @@
 ---
-title: StarTech TBT3TBTADAP teardown
-subtitle: Markings, BOM and component analysis
-date: '2026-10-19'
-subject: Informatique • IT
-tags:
-  - Informatique
-  - IT
-  - Matériel
-  - Hardware
-  - Teardown
-  - Thunderbolt
-  - Thunderbolt 3
-  - Thunderbolt 2
-  - USB-C
-  - StarTech
-  - Lintes
-  - BOM
 abbreviations:
   OEM: Original Equipment Manufacturer
   BOM: Bill Of Materials
@@ -37,7 +20,28 @@ abbreviations:
   WQFN: Thin Quad Flat No-leads
   VSON: Very-thin Small Outline No-leads
   TSSOP: Thin Shrink Small Outline Package
+date: '2026-10-19'
+keywords:
+  - 'Thunderbolt 3 to Thunderbolt 2 adapter'
+  - 'Thunderbolt 3 to 2 adapter'
+  - 'Adaptateur Thunderbolt 3 vers Thunderbolt 2'
+  - 'Adaptateur Thunderbolt 3 vers 2'
+short_title: 'Teardown: TBT3TBTADAP'
+subject: 'Informatique • IT'
+subtitle: 'Markings, BOM and component analysis'
+tags:
+  - 'Layer: Hardware'
+  - 'Démontage'
+  - 'Teardown'
+  - 'Thunderbolt'
+  - 'Thunderbolt 3'
+  - 'Thunderbolt 2'
+  - 'USB-C'
+  - 'StarTech'
+  - 'Lintes'
+  - 'BOM'
 ---
+# StarTech TBT3TBTADAP teardown
 
 Product page: <https://www.startech.com/en-us/usb-hubs/tbt3tbtadap>
 
@@ -152,6 +156,6 @@ bootloader query.
 - [Thunderbolt 3 ↔ Thunderbolt 2 adapters](2026-10-19-thunderbolt-adapters)
 - Daisy-chaining multiple Thunderbolt devices through mixed adapters and protocol versions
 - Thunderbolt device authorization (and my
-  [Cosmic desktop applet](https://github.com/rdoursenaud/cosmic-ext-applet-thunderbolt))
+  [Cosmic desktop applet](https://github.com/rdoursenaud/cosmic-ext-thunderbolt))
 - Wordclock synchronization across chained interfaces
 - Helping write the missing Linux driver for the PreSonus Quantum Thunderbolt Interfaces

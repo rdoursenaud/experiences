@@ -15,6 +15,11 @@ tags:
   - cv
   - resume
 date: 2026-09-15
+#exports:
+#  - format: pdf
+#    template: arxiv_nips
+#    logo: false
+#    link: https://raphael.doursenaud.fr/pages/cv/
 ---
 
 :::{card} Touche-à-tout !

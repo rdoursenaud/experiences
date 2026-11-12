@@ -1,12 +1,22 @@
 ---
-title: 'Cosmic DE: Map touch device to monitor'
-subtitle: 'Gotta touch…'
-subject: Informatique • IT
 date: '2026-02-12'
+keywords:
+  - 'Linux'
+  - 'Écran tactile'
+  - 'Moniteur tactile'
+  - 'Tactile screen'
+  - 'Tactile monitor'
+  - 'Touchscreen'
+  - 'Touch monitor'
+short_title: 'COSMIC touch monitor'
+subject: 'Informatique • IT'
+subtitle: 'Gotta touch…'
 tags:
-  - COSMIC
-  - touchscreen
+  - 'GNU/Linux'
+  - 'COSMIC'
+  - 'Touchscreen'
 ---
+# Cosmic DE: Map touch device to monitor
 
 :::{hint} Reference
 Cosmic [Touchscreen support meta-issue](https://github.com/pop-os/cosmic-epoch/issues/241)
@@ -21,7 +31,7 @@ libinput list-devices
 ## 2. Get the monitor output name(s)
 
 ```sh
-wrl-randr
+wlr-randr
 ```
 
 ## 3. Configure `cosmic-comp`
@@ -32,7 +42,7 @@ $EDITOR ~/.config/cosmic/com.system76.CosmicComp/v1/input_devices
 
 ### Sample config
 
-```json
+```rust
 {
     "[Touch Device Name]": (
         state: Enabled,
@@ -41,10 +51,10 @@ $EDITOR ~/.config/cosmic/com.system76.CosmicComp/v1/input_devices
 }
 ```
 
-:::{card}Example
+:::{card} Example
 Here's a working configuration for my ThinkPad P51 with an embedded Wacom touchscreen/pen and
 an external ThinkVision T24t-20 touchscreen-enabled monitor connected to an nVidia eGPU:
-```json
+```rust
 {
     "Wacom Pen and multitouch sensor Finger": (
         state: Enabled,

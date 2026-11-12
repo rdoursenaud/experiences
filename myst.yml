@@ -19,7 +19,7 @@ project:
   #thumbnail:
   #banner:
   parts:
-    banner: parts/banner.md
+#    banner: parts/banner.md
     primary_sidebar_footer: parts/primary-sidebar-footer.md
     footer: parts/footer.md
   #bibliography:
@@ -85,7 +85,8 @@ project:
       #discourse:
       #slack:
       github: "rdoursenaud"
-      gitlab: https://gitlab.com/rdoursenaud
+# TODO: report missing
+#      gitlab: https://gitlab.com/rdoursenaud
   #reviewers:
   #editors:
   #affiliations:
@@ -315,9 +316,11 @@ project:
   #kernelspec:
   #execute:
   static_files:
-    - .htaccess
-    - .infomaniak-maintenance.html
-    - .user.ini
+    ### Theme bug workaround. Fix these files in CI
+    #- .htaccess
+    #- .infomaniak-maintenance.html
+    #- .user.ini
+    ###
     # Bing IndexNow API Key
     - 9f66de17e87e4934a15d81c7538407d3.txt
     - files
@@ -326,30 +329,32 @@ project:
     - images
     - keybase.txt
   exclude:
+   - blog/_draft/YYYY-MM-DD-template.md
    - blog/_private/**/*
   toc:
     # TODO: landing page
-    - file: blog/index.md
-      hidden: true
+    - file: index.md
     - file: pages/cv.md
-      hidden: true
+#    - file: pages/cv.md
+#      hidden: true
     # TODO: english version
     # - file: pages/resume.md
-    - title: Blog
-      children:
-        - pattern: blog/_draft/*.md
-          hidden: true
-        - pattern: blog/**/*.md
-          sort: descending
+    - file: blog/index.md
+      hidden: true
+    - pattern: blog/_draft/*.md
+      sort: descending
+      hidden: true
+    - pattern: blog/**/*.md
+      sort: descending
     - file: glossaire.md
       hidden: true
     # TODO: english version
     #- file: glossary.md
     #  hidden: true
     - file: pages/contact.md
-      hidden: true
+#      hidden: true
     - file: pages/about.md
-      hidden: true
+#      hidden: true
 
 # https://mystmd.org/guide/website-templates
 site:

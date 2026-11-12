@@ -1,13 +1,14 @@
 ---
-title: Passage de tvtime à zapping
 date: '2005-09-19'
-subject: Informatique • IT
+short_title: 'Télécommande : zapping'
+subject: 'Informatique • IT'
 tags:
-  - Informatique
-  - IT
-  - GNU/Linux
-  - Ubuntu
+  - 'GNU/Linux'
+  - 'Ubuntu'
+  - 'lirc'
+  - 'zapping'
 ---
+# Passage de tvtime à zapping
 
 Je viens de découvrir [Zapping](https://zapping.sourceforge.net/Zapping/index.html) ; tout comme
 `tvtime` il permet de regarder la TV cependant il s’intègre beaucoup mieux

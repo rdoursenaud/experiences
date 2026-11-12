@@ -1,15 +1,13 @@
 ---
-title: RTIRQ sous UbuntuStudio
 date: '2007-10-23'
-subject: Informatique • IT
+subject: 'Informatique • IT'
 tags:
-  - Informatique
-  - IT
-  - GNU/Linux
-  - Ubuntu
-  - UbuntuStudio
-  - rtirq
+  - 'GNU/Linux'
+  - 'Ubuntu'
+  - 'UbuntuStudio'
+  - 'rtirq'
 ---
+# RTIRQ sous UbuntuStudio
 
 Dans `/etc/init.d/rtirq` :
 
@@ -105,11 +103,11 @@ then
 case ${ACTION} in
 *start)
 echo "${PREPEND}: ${THREADED}: OFF."
-echo -n 0 &gt; "${THREADED}"
+echo -n 0 > "${THREADED}"
 ;;
 stop)
 echo "${PREPEND}: ${THREADED}: ON."
-echo -n 1 &gt; "${THREADED}"
+echo -n 1 > "${THREADED}"
 ;;
 esac
 fi
@@ -279,7 +277,7 @@ echo
 ps -eo pid,class,rtprio,ni,pri,pcpu,stat,comm --sort -rtprio \
 | egrep '(\^[[:blank:]]*PID|IRQ|softirq)' \
 | awk 'BEGIN {
-while (getline IRQLine &lt; "/proc/interrupts") {
+while (getline IRQLine < "/proc/interrupts") {
 split(IRQLine, IRQSplit, ":[[:blank:]|0-9]+");
 if (match(IRQSplit[1], "\^[[:blank:]]*[0-9]+$")) {
 gsub("[\^[:blank:]]+PIC[\^[:blank:]]*[[:blank:]]+" \

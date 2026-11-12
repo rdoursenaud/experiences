@@ -1,3 +1,6 @@
+---
+subject: 'Juridique • Legal'
+---
 # Droit des Copropriétés
 
 ## Socle Législatif

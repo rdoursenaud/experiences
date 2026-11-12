@@ -1,16 +1,26 @@
 ---
-title: 'Kawai GMega'
-date: '2026-09-28'
+date: '2026-09-19'
+keywords:
+  - 'Expander'
+  - 'Expandeur'
+  - 'Sound module'
+  - 'Module de son'
+  - 'Synthesizer'
+  - 'Synthétiseur'
+subject: 'Techno. Musique • Music Tech.'
 tags:
-  - Nostalgia
-  - Rompler
-  - MIDI
-  - SysEx
+  - 'Kawai'
+  - 'GMega'
+  - 'Rompler'
+  - 'MIDI'
+  - 'SysEx'
 ---
+# Kawai GMega
 
 :::{figure} /images/kawai-gmega-front.jpg
-:alt: Kawai Gmega
+:alt: Kawai GMega
 :::
+
 ## Manuals
 
 - [User Manual](https://archive.org/details/manuallib-id-2723109)

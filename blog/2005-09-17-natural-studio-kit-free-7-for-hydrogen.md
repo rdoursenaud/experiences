@@ -1,15 +1,17 @@
 ---
-title: Natural Studio Kit Free 7 for Hydrogen
 date: '2005-09-17'
-subject: Musique • Music
+downloads:
+  - file: /files/ns_kit7free-h2.tar.gz
+    title: 'ns_kit7free-h2.tar.gz'
+short_title: 'Hydrogen Natural Studio Kit'
+subject: 'Musique • Music'
 tags:
-  - Musique
-  - Music
-  - GNU/Linux
-  - Échantillons
-  - Samples
-  - Batterie
-  - Drums
+  - 'GNU/Linux'
+  - 'Échantillons'
+  - 'Samples'
+  - 'Batterie'
+  - 'Drums'
 ---
+# Natural Studio Kit Free 7 for Hydrogen
 
 {download}`/files/ns_kit7free-h2.tar.gz`

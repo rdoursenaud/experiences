@@ -1,14 +1,16 @@
 ---
-title: Agostini lilypond drums notation
 date: '2011-07-21'
-subject: Musique • Musique
+downloads:
+  - file: /files/agostini.ly
+    title: 'Agostini notation lilypond definition'
+short_title: 'Agostini LilyPond'
+subject: 'Musique • Music'
 tags:
-  - Musique
-  - Music
-  - Batterie
-  - Drums
-  - Agostini
-  - Lilypond
+  - 'Batterie'
+  - 'Drums'
+  - 'Agostini'
+  - 'Lilypond'
 ---
+# Agostini LilyPond drums notation
 
 [Agostini notation lilypond definition](/files/agostini.ly)

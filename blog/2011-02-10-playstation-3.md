@@ -1,14 +1,16 @@
 ---
-title: Playstation 3?
 date: '2011-02-10'
-subject: Inclassable • Unclassifiable
+downloads:
+  - file: /files/ps3.mid
+    title: 'ps3'
+subject: 'Inclassable • Unclassifiable'
+subtitle: Hack This!
 tags:
-  - Inclassable
-  - Unclassifiable
-  - hack_this
-  - Sony
-  - Playstation
-  - MIDI
+  - 'hack_this'
+  - 'Sony'
+  - 'PlayStation 3'
+  - 'MIDI'
 ---
+# PlayStation 3?
 
 [ps3](/files/ps3.mid)

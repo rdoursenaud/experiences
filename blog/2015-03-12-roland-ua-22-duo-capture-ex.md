@@ -1,23 +1,28 @@
 ---
-title: Roland UA-22 DUO-CAPTURE EX
 date: '2015-03-12'
-subject: AV Technologies
+downloads:
+  - file: /files/0001-ALSA-snd-usb-add-quirks-for-Roland-UA-22.patch
+    title: '0001-ALSA-snd-usb-add-quirks-for-Roland-UA-22'
+  - file: /files/0002-UA-22-MIDI-fixup.patch
+    title: '0002-UA-22-MIDI-fixup'
+keywords:
+  - 'Audio interface'
+short_title: 'Roland UA-22'
+subject: 'Techno. Audio • Audio Tech.'
 tags:
-  - Informatique
-  - IT
-  - Matériel
-  - Hardware
-  - Démontage
-  - Teardown
-  - Roland
-  - UA-22
-  - ALSA
-  - Audio
-  - DUO-CAPTURE EX
-  - GNU/Linux
-  - MIDI
-  - USB
+  - 'Layer: Hardware'
+  - 'Démontage'
+  - 'Teardown'
+  - 'Roland'
+  - 'UA-22'
+  - 'DUO-CAPTURE EX'
+  - 'GNU/Linux'
+  - 'ALSA'
+  - 'Audio'
+  - 'MIDI'
+  - 'USB'
 ---
+# Roland UA-22 DUO-CAPTURE EX
 
 Just got myself this nice little USB audio and MIDI interface.
 
@@ -36,9 +41,10 @@ patches.
   
 {del}`Here they are:`
 
-- {del}`[0002-UA-22-MIDI-fixup](/files/0002-UA-22-MIDI-fixup.patch)`
 - {del}`[0001-ALSA-snd-usb-add-quirks-for-Roland-UA-22](
 /files/0001-ALSA-snd-usb-add-quirks-for-Roland-UA-22.patch)`
+- {del}`[0002-UA-22-MIDI-fixup](/files/0002-UA-22-MIDI-fixup.patch)`
+
 
 {del}`Hope these will get pushed upstream soon!`
 

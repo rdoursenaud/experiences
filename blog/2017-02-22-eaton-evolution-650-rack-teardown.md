@@ -1,14 +1,18 @@
 ---
-title: Eaton Evolution 650 rack teardown
 date: '2017-02-22'
-subject: Teardown
+keywords:
+  - 'Uninterruptible power supply'
+  - 'UPS'
+  - 'Onduleur'
+short_title: 'Teardown: Evolution 650'
+subject: 'Électronique • Electronics'
 tags:
-  - Démontage
-  - Teardown
-  - Matériel
-  - Hardware
-  - Eaton
-  - Evolution 650
+  - 'Démontage'
+  - 'Teardown'
+  - 'Layer: Hardware'
+  - 'Eaton'
+  - 'Evolution 650'
 ---
+# Eaton Evolution 650 rack teardown
 
 [Photos](https://goo.gl/photos/ScHvf2X1prvaDioP6)

@@ -1,17 +1,16 @@
 ---
-title: 'Télécommande suite : Totem'
 date: '2005-08-15'
-subject: Informatique • IT
+subject: 'Informatique • IT'
 tags:
-  - Informatique
-  - IT
-  - GNU/Linux
-  - Ubuntu
-  - lirc
-  - totem
+  - 'GNU/Linux'
+  - 'Ubuntu'
+  - 'lirc'
+  - 'totem'
+  - 'tvtime'
 ---
+# Télécommande : Totem
 
-Après avoir configuré la télécommande pour `tvtime`, je me suis attaqué a
+Après avoir configuré la télécommande pour `tvtime`, je me suis attaqué à
 `totem` dont voici la configuration (`tvtime` inclus) :
 
 ```ini

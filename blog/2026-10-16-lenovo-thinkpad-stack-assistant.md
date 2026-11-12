@@ -1,18 +1,4 @@
 ---
-title: 'Lenovo ThinkPad Stack Assistant'
-date: '2026-10-16'
-tags:
-  - Rétro-Ingénierie
-  - Reverse Engineering
-  - Lenovo
-  - ThinkPad
-  - Stack
-  - Assistant
-  - Router
-  - Projector
-  - Windows
-  - iOS
-  - Android
 abbreviations:
   POST:
   MAC: Medium Access Control
@@ -25,8 +11,24 @@ abbreviations:
   PDB: Program DataBase
   WPF: Windows Presentation Foundation
   mDNS: multicast DNS
+date: '2026-10-16'
+short_title: 'ThinkPad Stack: Assistant'
+subject: 'Informatique • IT'
+tags:
+  - 'Layer: Software'
+  - 'Rétro-Ingénierie'
+  - 'Reverse Engineering'
+  - 'Lenovo'
+  - 'ThinkPad'
+  - 'Stack'
+  - 'Assistant'
+  - 'Router'
+  - 'Projector'
+  - 'Application'
+  - 'Windows'
+  - 'iOS'
+  - 'Android'
 ---
-
 # Lenovo ThinkPad Stack Assistant
 
 > Analyse et rétro-ingénierie du protocole vers le routeur et le projecteur en vue d’un éventuel portage Linux.
@@ -52,7 +54,7 @@ Voir ci-dessous pour une version complète conservée par archive.org.
 
 - Microsoft Windows
 - iOS (*disparu de l’App Store*)
-- Android (`com.lenovo.stackable`, *disparu du Play Store*, *corrompu sur le site offciel*)
+- Android (`com.lenovo.stackable`, *disparu du Play Store*, *corrompu sur le site officiel*)
 
 ### Dernière(s) version(s)
 
@@ -235,7 +237,7 @@ for f in ["gjzglx.txt", "Moser_rj_gj.bin"]:
 
 :::{note} Le `.bin` est un recovery plus ancien que l'OTA
 `binwalk` sur le `.dec` sort un SquashFS daté **2038-07-18** (horloge RTC dégénérée
-au build). C'est le firmware recovery embarqué dans l'installeur. Il ne correspond pas à pas la dernière
+au build). C'est le firmware recovery embarqué dans l'installeur. Il ne correspond pas à la dernière
 version OTA `1.1.3.4` pourtant sortie à la date de publication.
 :::
 

@@ -1,14 +1,19 @@
 ---
-title: Hey Dude Where's my Oil
 date: '2005-09-17'
-subject: Musique • Music
+downloads:
+  - file: /files/dude.mid
+    title: 'MIDI track (Drums only)'
+  - file: /files/dude-kit-only.wav
+    title: 'Audio track (Drums only)'
+  - file: /files/dude-kit.wav
+    title: 'Unmastered full audio track'
+subject: 'Musique • Music'
 tags:
-  - Musique
-  - Music
-  - Batterie
-  - Drums
-  - Audio
+  - 'Batterie'
+  - 'Drums'
+  - 'Audio'
 ---
+# Hey Dude Where's my Oil
 
 Music from: {del}`<http://www.hearmymusic.co.uk/>`
 % FIXME: broken link

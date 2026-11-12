@@ -1,17 +1,22 @@
 ---
-title: Soundcraft Mini Stagebox 32 teardown
 date: '2017-02-22'
-subject: Teardown
+keywords:
+  - 'Soundcraft Si'
+  - 'Soundcraft Vi'
+  - 'Interface'
+  - 'MADI ethernet'
+  - 'MADI twisted pair'
+short_title: 'Teardown: Mini Stagebox 32'
+subject: 'Techno. Audio • Audio Tech.'
 tags:
-  - Démontage
-  - Teardown
-  - Matériel
-  - Hardware
-  - Audio
-  - Démontage
-  - Teardown
-  - Soundcraft
-  - Mini Stagebox 32
+  - 'Démontage'
+  - 'Teardown'
+  - 'Layer: Hardware'
+  - 'Soundcraft'
+  - 'Mini Stagebox 32'
+  - 'MADI'
+  - 'MADI-TP'
 ---
+# Soundcraft Mini Stagebox 32 teardown
 
 [Photos](https://goo.gl/photos/RSBvgF3QeyKjba1c9)

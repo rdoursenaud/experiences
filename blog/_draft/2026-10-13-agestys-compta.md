@@ -1,3 +1,6 @@
+---
+subject: 'Juridique • Legal'
+---
 # Rapport consultation des comptes
 
 Syndicat de copropriété « Les Palombes Blanches », 16 avenue Léon Blum, 64000 PAU

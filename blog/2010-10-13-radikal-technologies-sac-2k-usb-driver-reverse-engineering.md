@@ -1,30 +1,28 @@
 ---
-title: Radikal Technologies SAC-2K USB driver reverse engineering
 date: '2010-10-13'
-subject: AV Technologies
+short_title: SAC-2K driver R.E.
+subject: 'Techno. Audio • Audio Tech.'
 tags:
-  - Informatique
-  - IT
-  - Matériel
-  - Hardware
-  - Reverse Engineering
-  - GNU/Linux
-  - MIDI
-  - QEMU
-  - Radikal Technologies
-  - SAC-2K
-  - SysEx
-  - USB
-  - usbmon
-  - Wireshark
+  - 'Layer: Hardware'
+  - 'Reverse Engineering'
+  - 'GNU/Linux'
+  - 'MIDI'
+  - 'QEMU'
+  - 'Radikal Technologies'
+  - 'SAC-2K'
+  - 'SysEx'
+  - 'USB'
+  - 'usbmon'
+  - 'Wireshark'
 ---
+# Radikal Technologies SAC-2K USB driver reverse engineering
 
 I've started reverse engineering the windows USB driver using qemu,
 wireshark and the linux usbmon interface in order to hopefully write a
 Linux driver for this device.
 
 Here's the commented out first sniffed traffic:
-```pcap
+```text
 No. Time Source Destination Protocol Info  
   
 3 0.013662 host 9.0 USB GET DESCRIPTOR Request DEVICE
@@ -35,9 +33,9 @@ USB URB
   
 URB id: 0xffff8800cdb4ad40  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -47,17 +45,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 40  
+URB length [bytes]: 40  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 4\]  
+[Response in: 4]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -75,9 +73,9 @@ USB URB
   
 URB id: 0xffff8800cdb4ad40  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -91,15 +89,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 18  
+URB length [bytes]: 18  
   
-Data length \[bytes\]: 18  
+Data length [bytes]: 18  
   
-\[Request in: 3\]  
+[Request in: 3]  
   
-\[Time from request: 0.011580000 seconds\]  
+[Time from request: 0.011580000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 DEVICE DESCRIPTOR  
   
@@ -135,11 +133,11 @@ bNumConfigurations: 1
   
 0010 00 02 00 00 00 00 00 00 12 01 00 01 ff 00 ff 08 ................  
   
-0020 35 0a 2a 00 00 02 01 02 00 01 5.\*.......
+0020 35 0a 2a 00 00 02 01 02 00 01 5.*.......
 
 No. Time Source Destination Protocol Info  
   
-9 31.068508 9.1 host USB URB\_INTERRUPT
+9 31.068508 9.1 host USB URB_INTERRUPT
 
 Frame 9 (24 bytes on wire, 24 bytes captured)  
   
@@ -147,9 +145,9 @@ USB URB
   
 URB id: 0xffff8800560b4380  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x81  
   
@@ -163,9 +161,9 @@ Data: present (0)
   
 URB status: No such file or directory (-ENOENT) (-2)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0
+Data length [bytes]: 0
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -181,9 +179,9 @@ USB URB
   
 URB id: 0xffff8800df96a840  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x00  
   
@@ -197,13 +195,13 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 31\]  
+[Response in: 31]  
   
-\[bInterfaceClass: Unknown (0xffff)\]  
+[bInterfaceClass: Unknown (0xffff)]  
   
 URB setup
 
@@ -221,9 +219,9 @@ USB URB
   
 URB id: 0xffff8800df96a840  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x00  
   
@@ -237,13 +235,13 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 33\]  
+[Response in: 33]  
   
-\[bInterfaceClass: Unknown (0xffff)\]  
+[bInterfaceClass: Unknown (0xffff)]  
   
 URB setup
 
@@ -261,9 +259,9 @@ USB URB
   
 URB id: 0xffff8800df96a840  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x00  
   
@@ -277,13 +275,13 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 57\]  
+[Response in: 57]  
   
-\[bInterfaceClass: Unknown (0xffff)\]  
+[bInterfaceClass: Unknown (0xffff)]  
   
 URB setup
 
@@ -301,9 +299,9 @@ USB URB
   
 URB id: 0xffff8800df96a840  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x00  
   
@@ -317,13 +315,13 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 65\]  
+[Response in: 65]  
   
-\[bInterfaceClass: Unknown (0xffff)\]  
+[bInterfaceClass: Unknown (0xffff)]  
   
 URB setup
 
@@ -341,9 +339,9 @@ USB URB
   
 URB id: 0xffff8800df96a840  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x00  
   
@@ -357,13 +355,13 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 85\]  
+[Response in: 85]  
   
-\[bInterfaceClass: Unknown (0xffff)\]  
+[bInterfaceClass: Unknown (0xffff)]  
   
 URB setup
 
@@ -381,9 +379,9 @@ USB URB
   
 URB id: 0xffff8800df96a840  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x00  
   
@@ -397,13 +395,13 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 93\]  
+[Response in: 93]  
   
-\[bInterfaceClass: Unknown (0xffff)\]  
+[bInterfaceClass: Unknown (0xffff)]  
   
 URB setup
 
@@ -421,9 +419,9 @@ USB URB
   
 URB id: 0xffff8800cd97f900  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x00  
   
@@ -437,13 +435,13 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 111\]  
+[Response in: 111]  
   
-\[bInterfaceClass: Unknown (0xffff)\]  
+[bInterfaceClass: Unknown (0xffff)]  
   
 URB setup
 
@@ -461,9 +459,9 @@ USB URB
   
 URB id: 0xffff8800cd97f900  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -473,17 +471,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 115\]  
+[Response in: 115]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -493,8 +491,8 @@ URB setup
 
 No. Time Source Destination Protocol Info  
   
-115 37.991450 9.0 host USB GET DESCRIPTOR Response DEVICE\[Malformed
-Packet\]
+115 37.991450 9.0 host USB GET DESCRIPTOR Response DEVICE[Malformed
+Packet]
 
 Frame 115 (32 bytes on wire, 32 bytes captured)  
   
@@ -502,9 +500,9 @@ USB URB
   
 URB id: 0xffff8800cd97f900  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -518,15 +516,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Request in: 114\]  
+[Request in: 114]  
   
-\[Time from request: 0.007832000 seconds\]  
+[Time from request: 0.007832000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 DEVICE DESCRIPTOR  
   
@@ -544,7 +542,7 @@ bDeviceProtocol: 255
   
 bMaxPacketSize0: 8  
   
-\[Malformed Packet: USB\]
+[Malformed Packet: USB]
 
 0000 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................  
   
@@ -560,9 +558,9 @@ USB URB
   
 URB id: 0xffff8800cd97f900  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -572,17 +570,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 18  
+URB length [bytes]: 18  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 117\]  
+[Response in: 117]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -600,9 +598,9 @@ USB URB
   
 URB id: 0xffff8800cd97f900  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -616,15 +614,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 18  
+URB length [bytes]: 18  
   
-Data length \[bytes\]: 18  
+Data length [bytes]: 18  
   
-\[Request in: 116\]  
+[Request in: 116]  
   
-\[Time from request: 0.014000000 seconds\]  
+[Time from request: 0.014000000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 DEVICE DESCRIPTOR  
   
@@ -660,7 +658,7 @@ bNumConfigurations: 1
   
 0010 00 02 00 00 00 00 00 00 12 01 00 01 ff 00 ff 08 ................  
   
-0020 35 0a 2a 00 00 02 01 02 00 01 5.\*.......
+0020 35 0a 2a 00 00 02 01 02 00 01 5.*.......
 
 No. Time Source Destination Protocol Info  
   
@@ -672,9 +670,9 @@ USB URB
   
 URB id: 0xffff8800cd97f900  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -684,35 +682,35 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;') URB status: Operation now in progress
-(-EINPROGRESS) (-115) URB length \[bytes\]: 87 Data length \[bytes\]: 0
-\[Response in: 122\] \[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\] URB
+Data: not present ('<') URB status: Operation now in progress
+(-EINPROGRESS) (-115) URB length [bytes]: 87 Data length [bytes]: 0
+[Response in: 122] [bInterfaceClass: VENDOR_SPECIFIC (0xff)] URB
 setup 0000 80 06 00 02 00 00 57 00 00 00 00 00 00 00 00 00
 ......W......... 0010 00 02 00 00 00 00 00 00 ........ No. Time Source
 Destination Protocol Info 122 38.046440 9.0 host USB GET DESCRIPTOR
 Response CONFIGURATION Frame 122 (111 bytes on wire, 111 bytes captured)
-USB URB URB id: 0xffff8800cd97f900 URB type: URB\_COMPLETE ('C') URB
-transfer type: URB\_CONTROL (2) Endpoint: 0x80 Device: 9 URB bus id: 8
+USB URB URB id: 0xffff8800cd97f900 URB type: URB_COMPLETE ('C') URB
+transfer type: URB_CONTROL (2) Endpoint: 0x80 Device: 9 URB bus id: 8
 Device setup request: not present ('-') Data: present (0) URB status:
-Success (0) URB length \[bytes\]: 87 Data length \[bytes\]: 87 \[Request
-in: 118\] \[Time from request: 0.038984000 seconds\] \[bInterfaceClass:
-VENDOR\_SPECIFIC (0xff)\] CONFIGURATION DESCRIPTOR bLength: 9
+Success (0) URB length [bytes]: 87 Data length [bytes]: 87 [Request
+in: 118] [Time from request: 0.038984000 seconds] [bInterfaceClass:
+VENDOR_SPECIFIC (0xff)] CONFIGURATION DESCRIPTOR bLength: 9
 bDescriptorType: CONFIGURATION (2) wTotalLength: 87 bNumInterfaces: 3
 bConfigurationValue: 1 iConfiguration: 4 Configuration bmAttributes:
 0xc0 SELF-POWERED NO REMOTE-WAKEUP bMaxPower: 0 (0mA) INTERFACE
 DESCRIPTOR bLength: 9 bDescriptorType: INTERFACE (4) bInterfaceNumber: 0
-bAlternateSetting: 0 bNumEndpoints: 0 bInterfaceClass: VENDOR\_SPECIFIC
+bAlternateSetting: 0 bNumEndpoints: 0 bInterfaceClass: VENDOR_SPECIFIC
 (0xff) bInterfaceSubClass: 0xff bInterfaceProtocol: 0x00 iInterface: 0
 INTERFACE DESCRIPTOR bLength: 9 bDescriptorType: INTERFACE (4)
 bInterfaceNumber: 1 bAlternateSetting: 0 bNumEndpoints: 0
-bInterfaceClass: VENDOR\_SPECIFIC (0xff) bInterfaceSubClass: 0xff
+bInterfaceClass: VENDOR_SPECIFIC (0xff) bInterfaceSubClass: 0xff
 bInterfaceProtocol: 0x00 iInterface: 5 ENDPOINT DESCRIPTOR bLength: 7
 bDescriptorType: ENDPOINT (5) bEndpointAddress: 0x81 IN Endpoint:1
 bmAttributes: 0x02 wMaxPacketSize: 8 bInterval: 1 ENDPOINT DESCRIPTOR
 bLength: 7 bDescriptorType: ENDPOINT (5) bEndpointAddress: 0x01 OUT
 Endpoint:1 bmAttributes: 0x02 wMaxPacketSize: 8 bInterval: 1 INTERFACE
 DESCRIPTOR bLength: 9 bDescriptorType: INTERFACE (4) bInterfaceNumber: 2
-bAlternateSetting: 0 bNumEndpoints: 2 bInterfaceClass: VENDOR\_SPECIFIC
+bAlternateSetting: 0 bNumEndpoints: 2 bInterfaceClass: VENDOR_SPECIFIC
 (0xff) bInterfaceSubClass: 0xff bInterfaceProtocol: 0x00 iInterface: 6
 ENDPOINT DESCRIPTOR bLength: 7 bDescriptorType: ENDPOINT (5)
 bEndpointAddress: 0x81 IN Endpoint:1 bmAttributes: 0x03 wMaxPacketSize:
@@ -720,7 +718,7 @@ bEndpointAddress: 0x81 IN Endpoint:1 bmAttributes: 0x03 wMaxPacketSize:
 (5) bEndpointAddress: 0x01 OUT Endpoint:1 bmAttributes: 0x03
 wMaxPacketSize: 8 bInterval: 1 INTERFACE DESCRIPTOR bLength: 9
 bDescriptorType: INTERFACE (4) bInterfaceNumber: 2 bAlternateSetting: 1
-bNumEndpoints: 2 bInterfaceClass: VENDOR\_SPECIFIC (0xff)
+bNumEndpoints: 2 bInterfaceClass: VENDOR_SPECIFIC (0xff)
 bInterfaceSubClass: 0xff bInterfaceProtocol: 0x00 iInterface: 5 ENDPOINT
 DESCRIPTOR bLength: 7 bDescriptorType: ENDPOINT (5) bEndpointAddress:
 0x81 IN Endpoint:1 bmAttributes: 0x02 wMaxPacketSize: 8 bInterval: 1
@@ -735,31 +733,31 @@ bEndpointAddress: 0x01 OUT Endpoint:1 bmAttributes: 0x02 wMaxPacketSize:
 ................ 0060 05 07 05 81 02 08 00 01 07 05 01 02 08 00 01
 ............... No. Time Source Destination Protocol Info 123 38.046449
 host 9.0 USB SET CONFIGURATION Request Frame 123 (24 bytes on wire, 24
-bytes captured) USB URB URB id: 0xffff8800cd97f900 URB type: URB\_SUBMIT
-('S') URB transfer type: URB\_CONTROL (2) Endpoint: 0x00 Device: 9 URB
+bytes captured) USB URB URB id: 0xffff8800cd97f900 URB type: URB_SUBMIT
+('S') URB transfer type: URB_CONTROL (2) Endpoint: 0x00 Device: 9 URB
 bus id: 8 Device setup request: present (0) Data: present (0) URB
 status: Operation now in progress (-EINPROGRESS) (-115) URB length
-\[bytes\]: 0 Data length \[bytes\]: 0 \[Response in: 127\]
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\] URB setup 0000 00 09 01 00
+[bytes]: 0 Data length [bytes]: 0 [Response in: 127]
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)] URB setup 0000 00 09 01 00
 00 00 00 00 00 00 00 00 00 00 00 00 ................ 0010 00 00 00 00 00
 00 00 00 ........ No. Time Source Destination Protocol Info 127
 38.060439 9.0 host USB SET CONFIGURATION Response Frame 127 (24 bytes on
 wire, 24 bytes captured) USB URB URB id: 0xffff8800cd97f900 URB type:
-URB\_COMPLETE ('C') URB transfer type: URB\_CONTROL (2) Endpoint: 0x00
+URB_COMPLETE ('C') URB transfer type: URB_CONTROL (2) Endpoint: 0x00
 Device: 9 URB bus id: 8 Device setup request: not present ('-') Data:
-not present ('&gt;')  
+not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 123\]  
+[Request in: 123]  
   
-\[Time from request: 0.013990000 seconds\]  
+[Time from request: 0.013990000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]
 
 0000 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................  
   
@@ -775,9 +773,9 @@ USB URB
   
 URB id: 0xffff8800b5bdd2c0  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x00  
   
@@ -791,13 +789,13 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 147\]  
+[Response in: 147]  
   
-\[bInterfaceClass: Unknown (0xffff)\]  
+[bInterfaceClass: Unknown (0xffff)]  
   
 URB setup
 
@@ -815,9 +813,9 @@ USB URB
   
 URB id: 0xffff8800b5bdd2c0  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -827,17 +825,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 18  
+URB length [bytes]: 18  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 149\]  
+[Response in: 149]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -855,9 +853,9 @@ USB URB
   
 URB id: 0xffff8800b5bdd2c0  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -871,15 +869,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 18  
+URB length [bytes]: 18  
   
-Data length \[bytes\]: 18  
+Data length [bytes]: 18  
   
-\[Request in: 148\]  
+[Request in: 148]  
   
-\[Time from request: 0.013047000 seconds\]  
+[Time from request: 0.013047000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 DEVICE DESCRIPTOR  
   
@@ -915,7 +913,7 @@ bNumConfigurations: 1
   
 0010 00 02 00 00 00 00 00 00 12 01 00 01 ff 00 ff 08 ................  
   
-0020 35 0a 2a 00 00 02 01 02 00 01 5.\*.......
+0020 35 0a 2a 00 00 02 01 02 00 01 5.*.......
 
 No. Time Source Destination Protocol Info  
   
@@ -927,9 +925,9 @@ USB URB
   
 URB id: 0xffff8800b5bdd2c0  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -939,35 +937,35 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;') URB status: Operation now in progress
-(-EINPROGRESS) (-115) URB length \[bytes\]: 87 Data length \[bytes\]: 0
-\[Response in: 151\] \[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\] URB
+Data: not present ('<') URB status: Operation now in progress
+(-EINPROGRESS) (-115) URB length [bytes]: 87 Data length [bytes]: 0
+[Response in: 151] [bInterfaceClass: VENDOR_SPECIFIC (0xff)] URB
 setup 0000 80 06 00 02 00 00 57 00 00 00 00 00 00 00 00 00
 ......W......... 0010 00 02 00 00 00 00 00 00 ........ No. Time Source
 Destination Protocol Info 151 43.184658 9.0 host USB GET DESCRIPTOR
 Response CONFIGURATION Frame 151 (111 bytes on wire, 111 bytes captured)
-USB URB URB id: 0xffff8800b5bdd2c0 URB type: URB\_COMPLETE ('C') URB
-transfer type: URB\_CONTROL (2) Endpoint: 0x80 Device: 9 URB bus id: 8
+USB URB URB id: 0xffff8800b5bdd2c0 URB type: URB_COMPLETE ('C') URB
+transfer type: URB_CONTROL (2) Endpoint: 0x80 Device: 9 URB bus id: 8
 Device setup request: not present ('-') Data: present (0) URB status:
-Success (0) URB length \[bytes\]: 87 Data length \[bytes\]: 87 \[Request
-in: 150\] \[Time from request: 0.038988000 seconds\] \[bInterfaceClass:
-VENDOR\_SPECIFIC (0xff)\] CONFIGURATION DESCRIPTOR bLength: 9
+Success (0) URB length [bytes]: 87 Data length [bytes]: 87 [Request
+in: 150] [Time from request: 0.038988000 seconds] [bInterfaceClass:
+VENDOR_SPECIFIC (0xff)] CONFIGURATION DESCRIPTOR bLength: 9
 bDescriptorType: CONFIGURATION (2) wTotalLength: 87 bNumInterfaces: 3
 bConfigurationValue: 1 iConfiguration: 4 Configuration bmAttributes:
 0xc0 SELF-POWERED NO REMOTE-WAKEUP bMaxPower: 0 (0mA) INTERFACE
 DESCRIPTOR bLength: 9 bDescriptorType: INTERFACE (4) bInterfaceNumber: 0
-bAlternateSetting: 0 bNumEndpoints: 0 bInterfaceClass: VENDOR\_SPECIFIC
+bAlternateSetting: 0 bNumEndpoints: 0 bInterfaceClass: VENDOR_SPECIFIC
 (0xff) bInterfaceSubClass: 0xff bInterfaceProtocol: 0x00 iInterface: 0
 INTERFACE DESCRIPTOR bLength: 9 bDescriptorType: INTERFACE (4)
 bInterfaceNumber: 1 bAlternateSetting: 0 bNumEndpoints: 0
-bInterfaceClass: VENDOR\_SPECIFIC (0xff) bInterfaceSubClass: 0xff
+bInterfaceClass: VENDOR_SPECIFIC (0xff) bInterfaceSubClass: 0xff
 bInterfaceProtocol: 0x00 iInterface: 5 ENDPOINT DESCRIPTOR bLength: 7
 bDescriptorType: ENDPOINT (5) bEndpointAddress: 0x81 IN Endpoint:1
 bmAttributes: 0x02 wMaxPacketSize: 8 bInterval: 1 ENDPOINT DESCRIPTOR
 bLength: 7 bDescriptorType: ENDPOINT (5) bEndpointAddress: 0x01 OUT
 Endpoint:1 bmAttributes: 0x02 wMaxPacketSize: 8 bInterval: 1 INTERFACE
 DESCRIPTOR bLength: 9 bDescriptorType: INTERFACE (4) bInterfaceNumber: 2
-bAlternateSetting: 0 bNumEndpoints: 2 bInterfaceClass: VENDOR\_SPECIFIC
+bAlternateSetting: 0 bNumEndpoints: 2 bInterfaceClass: VENDOR_SPECIFIC
 (0xff) bInterfaceSubClass: 0xff bInterfaceProtocol: 0x00 iInterface: 6
 ENDPOINT DESCRIPTOR bLength: 7 bDescriptorType: ENDPOINT (5)
 bEndpointAddress: 0x81 IN Endpoint:1 bmAttributes: 0x03 wMaxPacketSize:
@@ -975,7 +973,7 @@ bEndpointAddress: 0x81 IN Endpoint:1 bmAttributes: 0x03 wMaxPacketSize:
 (5) bEndpointAddress: 0x01 OUT Endpoint:1 bmAttributes: 0x03
 wMaxPacketSize: 8 bInterval: 1 INTERFACE DESCRIPTOR bLength: 9
 bDescriptorType: INTERFACE (4) bInterfaceNumber: 2 bAlternateSetting: 1
-bNumEndpoints: 2 bInterfaceClass: VENDOR\_SPECIFIC (0xff)
+bNumEndpoints: 2 bInterfaceClass: VENDOR_SPECIFIC (0xff)
 bInterfaceSubClass: 0xff bInterfaceProtocol: 0x00 iInterface: 5 ENDPOINT
 DESCRIPTOR bLength: 7 bDescriptorType: ENDPOINT (5) bEndpointAddress:
 0x81 IN Endpoint:1 bmAttributes: 0x02 wMaxPacketSize: 8 bInterval: 1
@@ -990,31 +988,31 @@ bEndpointAddress: 0x01 OUT Endpoint:1 bmAttributes: 0x02 wMaxPacketSize:
 ................ 0060 05 07 05 81 02 08 00 01 07 05 01 02 08 00 01
 ............... No. Time Source Destination Protocol Info 152 43.184668
 host 9.0 USB SET CONFIGURATION Request Frame 152 (24 bytes on wire, 24
-bytes captured) USB URB URB id: 0xffff8800b5bdd2c0 URB type: URB\_SUBMIT
-('S') URB transfer type: URB\_CONTROL (2) Endpoint: 0x00 Device: 9 URB
+bytes captured) USB URB URB id: 0xffff8800b5bdd2c0 URB type: URB_SUBMIT
+('S') URB transfer type: URB_CONTROL (2) Endpoint: 0x00 Device: 9 URB
 bus id: 8 Device setup request: present (0) Data: present (0) URB
 status: Operation now in progress (-EINPROGRESS) (-115) URB length
-\[bytes\]: 0 Data length \[bytes\]: 0 \[Response in: 153\]
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\] URB setup 0000 00 09 01 00
+[bytes]: 0 Data length [bytes]: 0 [Response in: 153]
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)] URB setup 0000 00 09 01 00
 00 00 00 00 00 00 00 00 00 00 00 00 ................ 0010 00 00 00 00 00
 00 00 00 ........ No. Time Source Destination Protocol Info 153
 43.193655 9.0 host USB SET CONFIGURATION Response Frame 153 (24 bytes on
 wire, 24 bytes captured) USB URB URB id: 0xffff8800b5bdd2c0 URB type:
-URB\_COMPLETE ('C') URB transfer type: URB\_CONTROL (2) Endpoint: 0x00
+URB_COMPLETE ('C') URB transfer type: URB_CONTROL (2) Endpoint: 0x00
 Device: 9 URB bus id: 8 Device setup request: not present ('-') Data:
-not present ('&gt;')  
+not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 152\]  
+[Request in: 152]  
   
-\[Time from request: 0.008987000 seconds\]  
+[Time from request: 0.008987000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]
 
 0000 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................  
   
@@ -1030,9 +1028,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x00  
   
@@ -1046,13 +1044,13 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 173\]  
+[Response in: 173]  
   
-\[bInterfaceClass: Unknown (0xffff)\]  
+[bInterfaceClass: Unknown (0xffff)]  
   
 URB setup
 
@@ -1070,9 +1068,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -1082,17 +1080,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 18  
+URB length [bytes]: 18  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 175\]  
+[Response in: 175]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -1110,9 +1108,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -1126,15 +1124,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 18  
+URB length [bytes]: 18  
   
-Data length \[bytes\]: 18  
+Data length [bytes]: 18  
   
-\[Request in: 174\]  
+[Request in: 174]  
   
-\[Time from request: 0.013889000 seconds\]  
+[Time from request: 0.013889000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 DEVICE DESCRIPTOR  
   
@@ -1170,7 +1168,7 @@ bNumConfigurations: 1
   
 0010 00 02 00 00 00 00 00 00 12 01 00 01 ff 00 ff 08 ................  
   
-0020 35 0a 2a 00 00 02 01 02 00 01 5.\*.......
+0020 35 0a 2a 00 00 02 01 02 00 01 5.*.......
 
 No. Time Source Destination Protocol Info  
   
@@ -1182,9 +1180,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -1194,35 +1192,35 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;') URB status: Operation now in progress
-(-EINPROGRESS) (-115) URB length \[bytes\]: 87 Data length \[bytes\]: 0
-\[Response in: 177\] \[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\] URB
+Data: not present ('<') URB status: Operation now in progress
+(-EINPROGRESS) (-115) URB length [bytes]: 87 Data length [bytes]: 0
+[Response in: 177] [bInterfaceClass: VENDOR_SPECIFIC (0xff)] URB
 setup 0000 80 06 00 02 00 00 57 00 00 00 00 00 00 00 00 00
 ......W......... 0010 00 02 00 00 00 00 00 00 ........ No. Time Source
 Destination Protocol Info 177 44.232503 9.0 host USB GET DESCRIPTOR
 Response CONFIGURATION Frame 177 (111 bytes on wire, 111 bytes captured)
-USB URB URB id: 0xffff8800c3360680 URB type: URB\_COMPLETE ('C') URB
-transfer type: URB\_CONTROL (2) Endpoint: 0x80 Device: 9 URB bus id: 8
+USB URB URB id: 0xffff8800c3360680 URB type: URB_COMPLETE ('C') URB
+transfer type: URB_CONTROL (2) Endpoint: 0x80 Device: 9 URB bus id: 8
 Device setup request: not present ('-') Data: present (0) URB status:
-Success (0) URB length \[bytes\]: 87 Data length \[bytes\]: 87 \[Request
-in: 176\] \[Time from request: 0.038989000 seconds\] \[bInterfaceClass:
-VENDOR\_SPECIFIC (0xff)\] CONFIGURATION DESCRIPTOR bLength: 9
+Success (0) URB length [bytes]: 87 Data length [bytes]: 87 [Request
+in: 176] [Time from request: 0.038989000 seconds] [bInterfaceClass:
+VENDOR_SPECIFIC (0xff)] CONFIGURATION DESCRIPTOR bLength: 9
 bDescriptorType: CONFIGURATION (2) wTotalLength: 87 bNumInterfaces: 3
 bConfigurationValue: 1 iConfiguration: 4 Configuration bmAttributes:
 0xc0 SELF-POWERED NO REMOTE-WAKEUP bMaxPower: 0 (0mA) INTERFACE
 DESCRIPTOR bLength: 9 bDescriptorType: INTERFACE (4) bInterfaceNumber: 0
-bAlternateSetting: 0 bNumEndpoints: 0 bInterfaceClass: VENDOR\_SPECIFIC
+bAlternateSetting: 0 bNumEndpoints: 0 bInterfaceClass: VENDOR_SPECIFIC
 (0xff) bInterfaceSubClass: 0xff bInterfaceProtocol: 0x00 iInterface: 0
 INTERFACE DESCRIPTOR bLength: 9 bDescriptorType: INTERFACE (4)
 bInterfaceNumber: 1 bAlternateSetting: 0 bNumEndpoints: 0
-bInterfaceClass: VENDOR\_SPECIFIC (0xff) bInterfaceSubClass: 0xff
+bInterfaceClass: VENDOR_SPECIFIC (0xff) bInterfaceSubClass: 0xff
 bInterfaceProtocol: 0x00 iInterface: 5 ENDPOINT DESCRIPTOR bLength: 7
 bDescriptorType: ENDPOINT (5) bEndpointAddress: 0x81 IN Endpoint:1
 bmAttributes: 0x02 wMaxPacketSize: 8 bInterval: 1 ENDPOINT DESCRIPTOR
 bLength: 7 bDescriptorType: ENDPOINT (5) bEndpointAddress: 0x01 OUT
 Endpoint:1 bmAttributes: 0x02 wMaxPacketSize: 8 bInterval: 1 INTERFACE
 DESCRIPTOR bLength: 9 bDescriptorType: INTERFACE (4) bInterfaceNumber: 2
-bAlternateSetting: 0 bNumEndpoints: 2 bInterfaceClass: VENDOR\_SPECIFIC
+bAlternateSetting: 0 bNumEndpoints: 2 bInterfaceClass: VENDOR_SPECIFIC
 (0xff) bInterfaceSubClass: 0xff bInterfaceProtocol: 0x00 iInterface: 6
 ENDPOINT DESCRIPTOR bLength: 7 bDescriptorType: ENDPOINT (5)
 bEndpointAddress: 0x81 IN Endpoint:1 bmAttributes: 0x03 wMaxPacketSize:
@@ -1230,7 +1228,7 @@ bEndpointAddress: 0x81 IN Endpoint:1 bmAttributes: 0x03 wMaxPacketSize:
 (5) bEndpointAddress: 0x01 OUT Endpoint:1 bmAttributes: 0x03
 wMaxPacketSize: 8 bInterval: 1 INTERFACE DESCRIPTOR bLength: 9
 bDescriptorType: INTERFACE (4) bInterfaceNumber: 2 bAlternateSetting: 1
-bNumEndpoints: 2 bInterfaceClass: VENDOR\_SPECIFIC (0xff)
+bNumEndpoints: 2 bInterfaceClass: VENDOR_SPECIFIC (0xff)
 bInterfaceSubClass: 0xff bInterfaceProtocol: 0x00 iInterface: 5 ENDPOINT
 DESCRIPTOR bLength: 7 bDescriptorType: ENDPOINT (5) bEndpointAddress:
 0x81 IN Endpoint:1 bmAttributes: 0x02 wMaxPacketSize: 8 bInterval: 1
@@ -1245,31 +1243,31 @@ bEndpointAddress: 0x01 OUT Endpoint:1 bmAttributes: 0x02 wMaxPacketSize:
 ................ 0060 05 07 05 81 02 08 00 01 07 05 01 02 08 00 01
 ............... No. Time Source Destination Protocol Info 178 44.232515
 host 9.0 USB SET CONFIGURATION Request Frame 178 (24 bytes on wire, 24
-bytes captured) USB URB URB id: 0xffff8800c3360680 URB type: URB\_SUBMIT
-('S') URB transfer type: URB\_CONTROL (2) Endpoint: 0x00 Device: 9 URB
+bytes captured) USB URB URB id: 0xffff8800c3360680 URB type: URB_SUBMIT
+('S') URB transfer type: URB_CONTROL (2) Endpoint: 0x00 Device: 9 URB
 bus id: 8 Device setup request: present (0) Data: present (0) URB
 status: Operation now in progress (-EINPROGRESS) (-115) URB length
-\[bytes\]: 0 Data length \[bytes\]: 0 \[Response in: 179\]
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\] URB setup 0000 00 09 01 00
+[bytes]: 0 Data length [bytes]: 0 [Response in: 179]
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)] URB setup 0000 00 09 01 00
 00 00 00 00 00 00 00 00 00 00 00 00 ................ 0010 00 00 00 00 00
 00 00 00 ........ No. Time Source Destination Protocol Info 179
 44.241496 9.0 host USB SET CONFIGURATION Response Frame 179 (24 bytes on
 wire, 24 bytes captured) USB URB URB id: 0xffff8800c3360680 URB type:
-URB\_COMPLETE ('C') URB transfer type: URB\_CONTROL (2) Endpoint: 0x00
+URB_COMPLETE ('C') URB transfer type: URB_CONTROL (2) Endpoint: 0x00
 Device: 9 URB bus id: 8 Device setup request: not present ('-') Data:
-not present ('&gt;')  
+not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 178\]  
+[Request in: 178]  
   
-\[Time from request: 0.008981000 seconds\]  
+[Time from request: 0.008981000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]
 
 0000 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................  
   
@@ -1285,9 +1283,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -1297,17 +1295,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 64  
+URB length [bytes]: 64  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 181\]  
+[Response in: 181]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -1325,9 +1323,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -1341,15 +1339,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 18  
+URB length [bytes]: 18  
   
-Data length \[bytes\]: 18  
+Data length [bytes]: 18  
   
-\[Request in: 180\]  
+[Request in: 180]  
   
-\[Time from request: 0.012568000 seconds\]  
+[Time from request: 0.012568000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 DEVICE DESCRIPTOR  
   
@@ -1385,7 +1383,7 @@ bNumConfigurations: 1
   
 0010 00 02 00 00 00 00 00 00 12 01 00 01 ff 00 ff 08 ................  
   
-0020 35 0a 2a 00 00 02 01 02 00 01 5.\*.......
+0020 35 0a 2a 00 00 02 01 02 00 01 5.*.......
 
 No. Time Source Destination Protocol Info  
   
@@ -1397,9 +1395,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x00  
   
@@ -1413,13 +1411,13 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 201\]  
+[Response in: 201]  
   
-\[bInterfaceClass: Unknown (0xffff)\]  
+[bInterfaceClass: Unknown (0xffff)]  
   
 URB setup
 
@@ -1437,9 +1435,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x00  
   
@@ -1453,13 +1451,13 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 203\]  
+[Response in: 203]  
   
-\[bInterfaceClass: Unknown (0xffff)\]  
+[bInterfaceClass: Unknown (0xffff)]  
   
 URB setup
 
@@ -1477,9 +1475,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x00  
   
@@ -1493,13 +1491,13 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 227\]  
+[Response in: 227]  
   
-\[bInterfaceClass: Unknown (0xffff)\]  
+[bInterfaceClass: Unknown (0xffff)]  
   
 URB setup
 
@@ -1517,9 +1515,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -1529,17 +1527,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 18  
+URB length [bytes]: 18  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 229\]  
+[Response in: 229]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -1557,9 +1555,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -1573,15 +1571,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 18  
+URB length [bytes]: 18  
   
-Data length \[bytes\]: 18  
+Data length [bytes]: 18  
   
-\[Request in: 228\]  
+[Request in: 228]  
   
-\[Time from request: 0.012708000 seconds\]  
+[Time from request: 0.012708000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 DEVICE DESCRIPTOR  
   
@@ -1617,7 +1615,7 @@ bNumConfigurations: 1
   
 0010 00 02 00 00 00 00 00 00 12 01 00 01 ff 00 ff 08 ................  
   
-0020 35 0a 2a 00 00 02 01 02 00 01 5.\*.......
+0020 35 0a 2a 00 00 02 01 02 00 01 5.*.......
 
 No. Time Source Destination Protocol Info  
   
@@ -1629,9 +1627,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -1641,35 +1639,35 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;') URB status: Operation now in progress
-(-EINPROGRESS) (-115) URB length \[bytes\]: 87 Data length \[bytes\]: 0
-\[Response in: 237\] \[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\] URB
+Data: not present ('<') URB status: Operation now in progress
+(-EINPROGRESS) (-115) URB length [bytes]: 87 Data length [bytes]: 0
+[Response in: 237] [bInterfaceClass: VENDOR_SPECIFIC (0xff)] URB
 setup 0000 80 06 00 02 00 00 57 00 00 00 00 00 00 00 00 00
 ......W......... 0010 00 02 00 00 00 00 00 00 ........ No. Time Source
 Destination Protocol Info 237 45.357325 9.0 host USB GET DESCRIPTOR
 Response CONFIGURATION Frame 237 (111 bytes on wire, 111 bytes captured)
-USB URB URB id: 0xffff8800c3360680 URB type: URB\_COMPLETE ('C') URB
-transfer type: URB\_CONTROL (2) Endpoint: 0x80 Device: 9 URB bus id: 8
+USB URB URB id: 0xffff8800c3360680 URB type: URB_COMPLETE ('C') URB
+transfer type: URB_CONTROL (2) Endpoint: 0x80 Device: 9 URB bus id: 8
 Device setup request: not present ('-') Data: present (0) URB status:
-Success (0) URB length \[bytes\]: 87 Data length \[bytes\]: 87 \[Request
-in: 230\] \[Time from request: 0.047986000 seconds\] \[bInterfaceClass:
-VENDOR\_SPECIFIC (0xff)\] CONFIGURATION DESCRIPTOR bLength: 9
+Success (0) URB length [bytes]: 87 Data length [bytes]: 87 [Request
+in: 230] [Time from request: 0.047986000 seconds] [bInterfaceClass:
+VENDOR_SPECIFIC (0xff)] CONFIGURATION DESCRIPTOR bLength: 9
 bDescriptorType: CONFIGURATION (2) wTotalLength: 87 bNumInterfaces: 3
 bConfigurationValue: 1 iConfiguration: 4 Configuration bmAttributes:
 0xc0 SELF-POWERED NO REMOTE-WAKEUP bMaxPower: 0 (0mA) INTERFACE
 DESCRIPTOR bLength: 9 bDescriptorType: INTERFACE (4) bInterfaceNumber: 0
-bAlternateSetting: 0 bNumEndpoints: 0 bInterfaceClass: VENDOR\_SPECIFIC
+bAlternateSetting: 0 bNumEndpoints: 0 bInterfaceClass: VENDOR_SPECIFIC
 (0xff) bInterfaceSubClass: 0xff bInterfaceProtocol: 0x00 iInterface: 0
 INTERFACE DESCRIPTOR bLength: 9 bDescriptorType: INTERFACE (4)
 bInterfaceNumber: 1 bAlternateSetting: 0 bNumEndpoints: 0
-bInterfaceClass: VENDOR\_SPECIFIC (0xff) bInterfaceSubClass: 0xff
+bInterfaceClass: VENDOR_SPECIFIC (0xff) bInterfaceSubClass: 0xff
 bInterfaceProtocol: 0x00 iInterface: 5 ENDPOINT DESCRIPTOR bLength: 7
 bDescriptorType: ENDPOINT (5) bEndpointAddress: 0x81 IN Endpoint:1
 bmAttributes: 0x02 wMaxPacketSize: 8 bInterval: 1 ENDPOINT DESCRIPTOR
 bLength: 7 bDescriptorType: ENDPOINT (5) bEndpointAddress: 0x01 OUT
 Endpoint:1 bmAttributes: 0x02 wMaxPacketSize: 8 bInterval: 1 INTERFACE
 DESCRIPTOR bLength: 9 bDescriptorType: INTERFACE (4) bInterfaceNumber: 2
-bAlternateSetting: 0 bNumEndpoints: 2 bInterfaceClass: VENDOR\_SPECIFIC
+bAlternateSetting: 0 bNumEndpoints: 2 bInterfaceClass: VENDOR_SPECIFIC
 (0xff) bInterfaceSubClass: 0xff bInterfaceProtocol: 0x00 iInterface: 6
 ENDPOINT DESCRIPTOR bLength: 7 bDescriptorType: ENDPOINT (5)
 bEndpointAddress: 0x81 IN Endpoint:1 bmAttributes: 0x03 wMaxPacketSize:
@@ -1677,7 +1675,7 @@ bEndpointAddress: 0x81 IN Endpoint:1 bmAttributes: 0x03 wMaxPacketSize:
 (5) bEndpointAddress: 0x01 OUT Endpoint:1 bmAttributes: 0x03
 wMaxPacketSize: 8 bInterval: 1 INTERFACE DESCRIPTOR bLength: 9
 bDescriptorType: INTERFACE (4) bInterfaceNumber: 2 bAlternateSetting: 1
-bNumEndpoints: 2 bInterfaceClass: VENDOR\_SPECIFIC (0xff)
+bNumEndpoints: 2 bInterfaceClass: VENDOR_SPECIFIC (0xff)
 bInterfaceSubClass: 0xff bInterfaceProtocol: 0x00 iInterface: 5 ENDPOINT
 DESCRIPTOR bLength: 7 bDescriptorType: ENDPOINT (5) bEndpointAddress:
 0x81 IN Endpoint:1 bmAttributes: 0x02 wMaxPacketSize: 8 bInterval: 1
@@ -1692,31 +1690,31 @@ bEndpointAddress: 0x01 OUT Endpoint:1 bmAttributes: 0x02 wMaxPacketSize:
 ................ 0060 05 07 05 81 02 08 00 01 07 05 01 02 08 00 01
 ............... No. Time Source Destination Protocol Info 238 45.357333
 host 9.0 USB SET CONFIGURATION Request Frame 238 (24 bytes on wire, 24
-bytes captured) USB URB URB id: 0xffff8800c3360680 URB type: URB\_SUBMIT
-('S') URB transfer type: URB\_CONTROL (2) Endpoint: 0x00 Device: 9 URB
+bytes captured) USB URB URB id: 0xffff8800c3360680 URB type: URB_SUBMIT
+('S') URB transfer type: URB_CONTROL (2) Endpoint: 0x00 Device: 9 URB
 bus id: 8 Device setup request: present (0) Data: present (0) URB
 status: Operation now in progress (-EINPROGRESS) (-115) URB length
-\[bytes\]: 0 Data length \[bytes\]: 0 \[Response in: 239\]
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\] URB setup 0000 00 09 01 00
+[bytes]: 0 Data length [bytes]: 0 [Response in: 239]
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)] URB setup 0000 00 09 01 00
 00 00 00 00 00 00 00 00 00 00 00 00 ................ 0010 00 00 00 00 00
 00 00 00 ........ No. Time Source Destination Protocol Info 239
 45.367323 9.0 host USB SET CONFIGURATION Response Frame 239 (24 bytes on
 wire, 24 bytes captured) USB URB URB id: 0xffff8800c3360680 URB type:
-URB\_COMPLETE ('C') URB transfer type: URB\_CONTROL (2) Endpoint: 0x00
+URB_COMPLETE ('C') URB transfer type: URB_CONTROL (2) Endpoint: 0x00
 Device: 9 URB bus id: 8 Device setup request: not present ('-') Data:
-not present ('&gt;')  
+not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 238\]  
+[Request in: 238]  
   
-\[Time from request: 0.009990000 seconds\]  
+[Time from request: 0.009990000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]
 
 0000 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................  
   
@@ -1732,9 +1730,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -1744,17 +1742,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 18  
+URB length [bytes]: 18  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 241\]  
+[Response in: 241]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -1772,9 +1770,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -1788,15 +1786,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 18  
+URB length [bytes]: 18  
   
-Data length \[bytes\]: 18  
+Data length [bytes]: 18  
   
-\[Request in: 240\]  
+[Request in: 240]  
   
-\[Time from request: 0.011661000 seconds\]  
+[Time from request: 0.011661000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 DEVICE DESCRIPTOR  
   
@@ -1832,7 +1830,7 @@ bNumConfigurations: 1
   
 0010 00 02 00 00 00 00 00 00 12 01 00 01 ff 00 ff 08 ................  
   
-0020 35 0a 2a 00 00 02 01 02 00 01 5.\*.......
+0020 35 0a 2a 00 00 02 01 02 00 01 5.*.......
 
 No. Time Source Destination Protocol Info  
   
@@ -1844,9 +1842,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -1856,17 +1854,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 9  
+URB length [bytes]: 9  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 243\]  
+[Response in: 243]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -1884,9 +1882,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -1900,15 +1898,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 9  
+URB length [bytes]: 9  
   
-Data length \[bytes\]: 9  
+Data length [bytes]: 9  
   
-\[Request in: 242\]  
+[Request in: 242]  
   
-\[Time from request: 0.007280000 seconds\]  
+[Time from request: 0.007280000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 CONFIGURATION DESCRIPTOR  
   
@@ -1944,9 +1942,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -1956,17 +1954,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 255  
+URB length [bytes]: 255  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 245\]  
+[Response in: 245]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -1984,9 +1982,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -2000,15 +1998,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 87  
+URB length [bytes]: 87  
   
-Data length \[bytes\]: 87  
+Data length [bytes]: 87  
   
-\[Request in: 244\]  
+[Request in: 244]  
   
-\[Time from request: 0.035041000 seconds\]  
+[Time from request: 0.035041000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 CONFIGURATION DESCRIPTOR  
   
@@ -2040,7 +2038,7 @@ bAlternateSetting: 0
   
 bNumEndpoints: 0  
   
-bInterfaceClass: VENDOR\_SPECIFIC (0xff)  
+bInterfaceClass: VENDOR_SPECIFIC (0xff)  
   
 bInterfaceSubClass: 0xff  
   
@@ -2060,7 +2058,7 @@ bAlternateSetting: 0
   
 bNumEndpoints: 0  
   
-bInterfaceClass: VENDOR\_SPECIFIC (0xff)  
+bInterfaceClass: VENDOR_SPECIFIC (0xff)  
   
 bInterfaceSubClass: 0xff  
   
@@ -2108,7 +2106,7 @@ bAlternateSetting: 0
   
 bNumEndpoints: 2  
   
-bInterfaceClass: VENDOR\_SPECIFIC (0xff)  
+bInterfaceClass: VENDOR_SPECIFIC (0xff)  
   
 bInterfaceSubClass: 0xff  
   
@@ -2156,7 +2154,7 @@ bAlternateSetting: 1
   
 bNumEndpoints: 2  
   
-bInterfaceClass: VENDOR\_SPECIFIC (0xff)  
+bInterfaceClass: VENDOR_SPECIFIC (0xff)  
   
 bInterfaceSubClass: 0xff  
   
@@ -2216,9 +2214,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -2228,17 +2226,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 255  
+URB length [bytes]: 255  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 247\]  
+[Response in: 247]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -2256,9 +2254,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -2272,15 +2270,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 4  
+URB length [bytes]: 4  
   
-Data length \[bytes\]: 4  
+Data length [bytes]: 4  
   
-\[Request in: 246\]  
+[Request in: 246]  
   
-\[Time from request: 0.006095000 seconds\]  
+[Time from request: 0.006095000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 STRING DESCRIPTOR  
   
@@ -2304,9 +2302,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -2316,17 +2314,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 255  
+URB length [bytes]: 255  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 249\]  
+[Response in: 249]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -2344,9 +2342,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -2360,15 +2358,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 70  
+URB length [bytes]: 70  
   
-Data length \[bytes\]: 70  
+Data length [bytes]: 70  
   
-\[Request in: 248\]  
+[Request in: 248]  
   
-\[Time from request: 0.028853000 seconds\]  
+[Time from request: 0.028853000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 STRING DESCRIPTOR  
   
@@ -2400,9 +2398,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -2412,17 +2410,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 255  
+URB length [bytes]: 255  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 251\]  
+[Response in: 251]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -2440,9 +2438,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -2456,15 +2454,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 4  
+URB length [bytes]: 4  
   
-Data length \[bytes\]: 4  
+Data length [bytes]: 4  
   
-\[Request in: 250\]  
+[Request in: 250]  
   
-\[Time from request: 0.007013000 seconds\]  
+[Time from request: 0.007013000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 STRING DESCRIPTOR  
   
@@ -2488,9 +2486,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -2500,17 +2498,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 255  
+URB length [bytes]: 255  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 253\]  
+[Response in: 253]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -2528,9 +2526,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -2544,15 +2542,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 70  
+URB length [bytes]: 70  
   
-Data length \[bytes\]: 70  
+Data length [bytes]: 70  
   
-\[Request in: 252\]  
+[Request in: 252]  
   
-\[Time from request: 0.028710000 seconds\]  
+[Time from request: 0.028710000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 STRING DESCRIPTOR  
   
@@ -2584,9 +2582,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -2596,17 +2594,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 18  
+URB length [bytes]: 18  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 255\]  
+[Response in: 255]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -2624,9 +2622,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -2640,15 +2638,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 18  
+URB length [bytes]: 18  
   
-Data length \[bytes\]: 18  
+Data length [bytes]: 18  
   
-\[Request in: 254\]  
+[Request in: 254]  
   
-\[Time from request: 0.011480000 seconds\]  
+[Time from request: 0.011480000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 DEVICE DESCRIPTOR  
   
@@ -2684,7 +2682,7 @@ bNumConfigurations: 1
   
 0010 00 02 00 00 00 00 00 00 12 01 00 01 ff 00 ff 08 ................  
   
-0020 35 0a 2a 00 00 02 01 02 00 01 5.\*.......
+0020 35 0a 2a 00 00 02 01 02 00 01 5.*.......
 
 No. Time Source Destination Protocol Info  
   
@@ -2696,9 +2694,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -2708,17 +2706,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 9  
+URB length [bytes]: 9  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 257\]  
+[Response in: 257]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -2736,9 +2734,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -2752,15 +2750,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 9  
+URB length [bytes]: 9  
   
-Data length \[bytes\]: 9  
+Data length [bytes]: 9  
   
-\[Request in: 256\]  
+[Request in: 256]  
   
-\[Time from request: 0.008050000 seconds\]  
+[Time from request: 0.008050000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 CONFIGURATION DESCRIPTOR  
   
@@ -2796,9 +2794,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -2808,35 +2806,35 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;') URB status: Operation now in progress
-(-EINPROGRESS) (-115) URB length \[bytes\]: 87 Data length \[bytes\]: 0
-\[Response in: 259\] \[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\] URB
+Data: not present ('<') URB status: Operation now in progress
+(-EINPROGRESS) (-115) URB length [bytes]: 87 Data length [bytes]: 0
+[Response in: 259] [bInterfaceClass: VENDOR_SPECIFIC (0xff)] URB
 setup 0000 80 06 00 02 00 00 57 00 00 00 00 00 00 00 00 00
 ......W......... 0010 00 02 00 00 00 00 00 00 ........ No. Time Source
 Destination Protocol Info 259 45.752268 9.0 host USB GET DESCRIPTOR
 Response CONFIGURATION Frame 259 (111 bytes on wire, 111 bytes captured)
-USB URB URB id: 0xffff8800c3360680 URB type: URB\_COMPLETE ('C') URB
-transfer type: URB\_CONTROL (2) Endpoint: 0x80 Device: 9 URB bus id: 8
+USB URB URB id: 0xffff8800c3360680 URB type: URB_COMPLETE ('C') URB
+transfer type: URB_CONTROL (2) Endpoint: 0x80 Device: 9 URB bus id: 8
 Device setup request: not present ('-') Data: present (0) URB status:
-Success (0) URB length \[bytes\]: 87 Data length \[bytes\]: 87 \[Request
-in: 258\] \[Time from request: 0.033803000 seconds\] \[bInterfaceClass:
-VENDOR\_SPECIFIC (0xff)\] CONFIGURATION DESCRIPTOR bLength: 9
+Success (0) URB length [bytes]: 87 Data length [bytes]: 87 [Request
+in: 258] [Time from request: 0.033803000 seconds] [bInterfaceClass:
+VENDOR_SPECIFIC (0xff)] CONFIGURATION DESCRIPTOR bLength: 9
 bDescriptorType: CONFIGURATION (2) wTotalLength: 87 bNumInterfaces: 3
 bConfigurationValue: 1 iConfiguration: 4 Configuration bmAttributes:
 0xc0 SELF-POWERED NO REMOTE-WAKEUP bMaxPower: 0 (0mA) INTERFACE
 DESCRIPTOR bLength: 9 bDescriptorType: INTERFACE (4) bInterfaceNumber: 0
-bAlternateSetting: 0 bNumEndpoints: 0 bInterfaceClass: VENDOR\_SPECIFIC
+bAlternateSetting: 0 bNumEndpoints: 0 bInterfaceClass: VENDOR_SPECIFIC
 (0xff) bInterfaceSubClass: 0xff bInterfaceProtocol: 0x00 iInterface: 0
 INTERFACE DESCRIPTOR bLength: 9 bDescriptorType: INTERFACE (4)
 bInterfaceNumber: 1 bAlternateSetting: 0 bNumEndpoints: 0
-bInterfaceClass: VENDOR\_SPECIFIC (0xff) bInterfaceSubClass: 0xff
+bInterfaceClass: VENDOR_SPECIFIC (0xff) bInterfaceSubClass: 0xff
 bInterfaceProtocol: 0x00 iInterface: 5 ENDPOINT DESCRIPTOR bLength: 7
 bDescriptorType: ENDPOINT (5) bEndpointAddress: 0x81 IN Endpoint:1
 bmAttributes: 0x02 wMaxPacketSize: 8 bInterval: 1 ENDPOINT DESCRIPTOR
 bLength: 7 bDescriptorType: ENDPOINT (5) bEndpointAddress: 0x01 OUT
 Endpoint:1 bmAttributes: 0x02 wMaxPacketSize: 8 bInterval: 1 INTERFACE
 DESCRIPTOR bLength: 9 bDescriptorType: INTERFACE (4) bInterfaceNumber: 2
-bAlternateSetting: 0 bNumEndpoints: 2 bInterfaceClass: VENDOR\_SPECIFIC
+bAlternateSetting: 0 bNumEndpoints: 2 bInterfaceClass: VENDOR_SPECIFIC
 (0xff) bInterfaceSubClass: 0xff bInterfaceProtocol: 0x00 iInterface: 6
 ENDPOINT DESCRIPTOR bLength: 7 bDescriptorType: ENDPOINT (5)
 bEndpointAddress: 0x81 IN Endpoint:1 bmAttributes: 0x03 wMaxPacketSize:
@@ -2844,7 +2842,7 @@ bEndpointAddress: 0x81 IN Endpoint:1 bmAttributes: 0x03 wMaxPacketSize:
 (5) bEndpointAddress: 0x01 OUT Endpoint:1 bmAttributes: 0x03
 wMaxPacketSize: 8 bInterval: 1 INTERFACE DESCRIPTOR bLength: 9
 bDescriptorType: INTERFACE (4) bInterfaceNumber: 2 bAlternateSetting: 1
-bNumEndpoints: 2 bInterfaceClass: VENDOR\_SPECIFIC (0xff)
+bNumEndpoints: 2 bInterfaceClass: VENDOR_SPECIFIC (0xff)
 bInterfaceSubClass: 0xff bInterfaceProtocol: 0x00 iInterface: 5 ENDPOINT
 DESCRIPTOR bLength: 7 bDescriptorType: ENDPOINT (5) bEndpointAddress:
 0x81 IN Endpoint:1 bmAttributes: 0x02 wMaxPacketSize: 8 bInterval: 1
@@ -2859,31 +2857,31 @@ bEndpointAddress: 0x01 OUT Endpoint:1 bmAttributes: 0x02 wMaxPacketSize:
 ................ 0060 05 07 05 81 02 08 00 01 07 05 01 02 08 00 01
 ............... No. Time Source Destination Protocol Info 260 45.768543
 host 9.0 USB SET CONFIGURATION Request Frame 260 (24 bytes on wire, 24
-bytes captured) USB URB URB id: 0xffff8800cd9b80c0 URB type: URB\_SUBMIT
-('S') URB transfer type: URB\_CONTROL (2) Endpoint: 0x00 Device: 9 URB
+bytes captured) USB URB URB id: 0xffff8800cd9b80c0 URB type: URB_SUBMIT
+('S') URB transfer type: URB_CONTROL (2) Endpoint: 0x00 Device: 9 URB
 bus id: 8 Device setup request: present (0) Data: present (0) URB
 status: Operation now in progress (-EINPROGRESS) (-115) URB length
-\[bytes\]: 0 Data length \[bytes\]: 0 \[Response in: 261\]
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\] URB setup 0000 00 09 01 00
+[bytes]: 0 Data length [bytes]: 0 [Response in: 261]
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)] URB setup 0000 00 09 01 00
 00 00 00 00 00 00 00 00 00 00 00 00 ................ 0010 00 00 00 00 00
 00 00 00 ........ No. Time Source Destination Protocol Info 261
 45.774263 9.0 host USB SET CONFIGURATION Response Frame 261 (24 bytes on
 wire, 24 bytes captured) USB URB URB id: 0xffff8800cd9b80c0 URB type:
-URB\_COMPLETE ('C') URB transfer type: URB\_CONTROL (2) Endpoint: 0x00
+URB_COMPLETE ('C') URB transfer type: URB_CONTROL (2) Endpoint: 0x00
 Device: 9 URB bus id: 8 Device setup request: not present ('-') Data:
-not present ('&gt;')  
+not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 260\]  
+[Request in: 260]  
   
-\[Time from request: 0.005720000 seconds\]  
+[Time from request: 0.005720000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]
 
 0000 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................  
   
@@ -2899,9 +2897,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x00  
   
@@ -2915,13 +2913,13 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 263\]  
+[Response in: 263]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -2939,9 +2937,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x00  
   
@@ -2951,19 +2949,19 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&gt;')  
+Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 262\]  
+[Request in: 262]  
   
-\[Time from request: 0.004764000 seconds\]  
+[Time from request: 0.004764000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]
 
 0000 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................  
   
@@ -2979,9 +2977,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -2991,17 +2989,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 1  
+URB length [bytes]: 1  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 265\]  
+[Response in: 265]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -3019,9 +3017,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -3035,15 +3033,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 1  
+URB length [bytes]: 1  
   
-Data length \[bytes\]: 1  
+Data length [bytes]: 1  
   
-\[Request in: 264\]  
+[Request in: 264]  
   
-\[Time from request: 0.005979000 seconds\]  
+[Time from request: 0.005979000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 bConfigurationValue: 1
 
@@ -3061,9 +3059,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -3073,17 +3071,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 1  
+URB length [bytes]: 1  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 267\]  
+[Response in: 267]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -3101,9 +3099,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -3117,15 +3115,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 1  
+URB length [bytes]: 1  
   
-Data length \[bytes\]: 1  
+Data length [bytes]: 1  
   
-\[Request in: 266\]  
+[Request in: 266]  
   
-\[Time from request: 0.006987000 seconds\]  
+[Time from request: 0.006987000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 bAlternateSetting: 1
 
@@ -3143,9 +3141,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -3155,46 +3153,46 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;') URB status: Operation now in progress
-(-EINPROGRESS) (-115) URB length \[bytes\]: 1 Data length \[bytes\]: 0
-\[Response in: 269\] \[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\] URB
+Data: not present ('<') URB status: Operation now in progress
+(-EINPROGRESS) (-115) URB length [bytes]: 1 Data length [bytes]: 0
+[Response in: 269] [bInterfaceClass: VENDOR_SPECIFIC (0xff)] URB
 setup 0000 81 0a 00 00 02 00 01 00 00 00 00 00 00 00 00 00
 ................ 0010 00 02 00 00 00 00 00 00 ........ No. Time Source
 Destination Protocol Info 269 45.799261 9.0 host USB GET INTERFACE
 Response Frame 269 (25 bytes on wire, 25 bytes captured) USB URB URB id:
-0xffff8800cd9b8d80 URB type: URB\_COMPLETE ('C') URB transfer type:
-URB\_CONTROL (2) Endpoint: 0x80 Device: 9 URB bus id: 8 Device setup
+0xffff8800cd9b8d80 URB type: URB_COMPLETE ('C') URB transfer type:
+URB_CONTROL (2) Endpoint: 0x80 Device: 9 URB bus id: 8 Device setup
 request: not present ('-') Data: present (0) URB status: Success (0) URB
-length \[bytes\]: 1 Data length \[bytes\]: 1 \[Request in: 268\] \[Time
-from request: 0.003984000 seconds\] \[bInterfaceClass: VENDOR\_SPECIFIC
-(0xff)\] bAlternateSetting: 1 0000 00 00 00 00 00 00 00 00 00 00 00 00
+length [bytes]: 1 Data length [bytes]: 1 [Request in: 268] [Time
+from request: 0.003984000 seconds] [bInterfaceClass: VENDOR_SPECIFIC
+(0xff)] bAlternateSetting: 1 0000 00 00 00 00 00 00 00 00 00 00 00 00
 00 00 00 00 ................ 0010 00 02 00 00 00 00 00 00 01 .........
 No. Time Source Destination Protocol Info 270 46.358019 host 9.0 USB SET
 INTERFACE Request Frame 270 (24 bytes on wire, 24 bytes captured) USB
-URB URB id: 0xffff8800c3360680 URB type: URB\_SUBMIT ('S') URB transfer
-type: URB\_CONTROL (2) Endpoint: 0x00 Device: 9 URB bus id: 8 Device
+URB URB id: 0xffff8800c3360680 URB type: URB_SUBMIT ('S') URB transfer
+type: URB_CONTROL (2) Endpoint: 0x00 Device: 9 URB bus id: 8 Device
 setup request: present (0) Data: present (0) URB status: Operation now
-in progress (-EINPROGRESS) (-115) URB length \[bytes\]: 0 Data length
-\[bytes\]: 0 \[Response in: 271\] \[bInterfaceClass: VENDOR\_SPECIFIC
-(0xff)\] URB setup 0000 01 0b 00 00 02 00 00 00 00 00 00 00 00 00 00 00
+in progress (-EINPROGRESS) (-115) URB length [bytes]: 0 Data length
+[bytes]: 0 [Response in: 271] [bInterfaceClass: VENDOR_SPECIFIC
+(0xff)] URB setup 0000 01 0b 00 00 02 00 00 00 00 00 00 00 00 00 00 00
 ................ 0010 00 00 00 00 00 00 00 00 ........ No. Time Source
 Destination Protocol Info 271 46.362174 9.0 host USB SET INTERFACE
 Response Frame 271 (24 bytes on wire, 24 bytes captured) USB URB URB id:
-0xffff8800c3360680 URB type: URB\_COMPLETE ('C') URB transfer type:
-URB\_CONTROL (2) Endpoint: 0x00 Device: 9 URB bus id: 8 Device setup
-request: not present ('-') Data: not present ('&gt;')  
+0xffff8800c3360680 URB type: URB_COMPLETE ('C') URB transfer type:
+URB_CONTROL (2) Endpoint: 0x00 Device: 9 URB bus id: 8 Device setup
+request: not present ('-') Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 0  
+URB length [bytes]: 0  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 270\]  
+[Request in: 270]  
   
-\[Time from request: 0.004155000 seconds\]  
+[Time from request: 0.004155000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]
 
 0000 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................  
   
@@ -3210,9 +3208,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -3222,17 +3220,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 1  
+URB length [bytes]: 1  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 273\]  
+[Response in: 273]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -3250,9 +3248,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -3266,15 +3264,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 1  
+URB length [bytes]: 1  
   
-Data length \[bytes\]: 1  
+Data length [bytes]: 1  
   
-\[Request in: 272\]  
+[Request in: 272]  
   
-\[Time from request: 0.006983000 seconds\]  
+[Time from request: 0.006983000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 bConfigurationValue: 1
 
@@ -3292,9 +3290,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -3304,17 +3302,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 1  
+URB length [bytes]: 1  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 275\]  
+[Response in: 275]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -3332,9 +3330,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -3348,15 +3346,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 1  
+URB length [bytes]: 1  
   
-Data length \[bytes\]: 1  
+Data length [bytes]: 1  
   
-\[Request in: 274\]  
+[Request in: 274]  
   
-\[Time from request: 0.006991000 seconds\]  
+[Time from request: 0.006991000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 bAlternateSetting: 1
 
@@ -3374,9 +3372,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -3386,17 +3384,17 @@ URB bus id: 8
   
 Device setup request: present (0)  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 1  
+URB length [bytes]: 1  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 277\]  
+[Response in: 277]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 URB setup
 
@@ -3414,9 +3412,9 @@ USB URB
   
 URB id: 0xffff8800c3360680  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_CONTROL (2)  
+URB transfer type: URB_CONTROL (2)  
   
 Endpoint: 0x80  
   
@@ -3430,15 +3428,15 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 1  
+URB length [bytes]: 1  
   
-Data length \[bytes\]: 1  
+Data length [bytes]: 1  
   
-\[Request in: 276\]  
+[Request in: 276]  
   
-\[Time from request: 0.006980000 seconds\]  
+[Time from request: 0.006980000 seconds]  
   
-\[bInterfaceClass: VENDOR\_SPECIFIC (0xff)\]  
+[bInterfaceClass: VENDOR_SPECIFIC (0xff)]  
   
 bAlternateSetting: 1
 
@@ -3448,7 +3446,7 @@ bAlternateSetting: 1
 
 No. Time Source Destination Protocol Info  
   
-278 47.401967 host 9.1 USB URB\_INTERRUPT
+278 47.401967 host 9.1 USB URB_INTERRUPT
 
 Frame 278 (24 bytes on wire, 24 bytes captured)  
   
@@ -3456,9 +3454,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x81  
   
@@ -3468,43 +3466,43 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&lt;') URB status: Operation now in progress
-(-EINPROGRESS) (-115) URB length \[bytes\]: 8 Data length \[bytes\]: 0
-\[Response in: 279\] 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00
+Data: not present ('<') URB status: Operation now in progress
+(-EINPROGRESS) (-115) URB length [bytes]: 8 Data length [bytes]: 0
+[Response in: 279] 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00
 00 ................ 0010 00 02 00 00 00 00 00 00 ........ No. Time
 Source Destination Protocol Info 279 47.403015 9.1 host USB
-URB\_INTERRUPT Frame 279 (24 bytes on wire, 24 bytes captured) USB URB
-URB id: 0xffff8800cd913e00 URB type: URB\_COMPLETE ('C') URB transfer
-type: URB\_INTERRUPT (1) Endpoint: 0x81 Device: 9 URB bus id: 8 Device
+URB_INTERRUPT Frame 279 (24 bytes on wire, 24 bytes captured) USB URB
+URB id: 0xffff8800cd913e00 URB type: URB_COMPLETE ('C') URB transfer
+type: URB_INTERRUPT (1) Endpoint: 0x81 Device: 9 URB bus id: 8 Device
 setup request: not present ('-') Data: present (0) URB status: Success
-(0) URB length \[bytes\]: 0 Data length \[bytes\]: 0 \[Request in: 278\]
-\[Time from request: 0.001048000 seconds\] 0000 00 00 00 00 00 00 00 00
+(0) URB length [bytes]: 0 Data length [bytes]: 0 [Request in: 278]
+[Time from request: 0.001048000 seconds] 0000 00 00 00 00 00 00 00 00
 01 00 00 00 00 00 00 00 ................ 0010 00 02 00 00 00 00 00 00
 ........ No. Time Source Destination Protocol Info 280 47.404010 host
-9.1 USB URB\_INTERRUPT Frame 280 (32 bytes on wire, 32 bytes captured)
-USB URB URB id: 0xffff8800cd913e00 URB type: URB\_SUBMIT ('S') URB
-transfer type: URB\_INTERRUPT (1) Endpoint: 0x01 Device: 9 URB bus id: 8
+9.1 USB URB_INTERRUPT Frame 280 (32 bytes on wire, 32 bytes captured)
+USB URB URB id: 0xffff8800cd913e00 URB type: URB_SUBMIT ('S') URB
+transfer type: URB_INTERRUPT (1) Endpoint: 0x01 Device: 9 URB bus id: 8
 Device setup request: not present ('-') Data: present (0) URB status:
-Operation now in progress (-EINPROGRESS) (-115) URB length \[bytes\]: 8
-Data length \[bytes\]: 8 \[Response in: 281\] Application Data:
+Operation now in progress (-EINPROGRESS) (-115) URB length [bytes]: 8
+Data length [bytes]: 8 [Response in: 281] Application Data:
 F07E7F0601F7FFFF // SysEx "Identity Request" 0000 00 00 00 00 00 00 00
 00 01 00 00 00 00 00 00 00 ................ 0010 00 00 00 00 00 00 00 00
-f0 7e 7f 06 01 f7 ff ff .........\~...... No. Time Source Destination
-Protocol Info 281 47.405011 9.1 host USB URB\_INTERRUPT Frame 281 (24
+f0 7e 7f 06 01 f7 ff ff .........~...... No. Time Source Destination
+Protocol Info 281 47.405011 9.1 host USB URB_INTERRUPT Frame 281 (24
 bytes on wire, 24 bytes captured) USB URB URB id: 0xffff8800cd913e00 URB
-type: URB\_COMPLETE ('C') URB transfer type: URB\_INTERRUPT (1)
+type: URB_COMPLETE ('C') URB transfer type: URB_INTERRUPT (1)
 Endpoint: 0x01 Device: 9 URB bus id: 8 Device setup request: not present
-('-') Data: not present ('&gt;')  
+('-') Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 280\]  
+[Request in: 280]  
   
-\[Time from request: 0.001001000 seconds\]
+[Time from request: 0.001001000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -3512,7 +3510,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-282 47.405026 host 9.1 USB URB\_INTERRUPT
+282 47.405026 host 9.1 USB URB_INTERRUPT
 
 Frame 282 (24 bytes on wire, 24 bytes captured)  
   
@@ -3520,9 +3518,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x81  
   
@@ -3532,34 +3530,34 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&lt;') URB status: Operation now in progress
-(-EINPROGRESS) (-115) URB length \[bytes\]: 8 Data length \[bytes\]: 0
+Data: not present ('<') URB status: Operation now in progress
+(-EINPROGRESS) (-115) URB length [bytes]: 8 Data length [bytes]: 0
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................
 0010 00 02 00 00 00 00 00 00 ........ No. Time Source Destination
-Protocol Info 283 47.409086 host 9.1 USB URB\_INTERRUPT Frame 283 (32
+Protocol Info 283 47.409086 host 9.1 USB URB_INTERRUPT Frame 283 (32
 bytes on wire, 32 bytes captured) USB URB URB id: 0xffff8800cd9b8d80 URB
-type: URB\_SUBMIT ('S') URB transfer type: URB\_INTERRUPT (1) Endpoint:
+type: URB_SUBMIT ('S') URB transfer type: URB_INTERRUPT (1) Endpoint:
 0x01 Device: 9 URB bus id: 8 Device setup request: not present ('-')
 Data: present (0) URB status: Operation now in progress (-EINPROGRESS)
-(-115) URB length \[bytes\]: 8 Data length \[bytes\]: 8 \[Response in:
-284\] Application Data: F07E7F0601F7FFFF // SysEx "Identity Request"
+(-115) URB length [bytes]: 8 Data length [bytes]: 8 [Response in:
+284] Application Data: F07E7F0601F7FFFF // SysEx "Identity Request"
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................
-0010 00 00 00 00 00 00 00 00 f0 7e 7f 06 01 f7 ff ff .........\~......
+0010 00 00 00 00 00 00 00 00 f0 7e 7f 06 01 f7 ff ff .........~......
 No. Time Source Destination Protocol Info 284 47.411011 9.1 host USB
-URB\_INTERRUPT Frame 284 (24 bytes on wire, 24 bytes captured) USB URB
-URB id: 0xffff8800cd9b8d80 URB type: URB\_COMPLETE ('C') URB transfer
-type: URB\_INTERRUPT (1) Endpoint: 0x01 Device: 9 URB bus id: 8 Device
-setup request: not present ('-') Data: not present ('&gt;')  
+URB_INTERRUPT Frame 284 (24 bytes on wire, 24 bytes captured) USB URB
+URB id: 0xffff8800cd9b8d80 URB type: URB_COMPLETE ('C') URB transfer
+type: URB_INTERRUPT (1) Endpoint: 0x01 Device: 9 URB bus id: 8 Device
+setup request: not present ('-') Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 283\]  
+[Request in: 283]  
   
-\[Time from request: 0.001925000 seconds\]
+[Time from request: 0.001925000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -3567,7 +3565,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-285 47.414181 host 9.1 USB URB\_INTERRUPT
+285 47.414181 host 9.1 USB URB_INTERRUPT
 
 Frame 285 (32 bytes on wire, 32 bytes captured)  
   
@@ -3575,9 +3573,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -3591,22 +3589,22 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Response in: 287\]  
+[Response in: 287]  
   
 Application Data: F00001362A7F4400 // SysEx "Global System
 Configuration" (start)
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
-0010 00 00 00 00 00 00 00 00 f0 00 01 36 2a 7f 44 00 ...........6\*.D.
+0010 00 00 00 00 00 00 00 00 f0 00 01 36 2a 7f 44 00 ...........6*.D.
 
 No. Time Source Destination Protocol Info  
   
-286 47.416013 9.1 host USB URB\_INTERRUPT
+286 47.416013 9.1 host USB URB_INTERRUPT
 
 Frame 286 (24 bytes on wire, 24 bytes captured)  
   
@@ -3614,9 +3612,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -3626,17 +3624,17 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&gt;')  
+Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 285\]  
+[Request in: 285]  
   
-\[Time from request: 0.001832000 seconds\]
+[Time from request: 0.001832000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -3644,7 +3642,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-287 47.418010 9.1 host USB URB\_INTERRUPT
+287 47.418010 9.1 host USB URB_INTERRUPT
 
 Frame 287 (32 bytes on wire, 32 bytes captured)  
   
@@ -3652,9 +3650,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x81  
   
@@ -3668,24 +3666,24 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Request in: 285\]  
+[Request in: 285]  
   
-\[Time from request: 0.003829000 seconds\]  
+[Time from request: 0.003829000 seconds]  
   
 Application Data: F501F07E0F060200 // SysEx "Reply to Identity Request"
 (start)
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
-0010 00 02 00 00 00 00 00 00 f5 01 f0 7e 0f 06 02 00 ...........\~....
+0010 00 02 00 00 00 00 00 00 f5 01 f0 7e 0f 06 02 00 ...........~....
 
 No. Time Source Destination Protocol Info  
   
-288 47.418316 host 9.1 USB URB\_INTERRUPT
+288 47.418316 host 9.1 USB URB_INTERRUPT
 
 Frame 288 (24 bytes on wire, 24 bytes captured)  
   
@@ -3693,9 +3691,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x81  
   
@@ -3705,15 +3703,15 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 289\]
+[Response in: 289]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -3721,7 +3719,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-289 47.421009 9.1 host USB URB\_INTERRUPT
+289 47.421009 9.1 host USB URB_INTERRUPT
 
 Frame 289 (32 bytes on wire, 32 bytes captured)  
   
@@ -3729,9 +3727,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x81  
   
@@ -3745,24 +3743,24 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Request in: 288\]  
+[Request in: 288]  
   
-\[Time from request: 0.002693000 seconds\]  
+[Time from request: 0.002693000 seconds]  
   
 Application Data: 01362A000000332E // SysEx "Reply to Identity Request"
 (continued)
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
-0010 00 02 00 00 00 00 00 00 01 36 2a 00 00 00 33 2e .........6\*...3.
+0010 00 02 00 00 00 00 00 00 01 36 2a 00 00 00 33 2e .........6*...3.
 
 No. Time Source Destination Protocol Info  
   
-290 47.421368 host 9.1 USB URB\_INTERRUPT
+290 47.421368 host 9.1 USB URB_INTERRUPT
 
 Frame 290 (32 bytes on wire, 32 bytes captured)  
   
@@ -3770,9 +3768,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -3786,9 +3784,9 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
 Application Data: 000040F7FFFFFFFF // SysEx "Global System
 Configuration" mode 0x40 Slave ? (end)
@@ -3799,7 +3797,7 @@ Configuration" mode 0x40 Slave ? (end)
 
 No. Time Source Destination Protocol Info  
   
-291 47.421378 host 9.1 USB URB\_INTERRUPT
+291 47.421378 host 9.1 USB URB_INTERRUPT
 
 Frame 291 (24 bytes on wire, 24 bytes captured)  
   
@@ -3807,9 +3805,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x81  
   
@@ -3819,15 +3817,15 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 292\]
+[Response in: 292]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -3835,7 +3833,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-292 47.423008 9.1 host USB URB\_INTERRUPT
+292 47.423008 9.1 host USB URB_INTERRUPT
 
 Frame 292 (32 bytes on wire, 32 bytes captured)  
   
@@ -3843,9 +3841,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x81  
   
@@ -3859,13 +3857,13 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Request in: 291\]  
+[Request in: 291]  
   
-\[Time from request: 0.001630000 seconds\]  
+[Time from request: 0.001630000 seconds]  
   
 Application Data: 3038F7FFFFFFFFFF // SysEx "Reply to Identity Request"
 : "3.08" (end)
@@ -3876,7 +3874,7 @@ Application Data: 3038F7FFFFFFFFFF // SysEx "Reply to Identity Request"
 
 No. Time Source Destination Protocol Info  
   
-293 47.424423 host 9.1 USB URB\_INTERRUPT
+293 47.424423 host 9.1 USB URB_INTERRUPT
 
 Frame 293 (24 bytes on wire, 24 bytes captured)  
   
@@ -3884,9 +3882,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x81  
   
@@ -3896,25 +3894,25 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&lt;') URB status: Operation now in progress
-(-EINPROGRESS) (-115) URB length \[bytes\]: 8 Data length \[bytes\]: 0
-\[Response in: 294\] 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00
+Data: not present ('<') URB status: Operation now in progress
+(-EINPROGRESS) (-115) URB length [bytes]: 8 Data length [bytes]: 0
+[Response in: 294] 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00
 00 ................ 0010 00 02 00 00 00 00 00 00 ........ No. Time
 Source Destination Protocol Info 294 47.427008 9.1 host USB
-URB\_INTERRUPT Frame 294 (24 bytes on wire, 24 bytes captured) USB URB
-URB id: 0xffff8800cd913e00 URB type: URB\_COMPLETE ('C') URB transfer
-type: URB\_INTERRUPT (1) Endpoint: 0x01 Device: 9 URB bus id: 8 Device
-setup request: not present ('-') Data: not present ('&gt;')  
+URB_INTERRUPT Frame 294 (24 bytes on wire, 24 bytes captured) USB URB
+URB id: 0xffff8800cd913e00 URB type: URB_COMPLETE ('C') URB transfer
+type: URB_INTERRUPT (1) Endpoint: 0x01 Device: 9 URB bus id: 8 Device
+setup request: not present ('-') Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 293\]  
+[Request in: 293]  
   
-\[Time from request: 0.002585000 seconds\]
+[Time from request: 0.002585000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -3922,7 +3920,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-295 47.430521 host 9.1 USB URB\_INTERRUPT
+295 47.430521 host 9.1 USB URB_INTERRUPT
 
 Frame 295 (32 bytes on wire, 32 bytes captured)  
   
@@ -3930,9 +3928,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -3946,21 +3944,21 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Response in: 296\]  
+[Response in: 296]  
   
 Application Data: F00001362A7F4470 // SysEx "Send Display Text" (start)
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
-0010 00 00 00 00 00 00 00 00 f0 00 01 36 2a 7f 44 70 ...........6\*.Dp
+0010 00 00 00 00 00 00 00 00 f0 00 01 36 2a 7f 44 70 ...........6*.Dp
 
 No. Time Source Destination Protocol Info  
   
-296 47.432008 9.1 host USB URB\_INTERRUPT
+296 47.432008 9.1 host USB URB_INTERRUPT
 
 Frame 296 (24 bytes on wire, 24 bytes captured)  
   
@@ -3968,9 +3966,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -3980,17 +3978,17 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&gt;')  
+Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 295\]  
+[Request in: 295]  
   
-\[Time from request: 0.001487000 seconds\]
+[Time from request: 0.001487000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -3998,7 +3996,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-297 47.435813 host 9.1 USB URB\_INTERRUPT
+297 47.435813 host 9.1 USB URB_INTERRUPT
 
 Frame 297 (32 bytes on wire, 32 bytes captured)  
   
@@ -4006,9 +4004,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -4022,11 +4020,11 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Response in: 298\]  
+[Response in: 298]  
   
 Application Data: 00000D496E697469 // SysEx "Send Display Text" Clear
 display (continued)
@@ -4037,7 +4035,7 @@ display (continued)
 
 No. Time Source Destination Protocol Info  
   
-298 47.437023 9.1 host USB URB\_INTERRUPT
+298 47.437023 9.1 host USB URB_INTERRUPT
 
 Frame 298 (24 bytes on wire, 24 bytes captured)  
   
@@ -4045,9 +4043,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -4057,17 +4055,17 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&gt;')  
+Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 297\]  
+[Request in: 297]  
   
-\[Time from request: 0.001210000 seconds\]
+[Time from request: 0.001210000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -4075,7 +4073,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-299 47.440911 host 9.1 USB URB\_INTERRUPT
+299 47.440911 host 9.1 USB URB_INTERRUPT
 
 Frame 299 (32 bytes on wire, 32 bytes captured)  
   
@@ -4083,9 +4081,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -4099,11 +4097,11 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Response in: 300\]  
+[Response in: 300]  
   
 Application Data: 616C697A696E6720 // SysEx "Send Display Text"
 (continued)
@@ -4114,7 +4112,7 @@ Application Data: 616C697A696E6720 // SysEx "Send Display Text"
 
 No. Time Source Destination Protocol Info  
   
-300 47.442007 9.1 host USB URB\_INTERRUPT
+300 47.442007 9.1 host USB URB_INTERRUPT
 
 Frame 300 (24 bytes on wire, 24 bytes captured)  
   
@@ -4122,9 +4120,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -4134,17 +4132,17 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&gt;')  
+Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 299\]  
+[Request in: 299]  
   
-\[Time from request: 0.001096000 seconds\]
+[Time from request: 0.001096000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -4152,7 +4150,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-301 47.446008 host 9.1 USB URB\_INTERRUPT
+301 47.446008 host 9.1 USB URB_INTERRUPT
 
 Frame 301 (32 bytes on wire, 32 bytes captured)  
   
@@ -4160,9 +4158,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -4176,11 +4174,11 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Response in: 302\]  
+[Response in: 302]  
   
 Application Data: 55534220436F6E6E // SysEx "Send Display Text"
 (continued)
@@ -4191,7 +4189,7 @@ Application Data: 55534220436F6E6E // SysEx "Send Display Text"
 
 No. Time Source Destination Protocol Info  
   
-302 47.448006 9.1 host USB URB\_INTERRUPT
+302 47.448006 9.1 host USB URB_INTERRUPT
 
 Frame 302 (24 bytes on wire, 24 bytes captured)  
   
@@ -4199,9 +4197,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -4211,17 +4209,17 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&gt;')  
+Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 301\]  
+[Request in: 301]  
   
-\[Time from request: 0.001998000 seconds\]
+[Time from request: 0.001998000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -4229,7 +4227,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-303 47.451145 host 9.1 USB URB\_INTERRUPT
+303 47.451145 host 9.1 USB URB_INTERRUPT
 
 Frame 303 (32 bytes on wire, 32 bytes captured)  
   
@@ -4237,9 +4235,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -4253,11 +4251,11 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Response in: 304\]  
+[Response in: 304]  
   
 Application Data: 656374696F6E2E2E // SysEx "Send Display Text"
 (continued)
@@ -4268,7 +4266,7 @@ Application Data: 656374696F6E2E2E // SysEx "Send Display Text"
 
 No. Time Source Destination Protocol Info  
   
-304 47.453005 9.1 host USB URB\_INTERRUPT
+304 47.453005 9.1 host USB URB_INTERRUPT
 
 Frame 304 (24 bytes on wire, 24 bytes captured)  
   
@@ -4276,9 +4274,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -4288,17 +4286,17 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&gt;')  
+Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 303\]  
+[Request in: 303]  
   
-\[Time from request: 0.001860000 seconds\]
+[Time from request: 0.001860000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -4306,7 +4304,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-305 47.456236 host 9.1 USB URB\_INTERRUPT
+305 47.456236 host 9.1 USB URB_INTERRUPT
 
 Frame 305 (32 bytes on wire, 32 bytes captured)  
   
@@ -4314,9 +4312,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -4330,11 +4328,11 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Response in: 306\]  
+[Response in: 306]  
   
 Application Data: 2EF7FFFFFFFFFFFF // SysEx "Send Display Text" :
 "Initializing USB Connection..." (end)
@@ -4345,7 +4343,7 @@ Application Data: 2EF7FFFFFFFFFFFF // SysEx "Send Display Text" :
 
 No. Time Source Destination Protocol Info  
   
-306 47.458005 9.1 host USB URB\_INTERRUPT
+306 47.458005 9.1 host USB URB_INTERRUPT
 
 Frame 306 (24 bytes on wire, 24 bytes captured)  
   
@@ -4353,9 +4351,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -4365,17 +4363,17 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&gt;')  
+Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 305\]  
+[Request in: 305]  
   
-\[Time from request: 0.001769000 seconds\]
+[Time from request: 0.001769000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -4383,7 +4381,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-307 47.460559 host 9.1 USB URB\_INTERRUPT
+307 47.460559 host 9.1 USB URB_INTERRUPT
 
 Frame 307 (32 bytes on wire, 32 bytes captured)  
   
@@ -4391,9 +4389,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -4407,21 +4405,21 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Response in: 309\]  
+[Response in: 309]  
   
 Application Data: F07E7F0601F7FFFF // SysEx "Identity Request"
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
-0010 00 00 00 00 00 00 00 00 f0 7e 7f 06 01 f7 ff ff .........\~......
+0010 00 00 00 00 00 00 00 00 f0 7e 7f 06 01 f7 ff ff .........~......
 
 No. Time Source Destination Protocol Info  
   
-308 47.462003 9.1 host USB URB\_INTERRUPT
+308 47.462003 9.1 host USB URB_INTERRUPT
 
 Frame 308 (24 bytes on wire, 24 bytes captured)  
   
@@ -4429,9 +4427,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -4441,17 +4439,17 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&gt;')  
+Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 307\]  
+[Request in: 307]  
   
-\[Time from request: 0.001444000 seconds\]
+[Time from request: 0.001444000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -4459,7 +4457,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-309 47.490001 9.1 host USB URB\_INTERRUPT
+309 47.490001 9.1 host USB URB_INTERRUPT
 
 Frame 309 (32 bytes on wire, 32 bytes captured)  
   
@@ -4467,9 +4465,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x81  
   
@@ -4483,24 +4481,24 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Request in: 307\]  
+[Request in: 307]  
   
-\[Time from request: 0.029442000 seconds\]  
+[Time from request: 0.029442000 seconds]  
   
 Application Data: F501F07E0F060200 // SysEx "Reply to Identity Request"
 (start)
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
-0010 00 02 00 00 00 00 00 00 f5 01 f0 7e 0f 06 02 00 ...........\~....
+0010 00 02 00 00 00 00 00 00 f5 01 f0 7e 0f 06 02 00 ...........~....
 
 No. Time Source Destination Protocol Info  
   
-310 47.490116 host 9.1 USB URB\_INTERRUPT
+310 47.490116 host 9.1 USB URB_INTERRUPT
 
 Frame 310 (24 bytes on wire, 24 bytes captured)  
   
@@ -4508,9 +4506,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x81  
   
@@ -4520,15 +4518,15 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 311\]
+[Response in: 311]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -4536,7 +4534,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-311 47.493000 9.1 host USB URB\_INTERRUPT
+311 47.493000 9.1 host USB URB_INTERRUPT
 
 Frame 311 (32 bytes on wire, 32 bytes captured)  
   
@@ -4544,9 +4542,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x81  
   
@@ -4560,24 +4558,24 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Request in: 310\]  
+[Request in: 310]  
   
-\[Time from request: 0.002884000 seconds\]  
+[Time from request: 0.002884000 seconds]  
   
 Application Data: 01362A000000332E // SysEx "Reply to Identity Request"
 (continued)
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
-0010 00 02 00 00 00 00 00 00 01 36 2a 00 00 00 33 2e .........6\*...3.
+0010 00 02 00 00 00 00 00 00 01 36 2a 00 00 00 33 2e .........6*...3.
 
 No. Time Source Destination Protocol Info  
   
-312 47.493178 host 9.1 USB URB\_INTERRUPT
+312 47.493178 host 9.1 USB URB_INTERRUPT
 
 Frame 312 (24 bytes on wire, 24 bytes captured)  
   
@@ -4585,9 +4583,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x81  
   
@@ -4597,15 +4595,15 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 313\]
+[Response in: 313]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -4613,7 +4611,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-313 47.494996 9.1 host USB URB\_INTERRUPT
+313 47.494996 9.1 host USB URB_INTERRUPT
 
 Frame 313 (32 bytes on wire, 32 bytes captured)  
   
@@ -4621,9 +4619,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x81  
   
@@ -4637,13 +4635,13 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Request in: 312\]  
+[Request in: 312]  
   
-\[Time from request: 0.001818000 seconds\]  
+[Time from request: 0.001818000 seconds]  
   
 Application Data: 3038F7FFFFFFFFFF // SysEx "Reply to Identity Request"
 : "3.08" (end)
@@ -4654,7 +4652,7 @@ Application Data: 3038F7FFFFFFFFFF // SysEx "Reply to Identity Request"
 
 No. Time Source Destination Protocol Info  
   
-314 47.495236 host 9.1 USB URB\_INTERRUPT
+314 47.495236 host 9.1 USB URB_INTERRUPT
 
 Frame 314 (24 bytes on wire, 24 bytes captured)  
   
@@ -4662,9 +4660,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x81  
   
@@ -4674,35 +4672,35 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&lt;') URB status: Operation now in progress
-(-EINPROGRESS) (-115) URB length \[bytes\]: 8 Data length \[bytes\]: 0
+Data: not present ('<') URB status: Operation now in progress
+(-EINPROGRESS) (-115) URB length [bytes]: 8 Data length [bytes]: 0
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................
 0010 00 02 00 00 00 00 00 00 ........ No. Time Source Destination
-Protocol Info 315 47.499301 host 9.1 USB URB\_INTERRUPT Frame 315 (32
+Protocol Info 315 47.499301 host 9.1 USB URB_INTERRUPT Frame 315 (32
 bytes on wire, 32 bytes captured) USB URB URB id: 0xffff8800cd913e00 URB
-type: URB\_SUBMIT ('S') URB transfer type: URB\_INTERRUPT (1) Endpoint:
+type: URB_SUBMIT ('S') URB transfer type: URB_INTERRUPT (1) Endpoint:
 0x01 Device: 9 URB bus id: 8 Device setup request: not present ('-')
 Data: present (0) URB status: Operation now in progress (-EINPROGRESS)
-(-115) URB length \[bytes\]: 8 Data length \[bytes\]: 8 \[Response in:
-316\] Application Data: F00001362A7F4470 // SysEx "Send Display Text"
+(-115) URB length [bytes]: 8 Data length [bytes]: 8 [Response in:
+316] Application Data: F00001362A7F4470 // SysEx "Send Display Text"
 (start) 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00
 ................ 0010 00 00 00 00 00 00 00 00 f0 00 01 36 2a 7f 44 70
-...........6\*.Dp No. Time Source Destination Protocol Info 316
-47.500998 9.1 host USB URB\_INTERRUPT Frame 316 (24 bytes on wire, 24
+...........6*.Dp No. Time Source Destination Protocol Info 316
+47.500998 9.1 host USB URB_INTERRUPT Frame 316 (24 bytes on wire, 24
 bytes captured) USB URB URB id: 0xffff8800cd913e00 URB type:
-URB\_COMPLETE ('C') URB transfer type: URB\_INTERRUPT (1) Endpoint: 0x01
+URB_COMPLETE ('C') URB transfer type: URB_INTERRUPT (1) Endpoint: 0x01
 Device: 9 URB bus id: 8 Device setup request: not present ('-') Data:
-not present ('&gt;')  
+not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 315\]  
+[Request in: 315]  
   
-\[Time from request: 0.001697000 seconds\]
+[Time from request: 0.001697000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -4710,7 +4708,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-317 47.504417 host 9.1 USB URB\_INTERRUPT
+317 47.504417 host 9.1 USB URB_INTERRUPT
 
 Frame 317 (32 bytes on wire, 32 bytes captured)  
   
@@ -4718,9 +4716,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -4734,11 +4732,11 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Response in: 318\]  
+[Response in: 318]  
   
 Application Data: 004056657273696F // SysEx "Send Display Text" :
 Display 0 Line 1 (continued)
@@ -4749,7 +4747,7 @@ Display 0 Line 1 (continued)
 
 No. Time Source Destination Protocol Info  
   
-318 47.505996 9.1 host USB URB\_INTERRUPT
+318 47.505996 9.1 host USB URB_INTERRUPT
 
 Frame 318 (24 bytes on wire, 24 bytes captured)  
   
@@ -4757,9 +4755,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -4769,17 +4767,17 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&gt;')  
+Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 317\]  
+[Request in: 317]  
   
-\[Time from request: 0.001579000 seconds\]
+[Time from request: 0.001579000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -4787,7 +4785,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-319 47.509511 host 9.1 USB URB\_INTERRUPT
+319 47.509511 host 9.1 USB URB_INTERRUPT
 
 Frame 319 (32 bytes on wire, 32 bytes captured)  
   
@@ -4795,9 +4793,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -4811,11 +4809,11 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Response in: 320\]  
+[Response in: 320]  
   
 Application Data: 6E20333038F7FFFF // SysEx "Send Display Text" :
 "Version 308" (end)
@@ -4826,7 +4824,7 @@ Application Data: 6E20333038F7FFFF // SysEx "Send Display Text" :
 
 No. Time Source Destination Protocol Info  
   
-320 47.510997 9.1 host USB URB\_INTERRUPT
+320 47.510997 9.1 host USB URB_INTERRUPT
 
 Frame 320 (24 bytes on wire, 24 bytes captured)  
   
@@ -4834,9 +4832,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -4846,17 +4844,17 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&gt;')  
+Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 319\]  
+[Request in: 319]  
   
-\[Time from request: 0.001486000 seconds\]
+[Time from request: 0.001486000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -4864,7 +4862,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-321 47.514727 host 9.1 USB URB\_INTERRUPT
+321 47.514727 host 9.1 USB URB_INTERRUPT
 
 Frame 321 (32 bytes on wire, 32 bytes captured)  
   
@@ -4872,9 +4870,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -4888,22 +4886,22 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Response in: 322\]  
+[Response in: 322]  
   
 Application Data: F00001362A7F5201 // SysEx "Request System Parameter"
 (start)
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
-0010 00 00 00 00 00 00 00 00 f0 00 01 36 2a 7f 52 01 ...........6\*.R.
+0010 00 00 00 00 00 00 00 00 f0 00 01 36 2a 7f 52 01 ...........6*.R.
 
 No. Time Source Destination Protocol Info  
   
-322 47.515995 9.1 host USB URB\_INTERRUPT
+322 47.515995 9.1 host USB URB_INTERRUPT
 
 Frame 322 (24 bytes on wire, 24 bytes captured)  
   
@@ -4911,9 +4909,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -4923,17 +4921,17 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&gt;')  
+Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 321\]  
+[Request in: 321]  
   
-\[Time from request: 0.001268000 seconds\]
+[Time from request: 0.001268000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -4941,7 +4939,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-323 47.519824 host 9.1 USB URB\_INTERRUPT
+323 47.519824 host 9.1 USB URB_INTERRUPT
 
 Frame 323 (32 bytes on wire, 32 bytes captured)  
   
@@ -4949,9 +4947,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -4965,11 +4963,11 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Response in: 325\]  
+[Response in: 325]  
   
 Application Data: 01000001F7FFFFFF // SysEx "Request System Parameter"
 Address 010100 Length 0001 ID ? (end)
@@ -4980,7 +4978,7 @@ Address 010100 Length 0001 ID ? (end)
 
 No. Time Source Destination Protocol Info  
   
-324 47.520994 9.1 host USB URB\_INTERRUPT
+324 47.520994 9.1 host USB URB_INTERRUPT
 
 Frame 324 (24 bytes on wire, 24 bytes captured)  
   
@@ -4988,9 +4986,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -5000,17 +4998,17 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&gt;')  
+Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 323\]  
+[Request in: 323]  
   
-\[Time from request: 0.001170000 seconds\]
+[Time from request: 0.001170000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -5018,7 +5016,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-325 47.553990 9.1 host USB URB\_INTERRUPT
+325 47.553990 9.1 host USB URB_INTERRUPT
 
 Frame 325 (32 bytes on wire, 32 bytes captured)  
   
@@ -5026,9 +5024,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x81  
   
@@ -5042,24 +5040,24 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Request in: 323\]  
+[Request in: 323]  
   
-\[Time from request: 0.034166000 seconds\]  
+[Time from request: 0.034166000 seconds]  
   
 Application Data: F00001362A0F4401 // SysEx "Reply System Parameter"
 (start)
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
-0010 00 02 00 00 00 00 00 00 f0 00 01 36 2a 0f 44 01 ...........6\*.D.
+0010 00 02 00 00 00 00 00 00 f0 00 01 36 2a 0f 44 01 ...........6*.D.
 
 No. Time Source Destination Protocol Info  
   
-326 47.554437 host 9.1 USB URB\_INTERRUPT
+326 47.554437 host 9.1 USB URB_INTERRUPT
 
 Frame 326 (24 bytes on wire, 24 bytes captured)  
   
@@ -5067,9 +5065,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x81  
   
@@ -5079,15 +5077,15 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&lt;')  
+Data: not present ('<')  
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Response in: 327\]
+[Response in: 327]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -5095,7 +5093,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-327 47.556989 9.1 host USB URB\_INTERRUPT
+327 47.556989 9.1 host USB URB_INTERRUPT
 
 Frame 327 (32 bytes on wire, 32 bytes captured)  
   
@@ -5103,9 +5101,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x81  
   
@@ -5119,13 +5117,13 @@ Data: present (0)
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Request in: 326\]  
+[Request in: 326]  
   
-\[Time from request: 0.002552000 seconds\]  
+[Time from request: 0.002552000 seconds]  
   
 Application Data: 010000F7FFFFFFFF // SysEx "Reply System Parameter" ID
 0 (end)
@@ -5136,7 +5134,7 @@ Application Data: 010000F7FFFFFFFF // SysEx "Reply System Parameter" ID
 
 No. Time Source Destination Protocol Info  
   
-328 47.557497 host 9.1 USB URB\_INTERRUPT
+328 47.557497 host 9.1 USB URB_INTERRUPT
 
 Frame 328 (24 bytes on wire, 24 bytes captured)  
   
@@ -5144,9 +5142,9 @@ USB URB
   
 URB id: 0xffff8800cd9b8d80  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x81  
   
@@ -5156,35 +5154,35 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&lt;') URB status: Operation now in progress
-(-EINPROGRESS) (-115) URB length \[bytes\]: 8 Data length \[bytes\]: 0
+Data: not present ('<') URB status: Operation now in progress
+(-EINPROGRESS) (-115) URB length [bytes]: 8 Data length [bytes]: 0
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................
 0010 00 02 00 00 00 00 00 00 ........ No. Time Source Destination
-Protocol Info 329 47.668498 host 9.1 USB URB\_INTERRUPT Frame 329 (32
+Protocol Info 329 47.668498 host 9.1 USB URB_INTERRUPT Frame 329 (32
 bytes on wire, 32 bytes captured) USB URB URB id: 0xffff8800cd913e00 URB
-type: URB\_SUBMIT ('S') URB transfer type: URB\_INTERRUPT (1) Endpoint:
+type: URB_SUBMIT ('S') URB transfer type: URB_INTERRUPT (1) Endpoint:
 0x01 Device: 9 URB bus id: 8 Device setup request: not present ('-')
 Data: present (0) URB status: Operation now in progress (-EINPROGRESS)
-(-115) URB length \[bytes\]: 8 Data length \[bytes\]: 8 \[Response in:
-330\] Application Data: F00001362A7F4470 // SysEx "Send Display Text"
+(-115) URB length [bytes]: 8 Data length [bytes]: 8 [Response in:
+330] Application Data: F00001362A7F4470 // SysEx "Send Display Text"
 (start) 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00
 ................ 0010 00 00 00 00 00 00 00 00 f0 00 01 36 2a 7f 44 70
-...........6\*.Dp No. Time Source Destination Protocol Info 330
-47.669972 9.1 host USB URB\_INTERRUPT Frame 330 (24 bytes on wire, 24
+...........6*.Dp No. Time Source Destination Protocol Info 330
+47.669972 9.1 host USB URB_INTERRUPT Frame 330 (24 bytes on wire, 24
 bytes captured) USB URB URB id: 0xffff8800cd913e00 URB type:
-URB\_COMPLETE ('C') URB transfer type: URB\_INTERRUPT (1) Endpoint: 0x01
+URB_COMPLETE ('C') URB transfer type: URB_INTERRUPT (1) Endpoint: 0x01
 Device: 9 URB bus id: 8 Device setup request: not present ('-') Data:
-not present ('&gt;')  
+not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 329\]  
+[Request in: 329]  
   
-\[Time from request: 0.001474000 seconds\]
+[Time from request: 0.001474000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -5192,7 +5190,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-331 47.673598 host 9.1 USB URB\_INTERRUPT
+331 47.673598 host 9.1 USB URB_INTERRUPT
 
 Frame 331 (32 bytes on wire, 32 bytes captured)  
   
@@ -5200,9 +5198,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -5216,11 +5214,11 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Response in: 332\]  
+[Response in: 332]  
   
 Application Data: 00000D4669726D77 // SysEx "Send Display Text" Clear
 display (continued)
@@ -5231,7 +5229,7 @@ display (continued)
 
 No. Time Source Destination Protocol Info  
   
-332 47.674970 9.1 host USB URB\_INTERRUPT
+332 47.674970 9.1 host USB URB_INTERRUPT
 
 Frame 332 (24 bytes on wire, 24 bytes captured)  
   
@@ -5239,9 +5237,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -5251,17 +5249,17 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&gt;')  
+Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 331\]  
+[Request in: 331]  
   
-\[Time from request: 0.001372000 seconds\]
+[Time from request: 0.001372000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -5269,7 +5267,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-333 47.678712 host 9.1 USB URB\_INTERRUPT
+333 47.678712 host 9.1 USB URB_INTERRUPT
 
 Frame 333 (32 bytes on wire, 32 bytes captured)  
   
@@ -5277,9 +5275,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -5293,11 +5291,11 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Response in: 334\]  
+[Response in: 334]  
   
 Application Data: 6172652056332E30 // SysEx "Send Display Text"
 (continued)
@@ -5308,7 +5306,7 @@ Application Data: 6172652056332E30 // SysEx "Send Display Text"
 
 No. Time Source Destination Protocol Info  
   
-334 47.679970 9.1 host USB URB\_INTERRUPT
+334 47.679970 9.1 host USB URB_INTERRUPT
 
 Frame 334 (24 bytes on wire, 24 bytes captured)  
   
@@ -5316,9 +5314,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -5328,17 +5326,17 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&gt;')  
+Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 333\]  
+[Request in: 333]  
   
-\[Time from request: 0.001258000 seconds\]
+[Time from request: 0.001258000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -5346,7 +5344,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-335 47.683820 host 9.1 USB URB\_INTERRUPT
+335 47.683820 host 9.1 USB URB_INTERRUPT
 
 Frame 335 (32 bytes on wire, 32 bytes captured)  
   
@@ -5354,9 +5352,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -5370,11 +5368,11 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Response in: 336\]  
+[Response in: 336]  
   
 Application Data: 382C204944203020 // SysEx "Send Display Text"
 (continued)
@@ -5385,7 +5383,7 @@ Application Data: 382C204944203020 // SysEx "Send Display Text"
 
 No. Time Source Destination Protocol Info  
   
-336 47.684969 9.1 host USB URB\_INTERRUPT
+336 47.684969 9.1 host USB URB_INTERRUPT
 
 Frame 336 (24 bytes on wire, 24 bytes captured)  
   
@@ -5393,9 +5391,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -5405,17 +5403,17 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&gt;')  
+Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 335\]  
+[Request in: 335]  
   
-\[Time from request: 0.001149000 seconds\]
+[Time from request: 0.001149000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -5423,7 +5421,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-337 47.688903 host 9.1 USB URB\_INTERRUPT
+337 47.688903 host 9.1 USB URB_INTERRUPT
 
 Frame 337 (32 bytes on wire, 32 bytes captured)  
   
@@ -5431,9 +5429,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -5447,22 +5445,22 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Response in: 338\]  
+[Response in: 338]  
   
 Application Data: 5B4D41535445525D // SysEx "Send Display Text"
 (continued)
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
-0010 00 00 00 00 00 00 00 00 5b 4d 41 53 54 45 52 5d ........\[MASTER\]
+0010 00 00 00 00 00 00 00 00 5b 4d 41 53 54 45 52 5d ........[MASTER]
 
 No. Time Source Destination Protocol Info  
   
-338 47.689969 9.1 host USB URB\_INTERRUPT
+338 47.689969 9.1 host USB URB_INTERRUPT
 
 Frame 338 (24 bytes on wire, 24 bytes captured)  
   
@@ -5470,9 +5468,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -5482,17 +5480,17 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&gt;')  
+Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 337\]  
+[Request in: 337]  
   
-\[Time from request: 0.001066000 seconds\]
+[Time from request: 0.001066000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -5500,7 +5498,7 @@ Data length \[bytes\]: 0
 
 No. Time Source Destination Protocol Info  
   
-339 47.693989 host 9.1 USB URB\_INTERRUPT
+339 47.693989 host 9.1 USB URB_INTERRUPT
 
 Frame 339 (32 bytes on wire, 32 bytes captured)  
   
@@ -5508,9 +5506,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_SUBMIT ('S')  
+URB type: URB_SUBMIT ('S')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -5524,14 +5522,14 @@ Data: present (0)
   
 URB status: Operation now in progress (-EINPROGRESS) (-115)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 8  
+Data length [bytes]: 8  
   
-\[Response in: 340\]  
+[Response in: 340]  
   
 Application Data: F7FFFFFFFFFFFFFF // SysEx "Send Display Text" :
-"Firmware V3.08, ID 0 \[MASTER\]" (end)
+"Firmware V3.08, ID 0 [MASTER]" (end)
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -5539,7 +5537,7 @@ Application Data: F7FFFFFFFFFFFFFF // SysEx "Send Display Text" :
 
 No. Time Source Destination Protocol Info  
   
-340 47.695968 9.1 host USB URB\_INTERRUPT
+340 47.695968 9.1 host USB URB_INTERRUPT
 
 Frame 340 (24 bytes on wire, 24 bytes captured)  
   
@@ -5547,9 +5545,9 @@ USB URB
   
 URB id: 0xffff8800cd913e00  
   
-URB type: URB\_COMPLETE ('C')  
+URB type: URB_COMPLETE ('C')  
   
-URB transfer type: URB\_INTERRUPT (1)  
+URB transfer type: URB_INTERRUPT (1)  
   
 Endpoint: 0x01  
   
@@ -5559,17 +5557,17 @@ URB bus id: 8
   
 Device setup request: not present ('-')  
   
-Data: not present ('&gt;')  
+Data: not present ('>')  
   
 URB status: Success (0)  
   
-URB length \[bytes\]: 8  
+URB length [bytes]: 8  
   
-Data length \[bytes\]: 0  
+Data length [bytes]: 0  
   
-\[Request in: 339\]  
+[Request in: 339]  
   
-\[Time from request: 0.001979000 seconds\]
+[Time from request: 0.001979000 seconds]
 
 0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ................  
   
@@ -5581,7 +5579,7 @@ start of the message both from and to the SAC in the form:
 
 `F5 pn`
 
-where pn is the port number (01 to 06 being respectively SAC Control,
+where `pn` is the port number (01 to 06 being respectively SAC Control,
 MIDI port, Inst. 3, Inst. 4, Inst 5 and Config).
 
 It's not sent by the host for the SAC Control.

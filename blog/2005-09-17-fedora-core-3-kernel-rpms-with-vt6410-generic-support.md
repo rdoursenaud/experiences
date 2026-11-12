@@ -1,15 +1,21 @@
 ---
-title: Fedora Core 3 kernel rpms with VT6410 generic support
 date: '2005-09-17'
-subject: Informatique • IT
+downloads:
+  - file: /files/kernel-2.6.9-1.724_FC3.VT6410.i686.rpm
+    title: 'kernel-2.6.9-1.724_FC3.VT6410.i686'
+  - file: /files/kernel-smp-2.6.9-1.724_FC3.VT6410.i686.rpm
+    title: 'kernel-smp-2.6.9-1.724_FC3.VT6410.i686'
+  - file: /files/kernel-2.6.9-1.724_FC3.VT6410.src.rpm
+    title: 'kernel-2.6.9-1.724_FC3.VT6410.src'
+short_title: 'Fedora Core 3 VT6410 kernel'
+subject: 'Informatique • IT'
 tags:
-  - Informatique 
-  - IT
-  - GNU/Linux
-  - Fedora Core
-  - Noyau
-  - Kernel
+  - 'GNU/Linux'
+  - 'Fedora Core'
+  - 'Noyau'
+  - 'Kernel'
 ---
+# Fedora Core 3 kernel rpms with VT6410 generic support
 
 :::{attention}
 This page is old and no longer maintained!

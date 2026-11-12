@@ -1,28 +1,27 @@
 ---
-title: Thunderbolt 3 ↔ Thunderbolt 2 adapters
-subtitle: Directionality, power, and the traps nobody documents
-date: '2026-10-19'
-subject: Informatique • IT
-tags:
-  - Informatique
-  - IT
-  - Matériel
-  - Hardware
-  - Thunderbolt
-  - Thunderbolt 2
-  - Thunderbolt 3
-  - USB-C
-  - Apple
-  - StarTech
-  - Audio
-  - PreSonus
-  - Quantum
 abbreviations:
   BOM: Bill Of Materials
   TB: Thunderbolt
   mDP: Mini DisplayPort
+date: '2026-10-19'
+short_title: Thunderbolt adapters
+subject: 'Informatique • IT'
+subtitle: 'Directionality, power, and the traps nobody documents'
+tags:
+  - 'Layer: Hardware'
+  - 'Thunderbolt'
+  - 'Thunderbolt 2'
+  - 'Thunderbolt 3'
+  - 'USB-C'
+  - 'Apple'
+  - 'StarTech'
+  - 'Audio'
+  - 'PreSonus'
+  - 'Quantum'
 ---
-### TL;DR
+# Thunderbolt 3 ↔ Thunderbolt 2 adapters
+
+## TL;DR
 
 A Thunderbolt 3 ↔ Thunderbolt 2 adapter is **not** a passive cable. It is an
 active, **directional** bridge that **never passes power**. Buy it for the wrong
@@ -43,7 +42,7 @@ StarTech
 Thunderbolt 3 ↔ Thunderbolt 2 adapters
 :::::
 
-### Why direction matters
+## Why direction matters
 
 A Thunderbolt link is asymmetric by nature: one end is the **host** (the
 computer), the other end is the **device/peripheral**. An adapter is built to
@@ -56,7 +55,7 @@ convert in *one* canonical direction: its *"native"* direction.
 
 :::{note} Thunderbolt 3 & USB-C
 "USB-C" is a connector, "Thunderbolt 3" is a protocol that happens to share the same connector.
-The adapters bridge Thunderbolt, not plain USB even though the connector is the same.
+The adapters bridge Thunderbolt, not plain USB, even though the connector is the same.
 :::
 
 :::{note} Thunderbolt 1/2 & Mini DisplayPort
@@ -75,7 +74,7 @@ devices too. On the StarTech this is even printed on the PCB:
 `TBT3_LEGACY_ADAPTER` / `LEGACY THUNDERBOLT`.
 :::
 
-### Comparison
+## Comparison
 
 Only two vendors ever shipped an active Thunderbolt 3 ↔ Thunderbolt 2 adapter.
 
@@ -96,12 +95,12 @@ If you need support for a TB2 (or TB1) host → TB3 device,
 **only the Apple adapter can do it**. Note that the reverse link is capped (TB1: 10 Gbps, TB2: 20 Gbps) by the host side. Devices needing full TB3 bandwidth (40 Gbps) may not work properly.
 :::
 
-### Power
+## Power
 
 No adapter carries power. A TB device behind one must have its **own** power
 supply. Bus-powered TB devices will not work through the bridge.
 
-### StarTech adapter Teardown
+## StarTech adapter Teardown
 
 :::{figure} /images/startech-tbt3tbtadap-teardown.jpg
 :alt: StarTech TBT3TBTADAP teardown
@@ -115,13 +114,13 @@ Full teardown photo set available on
 *Markings, BOM and component analysis*.
 :::
 
-### Going further (*Upcoming articles*)
+## Going further (*Upcoming articles*)
 
 This is the prerequisite for the rest of the series:
 
 - Daisy-chaining multiple Thunderbolt devices through mixed adapters and protocol versions
 - Thunderbolt device authorization (and my
-  [Cosmic desktop applet](https://github.com/rdoursenaud/cosmic-ext-applet-thunderbolt))
+  [Cosmic desktop applet](https://github.com/rdoursenaud/cosmic-ext-thunderbolt))
 - Wordclock synchronization across chained interfaces
 - Helping write the missing Linux driver for the PreSonus Quantum Thunderbolt Interfaces
 

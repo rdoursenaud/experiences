@@ -1,16 +1,21 @@
 ---
-title: Sony MEX-N5100BT teardown
 date: '2016-11-13'
-subject: Teardown
+keywords:
+  - 'Autoradio'
+  - 'Car radio'
+  - 'Car stereo'
+  - 'Bluetooth audio system'
+short_title: 'Teardown: MEX-N5100BT'
+subject: 'Techno. Audio • Audio Tech.'
 tags:
-  - Démontage
-  - Teardown
-  - Matériel
-  - Hardware
-  - Démontage
-  - Teardown
-  - Sony
-  - MEX-N5100BT
+  - 'Layer: Hardware'
+  - 'Démontage'
+  - 'Teardown'
+  - 'Sony'
+  - 'MEX-N5100BT'
+  - 'CD'
+  - 'Bluetooth'
 ---
+# Sony MEX-N5100BT teardown
 
 [Photos](https://goo.gl/photos/QZAEfjNAZdWVg4559)

@@ -1,6 +1,11 @@
-# MyST build outputs
-_build/
-# node
-node_modules/
 # Private articles
 blog/_private
+
+# node
+node_modules/
+
+# Scripts
+scripts
+
+# MyST build outputs
+_build

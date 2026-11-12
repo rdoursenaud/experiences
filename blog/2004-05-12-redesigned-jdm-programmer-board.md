@@ -1,13 +1,39 @@
 ---
-title: Redesigned JDM programmer board
 date: '2004-05-12'
-subject: Électronique • Electronics
+downloads:
+  - file: /files/jdm.sch
+    title: 'JDM Schematic'
+  - file: /files/jdm.brd
+    title: 'JDM board'
+  - file: /files/partlist1.txt
+    title: 'JDM partlist'
+  - file: /files/netlist1.txt
+    title: 'JDM netlist'
+keywords:
+  - 'DIY'
+  - 'MIDI controller'
+  - 'MIDI foot controller'
+  - 'PCB Design'
+  - 'microcontroller'
+  - 'embedded system'
+  - 'PIC'
+short_title: 'Midibox: JDM programmer'
+subject: 'Électronique • Electronics'
+subtitle: 'Single sided board design'
 tags:
-  - Électronique
-  - Electronics
-  - Hardware
-  - Midibox
+  - 'DIY'
+  - 'EAGLE'
+  - 'Status: Frozen'
+  - 'Layer: Hardware'
+  - 'Midibox'
+  - 'Schematic'
+  - 'Board'
+  - 'Partlist'
+  - 'Netlist'
+  - 'PIC18F452'
+  - 'PIC16F87x'
 ---
+# Redesigned JDM programmer board
 
 :::{note} Status
 Frozen

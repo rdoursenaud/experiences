@@ -1,20 +1,46 @@
 ---
-title: Redesigned LTC module board
 date: '2004-05-12'
-subject: Électronique • Electronics
+downloads:
+  - file: /files/ltc.sch
+    title: 'LTC Schematic'
+  - file: /files/ltc.brd
+    title: 'LTC board'
+  - file: /files/partlist2.txt
+    title: 'LTC partlist'
+  - file: /files/netlist2.txt
+    title: 'LTC netlist'
+keywords:
+  - 'DIY'
+  - 'MIDI controller'
+  - 'MIDI foot controller'
+  - 'PCB Design'
+  - 'microcontroller'
+  - 'embedded system'
+  - 'PIC'
+short_title: 'Midibox: LTC interface'
+subject: 'Électronique • Electronics'
+subtitle: 'Panel mountable single sided board design'
 tags:
-  - Électronique
-  - Electronics
-  - Hardware
-  - Midibox
+  - 'DIY'
+  - 'EAGLE'
+  - 'Status: Frozen'
+  - 'Layer: Hardware'
+  - 'MIDI'
+  - 'Midibox'
+  - 'Schematic'
+  - 'Board'
+  - 'Partlist'
+  - 'Netlist'
+  - 'MAX232'
 ---
+# Redesigned LTC module board
 
 :::{note} Status
 Frozen
 :::
 
 :::{card} The MidiBox Project
-[www.midibox.org](https://www.midibox.org)
+[www.midibox.org](https://midibox.org)
 :::
 
 ## Significant improvements against the original design

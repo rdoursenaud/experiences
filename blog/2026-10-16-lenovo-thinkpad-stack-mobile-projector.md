@@ -1,17 +1,4 @@
 ---
-title: 'Lenovo ThinkPad Stack Mobile Projector'
-date: '2026-10-16'
-tags:
-  - Rétro-Ingénierie
-  - Reverse Engineering
-  - Lenovo
-  - ThinkPad
-  - Stack
-  - Projector
-  - DLP
-  - x86
-  - Intel
-  - Atom
 abbreviations:
   OSINT: Open Source Intelligence
   FRU: Field Replaceable Unit
@@ -29,18 +16,32 @@ abbreviations:
   LPDDR: Low Power Dual Data Rate
   USI: Universal Scientific Industrial Co.,Ltd.
   NVRAM: Non Volatile Random Access Memory
+date: '2026-10-16'
+short_title: 'ThinkPad Stack: Projector'
+subject: 'Techno. Vidéo • Video Tech.'
+tags:
+  - 'Rétro-Ingénierie'
+  - 'Reverse Engineering'
+  - 'Lenovo'
+  - 'ThinkPad'
+  - 'Stack'
+  - 'Projector'
+  - 'DLP'
+  - 'x86'
+  - 'Intel'
+  - 'Atom'
+  - 'Android'
 ---
-
 # Lenovo ThinkPad Stack Mobile Projector
 
 > Pré-rétro-ingénierie par OSINT — identification matérielle complète avant réception.
 
 :::{figure} /images/lenovo-thinkpad-stack-mobile-projector-overview.jpg
-:alt: Lenovo ThinkPad Stack Mobile Projecter overview
+:alt: Lenovo ThinkPad Stack Mobile Projector overview
 :::
 
 :::{figure} /images/lenovo-thinkpad-stack-mobile-projector-connectors.jpg
-:alt: Lenovo ThinkPad Stack Mobile Projecter overview
+:alt: Lenovo ThinkPad Stack Mobile Projector connectors
 :::
 
 ## Identification
@@ -92,7 +93,7 @@ Voir [Lenovo ThinkPad Stack Assistant](2026-10-16-lenovo-thinkpad-stack-assistan
 
 *Depuis [archive.org](https://archive.org/details/lenovothinkpadstackdocumentation), à valider dès réception du produit*
 
- Champ | Valeur | Intérêt port |
+| Champ | Valeur | Intérêt port |
 | --- | --- | --- |
 | Projector Model | `M123` | recoupe le FCC `A5MM123` |
 | Kernel | `3.14.55-x86_64` | **x86_64 confirmé** — branche alignée sur Android-x86 6.0 |
@@ -101,7 +102,7 @@ Voir [Lenovo ThinkPad Stack Assistant](2026-10-16-lenovo-thinkpad-stack-assistan
 | Release | `g_pi_stack-user 6.0.1` | build user, non-root d’origine |
 | Build | `majian@build.local`, 2017-08-09 | toolchain / date de compile |
 
-> Le `3.14.55x86_64` valide la cible **Android-x86 Marshmallow** comme étant la plus proche.
+> Le `3.14.55-x86_64` valide la cible **Android-x86 Marshmallow** comme étant la plus proche.
 
 ## Cibles OS envisagées
 
@@ -113,7 +114,7 @@ Voir [Lenovo ThinkPad Stack Assistant](2026-10-16-lenovo-thinkpad-stack-assistan
 https://www.reddit.com/r/NixOS/comments/1ultoc5/booted_nixos_on_the_incredibly_obscure_thinkpad/
 
 Confirme que le DLP est probablement vu comme un simple
-périphérique interne (eDP, LDVS, HDMI?) et ne nécessite
+périphérique interne (eDP, LVDS, HDMI?) et ne nécessite
 probablement pas de pilote spécifique pour afficher une image.
 
 Le challenge sera sur la partie contrôle (keystone, brightness…)

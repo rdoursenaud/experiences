@@ -1,15 +1,24 @@
 ---
-title: Reborn the floorboard project
-date: 2004-05-12
-subject: Électronique • Electronics
+date: '2004-05-12'
+keywords:
+  - 'DIY'
+  - 'MIDI controller'
+  - 'MIDI foot controller'
+  - 'Hardware design'
+  - 'microcontroller'
+  - 'embedded system'
+  - 'PIC'
+short_title: 'Midibox: floorboard'
+subject: 'Techno. Musique • Music Tech.'
+subtitle: 'Free and open source guitar MIDI controller'
 tags:
-  - Électronique
-  - Electronics
-  - Matériel
-  - Hardware
-  - Midibox
-  - MIDI
+  - 'Status: WIP'
+  - 'Layer: Specification'
+  - 'DIY'
+  - 'MIDI'
+  - 'Midibox'
 ---
+# Reborn the floorboard project
 
 :::{note} Status
 Work In Progress
@@ -55,6 +64,6 @@ at the midibox.org forums.
 
 Stay tuned!
 
-:::{hint}Resources
+:::{hint} Resources
 [MIDI Specification](/files/MIDI_Specification.pdf)
 :::

@@ -1,18 +1,19 @@
 ---
-title: 'Apple iPad Jailbreak'
-date: '2026-11-05'
-subject: Informatique • IT
-keywords:
-  - Apple
-  - iPad
-  - Jailbreak
-  - Dopamine
-  - OpenSSH
-  - SSH
 abbreviations:
   SSH: Secure SHell
   SoC: System on Chip
+date: '2026-11-05'
+subject: 'Informatique • IT'
+tags:
+  - 'Layer: Software'
+  - 'Apple'
+  - 'iPad'
+  - 'Jailbreak'
+  - 'Dopamine'
+  - 'OpenSSH'
+  - 'SSH'
 ---
+# Apple iPad Jailbreak
 
 ## Cible
 

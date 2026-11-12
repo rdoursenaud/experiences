@@ -1,3 +1,6 @@
+---
+subject: 'Informatique • IT'
+---
 "CUDA initialization fails globally when encountering a single incompatible GPU in a multi-GPU setup, rendering compatible GPUs inaccessible."
 
 La description :

@@ -1,21 +1,19 @@
 ---
-title: Lenovo ThinkPad P51
-subtitle: Hardware & Software support discovery
 date: '2017-08-31'
-subject: Informatique • IT
+subject: 'Informatique • IT'
+subtitle: Hardware & Software support discovery
 tags:
-  - Informatique
-  - IT
-  - Matériel
-  - Hardware
-  - Lenovo
-  - ThinkPad
-  - P51
-  - GNU/Linux
-  - Arch Linux
-  - Portable
-  - Laptop
+  - 'Layer: Hardware'
+  - 'Layer: Software'
+  - 'Lenovo'
+  - 'ThinkPad'
+  - 'P51'
+  - 'GNU/Linux'
+  - 'Arch Linux'
+  - 'Portable'
+  - 'Laptop'
 ---
+# Lenovo ThinkPad P51
 
 :::{figure} /images/lenovo-thinkpad-p51-hero.png
 :alt: Lenovo ThinkPad P51 hero shot
@@ -40,9 +38,9 @@ tags:
   ```
 :::
 
-### Hardware features
+## Hardware features
 
-#### Matrix
+### Matrix
 
 | Device                                    | Model                                                           | Specs                                                                                                                                      | Status                                                                                         | Modules                    |
 |-------------------------------------------|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|----------------------------|
@@ -56,7 +54,7 @@ tags:
 | HDMI                                      |                                                                 | 1.4b                                                                                                                                       | Working                                                                                        | nvhda (audio)              |
 | Mini DisplayPort                          |                                                                 | 1.2a                                                                                                                                       | Working                                                                                        | thunderbolt                |
 | Thunderbolt 3 / USB 3.1                   |                                                                 |                                                                                                                                            | Working                                                                                        | ?                          |
-| LAN                                       | Intel I219-LM                                                   | 1 Gbs                                                                                                                                      | Working                                                                                        | e1000e                     |
+| LAN                                       | Intel I219-LM                                                   | 1 Gb/s                                                                                                                                      | Working                                                                                        | e1000e                     |
 | WLAN (Wi-Fi)                              | [Intel Wireless 8265][3]                                        | 802.11ac M.2                                                                                                                               | Working                                                                                        | iwlwifi                    |
 | WWAN                                      | [Qualcomm Snapdragon X7 LTE-A][4] ([Sierra Wireless EM7455][5]) | 4G LTE-A M.2                                                                                                                               | Working                                                                                        | cdc_mbim                   |
 | GPS                                       | In WWAN device                                                  | GNSS (GPS, GLONASS, Beidou, Galileo)                                                                                                       | TBD                                                                                            |                            |
@@ -114,12 +112,11 @@ tags:
 [Lenovo ThinkPad P51 Linux Hardware Probe](https://linux-hardware.org/?probe=184ecc2a5c)
 :::
 
-#### GPUs
+### GPUs
 
 Display management scripts and configuration repository available on [GitHub](https://github.com/rdoursenaud/lenovo-p51-display-management)
 
-
-##### Optimus / Prime
+#### Optimus / Prime
 
 `/etc/modprobe.d/nvidia_drm.conf`
 ```
@@ -133,8 +130,7 @@ options nvidia_drm modeset=1
 "Boot with standard options"  "rw root=UUID=b549d30f-939e-4d74-b39d-676856e9faca drm.rnodes=1 intel_iommu=1 quiet initrd=/intel-ucode.img initrd=/initramfs-linux.img"
 ```
 
-
-##### Energy saving
+#### Energy saving
 
 `/etc/modprobe.d/i915.conf`
 ```
@@ -145,13 +141,11 @@ options i915 enable_dc=2
 options i915 enable_fbc=1
 ```
 
-
-##### HDMI audio
+#### HDMI audio
 
 Build, install and enable the nvhda module from [this bug report](https://bugs.freedesktop.org/show_bug.cgi?id=75985#c27)
 
-
-#### Touchscreen
+### Touchscreen
 
 `~/.xinitrc`
 ```sh
@@ -166,26 +160,23 @@ xinput map-to-output Wacom\ Co.,Ltd.\ Pen\ and\ multitouch\ sensor\ Pen\ stylus 
 xinput map-to-output Wacom\ Co.,Ltd.\ Pen\ and\ multitouch\ sensor\ Pen\ eraser eDP-1-1
 ```
 
-
-#### Dock
+### Dock
 
 Sound I/O not working.
-
 
 :::{note}Update 2018-08-28
 Sound I/O is now working in Arch Linux.
 Don't know which update brought support though…
 :::
 
-#### Fans
+### Fans
 
 `/etc/modprobe.d/thinkpad_acpi.conf`
 ```
 options thinkpad_acpi fan_control=1
 ```
 
-
-##### [ThinkFan](https://github.com/vmatare/thinkfan/)
+#### [ThinkFan](https://github.com/vmatare/thinkfan/)
 
 `/etc/thinkfan.conf`
 ```yaml
@@ -219,22 +210,20 @@ levels:
 :::{danger} FIXME
 Virtual hwmon path can change upon reboot and prevent thinkfan from starting.
 The order is determined by the modules loading order.
-Workaround seem to be to load modules manually in a deterministic order.
+The workaround seems to be to load modules manually in a deterministic order.
 :::
 
-#### Fingerprint reader
+### Fingerprint reader
 
 Not supported by fprint.
-
 
 :::{note} Update 2020-04-02
 The libfprint fork at https://github.com/nmikhailov/Validity90 offers experimental support with ongoing reverse engineering.
 :::
 
-### Install
+## Install
 
-
-#### Partitions
+### Partitions
 
 ESP: FAT32 1024 MiB (550 minimum [Source](https://www.rodsbooks.com/efi-bootloaders/principles.html))  
 BTRFS 931,51 GiB (To match the backup HDD size)  
@@ -244,8 +233,7 @@ RAID1 BTRFS SSDs
 ESP backup on second disk  
 Second swap
 
-
-#### Directories and subvolumes
+### Directories and subvolumes
 
 ```
 toplevel
@@ -261,45 +249,37 @@ toplevel
           +-- …
 ```
 
-
-### Firmware bugs?
+## Firmware bugs?
 
 :::{caution} TODO
 Report to Lenovo support.
 :::
 
-
-#### Workstation dock long USB detection
+### Workstation dock long USB detection
 
 Using the workstation dock, boot time is painfully slow as the EFI scans USB peripherals.  
 Unfortunately, removing USB devices from the dock doesn't improve performance.
 
-
-#### Disk lock and fingerprint
+### Disk lock and fingerprint
 
 When using the fingerprint scanner on boot with disk lock enabled, the first disk sometimes does not unlock.
 
+## Benchmarks
 
-### Benchmarks
+### Geekbench
 
-
-#### Geekbench
-
-
-##### CPU
+#### CPU
 
 [Linux](https://browser.geekbench.com/v4/cpu/3884202)  
 [Microsoft Windows 10](https://browser.geekbench.com/v4/cpu/3280047)
 
-
-##### GPU compute
+#### GPU compute
 
 [Linux nVidia Quadro M2200 OpenCL](https://browser.geekbench.com/v4/compute/1074183)  
 [Microsoft Windows 10 Intel HD Graphics P630](https://browser.geekbench.com/v4/compute/882924)  
 [Microsoft Windows 10 nVidia Quadro M2200](https://browser.geekbench.com/v4/compute/882920)
 
-
-#### Luxmark
+### Luxmark
 
 [CPU+GPU](https://web.archive.org/web/20240221113441/http://luxmark.info/node/4625)  
 [GPU](https://web.archive.org/web/20240225011432/http://luxmark.info/node/4624)
@@ -307,29 +287,24 @@ When using the fingerprint scanner on boot with disk lock enabled, the first dis
 % - http://luxmark.info/node/4625
 % - http://luxmark.info/node/4624
 
-#### gtkperf
+### gtkperf
 
 Launched from CLI  
 Fullscreen window 1920x1080  
 5 consecutive runs  
 
-
-##### Intel modesetting
+#### Intel modesetting
 3.62-3.74
 
-
-##### Intel
+#### Intel
 2.72-2.80
 
+#### nVidia
 
-##### nVidia
-
-
-###### Single laptop screen
+##### Single laptop screen
 2.70-2.74
 
-
-###### 4 screens setup with Workstation Dock
+##### 4 screens setup with Workstation Dock
 screen 1 (DP-1): 4.11-4.67  
 screen 2 (DP-2 rotated 90° right): 4.80-5.41  
 screen 3 (DP-3):  4.91-5.69  
