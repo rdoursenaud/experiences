@@ -33,21 +33,6 @@ project:
       email: "raphael+blog@doursenaud.fr"
       #roles:
       affiliations:
-        - id: refuge
-          name: refuge.coop
-          url: https://refuge.coop
-          github: rufuge-coop
-          postal_code: "64000"
-          city: Pau
-          country: France
-        - id: gpc
-          name: GPC.solutions SAS
-          email: contact@gpcsolutions.fr
-          url: https://gpcsolutions.fr
-          github: GPCsolutions
-          postal_code: "64000"
-          city: Pau
-          country: France
         - id: ematech
           name: EMA Tech.
           #institution:
@@ -66,6 +51,21 @@ project:
           #phone:
           #fax:
           #collaboration:
+        - id: gpc
+          name: GPC.solutions SAS
+          email: contact@gpcsolutions.fr
+          url: https://gpcsolutions.fr
+          github: GPCsolutions
+          postal_code: "64000"
+          city: Pau
+          country: France
+        - id: refuge
+          name: refuge.coop
+          url: https://refuge.coop
+          github: rufuge-coop
+          postal_code: "64000"
+          city: Pau
+          country: France
 
       #equal_contributor:
       #deceased:
