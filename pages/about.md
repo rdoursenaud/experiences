@@ -1,8 +1,9 @@
 ---
-title: À propos
-short_title: À propos
 date: 2026-09-15
+site:
+  hide_authors: true
 ---
+# À propos
 
 ### Éditeur
 

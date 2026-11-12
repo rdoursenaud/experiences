@@ -1,8 +1,10 @@
 ---
-title: Me contacter
-short_title: Contact
 date: 2026-09-28
+short_title: Contact
+site:
+  hide_authors: true
 ---
+# Me contacter
 
 Mes coordonnées complètes sont disponibles sur mon **[Curriculum Vitæ](/pages/cv.md)**.
 

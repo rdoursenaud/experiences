@@ -1,7 +1,14 @@
 ---
-title: Curriculum Vitæ
-subtitle: Touche à tout
+date: 2026-09-15
+#exports:
+#  - format: pdf
+#    template: arxiv_nips
+#    logo: false
+#    link: https://raphael.doursenaud.fr/pages/cv/
 short_title: CV
+site:
+  hide_authors: true
+subtitle: Touche à tout
 keywords:
   - Raphaël Doursenaud
   - raphael
@@ -14,13 +21,8 @@ tags:
   - curriculum vitæ
   - cv
   - resume
-date: 2026-09-15
-#exports:
-#  - format: pdf
-#    template: arxiv_nips
-#    logo: false
-#    link: https://raphael.doursenaud.fr/pages/cv/
 ---
+# Curriculum Vitæ
 
 :::{card} Touche-à-tout !
 :header: Raphaël Doursenaud
