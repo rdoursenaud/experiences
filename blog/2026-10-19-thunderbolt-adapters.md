@@ -106,8 +106,7 @@ supply. Bus-powered TB devices will not work through the bridge.
 :alt: StarTech TBT3TBTADAP teardown
 :::
 
-Full teardown photo set available on
-[Google Photos](https://photos.app.goo.gl/2REgMb8gFkeQJQsB8).
+{button}`Teardown photos album <https://photos.app.goo.gl/2REgMb8gFkeQJQsB8>`
 
 :::{card} Related article
 [StarTech TBT3TBTADAP teardown](2026-10-19-startech-tbt3tbtadap) :

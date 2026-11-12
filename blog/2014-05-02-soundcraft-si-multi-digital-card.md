@@ -10,7 +10,7 @@ tags:
 ---
 # Soundcraft Si Multi Digital Card
 
-[Photos](https://goo.gl/photos/jMU3zhXQ7ojWFvGQ8)
+{button}`Teardown photos album <https://goo.gl/photos/jMU3zhXQ7ojWFvGQ8>`
 
 Once the firmware is flashed from a Windows or Mac OS machine, the
 device is seen as USB class compliant.  

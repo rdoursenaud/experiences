@@ -63,6 +63,5 @@ Thanks Daniel!
 
 Oh, and if you're an hardware freak like me, you'll love seeing what's
 in its guts.  
-  
-[Here are the photos of the
-teardown.](https://photos.app.goo.gl/8cYJhVcB2Lp6Mvmc9)
+
+{button}`Teardown photos album <https://photos.app.goo.gl/8cYJhVcB2Lp6Mvmc9>`

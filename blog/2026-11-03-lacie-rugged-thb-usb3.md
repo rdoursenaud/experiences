@@ -551,7 +551,7 @@ USB 3.0.
 
 ### Photos
 
-[Photo album](https://photos.app.goo.gl/nMDd4uqHQMPVhT1u5)
+{button}`Teardown photos album <https://photos.app.goo.gl/nMDd4uqHQMPVhT1u5>`
 
 ### External
 

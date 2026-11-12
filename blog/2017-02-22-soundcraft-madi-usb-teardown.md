@@ -20,4 +20,4 @@ tags:
 ---
 # Soundcraft MADI-USB teardown
 
-[Photos](https://goo.gl/photos/pcvvYXR3wYVk6UHo6)
+{button}`Teardown photos album <https://goo.gl/photos/pcvvYXR3wYVk6UHo6>`

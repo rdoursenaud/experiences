@@ -13,4 +13,4 @@ tags:
 ---
 # Netgear GS724T teardown
 
-[Photos](https://goo.gl/photos/deRPiDEeKWGvibhq5)
+{button}`Teardown photos album <https://goo.gl/photos/deRPiDEeKWGvibhq5>`

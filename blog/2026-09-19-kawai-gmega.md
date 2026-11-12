@@ -82,4 +82,4 @@ F0 40 00 10 00 08 08 1F 00 00 01 0F 06 04 00 01 04 00 01 08 08 00 00 01 01 0A 04
 
 ## Teardown
 
-[Photo album](https://photos.app.goo.gl/8Vipu3x6CSTZLbGe8)
+{button}`Teardown photos album <https://photos.app.goo.gl/8Vipu3x6CSTZLbGe8>`

@@ -50,8 +50,7 @@ Product page: <https://www.startech.com/en-us/usb-hubs/tbt3tbtadap>
 StarTech TBT3TBTADAP, opened
 :::
 
-Full teardown photo set available on
-[Google Photos](https://photos.app.goo.gl/2REgMb8gFkeQJQsB8).
+{button}`Teardown photos album <https://photos.app.goo.gl/2REgMb8gFkeQJQsB8>`
 
 :::{card} Related article
 [Thunderbolt 3 ↔ Thunderbolt 2 adapters](2026-10-19-thunderbolt-adapters).

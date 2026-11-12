@@ -17,7 +17,7 @@ tags:
 
 ## Taking it apart
 
-[Photos](https://goo.gl/photos/Tq6DEgYVoqTKaKYu7)
+{button}`Teardown photos album <https://goo.gl/photos/Tq6DEgYVoqTKaKYu7>`
 
 :::{note}
 *All descriptions are seen from the back of the unit with the unit lying

@@ -15,4 +15,4 @@ tags:
 ---
 # Eaton Evolution 650 rack teardown
 
-[Photos](https://goo.gl/photos/ScHvf2X1prvaDioP6)
+{button}`Teardown photos album <https://goo.gl/photos/ScHvf2X1prvaDioP6>`

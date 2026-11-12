@@ -50,7 +50,7 @@ Ressources :
 
 *Ouverture du module routeur (18/02/2024).*
 
-[Album photos](https://photos.app.goo.gl/5F57PyhDLT7txtCX6)
+{button}`Album photos <https://photos.app.goo.gl/5F57PyhDLT7txtCX6>`
 
 | Poste | Marquage | Rôle |
 | --- | --- | --- |

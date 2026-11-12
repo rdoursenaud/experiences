@@ -19,4 +19,4 @@ tags:
 ---
 # Soundcraft Mini Stagebox 32 teardown
 
-[Photos](https://goo.gl/photos/RSBvgF3QeyKjba1c9)
+{button}`Teardown photos album <https://goo.gl/photos/RSBvgF3QeyKjba1c9>`

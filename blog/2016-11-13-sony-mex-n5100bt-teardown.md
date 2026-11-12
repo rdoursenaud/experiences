@@ -18,4 +18,4 @@ tags:
 ---
 # Sony MEX-N5100BT teardown
 
-[Photos](https://goo.gl/photos/QZAEfjNAZdWVg4559)
+{button}`Teardown photos album <https://goo.gl/photos/QZAEfjNAZdWVg4559>`

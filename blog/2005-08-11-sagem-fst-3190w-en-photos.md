@@ -23,5 +23,5 @@ photos intérieur/extérieur postées sur le forum de
 :::{note} Mise à jour 2026-10-18
 J’ai retrouvé les photos!
 
-[Album Google Photos](https://photos.app.goo.gl/MAqGT7ybTdK13zFB8)
+{button}`Album photos <https://photos.app.goo.gl/MAqGT7ybTdK13zFB8>`
 :::
